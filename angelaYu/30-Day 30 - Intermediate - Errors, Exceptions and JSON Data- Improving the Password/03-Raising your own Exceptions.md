@@ -1,30 +1,38 @@
-# 🔧 Raising your own Exceptions
+Here is a structured breakdown of this lesson on raising your own exceptions.
 
 ---
 
-### Overview
+### 1. The `raise` Keyword
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 30 - Intermediate - Errors, Exceptions and JSON Data: Improving the Password
-**Lecture:** Raising your own Exceptions
-**Level:** Intermediate
+Your code can **throw** exceptions when its own rules are violated:
 
----
+```python
+height = float(input("Height: "))
+weight = int(input("Weight: "))
 
-### Summary
+if height > 3:
+    raise ValueError("Human height should not be over 3 meters.")
 
-In this lesson, I&#x27;ll show you how you can generate your own exceptions in case your code encounters unexpected situations. So these are the four keywords are most important when it comes to error handling and catching exceptions. The final keyword that is related is one called raise. And what this allows us to do is to raise our own exceptions. For example, let&#x27;s say I decide that at the very end of all of our file, no matter if this file went through or if it didn&#x27;t, if there were an error if there wasn&#x27;t error, I&#x27;m still going to raise an exception. And to raise an exception all you have to do is tap into one of the known exception classes. So let&#x27;s say I just decided to raise a key error. Now, when I hit run you can see no matter what happened, and in fact, there is no error. I decided to raise this error and that&#x27;s what I see right here. I could change that to a type error, and that is what will crash my code. And I can even specify a message along with this error. So I could say raise a type error and let&#x27;s just say the message is, and you can see now when it runs, it hits that type error. And it says, this is an error that I made up. So when might you want to raise errors? Well, let&#x27;s comment out all the code that we have because we have that type error at the end so it&#x27;s always going to crash the code no matter what. So let&#x27;s comment it out and let&#x27;s start from scratch. Let&#x27;s say that I decided to calculate the body mass index or the BMI of somebody&#x27;s and I&#x27;m getting them to input their height as a float. So this is going to be their height in meters and their weight as an integer. Now I can calculate the BMI by taking the weight / height * height. And you can either do this and wrap it inside some parentheses, or you can use the power function or even better you can actually use the builtin exponent, so height to the power of 2. No matter which way we use, we can print out the BMI. But if I provide a height that is just an unrealistic non-human height, lets say there were 45 meters tall, like some sort of four storey building. And then I gave them a weight, so let&#x27;s say they are 67 kilos. Then obviously a mistake has been made somewhere in the height, right? Because this is just not within the normal human range. This is like Godzilla&#x27;s height. If I go ahead and hit enter, you can see that we get at BMI and it is calculated correctly and there are no errors because everything is perfectly valid other than the fact that this height should not really ever go over 3 meters. In this case, we might want to raise our own exception. So we can go ahead and say that if the height is greater than 3 meters, well, in that case, it&#x27;s probably not a valid height. So we can go ahead and raise a value error. So this is an error that says that whatever value was entered as the argument is probably wrong. And we can accompany that with a message. Human height should not be over 3 meters. Now, when we run our code and the user mistakenly types a wrong height, then it&#x27;s going to actually give us this error and it won&#x27;t proceed to give them an inaccurate BMI. So this is how you might raise your own exceptions when there are certain things that are not caught by the code because it&#x27;s perfectly valid code, but it&#x27;s in fact going to generate the wrong results. Now that we&#x27;ve seen all of these aspects of exceptions, I want you to have a go at catching some exceptions that can commonly occur. So head over to the next lesson where I&#x27;ve got an exercise for you.
+bmi = weight / height ** 2
+print(bmi)
+```
 
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+* `raise ExceptionType("message")` — pick a built-in type (`ValueError`, `TypeError`,
+  `KeyError`…) that matches the mistake.
+* The message appears in the traceback, exactly like Python's own errors.
 
 ---
 
-### Next Steps
+### 2. Why Raise Instead of Print?
 
-In this lesson, I&#x27;ll show you how you can generate your own exceptions in case your code encounters unexpected situations. So these are the four keywords are most important when it comes to error handling and catching exceptions. The final keyword that is related is one called raise. And what this allows us to do is to raise our own exceptions. For example, let&#x27;s say I decide that at the very end of all of our file, no matter if this file went through or if it didn&#x27;t, if there were an error if there wasn&#x27;t error, I&#x27;m still going to raise an exception. And to raise an exception all you have to do is tap into one of the known exception classes. So let&#x27;s say I just decided to raise a key error. Now, when I hit run you can see no matter what happened, and in fact, there is no error. I decided to raise this error and that&#x27;s what I see right here. I could change that to a type error, and that is what will crash my code. And I can even specify a message along with this error. So I could say raise a type error and let&#x27;s just say the message is, and you can see now when it runs, it hits that type error. And it says, this is an error that I made up. So when might you want to raise errors? Well, let&#x27;s comment out all the code that we have because we have that type error at the end so it&#x27;s always going to crash the code no matter what. So let&#x27;s comment it out and let&#x27;s start from scratch. Let&#x27;s say that I decided to calculate the body mass index or the BMI of somebody&#x27;s and I&#x27;m getting them to input their height as a float. So this is going to be their height in meters and their weight as an integer. Now I can calculate the BMI by taking the weight / height * height. And you can either do this and wrap it inside some parentheses, or you can use the power function or even better you can actually use the builtin exponent, so height to the power of 2. No matter which way we use, we can print out the BMI. But if I provide a height that is just an unrealistic non-human height, lets say there were 45 meters tall, like some sort of four storey building. And then I gave them a weight, so let&#x27;s say they are 67 kilos. Then obviously a mistake has been made somewhere in the height, right? Because this is just not within the normal human range. This is like Godzilla&#x27;s height. If I go ahead and hit enter, you can see that we get at BMI and it is calculated correctly and there are no errors because everything is perfectly valid other than the fact that this height should not really ever go over 3 meters. In this case, we might want to raise our own exception. So we can go ahead and say that if the height is greater than 3 meters, well, in that case, it&#x27;s probably not a valid height. So we can go ahead and raise a value error. So this is an error that says that whatever value was entered as the argument is probably wrong. And we can accompany that with a message. Human height should not be over 3 meters. Now, when we run our code and the user mistakenly types a wrong height, then it&#x27;s going to actually give us this error and it won&#x27;t proceed to give them an inaccurate BMI. So this is how you might raise your own exceptions when there are certain things that are not caught by the code because it&#x27;s perfectly valid code, but it&#x27;s in fact going to generate the wrong results. Now that we&#x27;ve seen all of these aspects of exceptions, I want you to have a go at catching some exceptions that can commonly occur. So head over to the next lesson where I&#x27;ve got an exercise for you.
+* A printed warning is **ignorable**; an exception is a loud, catchable event.
+* Calling code can `try`/`except` your exceptions and decide what to do — that's how
+  libraries report problems to applications.
+
+---
+
+### Summary Checklist
+
+1. `raise` = fail loudly with a typed, descriptive error.
+2. Choose the exception type that names the problem class.
+3. Exceptions are APIs: callers handle what you raise.
