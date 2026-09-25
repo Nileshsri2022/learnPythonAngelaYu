@@ -1,0 +1,18 @@
+# Docs site build output
+docs-site/site/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# macOS / OS junk
+__MACOSX/
+._*
+.DS_Store
+Thumbs.db
