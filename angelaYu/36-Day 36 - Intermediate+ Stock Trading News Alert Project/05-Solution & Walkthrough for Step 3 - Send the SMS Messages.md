@@ -1,30 +1,41 @@
-# 📖 Solution & Walkthrough for Step 3 - Send the SMS Messages
+Here is a structured walkthrough of Step 3 — sending the SMS messages.
 
 ---
 
-### Overview
+### 1. One Message per Article
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 36 - Intermediate+ Stock Trading News Alert Project
-**Lecture:** Solution & Walkthrough for Step 3 - Send the SMS Messages
-**Level:** N/A
+```python
+from twilio.rest import Client
+
+client = Client(os.environ.get("TWILIO_SID"), os.environ.get("TWILIO_AUTH_TOKEN"))
+
+for article in formatted_articles:
+    message = client.messages.create(
+        body=article,
+        from_="+1234567890",
+        to="+911234567890",
+    )
+    print(message.status)
+```
+
+* Loop the formatted list — three coherent alerts, not one giant SMS.
+* Twilio credentials come from environment variables (Day 35).
+
+---
+
+### 2. The Pipeline Complete
+
+```
+Alpha Vantage ──▶ ±5%? ──▶ NewsAPI ──▶ format ──▶ Twilio SMS
+   (prices)       (gate)   (context)   (f-string)  (delivery)
+```
+
+Each stage is independently testable — print at every stage while developing, then wire
+the real sender last.
 
 ---
 
-### Summary
+### Summary Checklist
 
-So previously we&#x27;ve managed to check the stock price difference between the day before yesterday and yesterday. And then based on when that different is over a certain threshold, then we trigger this bunch of code which actually fetches some news from the news API regarding that company. So now that we&#x27;ve got the top three_articles from the news API, now we&#x27;re on to Step 3, which is to use Twilio to send a message with each article&#x27;s title and description to our phone number. The first step is to create a list of the first three articles headline and description using list comprehension. So what we&#x27;re aiming for is a single string that says something like this, Headline: and then it&#x27;s the actual {article title}. And then we&#x27;ve got our \nBrief: which is going to go on a new line, and then this is going to be the {article description}. You can see those parts in the articles that we printed out. For example, this first article here. You can see the title says Spartan Energy surges after something, something, something, something. You can see this is the first title and this is the first description. So it&#x27;s basically the title of the article and also a brief description of what the article is about. That&#x27;s what we want to get messaged to us. Now in order to use list comprehension, we first use the keyword method. So, [new_item for item in list]. Now our list in this case is of course our three_articles, and each of those items will be an article in themselves, and for each of those articles, we want to have this format. So I&#x27;m just going to cut that and then paste it in here. And then I&#x27;m going to use an f-string in order to insert these relevant parts. So the article title is stored under the title key and the description is stored under the description key. So we can simply use that as the key to tap into this article. Notice how we&#x27;ve got a set of double quotes outside to create our string, if we have another set of double quotes to specify the key, this is going to be a bit confusing for the code interpreter. So let&#x27;s change that to single quotes instead to make it actually work, like this. Now next is the article description. So this is going go inside another set of quotes and also it&#x27;s going to go inside a set of square brackets, like this. Each of the new items that&#x27;s going to go into this new list is going to be a string that&#x27;s comprised of the article[&#x27;title&#x27;] and also the article[&#x27;description&#x27;]. So now we can save this new list into a formatted_articles list, like this. So that&#x27;s TODO 8 completed, and now we&#x27;re going to try and send each article as a separate message via Twilio. Here&#x27;s our Twilio SMS Python Quickstart, and we&#x27;re basically going to replicate all of this. So first we&#x27;re going to import the Client class from the Twilio library. And make sure that we actually have this installed if it&#x27;s not already installed and get rid of the red underlines. Next we&#x27;re going to get our ACCOUNT SID and AUTH TOKEN from Twilio. So I&#x27;m going to copy my account SID and put that over here, and also get my AUTH_TOKEN from here as well. So now I can set up my client by creating it from the Client class. Down here at the point where I want to send my message I&#x27;m going to create a new client from the Twilio Client class. And this is going to be comprised of my TWILIO account SID and also my TWILIO_AUTH_TOKEN. Finally, we can create our message and send it to our own number. The body of the message is going to be each of the articles. So in order to send three messages, we can loop through our three formatted_articles like this, and then we can create a message and send each of those one by one. So the body is going to be each article in the formatted_articles. Now the &quot;from&quot; number is going to be our Twilio virtual number and our &quot;to&quot; number is going to be our actual phone number. Once we&#x27;ve done all of that we can now test this and run it to see if it actually works. Now I&#x27;m going to go ahead and hit Run, and hopefully our messages will get sent as you can see right now. So we&#x27;ve got our headline and our brief and each of the three articles are being sent as a separate message. That&#x27;s pretty much the end of this challenge. Now you can of course, improve this even further. And one of the things I thought about is having a little emoji to show whether if your stock is up or down and also showing a rounded percentage. To do that, we need to figure out whether if the stock was up or down and we can work that out by looking at the difference. If instead of using the abs here, which is going to get rid of our negative and positive, if we had instead use an if-statement to check if the difference is greater than zero, so it&#x27;s positive, then we can create a variable called up_down, which starts out as None; but if it&#x27;s positive, then we can turn that into an up emoji ðŸ”º. And remember, emojis are simply just treated as strings in our code. Otherwise, if it&#x27;s below zero, then we&#x27;ll change that to a down emoji ðŸ”», like this. And as always, you can always search for these emojis in Google and copy and paste them in if you don&#x27;t have the emoji and symbols keyboard. But having taken away that absolute value function here, we&#x27;re going to have to put it back somewhere else. So we&#x27;re going to put it right here at the point where we do the if checking. And in addition, I want to change this diff_percent so that we actually around it to the nearest whole number. With the rounded diff_percent and also this up_down, we can now format our message so that it says the name of the stock and then whether if it&#x27;s up or down and then the diff_percent, and finally a percentage sign and also a new line. So now if I run this again, you can see that this time these messages come complete with the stock name, the movement percentage, the headlines, and the brief. So there you have it. I&#x27;m sure you can think of even more improvements to this program, and especially if you&#x27;re somebody who actually trades stocks, then I&#x27;m sure you&#x27;ll think of even more ways of improving this project. If you come up with anything interesting and fun, be sure to share it with the rest of us in the Q&amp;A so that we can all admire your hard work.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **for loops** | Introduced/used in this lecture |
-| 3 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 4 | **Module imports** | Introduced/used in this lecture |
-| 5 | **List comprehensions** | Introduced/used in this lecture |
-
----
+1. Three APIs, one script, zero secrets in code.
+2. Runnable version: [`main.py`](main.py)
