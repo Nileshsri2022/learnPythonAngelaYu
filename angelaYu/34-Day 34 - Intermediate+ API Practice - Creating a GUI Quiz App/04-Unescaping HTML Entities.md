@@ -1,27 +1,40 @@
-# 📖 Unescaping HTML Entities
+Here is a structured breakdown of this lesson on unescaping HTML entities.
 
 ---
 
-### Overview
+### 1. The Problem
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 34 - Intermediate+ API Practice - Creating a GUI Quiz App
-**Lecture:** Unescaping HTML Entities
-**Level:** Intermediate+ API Practice
+APIs often return text safe for HTML display: `&#039;` for `'`, `&quot;` for `"`,
+`&amp;` for `&`. Printing that raw looks like gibberish.
 
 ---
 
-### Summary
+### 2. The Fix — `html.unescape()`
 
-In the last lesson, we managed to get our API to work and we got back some live data. But when we ran it, we saw that some of the texts that we were getting back was formatted really strangely with these pound signs and ampersands, and it&#x27;s not the actual text that we see. So what&#x27;s happening here? Well, what we&#x27;re actually seeing here are called HTML entities, and there are a way of replacing certain characters in HTML so that it doesn&#x27;t get confused with HTML code. So for example, the less than symbol could be a part of HTML code. And instead of using that, we have to use the &amp;lt and then semicolon. So if we look down this table, we can actually see this &quot; actually stands for a double quotation mark. And that would make sense cause it&#x27;s saying &quot;Mario Kart 64&quot; and this #039, if we look up in this list, is actually a single quotation mark. And that would make sense as well, cause it would be Stalin&#x27;s death. So how do we get hold of the actual human readable text? Well, we can use this tool called the free formatter to unescape the HTML results that we&#x27;re getting back from our API. I&#x27;ve copied and pasted this part we&#x27;ve got here. And if I go ahead and click on unescape, you can see that it formats it into the original human readable format and now it says in &quot;Mario Kart 64&quot; Waluigi is a playable character. And if I paste the cold war ended with Joseph Stalin, blah, blah, blah, death and I click unescape, then you can see it says the Cold War ended with Joseph Stalin&#x27;s death and it replaces that with an apostrophe. Now, essentially we know what to Google and that&#x27;s kind of the first step towards solving any problem. So if you Google for escaping HTML entities in Python, then the first result we get in Stack Overflow gives us the answer. We have to import the HTML module and use one of the methods in that module called unescape in order to unescape the text that we&#x27;re getting back. The part where we&#x27;re interested in this is in our quiz brain, because that&#x27;s the part what we format it into our user answer. Let&#x27;s change the question text to be equal to the self.current_question.text, so this part that we have here which is being put into our input and we can use this q_text instead. But instead of using just the text that we get back from the API, we&#x27;re going to import the HTML module. Yeah. And we&#x27;re going to use the method inside this HTML module called unescape to unescape this string that we get from the API. And now if I run this code again, you can see that this time, no matter what is inside the string, say an apostrophe in this case or a double quote in this case, they&#x27;re all being formatted correctly. There you have it. We started off with some strange characters and after a bit of Googling around, we found the solution to turn them into human readable text. Aas a programmer, this is a skill that you have to really hone. This is something that is going to take you to the next level to this intermediate++ level. You have to find out solutions to your own problems, and Google is your best friend.
+```python
+import html
+
+question_text = html.unescape(question["question"])
+```
+
+Applied where the bank is built:
+
+```python
+for question in question_data:
+    question_text = html.unescape(question["question"])
+    question_bank.append(Question(question_text, question["correct_answer"]))
+```
+
+**Output before:** `&quot;Southern Cross&quot; is the name of the UK&#039;s flag.`
+**Output after:** `"Southern Cross" is the name of the UK's flag.`
+
+> **Tip:** Decode at the data boundary (in `data.py`/the bank loop) so every downstream
+> component sees clean text.
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Module imports** | Introduced/used in this lecture |
-
----
+1. HTML entities are escaped characters from web-safe transport.
+2. `html.unescape()` converts them back to real characters.
+3. Clean data at the boundary, not in every consumer.
