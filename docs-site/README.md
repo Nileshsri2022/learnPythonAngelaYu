@@ -56,5 +56,6 @@ python3 check_links.py
 What you get:
 
 - **Top tab bar** — Home · Beginner · Intermediate · Intermediate+ · Web Dev · Advanced — with collapsed day sections and short sidebar labels
-- One page per **raw transcript**, grouped into 85 days
+- One page per **lecture note** (367 pages), grouped into 85 days
+- One page per **raw transcript** (604 pages), marked with 🗣 in the sidebar
 - Full-text **search across everything**, dark mode, copy-buttons on code blocks

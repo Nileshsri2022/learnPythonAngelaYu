@@ -1,0 +1,32 @@
+# 🔧 Object State and Instances
+
+---
+
+### Overview
+
+**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
+**Chapter:** Day 19 - Intermediate - Instances, State and Higher Order Functions
+**Lecture:** Object State and Instances
+**Level:** Intermediate
+
+---
+
+### Summary
+
+The objective is we want to be able to build a turtle race, where we have multiple turtles to run along a line and then see who actually reaches the finish line first. Now here&#x27;s a question though. We know how to build one turtle from the turtle blueprint, but what if we need more turtles? How do we get hold of them? Well, we know that we can use a class or a blueprint to define what a turtle should appear like and how it should behave. So what it has and what it can do. Now, we can then take this class and construct an actual turtle object from it which is then doing all the drawing and walking around on the screen. So this is what the code has looked like so far. We have Timmy which is our turtle object, and turtle coming from the turtle module is the class which is used to construct this object. But that&#x27;s not the end of the story because the whole reason why we can have these blueprints is so we can make more objects. So, we&#x27;re not limited to just one turtle object. We can create as many as we need in the same way that we have created Timmy. We create Tommy, Johnny, Jenny, and Benny. Even though both Timmy and Tommy are turtle objects, they actually function completely independent of each other. So in programming, we would say that they are each a separate instance. So what does that mean? Well, that means that they&#x27;re each an example of the turtle object. So just as you and I are both examples of human objects, Timmy and Tommy are both examples of turtle objects. And that means that at any moment in time, they could have different attributes and they could be doing different things. So that means, for example, Timmy could have his color set to green while Tommy could have its color set to something completely different, like purple. Now the fact that each of these objects can have different attributes and can be performing different methods at any one time in programming is known as their state. So the state of Timmy&#x27;s color attribute is green and Tommy&#x27;s color attribute is purple. So in this case, they have different state in terms of their attribute or their appearance. But they can also have different state in terms of whether if they are doing something. For example, Timmy could be asked to move forwards while Tommy is staying completely stationary. So Timmy is in the middle of a method call whereas Tommy is not doing anything at all. Now in the next lesson, we&#x27;re going to be building out our turtle racing game and we&#x27;re going to see this in action. The idea that you could have separate versions of the same object each with a different state and acting completely independently from each other in order to race against each other. So don&#x27;t worry if this doesn&#x27;t make sense a hundred percent just yet. Head over to the next lesson and we&#x27;re going to start writing some real code to better understand this concept.
+
+---
+
+### Key Concepts
+
+| # | Concept | Description |
+|---|---------|-------------|
+| 1 | **Class definitions (class)** | Introduced/used in this lecture |
+| 2 | **while loops** | Introduced/used in this lecture |
+| 3 | **if/elif/else conditionals** | Introduced/used in this lecture |
+
+---
+
+### Next Steps
+
+The objective is we want to be able to build a turtle race, where we have multiple turtles to run along a line and then see who actually reaches the finish line first. Now here&#x27;s a question though. We know how to build one turtle from the turtle blueprint, but what if we need more turtles? How do we get hold of them? Well, we know that we can use a class or a blueprint to define what a turtle should appear like and how it should behave. So what it has and what it can do. Now, we can then take this class and construct an actual turtle object from it which is then doing all the drawing and walking around on the screen. So this is what the code has looked like so far. We have Timmy which is our turtle object, and turtle coming from the turtle module is the class which is used to construct this object. But that&#x27;s not the end of the story because the whole reason why we can have these blueprints is so we can make more objects. So, we&#x27;re not limited to just one turtle object. We can create as many as we need in the same way that we have created Timmy. We create Tommy, Johnny, Jenny, and Benny. Even though both Timmy and Tommy are turtle objects, they actually function completely independent of each other. So in programming, we would say that they are each a separate instance. So what does that mean? Well, that means that they&#x27;re each an example of the turtle object. So just as you and I are both examples of human objects, Timmy and Tommy are both examples of turtle objects. And that means that at any moment in time, they could have different attributes and they could be doing different things. So that means, for example, Timmy could have his color set to green while Tommy could have its color set to something completely different, like purple. Now the fact that each of these objects can have different attributes and can be performing different methods at any one time in programming is known as their state. So the state of Timmy&#x27;s color attribute is green and Tommy&#x27;s color attribute is purple. So in this case, they have different state in terms of their attribute or their appearance. But they can also have different state in terms of whether if they are doing something. For example, Timmy could be asked to move forwards while Tommy is staying completely stationary. So Timmy is in the middle of a method call whereas Tommy is not doing anything at all. Now in the next lesson, we&#x27;re going to be building out our turtle racing game and we&#x27;re going to see this in action. The idea that you could have separate versions of the same object each with a different state and acting completely independently from each other in order to race against each other. So don&#x27;t worry if this doesn&#x27;t make sense a hundred percent just yet. Head over to the next lesson and we&#x27;re going to start writing some real code to better understand this concept.

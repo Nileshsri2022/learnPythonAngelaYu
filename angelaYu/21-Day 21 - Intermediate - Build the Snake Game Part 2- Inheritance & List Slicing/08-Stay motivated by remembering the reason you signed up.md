@@ -1,0 +1,26 @@
+# 🔧 Stay motivated by remembering the reason you signed up
+
+---
+
+### Overview
+
+**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
+**Chapter:** Day 21 - Intermediate - Build the Snake Game Part 2: Inheritance & List Slicing
+**Lecture:** Stay motivated by remembering the reason you signed up
+**Level:** Intermediate
+
+---
+
+### Summary
+
+Hey, well done on completing day 21. Now you&#x27;re getting to the point of the course where you&#x27;re going to have to start bringing some more of your own motivation, because as we go through this, this is a marathon. It&#x27;s not a sprint. If it was a five hour course, you could sprint through it in one day. But that&#x27;s not how we become Python developers. It is a marathon and understanding that will be key. So what I need you to do is to think about all the reasons why you must do this. You have to get leveraged. You have to think about why is it that I want to achieve this goal? Why is it that I want to become a python developer? Why is it that I want to complete 100 days? And the reasons might be things like I want to be able to provide a better future for my family, or it might be because I really want to build this project and I want it so much to exist. That was it for me, anyways. When I first started learning to code, it was because I just had this idea and it had to be alive, it had to be built. So it didn&#x27;t matter what hardships I had to go through, what hurdles I need to jump through, how many lessons on programming I need to take, I was able to motivate myself because I knew what I wanted at the end of that path. So focus on what that is for you. Think about what is that goal and how much you want it, and think back to that every time you start on this journey to continue motivating yourself.
+
+---
+
+### Key Concepts
+
+| # | Concept | Description |
+|---|---------|-------------|
+| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+
+---

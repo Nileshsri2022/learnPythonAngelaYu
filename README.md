@@ -8,7 +8,7 @@ Personal notes and transcripts for learning Python with **Angela Yu**, following
 
 ```
 angelaYu/
-├── transcripts/              # Full course transcripts, one folder per day
+├── Day 1 … Day 85/          # Per-day lecture notes (.md) derived from transcripts
 │   ├── 01-Day 1 - Beginner - Working with Variables in Python to Manage Data
 │   ├── 02-Day 2 - Beginner - Understanding Data Types and How to Manipulate Strings
 │   ├── …
@@ -16,9 +16,16 @@ angelaYu/
 │   ├── 82-Day 82 - Professional Portfolio Project - [Python Scripting]
 │   ├── 83-Day 83 - Professional Portfolio Project - [Python Web Development]
 │   ├── 84-Final Stretch
-│   ├── 85-Bonus Lecture- Succeed in the Age of AI
-│   └── _full-transcript.txt  # Complete concatenated transcript
+│   └── 85-Bonus Lecture- Succeed in the Age of AI
+└── transcripts/              # Full course transcripts, one folder per day
+    ├── 01-Day 1 … 85-Bonus Lecture/
+    └── _full-transcript.txt  # Complete concatenated transcript
 ```
+
+**Lecture notes** (367 `.md` files) are structured study notes with overview,
+summary, key concepts table, and detailed notes — derived from the raw
+transcripts. **Transcripts** (604 `.txt` files) are the verbatim word-for-word
+text of each lecture.
 
 ## Topics covered
 
