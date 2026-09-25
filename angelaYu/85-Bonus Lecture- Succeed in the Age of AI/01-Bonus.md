@@ -1,27 +1,61 @@
-# 📖 Bonus
+Here is a structured breakdown of this bonus lecture.
 
 ---
 
-### Overview
+### 1. What It Is
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Bonus Lecture: Succeed in the Age of AI
-**Lecture:** Bonus
-**Level:** N/A
+A short closing lecture introducing Angela's follow-on course, **Succeed in the Age of AI**.
+The pitch, in one line: *productivity isn't about doing more — it's about becoming more.*
 
 ---
 
-### Summary
+### 2. The Premise
 
-Have you ever felt like you have so much potential, but your days are somehow just slipping by? You know, there&#x27;s a version of you who&#x27;s thriving, focused, unstoppable on top of your game. You just need the right system to bring that out. My name is Angela. You? I worked as a runway model while I was coming top of my class in medical school. I built a startup while working night shifts in the hospital as a surgeon, and today I&#x27;m one of Udemy&#x27;s top instructors, having taught over 3.2 million people across the world how to code. None of that came from working harder. It came from learning how to design achievement, using science, structure and now AI. In this course, I&#x27;ll share with you the frameworks and tools that I have built up over the years to turn ambition into achievement. How to focus when everything feels urgent. How to use AI tools to think clearer and work smarter. How I manage to triple my coding productivity as a software engineer by incorporating the latest and best practices for using AI, and how to build habits that compound into lasting success. Because productivity isn&#x27;t about doing more, it&#x27;s about becoming more. You&#x27;ll learn how to use AI as your strategist, your thinking partner, your coach, whether you&#x27;re coding, studying, or chasing that next big goal at work. This course is going to bridge the gap between who you are and who you know you could be. You already have the ability. Now let&#x27;s turn it into results. Join me in the age of AI and let&#x27;s unlock your highest potential.
+The instructor's own story: top of her medical class while working as a runway model,
+building a startup during night shifts as a surgeon, and now teaching over 3.2 million
+students. Her claim is that none of it came from simply working harder — it came from
+**designing achievement**: science, structure and now AI.
+
+---
+
+### 3. What the Course Covers
+
+| Topic | Promise |
+|-------|---------|
+| Focus | how to concentrate when everything feels urgent |
+| AI as a thinking partner | use AI to think more clearly, not just type faster |
+| AI in engineering | how to triple coding productivity with current AI practices |
+| Habits | build routines that compound into lasting results |
+| Frameworks | turn ambition into achievement with repeatable systems |
 
 ---
 
-### Key Concepts
+### 4. What It Means for You As a Developer
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **while loops** | Introduced/used in this lecture |
+Even without taking the course, the ideas map directly onto your Python work:
+
+* **Use AI for the mechanical, keep the logic for yourself** — the same instinct as letting
+  a linter catch syntax so you can think about design.
+* **AI is a tutor, not an oracle** — ask it to explain, review, and suggest tests; verify
+  everything it produces (a hallucinated function that "looks right" is the classic trap).
+* **Automate the boring** — the entire back half of this course was about making the
+  repetitive parts of your job disappear; AI extends that to code generation, refactoring
+  and documentation.
+* **Systems beat willpower** — scheduled focus blocks, a "next action" note, small daily
+  commits.
 
 ---
+
+### 5. Closing Thought
+
+The course ends here, but the loop it taught continues: pick a project, break it into
+pieces, learn what you need, build, deploy, share — and repeat with better tools each time.
+
+---
+
+### Summary Checklist
+
+1. The bonus lecture pitches *Succeed in the Age of AI*: focus, AI workflow, habits, systems.
+2. Productivity means designing achievement, not working longer.
+3. As a developer: AI for mechanical work and review, you for logic and verification.
+4. The loop from this course — project → break down → learn → build → ship — never expires.
