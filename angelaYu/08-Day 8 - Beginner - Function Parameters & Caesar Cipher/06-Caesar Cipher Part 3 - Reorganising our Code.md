@@ -1,36 +1,95 @@
-# 🐍 Caesar Cipher Part 3 - Reorganising our Code
+Here is a structured breakdown of Caesar Cipher Part 3 — reorganising the code.
 
 ---
 
-### Overview
+### 1. The Three TODOs
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 8 - Beginner - Function Parameters & Caesar Cipher
-**Lecture:** Caesar Cipher Part 3 - Reorganising our Code
-**Level:** Beginner
-
----
-
-### Summary
-
-Now we&#x27;re really close to the finish line. I know today is quite a long day, but just bear in there, you&#x27;re going to get there really, really soon. So the last part of our Caesar Cipher just has three TODOs. One is we need to import and print the logo from this file, art.py. And then we have to figure out, well, what happens if the user enters a number or space. So if you take a look at the final, demo and we were to write a message, say &quot;hello,&quot; and then we add some numbers or some symbols, we don&#x27;t want those to be lost when we encode the message, right? So what we want instead is we only want to encode the alphabetical letters. And then for anything that is not within the alphabet, we just keep it as it is and add it to the final encoded result. This way we can encode and decode and keep any of these characters the user types in. And then finally we need a way for our program to rerun once the user is done with encoding or decoding. So that way we ask them, &quot;Type &#x27;yes&#x27; if you want to go again. Otherwise type &#x27;no&#x27;.&quot; And if they type yes then they get to encode_or_decode again. And once they&#x27;re actually done then they could type &#x27;no&#x27;, and the program just says, &#x27;Goodbye&#x27; like a good little robot. So those are the three TODOs, have a look in the Description box, have a look at the hints if you need them, and go ahead and pause the video and complete the final part of the Caesar Cipher project. Okay, hopefully, it was straightforward and you&#x27;re just here to check the solution. If not, don&#x27;t worry, I&#x27;m going to walk through everything and explain everything anyways, so hopefully it&#x27;ll be a lot more clear afterwards. So TODO one is pretty simple, All we need to do is import the module art and then just simply print(art.logo), which is the name that we&#x27;ve got in here. That&#x27;s the name of the variable. And that&#x27;s going to print out that Caesar Cipher logo with ASCII art every time we start our program. Now you can also do the previous from import, but this is also clear enough as well. Now TODO Number 2, we need to figure out what to do if the user enters a number, or symbol, or space, and how can we keep hold of it when they actually type that in. So let&#x27;s think about where we would make that differentiation every time we loop through each of the letters, if that letter that we&#x27;re looping through from the original_text happens to be not something that exists in this list of alphabet, then it&#x27;s probably a symbol or a number or something that we can&#x27;t shift very easily. So then we probably want to bypass the rest of this and do something separate. So what we can do is we can say if the letter is not in the alphabet list, then in that case, all we&#x27;re going to do is simply take the output_text += the current letter. And this will add whatever letter it is that we need to skip into the output_text as its original format. But then we can have an else statement and have the rest of this carryout if this is not the case, which means the letter is in the alphabet and we can in fact shift it. Now, another way that we could do this is we could add a bunch of symbols and numbers to our alphabet list, and instead of calling it alphabet, call it something else, and that way we can be more inclusive. But it&#x27;s quite hard to include all of the symbols and all of the numbers. And just to keep it simple for this practice exercise, this is probably the most straightforward solution. So now we&#x27;re on to TODO Number 3, can you figure out a way to restart the Cipher program. So as previous, the way that we need to do this is to use a while loop. So if we have some sort of variable let&#x27;s call it should_continue, and we set it to true because normally while the program is going, it should in fact continue asking the user, do you want to go again? Do you want to go again? But sometimes the user will say, no. So let&#x27;s go ahead and create a while loop that checks for this variable. And if it is the case, then we&#x27;re going to keep running all of these inputs, asking them direction, text, shift and also running our ceasar() function. But then at the end of all of that, once we&#x27;ve given them the encoded_or_decoded text and that caesar() function has come to an end, then the next thing we&#x27;re going to do is we&#x27;re going to check with them whether if they want to go again. So I&#x27;m going to copy this message and add it into an input. So in this input, I&#x27;m going to go ahead and change it to .lower() to make sure that we&#x27;ve got the...whatever it is they type capital, or no capital set to the same thing so that we can check it more easily. And I&#x27;m also just going to add a \n so that our cursor goes on to the next line when they do have to type, so that its cursor here rather than cursor here. Now finally I&#x27;m going to save that input into a variable called restart. And now we can check the value of that restart. If restart is equal to &quot;no&quot;, well, in that case, we can change our should continue to False. And then we can print (&quot;Goodbye&quot;). And if the restart is any other value. So &#x27;yes&#x27;, or capital &#x27;Yes&#x27;, or whichever then this if statement is skipped, and our while loop loops back up from the start. So that is how we can make sure that our code continues asking the user for a message and their encoding or decoding. And it will continue forever until they basically say, &#x27;no&#x27;. Now, if you&#x27;ve been following my code all along, I want you to try and test your code right now repeatedly, and see if you can spot a crucial bug. Now it relates to this caesar() function, and I want you to see if you can, through testing, figure out what is wrong and solve the issue. So pause the video now. So did you manage to find the problem? Here, let me show you. So if I go ahead and start encoding and we decide to type a and b, and then type the shift to go up by 2, so that becomes cd, which is great. So let&#x27;s go again. And let&#x27;s now type decode and again use the previous cyber_text which is CD. And if we take our cipher_text and shift it down by 2, we should expect ab, which is our original message which we encoded up here, but instead we get an f. So what is going on? Well, if you debug either using the debugger or your own knowledge, you&#x27;ll find that this line here is the culprit. We&#x27;re determining the shift-amount by shifting it back to the negative, and that&#x27;s what happens when we do -1. But this is inside the for loop, which means that it&#x27;s going to happen and flip every single time the for loop runs. So in order to fix this, what we need to do is just to take it out of the for loop and then put it above the for loop. And now if we retest, you&#x27;ll see we&#x27;ve managed to solve that problem. So going up works, and going down also works. So that is all there is to it to this three-part Caesar Cipher project. And of course, as always with all of these projects, feel free to add modifications, tackle any edge cases, there might be things that I haven&#x27;t thought of, that you&#x27;ve thought of, it might be improvements you want to make. The program is yours, so you can do whatever it is you want to do to improve it. And hopefully in the process, you&#x27;ve managed to solidify and revise some of the topics that we&#x27;ve learned in today and previous lessons. And if it was really, really hard, then that&#x27;s a good thing. That means you really struggled and you&#x27;re building those programming muscles, right? There&#x27;s no point going to the gym and lifting one kilogram weights. It&#x27;s not going to make you very muscular. We got to push ourselves and this is okay. So I hope you had fun with me today and I look forward to seeing you tomorrow.
+1. **Import and print the logo** from `art.py` — your own file as a module (Day 4/7 skill).
+2. **Handle non-letters**: numbers, spaces and symbols should pass through *unchanged*
+   instead of crashing `.index()`.
+3. **Merge** `encrypt()` and `decrypt()` into one `caesar()` function — *refactoring*.
 
 ---
 
-### Key Concepts
+### 2. Merging the Two Functions
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **print() function** | Introduced/used in this lecture |
-| 2 | **while loops** | Introduced/used in this lecture |
-| 3 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 4 | **Module imports** | Introduced/used in this lecture |
-| 5 | **String .lower() method** | Introduced/used in this lecture |
+The only difference was `+` vs `-`. Fold the direction into the shift:
+
+```python
+def caesar(start_text, shift_amount, cipher_direction):
+    end_text = ""
+    if cipher_direction == "decode":
+        shift_amount *= -1          # backwards for decode
+    for letter in start_text:
+        position = alphabet.index(letter)
+        new_position = (position + shift_amount) % 26
+        end_text += alphabet[new_position]
+    print(f"Here's the {cipher_direction}d result: {end_text}")
+```
 
 ---
 
-### 🏋️ Practice Exercise
+### 3. Passing Through Symbols
 
-Now we&#x27;re really close to the finish line. I know today is quite a long day, but just bear in there, you&#x27;re going to get there really, really soon. So the last part of our Caesar Cipher just has three TODOs. One is we need to import and print the logo from this file, art.py. And then we have to figure out, well, what happens if the user enters a number or space. So if you take a look at the final, demo and we were to write a message, say &quot;hello,&quot; and then we add some numbers or some symbols, we don&#x27;t want those to be lost when we encode the message, right? So what we want instead is we only want to encode the alphabetical letters. And then for anything that is not within the alphabet, we just keep it as it is and add it to the final encoded result. This way we can encode and decode and keep any of these characters the user types in. And then finally we need a way for our program to rerun once the user is done with encoding or decoding. So that way we ask them, &quot;Type &#x27;yes&#x27; if you want to go again. Otherwise type &#x27;no&#x27;.&quot; And if they type yes then they get to encode_or_decode again. And once they&#x27;re actually done then they could type &#x27;no&#x27;, and the program just says, &#x27;Goodbye&#x27; like a good little robot. So those are the three TODOs, have a look in the Description box, have a look at the hints if you need them, and go ahead and pause the video and complete the final part of the Caesar Cipher project. Okay, hopefully, it was straightforward and you&#x27;re just here to check the solution. If not, don&#x27;t worry, I&#x27;m going to walk through everything and explain everything anyways, so hopefully it&#x27;ll be a lot more clear afterwards. So TODO one is pretty simple, All we need to do is import the module art and then just simply print(art.logo), which is the name that we&#x27;ve got in here. That&#x27;s the name of the variable. And that&#x27;s going to print out that Caesar Cipher logo with ASCII art every time we start our program. Now you can also do the previous from import, but this is also clear enough as well. Now TODO Number 2, we need to figure out what to do if the user enters a number, or symbol, or space, and how can we keep hold of it when they actually type that in. So let&#x27;s think about where we would make that differentiation every time we loop through each of the letters, if that letter that we&#x27;re looping through from the original_text happens to be not something that exists in this list of alphabet, then it&#x27;s probably a symbol or a number or something that we can&#x27;t shift very easily. So then we probably want to bypass the rest of this and do something separate. So what we can do is we can say if the letter is not in the alphabet list, then in that case, all we&#x27;re going to do is simply take the output_text += the current letter. And this will add whatever letter it is that we need to skip into the output_text as its original format. But then we can have an else statement and have the rest of this carryout if this is not the case, which means the letter is in the alphabet and we can in fact shift it. Now, another way that we could do this is we could add a bunch of symbols and numbers to our alphabet list, and instead of calling it alphabet, call it something else, and that way we can be more inclusive. But it&#x27;s quite hard to include all of the symbols and all of the numbers. And just to keep it simple for this practice exercise, this is probably the most straightforward solution. So now we&#x27;re on to TODO Number 3, can you figure out a way to restart the Cipher program. So as previous, the way that we need to do this is to use a while loop. So if we have some sort of variable let&#x27;s call it should_continue, and we set it to true because normally while the program is going, it should in fact continue asking the user, do you want to go again? Do you want to go again? But sometimes the user will say, no. So let&#x27;s go ahead and create a while loop that checks for this variable. And if it is the case, then we&#x27;re going to keep running all of these inputs, asking them direction, text, shift and also running our ceasar() function. But then at the end of all of that, once we&#x27;ve given them the encoded_or_decoded text and that caesar() function has come to an end, then the next thing we&#x27;re going to do is we&#x27;re going to check with them whether if they want to go again. So I&#x27;m going to copy this message and add it into an input. So in this input, I&#x27;m going to go ahead and change it to .lower() to make sure that we&#x27;ve got the...whatever it is they type capital, or no capital set to the same thing so that we can check it more easily. And I&#x27;m also just going to add a \n so that our cursor goes on to the next line when they do have to type, so that its cursor here rather than cursor here. Now finally I&#x27;m going to save that input into a variable called restart. And now we can check the value of that restart. If restart is equal to &quot;no&quot;, well, in that case, we can change our should continue to False. And then we can print (&quot;Goodbye&quot;). And if the restart is any other value. So &#x27;yes&#x27;, or capital &#x27;Yes&#x27;, or whichever then this if statement is skipped, and our while loop loops back up from the start. So that is how we can make sure that our code continues asking the user for a message and their encoding or decoding. And it will continue forever until they basically say, &#x27;no&#x27;. Now, if you&#x27;ve been following my code all along, I want you to try and test your code right now repeatedly, and see if you can spot a crucial bug. Now it relates to this caesar() function, and I want you to see if you can, through testing, figure out what is wrong and solve the issue. So pause the video now. So did you manage to find the problem? Here, let me show you. So if I go ahead and start encoding and we decide to type a and b, and then type the shift to go up by 2, so that becomes cd, which is great. So let&#x27;s go again. And let&#x27;s now type decode and again use the previous cyber_text which is CD. And if we take our cipher_text and shift it down by 2, we should expect ab, which is our original message which we encoded up here, but instead we get an f. So what is going on? Well, if you debug either using the debugger or your own knowledge, you&#x27;ll find that this line here is the culprit. We&#x27;re determining the shift-amount by shifting it back to the negative, and that&#x27;s what happens when we do -1. But this is inside the for loop, which means that it&#x27;s going to happen and flip every single time the for loop runs. So in order to fix this, what we need to do is just to take it out of the for loop and then put it above the for loop. And now if we retest, you&#x27;ll see we&#x27;ve managed to solve that problem. So going up works, and going down also works. So that is all there is to it to this three-part Caesar Cipher project. And of course, as always with all of these projects, feel free to add modifications, tackle any edge cases, there might be things that I haven&#x27;t thought of, that you&#x27;ve thought of, it might be improvements you want to make. The program is yours, so you can do whatever it is you want to do to improve it. And hopefully in the process, you&#x27;ve managed to solidify and revise some of the topics that we&#x27;ve learned in today and previous lessons. And if it was really, really hard, then that&#x27;s a good thing. That means you really struggled and you&#x27;re building those programming muscles, right? There&#x27;s no point going to the gym and lifting one kilogram weights. It&#x27;s not going to make you very muscular. We got to push ourselves and this is okay. So I hope you had fun with me today and I look forward to seeing you tomorrow.
+Skip anything that isn't in the alphabet:
+
+```python
+    for char in start_text:
+        if char in alphabet:
+            position = alphabet.index(char)
+            new_position = (position + shift_amount) % 26
+            end_text += alphabet[new_position]
+        else:
+            end_text += char       # keep spaces, numbers, symbols as-is
+```
 
 ---
+
+### 4. Full Runnable Solution
+
+```python
+import caesar_art   # or: from art import logo
+
+print(caesar_art.logo)
+
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+            'q','r','s','t','u','v','w','x','y','z']
+
+def caesar(start_text, shift_amount, cipher_direction):
+    end_text = ""
+    if cipher_direction == "decode":
+        shift_amount *= -1
+    for char in start_text:
+        if char in alphabet:
+            new_position = (alphabet.index(char) + shift_amount) % 26
+            end_text += alphabet[new_position]
+        else:
+            end_text += char
+    print(f"Here's the {cipher_direction}d result: {end_text}")
+
+should_continue = True
+while should_continue:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n")) % 26
+    caesar(start_text=text, shift_amount=shift, cipher_direction=direction)
+
+    restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n")
+    if restart == "no":
+        should_continue = False
+        print("Goodbye")
+```
+
+> **Tip:** `shift % 26` also fixes shifts larger than 26 — the user can type `200`
+> and the maths still works. A `while` loop around the program lets users encode
+> repeatedly without restarting.
+
+---
+
+### Summary Checklist
+
+1. Refactoring = restructuring code without changing behaviour — here, merging
+   two near-identical functions.
+2. `shift_amount *= -1` makes one function serve both directions.
+3. Non-alphabet characters pass through with an `if char in alphabet` check.
+4. Runnable version: [`caesar_cipher.py`](caesar_cipher.py)

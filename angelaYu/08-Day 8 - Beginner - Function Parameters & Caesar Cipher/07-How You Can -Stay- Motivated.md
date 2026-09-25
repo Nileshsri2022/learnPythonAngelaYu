@@ -1,22 +1,25 @@
-# 🐍 How You Can *Stay* Motivated
+Here is a short wrap-up note for this end-of-Day-8 lecture.
 
 ---
 
-### Overview
+### 1. The Message
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 8 - Beginner - Function Parameters & Caesar Cipher
-**Lecture:** How You Can *Stay* Motivated
-**Level:** Beginner
+Somewhere along a 100-day journey your **motivation will dip** — maybe now, maybe later.
+The antidote is reconnecting with *why you started*:
 
----
-
-### Summary
-
-Hey! Well done for completing Day 8. Now, somewhere along this journey, you will feel a dip in your motivation. It might happen around now, it might happen later. But what you got to think about is what really motivates you. Why are you doing this? What is learning this skill going to do for you? What is it going to do for your family? It might be that you want to get a better paying job. It might be that you just hate your current job and you want to do something that you actually enjoy, like programming, or maybe you want to start your own business and you need the skills to be able to build the product that you&#x27;re going to sell. So have a think about what drives you, why you&#x27;re doing this, write it down on a piece of paper, put it up on a wall so that you can see it every day when you wake up and maybe comment in the box below it so that other people can cheer you on and you can be motivated and also motivate others. So have a think about that and I&#x27;ll see you tomorrow.
+* A better-paying job? Escaping a job you hate? Building your own business?
+* Whatever it is, write it down — you'll need it on the hard days.
 
 ---
 
-### Next Steps
+### 2. Practical Advice
 
-Hey! Well done for completing Day 8. Now, somewhere along this journey, you will feel a dip in your motivation. It might happen around now, it might happen later. But what you got to think about is what really motivates you. Why are you doing this? What is learning this skill going to do for you? What is it going to do for your family? It might be that you want to get a better paying job. It might be that you just hate your current job and you want to do something that you actually enjoy, like programming, or maybe you want to start your own business and you need the skills to be able to build the product that you&#x27;re going to sell. So have a think about what drives you, why you&#x27;re doing this, write it down on a piece of paper, put it up on a wall so that you can see it every day when you wake up and maybe comment in the box below it so that other people can cheer you on and you can be motivated and also motivate others. So have a think about that and I&#x27;ll see you tomorrow.
+* Remember your reason before you quit.
+* Small daily progress compounds; motivation follows action, not the other way round.
+
+---
+
+### Summary Checklist
+
+1. Motivation dips are normal — plan for them.
+2. Your "why" is the fuel; keep it visible. 🔥

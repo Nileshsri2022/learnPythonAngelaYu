@@ -1,22 +1,40 @@
-# 🐍 Day 8 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 8 goals and the project you'll have built by the end of the day.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 8
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 8 - Beginner - Function Parameters & Caesar Cipher
-**Lecture:** Day 8 Goals: what we will make by the end of the day
-**Level:** Beginner
-
----
-
-### Summary
-
-Hey, guys. Welcome to Day 8 of 100 Days of Code. And today we&#x27;re going to be looking at functions that allow you to give them inputs. And once we&#x27;ve learned all of that and we&#x27;ve grasped it, then we&#x27;re going to be building a cipher program. And the cypher program is called Caesar Cipher. So Caesar cipher is a really quite ancient type of encryption. So the story goes that when Caesar wanted to send highly sensitive military messages, he would encode his message so that each letter would be shifted by a predetermined amount. So let&#x27;s say that we wanted to encode the letter A and we shift it by three. Well then A becomes D, B becomes E, and so on and so forth. And this is what the final version will look like. Let&#x27;s go ahead and encode something. So I&#x27;m going to type encode to start encrypting a message, and then I&#x27;m going to type my message with no spaces in between. And then I&#x27;m going to give it a shift number. So this is going to be a number that the recipient and I are going to agree on so that we know how to decode the message. Let&#x27;s put that at 9. And then it&#x27;s going to give us the encoded results which is something like this. And this will be the message that I&#x27;m going to transmit to my friend, either through a letter or through an email. And it means that whenever somebody comes across this message, they won&#x27;t really know what&#x27;s going on unless they knew the shift number. So let&#x27;s say that I am my friend. I&#x27;ve just received this message, and I&#x27;m going to go ahead and type &#x27;yes&#x27; to go again, and in this case I&#x27;m going to decode instead of encoding. And then I&#x27;m going to type out the message from previous and hit Enter. And of course the shift number is 9, and now I have the decoded result which I can read and understand. By the end of today, you would have learned about functions with inputs, you&#x27;ll know what the difference is between arguments and parameters. Once you&#x27;re ready, once you&#x27;re loaded up on coffee, then head over to the next lesson, and let&#x27;s get started.
+* **Functions with inputs** — parameters and arguments
+* **Positional vs. keyword arguments**
+* Applying both to build a real program step by step (encryption → decryption → refactor)
 
 ---
 
-### Next Steps
+### 2. The End-of-Day Project: Caesar Cipher
 
-Hey, guys. Welcome to Day 8 of 100 Days of Code. And today we&#x27;re going to be looking at functions that allow you to give them inputs. And once we&#x27;ve learned all of that and we&#x27;ve grasped it, then we&#x27;re going to be building a cipher program. And the cypher program is called Caesar Cipher. So Caesar cipher is a really quite ancient type of encryption. So the story goes that when Caesar wanted to send highly sensitive military messages, he would encode his message so that each letter would be shifted by a predetermined amount. So let&#x27;s say that we wanted to encode the letter A and we shift it by three. Well then A becomes D, B becomes E, and so on and so forth. And this is what the final version will look like. Let&#x27;s go ahead and encode something. So I&#x27;m going to type encode to start encrypting a message, and then I&#x27;m going to type my message with no spaces in between. And then I&#x27;m going to give it a shift number. So this is going to be a number that the recipient and I are going to agree on so that we know how to decode the message. Let&#x27;s put that at 9. And then it&#x27;s going to give us the encoded results which is something like this. And this will be the message that I&#x27;m going to transmit to my friend, either through a letter or through an email. And it means that whenever somebody comes across this message, they won&#x27;t really know what&#x27;s going on unless they knew the shift number. So let&#x27;s say that I am my friend. I&#x27;ve just received this message, and I&#x27;m going to go ahead and type &#x27;yes&#x27; to go again, and in this case I&#x27;m going to decode instead of encoding. And then I&#x27;m going to type out the message from previous and hit Enter. And of course the shift number is 9, and now I have the decoded result which I can read and understand. By the end of today, you would have learned about functions with inputs, you&#x27;ll know what the difference is between arguments and parameters. Once you&#x27;re ready, once you&#x27;re loaded up on coffee, then head over to the next lesson, and let&#x27;s get started.
+One of the oldest encryption schemes, used by Julius Caesar for military messages:
+**shift each letter of the alphabet by a predetermined amount**.
+
+```
+Type 'encode' to encrypt, type 'decode' to decrypt:
+encode
+Type your message:
+hello
+Type the shift number:
+5
+Here is the encoded result: mjqqt
+```
+
+Built in three parts:
+
+1. **Encryption** — shift letters forward
+2. **Decryption** — shift letters backward
+3. **Refactoring** — merge both into one `caesar()` function + handle symbols/numbers
+
+---
+
+### Summary Checklist
+
+1. Parameters let the *same* function work with *different* data.
+2. Positional order matters; keyword arguments don't.
+3. You'll combine them into a working **encode/decode** app.
