@@ -1,30 +1,28 @@
-# 📖 What are Application Programming Interfaces (APIs)?
+Here is a structured breakdown of this lesson on what APIs are.
 
 ---
 
-### Overview
+### 1. The Restaurant Analogy
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 33 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier
-**Lecture:** What are Application Programming Interfaces (APIs)?
-**Level:** Intermediate+ API Endpoints & API Parameters
+An **API (Application Programming Interface)** is the *waiter* between your program
+(the customer) and another system (the kitchen):
 
----
+* You order via a **request** (the menu = documented options).
+* The kitchen prepares it (their data/service/code).
+* The waiter returns a **response**.
 
-### Summary
-
-First, let&#x27;s take a look at what application programming interfaces are and then we&#x27;ll see how we can use them to start pulling in some data from the internet. So when you&#x27;re browsing the web, you might&#x27;ve realized that there&#x27;s a lot of websites out there that carry a whole bunch of data. For example, you could go onto Yahoo weather and see next week&#x27;s weather predictions for any city in the world, you could go onto Coinbase and see what is the current market value of various cryptocurrencies like Bitcoin and Ethereum. You can also go onto the MBA website and look at various stats about your favorite basketball players. Now, what if we wanted to use the data that they have? How can we tap into it and use it in our own programs? Well, that&#x27;s where application programming interfaces come into play. They all are a set of commands, functions, protocols, and objects that programmers can use to create software or interact with an external system. In the upcoming lessons what we&#x27;re going to be focusing on is this interacting with external systems. Namely, we&#x27;re going to try and interact with various websites and pull live data from those websites. Essentially, the API is an interface or rather a sort of barrier between your program and an external system. And what you&#x27;re trying to do is you&#x27;re trying to use the rules that the API has prescribed to make a request to the external system for some piece of data. And if you have structured your request according to all of the requirements that this external system has set out in their API, then they will respond to you appropriately and give you the data that you want. But if you don&#x27;t follow the rules, then your request will be invalid and they will tell you to go away. So if we think about the websites we saw before, Yahoo weather has a Yahoo weather API which you can tap into using your programs or apps and get things like 10-day forecast, wind, atmosphere, astronomy conditions, and Coinbase has their own API, which lets you tap into the current live prices of various cryptocurrencies. And of course, the MBA also has an API for you to be able to get various information that you&#x27;re interested in on leagues, teams, players, games and a whole bunch more. So essentially, you can imagine these websites as the sort of restaurant, right? And the data that powers these websites as the kitchen behind the scenes. We can&#x27;t really go to a restaurant as a member of the public and just go in to the kitchen and start raiding their cupboards. You can&#x27;t, you know, imagine going to your favorite Japanese restaurant and heading straight into the kitchen for some of your favorite Kewpie mayonnaise. That&#x27;s not really appropriate. In a restaurant we have a menu and this menu is kind of like the interface between you and the restaurant. It&#x27;s the thing that tells you what you can order and what you can&#x27;t. So maybe you can get a cake, a sandwich or tea from the restaurant, but you can&#x27;t just go into the kitchen and demand whatever it is that you want. Essentially an API is exactly that. It&#x27;s the menu. It&#x27;s all of the things that you can do to interact with an external system such as a website that carries data like Yahoo weather or the MBA website. In the coming lessons we&#x27;re going to be looking at how we can read the documentation for the API and interact with them to be able to pull pieces of data that we want in the moment that we want it. So for all of that and more, I&#x27;ll see on the next lesson.
+You never see the kitchen's internals — just the agreed interface.
 
 ---
 
-### Key Concepts
+### 2. Why APIs Rule the Web
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+Weather, maps, payments, AI models, ISS positions — apps don't rebuild these; they call
+an API. Your Python code becomes a *client* that consumes anyone's service over HTTP.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-First, let&#x27;s take a look at what application programming interfaces are and then we&#x27;ll see how we can use them to start pulling in some data from the internet. So when you&#x27;re browsing the web, you might&#x27;ve realized that there&#x27;s a lot of websites out there that carry a whole bunch of data. For example, you could go onto Yahoo weather and see next week&#x27;s weather predictions for any city in the world, you could go onto Coinbase and see what is the current market value of various cryptocurrencies like Bitcoin and Ethereum. You can also go onto the MBA website and look at various stats about your favorite basketball players. Now, what if we wanted to use the data that they have? How can we tap into it and use it in our own programs? Well, that&#x27;s where application programming interfaces come into play. They all are a set of commands, functions, protocols, and objects that programmers can use to create software or interact with an external system. In the upcoming lessons what we&#x27;re going to be focusing on is this interacting with external systems. Namely, we&#x27;re going to try and interact with various websites and pull live data from those websites. Essentially, the API is an interface or rather a sort of barrier between your program and an external system. And what you&#x27;re trying to do is you&#x27;re trying to use the rules that the API has prescribed to make a request to the external system for some piece of data. And if you have structured your request according to all of the requirements that this external system has set out in their API, then they will respond to you appropriately and give you the data that you want. But if you don&#x27;t follow the rules, then your request will be invalid and they will tell you to go away. So if we think about the websites we saw before, Yahoo weather has a Yahoo weather API which you can tap into using your programs or apps and get things like 10-day forecast, wind, atmosphere, astronomy conditions, and Coinbase has their own API, which lets you tap into the current live prices of various cryptocurrencies. And of course, the MBA also has an API for you to be able to get various information that you&#x27;re interested in on leagues, teams, players, games and a whole bunch more. So essentially, you can imagine these websites as the sort of restaurant, right? And the data that powers these websites as the kitchen behind the scenes. We can&#x27;t really go to a restaurant as a member of the public and just go in to the kitchen and start raiding their cupboards. You can&#x27;t, you know, imagine going to your favorite Japanese restaurant and heading straight into the kitchen for some of your favorite Kewpie mayonnaise. That&#x27;s not really appropriate. In a restaurant we have a menu and this menu is kind of like the interface between you and the restaurant. It&#x27;s the thing that tells you what you can order and what you can&#x27;t. So maybe you can get a cake, a sandwich or tea from the restaurant, but you can&#x27;t just go into the kitchen and demand whatever it is that you want. Essentially an API is exactly that. It&#x27;s the menu. It&#x27;s all of the things that you can do to interact with an external system such as a website that carries data like Yahoo weather or the MBA website. In the coming lessons we&#x27;re going to be looking at how we can read the documentation for the API and interact with them to be able to pull pieces of data that we want in the moment that we want it. So for all of that and more, I&#x27;ll see on the next lesson.
+1. API = a documented interface to someone else's system.
+2. Request in, response out — no internal knowledge needed.
