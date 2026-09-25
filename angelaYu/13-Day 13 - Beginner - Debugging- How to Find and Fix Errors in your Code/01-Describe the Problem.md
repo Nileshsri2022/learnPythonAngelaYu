@@ -1,32 +1,37 @@
-# 🐍 Describe the Problem
+Here is a structured breakdown of this lesson on debugging — starting with describing the problem.
 
 ---
 
-### Overview
+### 1. What is Debugging?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 13 - Beginner - Debugging: How to Find and Fix Errors in your Code
-**Lecture:** Describe the Problem
-**Level:** Beginner
+**Debugging** is the process of finding and removing bugs — the mistakes every programmer
+inevitably makes. Debugging isn't an occasional chore; it's a *core programming skill*.
 
 ---
 
-### Summary
+### 2. Tip #1: Describe the Problem Precisely
 
-Hey, guys. Welcome back to 100 Days of Code. Today we&#x27;re going to look at Debugging, the process of removing bugs from your code. If you&#x27;ve managed to get to this point you&#x27;ve probably written quite a bit of code already. And I will bet that you&#x27;ve probably made some mistakes, some typos, some errors, and some bugs. So in this lesson, I want to talk about some techniques and tips for how to find bugs and how to get rid of them from your code. Now, the first documented bug was actually found by this lady, Grace Hopper. She was probably one of the first programmers and one of the pioneers of the job that we&#x27;re undertaking right now. Now, in her notes, you&#x27;ll find a moth that&#x27;s been taped to the notebook. And this was found in a relay that was preventing her code from running properly. and this was pretty much the first actual case of a bug that&#x27;s been found in a computer. Even though we&#x27;re not dealing with moths these days anymore, we&#x27;re still going to end up finding bits of things in our code that prevent the code from doing the things that we want it to. The important thing to remember is don&#x27;t feel down when you&#x27;ve created a bug because everyone gets bugs. And when I say gets bugs, I mean we create them, right? So once you&#x27;ve gotten over this next, I want to talk about some of the tips and techniques that you should follow on how to quickly be able to identify and remove these bugs. So the first step is to describe the problem. If the problem is messy and it&#x27;s not well understood in your head, then it&#x27;s almost impossible to debug it. So untangle the problem and try to make sense of what&#x27;s going on. Now, in this block of code, we&#x27;re going to practice describing the problem to help us solve this debugging problem. Now if you take a look at this function, you can see that at some point in the function, we&#x27;re supposed to print this line out into the console. But if we go ahead and hit Run you can see that nothing gets printed. So what&#x27;s going on here? I want you to take a look at this function and describe the actual problem. What is the for loop doing? When is the function meant to print? You got it. What assumptions are you making about the value of i? So pause the video, read the function and have a go at describing the problem. All right. So what we&#x27;ve got here is we&#x27;ve got a function that loops through all the numbers between 1 and 20, and then once that number reaches 20, it&#x27;s supposed to print, &quot;You got it&quot;, but the problem is that when i reaches 20, it doesn&#x27;t print this line into the console. So now that we&#x27;ve described the problem, and we understand what&#x27;s going on, let&#x27;s see if we can solve it. If we think about this problem when i reaches 20, it doesn&#x27;t print out this line. There&#x27;s an assumption in there, right? The assumption is that i will definitely reach 20. But if you think back to how the range function works, the stop or the upper bound is actually omitted. So when you write range 4, it actually produces a number from 0 up to 3. And in our case, when we write 1, 20, it actually goes from 1 all the way up to 19, but not including 20. The problem here is that i actually never reaches 20, so this assumption is completely false. Pause the video and see if you can fix the code so that this line actually gets printed. All right. So all we need to do is change this to 21 instead of 20, and now when we hit run you can see it actually works, and we manage to debug this problem. Always when you come across a problem in your code, try to describe it so that you really understand what the issue is, and then test your assumptions and see which of those assumptions is actually false.
+Before touching code, write down (in a comment or on paper) **exactly** what's wrong:
+
+```python
+# def my_sum(a, b):
+#     return a + b
+# BUG: my_sum(1, 2) should be 3 — but it returns 12 when called with strings
+```
+
+The discipline of describing forces you to answer:
+
+* What did you **expect** to happen?
+* What **actually** happened?
+* Under **which inputs** does it fail?
+
+> **Tip:** Rubber-duck debugging — explain the bug out loud to an inanimate object.
+> Saying it precisely often reveals the cause before the duck answers.
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-Hey, guys. Welcome back to 100 Days of Code. Today we&#x27;re going to look at Debugging, the process of removing bugs from your code. If you&#x27;ve managed to get to this point you&#x27;ve probably written quite a bit of code already. And I will bet that you&#x27;ve probably made some mistakes, some typos, some errors, and some bugs. So in this lesson, I want to talk about some techniques and tips for how to find bugs and how to get rid of them from your code. Now, the first documented bug was actually found by this lady, Grace Hopper. She was probably one of the first programmers and one of the pioneers of the job that we&#x27;re undertaking right now. Now, in her notes, you&#x27;ll find a moth that&#x27;s been taped to the notebook. And this was found in a relay that was preventing her code from running properly. and this was pretty much the first actual case of a bug that&#x27;s been found in a computer. Even though we&#x27;re not dealing with moths these days anymore, we&#x27;re still going to end up finding bits of things in our code that prevent the code from doing the things that we want it to. The important thing to remember is don&#x27;t feel down when you&#x27;ve created a bug because everyone gets bugs. And when I say gets bugs, I mean we create them, right? So once you&#x27;ve gotten over this next, I want to talk about some of the tips and techniques that you should follow on how to quickly be able to identify and remove these bugs. So the first step is to describe the problem. If the problem is messy and it&#x27;s not well understood in your head, then it&#x27;s almost impossible to debug it. So untangle the problem and try to make sense of what&#x27;s going on. Now, in this block of code, we&#x27;re going to practice describing the problem to help us solve this debugging problem. Now if you take a look at this function, you can see that at some point in the function, we&#x27;re supposed to print this line out into the console. But if we go ahead and hit Run you can see that nothing gets printed. So what&#x27;s going on here? I want you to take a look at this function and describe the actual problem. What is the for loop doing? When is the function meant to print? You got it. What assumptions are you making about the value of i? So pause the video, read the function and have a go at describing the problem. All right. So what we&#x27;ve got here is we&#x27;ve got a function that loops through all the numbers between 1 and 20, and then once that number reaches 20, it&#x27;s supposed to print, &quot;You got it&quot;, but the problem is that when i reaches 20, it doesn&#x27;t print this line into the console. So now that we&#x27;ve described the problem, and we understand what&#x27;s going on, let&#x27;s see if we can solve it. If we think about this problem when i reaches 20, it doesn&#x27;t print out this line. There&#x27;s an assumption in there, right? The assumption is that i will definitely reach 20. But if you think back to how the range function works, the stop or the upper bound is actually omitted. So when you write range 4, it actually produces a number from 0 up to 3. And in our case, when we write 1, 20, it actually goes from 1 all the way up to 19, but not including 20. The problem here is that i actually never reaches 20, so this assumption is completely false. Pause the video and see if you can fix the code so that this line actually gets printed. All right. So all we need to do is change this to 21 instead of 20, and now when we hit run you can see it actually works, and we manage to debug this problem. Always when you come across a problem in your code, try to describe it so that you really understand what the issue is, and then test your assumptions and see which of those assumptions is actually false.
-
----
+1. Bugs are normal; debugging is a *skill to practise*, not an interruption.
+2. Describe the problem in one precise sentence before fixing anything.
+3. Expected vs. actual vs. inputs — the three questions.
