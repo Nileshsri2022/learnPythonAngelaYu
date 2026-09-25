@@ -1,33 +1,70 @@
-# 📖 Day 44 Project - Motivational Poster Website
+Here is a structured breakdown of the Day 44 project — Motivational Poster Website.
 
 ---
 
-### Overview
+### 1. The Task
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 44 - Web Foundation - Intermediate CSS
-**Lecture:** Day 44 Project - Motivational Poster Website
-**Level:** Web Foundation
+Recreate the classic motivational poster: an image in a black frame with white padding,
+a bold title and a caption — pure box-model CSS.
 
 ---
 
-### Summary
+### 2. The Solution
 
-All right. So for the final project, we&#x27;re going to be building a motivational poster website and we&#x27;re going to make our own memes. You might have seen some of these around the Internet. There are the serious ones which are based off these &#x27;90s seconds motivational posters where you have some sort of title and you have some sort of motivational text like, &quot;POTENTIAL.&quot; &quot;We all have the tools for greatness within us,&quot; and I believe that is true, and you&#x27;ve got a cute little Arctic fox. But also there are some pretty hilarious ones like &quot;COOLNESS.&quot; &quot;You may be cool...but you&#x27;ll never be 4 popped-collars cool,&quot; like this guy. So the goal is to make our own website where we can create our own motivational poster. The important part of a motivational poster is there is an image that is going to be big, there is a border around the image, so we now know all about borders and we can do that. We have a black background and that is easy because we know all about CSS color properties. We have a big main title, which we&#x27;re going to use a custom font to mimic this font a little bit better. And finally, we have a paragraph at the bottom. And we&#x27;re going to figure out how we&#x27;re going to center things on the screen, how to add borders and how to apply basically everything that we&#x27;ve learned so far in this section. Go ahead and download the starting project files for the Motivation Meme Project and extract it and then open it up inside VS Code. I&#x27;ve created the task in a sort of TODO list breakdown for you. Now the main thing is that it&#x27;s your website, it&#x27;s your project, and as with all the projects in the course, it&#x27;s totally up to you how you want to create it. But, there are some caveats and it&#x27;s important that you touch all of the learning points. So these six points are important, and after completing these six points, you can change your website, you can mess with it however you like, but want to make sure that everything you&#x27;ve learned so far has consolidated and it all makes sense. We&#x27;re going to use a custom font from Google called The Libre-Baskerville, which looks somewhat similar to the motivational main title font. You should add your own image into the images folder under the assets folder. I&#x27;ve got an example image in here for you just in case you want to use it, but I recommend putting in your own images just for practice. And that image should have a 5px white border and the text should be center-aligned and you should adjust the margin so that the image and text are centered on the page. Now, this is going to be the trickiest part because centering elements using CSS is a whole science in itself, but we&#x27;re going to do it simply. We&#x27;re going to horizontally center the div by giving that div a width of 50% to take up 50% of the screen, and then if you think about it, there&#x27;s only 25% left on each side. So if we have a margin-left of 20% on that div, then it should push it into the center. In addition, you might find it useful to set the image to have a width of 100% so that it fills the entire container div so that you&#x27;re not having to center the image along with the div. Some of these hints are only going to make sense once you get started writing the code for it, so don&#x27;t worry too much about it now, I&#x27;m just highlighting certain points in the TODO so that when you get to it, to pay more attention to these parts and these helpful tips, which you&#x27;ll probably need because especially at this point, number five, it&#x27;s quite a difficult task and it will take some time for you to figure out how to get it to look like this. And if you want to push the div down vertically, then I recommend just adding a top-margin to push it down by a pixel amount. It doesn&#x27;t have to be spot bang in the middle of the center because as I said, that is a whole science in itself and we&#x27;re going to be covering it in coming sections, but it&#x27;s just a little bit more complicated. So we&#x27;re going to judge it by eye for this project for now. In order to get something that looks like the goal image, I recommend putting the h1, the paragraph, and the image inside a div. That way you can center the div on the screen and you won&#x27;t have to mess with all three elements and their centering, which is already a hard enough task. Finally, you&#x27;re going to use your Developer D oc reading skills and learn by yourself about a property called text-transform and figure out how to make the h1 look uppercase like what I&#x27;ve got in the solution goal website. All of these elements are on screen. We&#x27;ve got the white board around the image, we&#x27;ve got the black background, the white text, the custom font and our h1 is totally in uppercase without us having to type it in uppercase. So that&#x27;s where that text-transform property comes in. And notice how this entire content div is roughly somewhere in the center, horizontally and vertically, just judging it by eye. It&#x27;s not perfect, but as long as you find the perfect avocado, everything else is easy in life. Pause the video now and complete this project and once you&#x27;re done, come back and I&#x27;m going to walk through the solution code with you. All right. So hopefully that wasn&#x27;t too hard. If we take a look at the solution HTML, you can see that I&#x27;ve completed all of those tasks with a small HTML and a small CSS file, so it shouldn&#x27;t be too hard. Now, some of the steps are pretty self-explanatory, but there&#x27;s a couple of things I want to just briefly touch on. One is you will need the Google font links in the head section if you want to be able to have that custom font on screen. And this is the custom font. In addition, we want to have all our elements inside a div so that we can style it all together, and that&#x27;s quite important in terms of positioning. So I&#x27;ve created a class for the div. In this case, you could have also used an ID, but if you were going to extend this website then it&#x27;s safer to use a class so that you might be able to reuse the CSS in the future. The poster is the part that is more or less center aligned and we used that trick with setting its width and setting its margin, using percentages to get it more or less in the horizontal center. And then I simply set a 100px margin-top, just judging it by eye to get it somewhere in the middle. And I added the custom font and the border to the image and made the image 100% wide so that it would fit fully into that poster div. If you had any problems this is a time where you can look at the solution code and look at your own code and see if there&#x27;s any fixes you want to make. And once you have, then you can also modify the website any way you like to personalize it and make it your own.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motivation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="poster">
+        <img src="mountains.jpg" alt="Misty mountains">
+        <h1>KEEP CLIMBING</h1>
+        <p>The view gets better with every step.</p>
+    </div>
+</body>
+</html>
+```
+
+```css
+body {
+    background-color: #111;
+}
+
+.poster {
+    width:          500px;
+    margin:         50px auto;      /* centred horizontally */
+    padding:        20px 20px 0;
+    background-color: white;
+    border:         5px solid #eee;
+    text-align:     center;
+    font-family:    'Libre Baskerville', serif;
+}
+
+.poster img {
+    width: 100%;
+}
+
+.poster h1 {
+    font-size: 3rem;
+    color: black;
+}
+
+.poster p {
+    color: grey;
+    padding-bottom: 20px;
+}
+```
+
+* Descendant selectors (`.poster img`) style children without extra classes.
+* `margin: 50px auto` — the classic centring trick.
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-All right. So for the final project, we&#x27;re going to be building a motivational poster website and we&#x27;re going to make our own memes. You might have seen some of these around the Internet. There are the serious ones which are based off these &#x27;90s seconds motivational posters where you have some sort of title and you have some sort of motivational text like, &quot;POTENTIAL.&quot; &quot;We all have the tools for greatness within us,&quot; and I believe that is true, and you&#x27;ve got a cute little Arctic fox. But also there are some pretty hilarious ones like &quot;COOLNESS.&quot; &quot;You may be cool...but you&#x27;ll never be 4 popped-collars cool,&quot; like this guy. So the goal is to make our own website where we can create our own motivational poster. The important part of a motivational poster is there is an image that is going to be big, there is a border around the image, so we now know all about borders and we can do that. We have a black background and that is easy because we know all about CSS color properties. We have a big main title, which we&#x27;re going to use a custom font to mimic this font a little bit better. And finally, we have a paragraph at the bottom. And we&#x27;re going to figure out how we&#x27;re going to center things on the screen, how to add borders and how to apply basically everything that we&#x27;ve learned so far in this section. Go ahead and download the starting project files for the Motivation Meme Project and extract it and then open it up inside VS Code. I&#x27;ve created the task in a sort of TODO list breakdown for you. Now the main thing is that it&#x27;s your website, it&#x27;s your project, and as with all the projects in the course, it&#x27;s totally up to you how you want to create it. But, there are some caveats and it&#x27;s important that you touch all of the learning points. So these six points are important, and after completing these six points, you can change your website, you can mess with it however you like, but want to make sure that everything you&#x27;ve learned so far has consolidated and it all makes sense. We&#x27;re going to use a custom font from Google called The Libre-Baskerville, which looks somewhat similar to the motivational main title font. You should add your own image into the images folder under the assets folder. I&#x27;ve got an example image in here for you just in case you want to use it, but I recommend putting in your own images just for practice. And that image should have a 5px white border and the text should be center-aligned and you should adjust the margin so that the image and text are centered on the page. Now, this is going to be the trickiest part because centering elements using CSS is a whole science in itself, but we&#x27;re going to do it simply. We&#x27;re going to horizontally center the div by giving that div a width of 50% to take up 50% of the screen, and then if you think about it, there&#x27;s only 25% left on each side. So if we have a margin-left of 20% on that div, then it should push it into the center. In addition, you might find it useful to set the image to have a width of 100% so that it fills the entire container div so that you&#x27;re not having to center the image along with the div. Some of these hints are only going to make sense once you get started writing the code for it, so don&#x27;t worry too much about it now, I&#x27;m just highlighting certain points in the TODO so that when you get to it, to pay more attention to these parts and these helpful tips, which you&#x27;ll probably need because especially at this point, number five, it&#x27;s quite a difficult task and it will take some time for you to figure out how to get it to look like this. And if you want to push the div down vertically, then I recommend just adding a top-margin to push it down by a pixel amount. It doesn&#x27;t have to be spot bang in the middle of the center because as I said, that is a whole science in itself and we&#x27;re going to be covering it in coming sections, but it&#x27;s just a little bit more complicated. So we&#x27;re going to judge it by eye for this project for now. In order to get something that looks like the goal image, I recommend putting the h1, the paragraph, and the image inside a div. That way you can center the div on the screen and you won&#x27;t have to mess with all three elements and their centering, which is already a hard enough task. Finally, you&#x27;re going to use your Developer D oc reading skills and learn by yourself about a property called text-transform and figure out how to make the h1 look uppercase like what I&#x27;ve got in the solution goal website. All of these elements are on screen. We&#x27;ve got the white board around the image, we&#x27;ve got the black background, the white text, the custom font and our h1 is totally in uppercase without us having to type it in uppercase. So that&#x27;s where that text-transform property comes in. And notice how this entire content div is roughly somewhere in the center, horizontally and vertically, just judging it by eye. It&#x27;s not perfect, but as long as you find the perfect avocado, everything else is easy in life. Pause the video now and complete this project and once you&#x27;re done, come back and I&#x27;m going to walk through the solution code with you. All right. So hopefully that wasn&#x27;t too hard. If we take a look at the solution HTML, you can see that I&#x27;ve completed all of those tasks with a small HTML and a small CSS file, so it shouldn&#x27;t be too hard. Now, some of the steps are pretty self-explanatory, but there&#x27;s a couple of things I want to just briefly touch on. One is you will need the Google font links in the head section if you want to be able to have that custom font on screen. And this is the custom font. In addition, we want to have all our elements inside a div so that we can style it all together, and that&#x27;s quite important in terms of positioning. So I&#x27;ve created a class for the div. In this case, you could have also used an ID, but if you were going to extend this website then it&#x27;s safer to use a class so that you might be able to reuse the CSS in the future. The poster is the part that is more or less center aligned and we used that trick with setting its width and setting its margin, using percentages to get it more or less in the horizontal center. And then I simply set a 100px margin-top, just judging it by eye to get it somewhere in the middle. And I added the custom font and the border to the image and made the image 100% wide so that it would fit fully into that poster div. If you had any problems this is a time where you can look at the solution code and look at your own code and see if there&#x27;s any fixes you want to make. And once you have, then you can also modify the website any way you like to personalize it and make it your own.
-
----
+1. Padding inside the white frame, border as the edge, margin to centre.
+2. Runnable versions: [`motivational_poster.html`](motivational_poster.html) + [`style.css`](style.css)

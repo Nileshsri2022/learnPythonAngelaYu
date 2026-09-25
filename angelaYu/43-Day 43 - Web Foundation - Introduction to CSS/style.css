@@ -1,0 +1,20 @@
+body {
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.red-colour {
+    color: red;
+}
+
+.blue-colour {
+    color: blue;
+}
+
+.green-colour {
+    color: green;
+}
