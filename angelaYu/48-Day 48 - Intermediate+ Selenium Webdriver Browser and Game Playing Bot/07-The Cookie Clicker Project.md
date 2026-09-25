@@ -1,37 +1,39 @@
-# 📖 The Cookie Clicker Project
+Here is a structured breakdown of this lesson on the Cookie Clicker project.
 
 ---
 
-### Overview
+### 1. The Game
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 48 - Intermediate+ Selenium Webdriver Browser and Game Playing Bot
-**Lecture:** The Cookie Clicker Project
-**Level:** N/A
-
----
-
-### Summary
-
-It&#x27;s now time for the final project where we put everything into practice. Now, before I reveal the next message, just a word of warning. It has explicit content. If you are hungry, if you haven&#x27;t eaten, if you are intermittent fasting like me, it might be worth skipping over the next image. Oh, but it does describe what we&#x27;re going to do in this project. We&#x27;re going to be baking some cookies. We&#x27;re going to be playing the Cookie Clicker game, but we&#x27;re not going to do it normally like a normal person, we&#x27;re not going to go and click on our cookies and tirelessly end up with repetitive strain injury and play the game as if we&#x27;re a human. No, we&#x27;re going to play it using a Python bot created with selenium. So recently I&#x27;ve been looking on Reddit and there&#x27;s a lot of posts talking about how addictive this Cookie Clicker game is. Why is this game so addicting? Cookie clicker ruined my life, and when you think about it, it&#x27;s such a simple game. All it is is a big giant cookie. You click on it as fast as you can and once you&#x27;ve gotten a number of cookies, then you can buy certain upgrades like a cursor, which will click on the cookie automatically for you. And if you get even more cookies, you can end up buying other things. For example, once you have 100 cookies. You can buy a grandma which will bake more cookies for you. But we&#x27;re not going to do it manually because I can physically not click at this rate. We&#x27;re going to get our bot to decide which add ons to buy that make sense, and to buy as many of these add ons as we have money. And we&#x27;re going to get our bot to continuously click the cookie to bake even more cookies. So the goal is we&#x27;re trying to max out on this cookies per second rating, because the more of these add ons that you buy, the more often that you click on the cookie, the more cookies per second you can bake. So basically what we want to do is to not even touch our mouse and use selenium to play this game for us. And we&#x27;re going to try and get some high scores by cheating basically. So the goal is to max out the cookies per second. And we&#x27;re going to be playing this game by clicking on this cookie automatically using selenium. And once we&#x27;ve clicked for five seconds, we&#x27;re going to see what is the highest value add on we can buy. And then we&#x27;ll buy it to help us with the game. So the goal at the end of the day is we&#x27;re going to run the program for five minutes, and at the end of the five minutes, we&#x27;re going to check our cookies per second, and we&#x27;re going to compete with each other on that number, because of course, you can get selenium to play the game in different ways. So what I recommend first before you get started with the project is just to head over to this link, which is in the course resources and actually play the game first as a human so that you can understand how it works and see how these add ons really help us improve our rate of baking cookies. Pause the video. Now head over to this link. Play the game for maybe five minutes, and then head over to the next lesson where there&#x27;s the full instructions for how to complete this challenge.
+Cookie Clicker: click a giant cookie → earn cookies → buy upgrades (cursors, grandmas,
+farms) that click *for* you. The strategy: always buy the cheapest affordable upgrade
+with the best return. Perfect for a bot.
 
 ---
 
-### Key Concepts
+### 2. The Bot Loop
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Selenium web automation** | Introduced/used in this lecture |
+```python
+import time
+
+while True:
+    cookies = int(driver.find_element(By.ID, "cookies").text.split()[0])
+    store = driver.find_elements(By.CSS_SELECTOR, "#store div:not(.toFill)")[::-1]
+
+    for item in store:                    # cheapest last → first affordable wins
+        price = int(item.find_element(By.CLASS_NAME, "price").text.replace(",", ""))
+        if cookies >= price:
+            item.click()
+            break
+    time.sleep(5)                         # let the cookies flow, then re-check
+```
+
+1. **Read** the cookie count (strip commas).
+2. **List** affordable upgrades, cheapest-last so the first match is the best buy.
+3. **Buy**, wait, repeat — for two minutes, then print the final cookies-per-second.
 
 ---
 
-### 🏋️ Practice Exercise
+### Summary Checklist
 
-It&#x27;s now time for the final project where we put everything into practice. Now, before I reveal the next message, just a word of warning. It has explicit content. If you are hungry, if you haven&#x27;t eaten, if you are intermittent fasting like me, it might be worth skipping over the next image. Oh, but it does describe what we&#x27;re going to do in this project. We&#x27;re going to be baking some cookies. We&#x27;re going to be playing the Cookie Clicker game, but we&#x27;re not going to do it normally like a normal person, we&#x27;re not going to go and click on our cookies and tirelessly end up with repetitive strain injury and play the game as if we&#x27;re a human. No, we&#x27;re going to play it using a Python bot created with selenium. So recently I&#x27;ve been looking on Reddit and there&#x27;s a lot of posts talking about how addictive this Cookie Clicker game is. Why is this game so addicting? Cookie clicker ruined my life, and when you think about it, it&#x27;s such a simple game. All it is is a big giant cookie. You click on it as fast as you can and once you&#x27;ve gotten a number of cookies, then you can buy certain upgrades like a cursor, which will click on the cookie automatically for you. And if you get even more cookies, you can end up buying other things. For example, once you have 100 cookies. You can buy a grandma which will bake more cookies for you. But we&#x27;re not going to do it manually because I can physically not click at this rate. We&#x27;re going to get our bot to decide which add ons to buy that make sense, and to buy as many of these add ons as we have money. And we&#x27;re going to get our bot to continuously click the cookie to bake even more cookies. So the goal is we&#x27;re trying to max out on this cookies per second rating, because the more of these add ons that you buy, the more often that you click on the cookie, the more cookies per second you can bake. So basically what we want to do is to not even touch our mouse and use selenium to play this game for us. And we&#x27;re going to try and get some high scores by cheating basically. So the goal is to max out the cookies per second. And we&#x27;re going to be playing this game by clicking on this cookie automatically using selenium. And once we&#x27;ve clicked for five seconds, we&#x27;re going to see what is the highest value add on we can buy. And then we&#x27;ll buy it to help us with the game. So the goal at the end of the day is we&#x27;re going to run the program for five minutes, and at the end of the five minutes, we&#x27;re going to check our cookies per second, and we&#x27;re going to compete with each other on that number, because of course, you can get selenium to play the game in different ways. So what I recommend first before you get started with the project is just to head over to this link, which is in the course resources and actually play the game first as a human so that you can understand how it works and see how these add ons really help us improve our rate of baking cookies. Pause the video. Now head over to this link. Play the game for maybe five minutes, and then head over to the next lesson where there&#x27;s the full instructions for how to complete this challenge.
-
----
-
-### Next Steps
-
-It&#x27;s now time for the final project where we put everything into practice. Now, before I reveal the next message, just a word of warning. It has explicit content. If you are hungry, if you haven&#x27;t eaten, if you are intermittent fasting like me, it might be worth skipping over the next image. Oh, but it does describe what we&#x27;re going to do in this project. We&#x27;re going to be baking some cookies. We&#x27;re going to be playing the Cookie Clicker game, but we&#x27;re not going to do it normally like a normal person, we&#x27;re not going to go and click on our cookies and tirelessly end up with repetitive strain injury and play the game as if we&#x27;re a human. No, we&#x27;re going to play it using a Python bot created with selenium. So recently I&#x27;ve been looking on Reddit and there&#x27;s a lot of posts talking about how addictive this Cookie Clicker game is. Why is this game so addicting? Cookie clicker ruined my life, and when you think about it, it&#x27;s such a simple game. All it is is a big giant cookie. You click on it as fast as you can and once you&#x27;ve gotten a number of cookies, then you can buy certain upgrades like a cursor, which will click on the cookie automatically for you. And if you get even more cookies, you can end up buying other things. For example, once you have 100 cookies. You can buy a grandma which will bake more cookies for you. But we&#x27;re not going to do it manually because I can physically not click at this rate. We&#x27;re going to get our bot to decide which add ons to buy that make sense, and to buy as many of these add ons as we have money. And we&#x27;re going to get our bot to continuously click the cookie to bake even more cookies. So the goal is we&#x27;re trying to max out on this cookies per second rating, because the more of these add ons that you buy, the more often that you click on the cookie, the more cookies per second you can bake. So basically what we want to do is to not even touch our mouse and use selenium to play this game for us. And we&#x27;re going to try and get some high scores by cheating basically. So the goal is to max out the cookies per second. And we&#x27;re going to be playing this game by clicking on this cookie automatically using selenium. And once we&#x27;ve clicked for five seconds, we&#x27;re going to see what is the highest value add on we can buy. And then we&#x27;ll buy it to help us with the game. So the goal at the end of the day is we&#x27;re going to run the program for five minutes, and at the end of the five minutes, we&#x27;re going to check our cookies per second, and we&#x27;re going to compete with each other on that number, because of course, you can get selenium to play the game in different ways. So what I recommend first before you get started with the project is just to head over to this link, which is in the course resources and actually play the game first as a human so that you can understand how it works and see how these add ons really help us improve our rate of baking cookies. Pause the video. Now head over to this link. Play the game for maybe five minutes, and then head over to the next lesson where there&#x27;s the full instructions for how to complete this challenge.
+1. Read state → decide → act → wait → repeat.
+2. Every game bot is this loop with different selectors.
