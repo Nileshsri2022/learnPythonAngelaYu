@@ -1,0 +1,54 @@
+/* Day 68 - minimal styling for the authentication project */
+
+body {
+    font-family: system-ui, "Helvetica Neue", Arial, sans-serif;
+    max-width: 640px;
+    margin: 48px auto;
+    padding: 0 20px;
+    color: #1d2b36;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+}
+
+nav a { text-decoration: none; color: #14566b; }
+nav a:hover { color: #c98a3c; }
+nav .who { margin-left: auto; color: #7b8794; font-size: 0.85rem; }
+
+h1 { font-size: 1.7rem; margin-bottom: 6px; }
+p.lead { color: #5a6b78; }
+
+form { display: grid; gap: 14px; margin-top: 24px; }
+
+input {
+    padding: 12px;
+    border: 1px solid #cfd6db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    background: #14566b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover { background: #c98a3c; }
+
+.buttons { display: flex; gap: 14px; margin-top: 28px; }
+
+.alert { padding: 12px 16px; border-radius: 6px; margin: 18px 0; font-size: 0.95rem; }
+.alert-error   { background: #fdecea; color: #a4262c; }
+.alert-success { background: #e7f6ec; color: #1e7b45; }
