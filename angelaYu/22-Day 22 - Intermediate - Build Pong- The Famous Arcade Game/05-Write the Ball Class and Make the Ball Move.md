@@ -1,35 +1,51 @@
-# 🔧 Write the Ball Class and Make the Ball Move
+Here is a structured breakdown of this lesson on the Ball class and making it move.
 
 ---
 
-### Overview
+### 1. The `Ball` Class
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 22 - Intermediate - Build Pong: The Famous Arcade Game
-**Lecture:** Write the Ball Class and Make the Ball Move
-**Level:** Intermediate
+```python
+from turtle import Turtle
+
+
+class Ball(Turtle):
+
+    def __init__(self):
+        super().__init__()
+        self.shape("circle")
+        self.color("white")
+        self.penup()
+        self.goto(0, 0)
+        self.x_move = 10
+        self.y_move = 10
+
+    def move(self):
+        new_x = self.xcor() + self.x_move
+        new_y = self.ycor() + self.y_move
+        self.goto(new_x, new_y)
+```
+
+* Movement is **diagonal**: every frame adds `x_move` to x and `y_move` to y.
+* Storing movement as attributes is the key — *bouncing* will just flip their signs.
+
+---
+
+### 2. Animating It
+
+```python
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
+    ball.move()
+```
+
+The Snake frame loop again — update, delay, move.
 
 ---
 
-### Summary
+### Summary Checklist
 
-Now that we&#x27;ve created both paddles the next obvious step is to create the ball and get it to move. So this ball is going to be created as a separate ball class and the ball object that we&#x27;re going to create from it will have a width of 20, height of 20, and it&#x27;s X and Y position will start out at the center of the screen, so (0, 0). Now when the screen refreshes, the ball is automatically going to move on the screen and it&#x27;s going to move up and also to the right. So it&#x27;s X and Y positions will change on every refresh of the screen. So this is going to be a little bit more challenging and will require a little bit of thinking from your part. But I want you to pause the video and give this problem a bit of thought and see how far you can get in trying to get the ball to move to the top- right edge of the screen. Pause the video and give that a go. All right. So to start off, this time I&#x27;m going to create a ball.py file and inside this ball.py is where we&#x27;re going to create our ball object. So firstly, I&#x27;m going to import my turtle class and then I&#x27;m going to create my ball class which is going to inherit from the turtle class. And then I&#x27;m going to do all of the usual initialization. And now we&#x27;re ready to create our ball class. This ball is going to, firstly, have a white color. And in addition, it&#x27;s going to have a shape that is going to be a circle. Now I know that in the original pong game, the table tennis ball is actually a square. So you can keep it a square if you want to be historically accurate, or you can change it to a circle like I have here to make it look more like a ping pong ball. Now, in addition, we&#x27;re going to need to get it to pen up so that it doesn&#x27;t end up drawing across the screen. And now all we need is to initialize our ball from the ball.py and we&#x27;re going to do that just below our paddles. So I&#x27;m going to create a new ball object from the ball class. And now if I hit run, you&#x27;ll see our circular ball show up in the center of the screen. The next problem is how do we get the ball to move towards the top right corner of the screen? So that&#x27;s going to involve a change in the X coordinate as well as the Y coordinate. In our while loop here where our screen is updating, we&#x27;re going to call a method in the ball class which is going to be called move. And this move method which we&#x27;ll define now is going to be responsible for moving our ball. And the way that it&#x27;s going to move is it&#x27;s going to increase on the X and also increase on the Y. Let&#x27;s create a new X coordinate which is going to be the current self.xcor plus a arbitrary amount. So let&#x27;s say increase by 10. And then the new Y is going to be the self.ycor increased by the same arbitrary amount. And then finally, we can get our ball to go to this new X and new Y. So now when we run our code, you can see that our ball immediately goes off the screen to the top right corner. If we want the ball to slow down a little bit, we can do one of two things. Either we can go into the move method and change this 10 here to say a 1. That way, every time our loop runs, our ball will only move one pixel. Alternatively, we can pause the loop for a short time during each iteration. Moving the ball at a tiny amount does work, but I&#x27;m going to go with the second option and import our time module. Then I&#x27;m going to get our while loop to sleep for a little bit in between each of the updates. So, I normally start off with just a 0.1 second sleep, and you can see now a ball moves at a more reasonable pace and we actually have a chance of catching it with one of the paddles. That&#x27;s all there is to it. We&#x27;ve now created on the ball class, initialized a ball object and we&#x27;ve got the ball to move on every refresh of the screen.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **while loops** | Introduced/used in this lecture |
-| 3 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 4 | **Module imports** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-Now that we&#x27;ve created both paddles the next obvious step is to create the ball and get it to move. So this ball is going to be created as a separate ball class and the ball object that we&#x27;re going to create from it will have a width of 20, height of 20, and it&#x27;s X and Y position will start out at the center of the screen, so (0, 0). Now when the screen refreshes, the ball is automatically going to move on the screen and it&#x27;s going to move up and also to the right. So it&#x27;s X and Y positions will change on every refresh of the screen. So this is going to be a little bit more challenging and will require a little bit of thinking from your part. But I want you to pause the video and give this problem a bit of thought and see how far you can get in trying to get the ball to move to the top- right edge of the screen. Pause the video and give that a go. All right. So to start off, this time I&#x27;m going to create a ball.py file and inside this ball.py is where we&#x27;re going to create our ball object. So firstly, I&#x27;m going to import my turtle class and then I&#x27;m going to create my ball class which is going to inherit from the turtle class. And then I&#x27;m going to do all of the usual initialization. And now we&#x27;re ready to create our ball class. This ball is going to, firstly, have a white color. And in addition, it&#x27;s going to have a shape that is going to be a circle. Now I know that in the original pong game, the table tennis ball is actually a square. So you can keep it a square if you want to be historically accurate, or you can change it to a circle like I have here to make it look more like a ping pong ball. Now, in addition, we&#x27;re going to need to get it to pen up so that it doesn&#x27;t end up drawing across the screen. And now all we need is to initialize our ball from the ball.py and we&#x27;re going to do that just below our paddles. So I&#x27;m going to create a new ball object from the ball class. And now if I hit run, you&#x27;ll see our circular ball show up in the center of the screen. The next problem is how do we get the ball to move towards the top right corner of the screen? So that&#x27;s going to involve a change in the X coordinate as well as the Y coordinate. In our while loop here where our screen is updating, we&#x27;re going to call a method in the ball class which is going to be called move. And this move method which we&#x27;ll define now is going to be responsible for moving our ball. And the way that it&#x27;s going to move is it&#x27;s going to increase on the X and also increase on the Y. Let&#x27;s create a new X coordinate which is going to be the current self.xcor plus a arbitrary amount. So let&#x27;s say increase by 10. And then the new Y is going to be the self.ycor increased by the same arbitrary amount. And then finally, we can get our ball to go to this new X and new Y. So now when we run our code, you can see that our ball immediately goes off the screen to the top right corner. If we want the ball to slow down a little bit, we can do one of two things. Either we can go into the move method and change this 10 here to say a 1. That way, every time our loop runs, our ball will only move one pixel. Alternatively, we can pause the loop for a short time during each iteration. Moving the ball at a tiny amount does work, but I&#x27;m going to go with the second option and import our time module. Then I&#x27;m going to get our while loop to sleep for a little bit in between each of the updates. So, I normally start off with just a 0.1 second sleep, and you can see now a ball moves at a more reasonable pace and we actually have a chance of catching it with one of the paddles. That&#x27;s all there is to it. We&#x27;ve now created on the ball class, initialized a ball object and we&#x27;ve got the ball to move on every refresh of the screen.
-
----
+1. Ball = small circle turtle with `x_move`/`y_move` speed attributes.
+2. `move()` = position + speed each frame.
+3. Diagonal motion falls out of adding to both axes.
