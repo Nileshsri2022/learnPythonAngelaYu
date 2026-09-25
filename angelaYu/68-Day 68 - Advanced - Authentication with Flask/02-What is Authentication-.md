@@ -1,30 +1,68 @@
-# 🎓 What is Authentication?
+Here is a structured breakdown of this lesson on what authentication is.
 
 ---
 
-### Overview
+### 1. The Core Idea
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 68 - Advanced - Authentication with Flask
-**Lecture:** What is Authentication?
-**Level:** Advanced
+Every user who visits your site creates data — likes, messages, posts. Without accounts,
+you can't say *whose* data it is. Authentication gives every user an identity:
 
----
+```
+register → create account (username + password)
+login    → prove you are that account
+session  → the site remembers you while you browse
+logout   → forget you
+```
 
-### Summary
-
-All right, guys, welcome to a brand new module. And in this module, we&#x27;re going to tackle the topic of authentication. And it&#x27;s something that is often thought of as incredibly complicated, but it doesn&#x27;t have to be. And we&#x27;re going to take it step by step from beginning to end so that you get an overview of the entire process of setting up authentication from scratch. So why do we need to authenticate? Well, as we&#x27;re creating our website or web app for users to use, then these users are going to start generating data in the website. They might like certain posts, they might interact with other users, there might be messages created or recipes created. There&#x27;s always going to be some user data created. And in order to associate those pieces of data with individual users, we need to create an account for each user. So that they would sign up to our website using a username and a password and we would essentially create kind of like an ID card for them to uniquely identify them on our database and to save all of the data that they generate onto that account. So the next time that they come back onto the website, they&#x27;ll be able to use their username and password and log in to our website and be able to access all of those possibly private pieces of information. So this way, you don&#x27;t end up with everybody being able to see, you know, what private messages you&#x27;re sending around on Facebook or see your direct messages on Twitter. So that&#x27;s pretty simple. Now, the other reason why you might want to add authentication to your website is to restrict access to certain areas of the website depending on the status of the user. So, for example, if you were Spotify or Netflix and you charge a subscription for accessing certain parts of the website, then once the user pays, you have to update their account in your database to say that they have paid and they&#x27;ll be allowed to access the TV shows or songs that they&#x27;re entitled to. So those are some of the reasons why you might want to add authentication to your website. But authentication can be done in a number of ways. Creating a website where we sign up and log in users seems simple enough, but the difficult part of authentication comes from how secure you&#x27;re going to make your website. But so we&#x27;re going to learn how to progress from essentially a website that&#x27;s basically secured with a Cheeto to something that is a lot more serious and more consistent with industry standards of good security on a website. So the structure of our website is really, really simple. It has a homepage which has two buttons that allows you to either go towards register or go towards login. And once the user has been registered or logged in and they have been authenticated, then they are able to access the secrets page. So I&#x27;ve kept the remainder of the website pretty simple because we&#x27;re going to be focusing on a pretty complex topic. So I&#x27;ve created some starting files for you to download so that we can focus our efforts on learning authentication and not get distracted by things like bootstrap and styling. So once you&#x27;re ready, head over to the next lesson and download the starting files, and then we&#x27;re going to get started with authentication. So I&#x27;ll see you there.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+Like an ID card: issued once, presented on every visit.
 
 ---
 
-### Next Steps
+### 2. Two Separate Jobs People Confuse
 
-All right, guys, welcome to a brand new module. And in this module, we&#x27;re going to tackle the topic of authentication. And it&#x27;s something that is often thought of as incredibly complicated, but it doesn&#x27;t have to be. And we&#x27;re going to take it step by step from beginning to end so that you get an overview of the entire process of setting up authentication from scratch. So why do we need to authenticate? Well, as we&#x27;re creating our website or web app for users to use, then these users are going to start generating data in the website. They might like certain posts, they might interact with other users, there might be messages created or recipes created. There&#x27;s always going to be some user data created. And in order to associate those pieces of data with individual users, we need to create an account for each user. So that they would sign up to our website using a username and a password and we would essentially create kind of like an ID card for them to uniquely identify them on our database and to save all of the data that they generate onto that account. So the next time that they come back onto the website, they&#x27;ll be able to use their username and password and log in to our website and be able to access all of those possibly private pieces of information. So this way, you don&#x27;t end up with everybody being able to see, you know, what private messages you&#x27;re sending around on Facebook or see your direct messages on Twitter. So that&#x27;s pretty simple. Now, the other reason why you might want to add authentication to your website is to restrict access to certain areas of the website depending on the status of the user. So, for example, if you were Spotify or Netflix and you charge a subscription for accessing certain parts of the website, then once the user pays, you have to update their account in your database to say that they have paid and they&#x27;ll be allowed to access the TV shows or songs that they&#x27;re entitled to. So those are some of the reasons why you might want to add authentication to your website. But authentication can be done in a number of ways. Creating a website where we sign up and log in users seems simple enough, but the difficult part of authentication comes from how secure you&#x27;re going to make your website. But so we&#x27;re going to learn how to progress from essentially a website that&#x27;s basically secured with a Cheeto to something that is a lot more serious and more consistent with industry standards of good security on a website. So the structure of our website is really, really simple. It has a homepage which has two buttons that allows you to either go towards register or go towards login. And once the user has been registered or logged in and they have been authenticated, then they are able to access the secrets page. So I&#x27;ve kept the remainder of the website pretty simple because we&#x27;re going to be focusing on a pretty complex topic. So I&#x27;ve created some starting files for you to download so that we can focus our efforts on learning authentication and not get distracted by things like bootstrap and styling. So once you&#x27;re ready, head over to the next lesson and download the starting files, and then we&#x27;re going to get started with authentication. So I&#x27;ll see you there.
+| Term | Question it answers |
+|------|---------------------|
+| **Authentication** | *who are you?* (login) |
+| **Authorisation** | *what are you allowed to do?* (paid tier, admin, owner of a post) |
+
+Today's project is authentication; the "premium content" use case is authorisation layered
+on top.
+
+---
+
+### 3. Why Sites Need It
+
+* **Privacy** — your DMs shouldn't be visible to strangers.
+* **Personalisation** — "your" feed, "your" saved items.
+* **Monetisation** — subscribers see the content they paid for.
+* **Safety** — nobody should be able to delete someone else's post.
+
+---
+
+### 4. The Hard Part Is Security, Not Login Forms
+
+Making a login page is easy. Making it *safe* is the discipline:
+
+* never store passwords as they were typed,
+* never let one user act as another,
+* never expose who exists to someone unauthenticated.
+
+> **Note:** A functional login that stores plain-text passwords is *worse* than no login —
+> it invites users to hand you a secret you can't protect.
+
+---
+
+### 5. What You'll Build
+
+A site with `/register`, `/login`, `/logout` and a `/secrets` page that only
+authenticated users can reach — then progressively harden the password storage underneath
+it.
+
+---
+
+### Summary Checklist
+
+1. Authentication = identity; authorisation = permissions.
+2. Accounts exist to attach data to users and to gate content.
+3. The valuable skill is doing it securely.
+4. Project: register, login, logout and a protected page.

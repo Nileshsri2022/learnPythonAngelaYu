@@ -1,32 +1,118 @@
-# 📖 Understanding Python Decorator Functions and the @ Syntax
+Here is a structured breakdown of this lesson on Python decorators and the `@` syntax.
 
 ---
 
-### Overview
+### 1. What Is a Decorator?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 54 - Intermediate+ Introduction to Web Development with Flask
-**Lecture:** Understanding Python Decorator Functions and the @ Syntax
-**Level:** N/A
+A **decorator** is a function that wraps another function and gives it extra
+functionality — running code before it, after it, modifying how often it's called, or
+adding behaviour the original author never wrote.
 
----
-
-### Summary
-
-In the last lesson, we had a primer on functions so that we can understand the next step which is the Python decorator. So we&#x27;ve seen that functions can have functionality, inputs, and outputs, functions are first-class objects and can be passed around as arguments, functions can be nested in other functions, and finally, functions can be returned as the output from another function without needing to trigger it. With these four things in mind, we&#x27;re finally ready to tackle the Python decorator. First of all, I&#x27;m actually going to create a Python decorator for you so that we can talk about how it works. Here&#x27;s what a Python decorator function looks like. We started off by creating just a normal function. Let&#x27;s say I call it my decorator_function. This function is going to take another function as an input. Now, inside the decorator_functionn, I&#x27;m going to nest a wrapper_function. And this wrapper_function is then going to trigger the actual function that was passed in to the decorator function. And at the end of calling all the lines in my decorator_function, I&#x27;m going to return my wrapper_function. But remember without the parentheses. Now, basically what we&#x27;ve done is we&#x27;ve created a decorator_function which can do some stuff and it could control the calling of the function that was passed in. Remember that a decorator_function is just a function that wraps another function and gives that function some additional functionality. That&#x27;s quite a mouthful, but let&#x27;s take a look at an example. Let&#x27;s say that I wanted to create a simple function which I&#x27;ll call say_hello. Now this function is going to be the simplest form of function. It has no inputs and it has no outputs and all it does is just going to print hello. Now, what if I don&#x27;t want to run this immediately the moment when I hit run, what if I wanted to add a delay to this function? Well, one way of doing that would be importing the time module and then before we print hello, we can go ahead and run time.sleep and we can sleep for a prespecified number of seconds. So now when I call this method, say_hello, and when I run it, you&#x27;ll see that immediately nothing happens. And then after a two second delay, you can see the print hello actually gets triggered. Now, what if I wanted to create a whole bunch of functions like say_bye and say_greeting. And I wanted to add a delay onto each of these. Well, then I would have to copy and paste this code into all three places. Now, this is a very simple example, but frequently we&#x27;ll want to add some additional piece of functionality to a number of our functions. So this is where the decorator comes in handy. What we could do is before we trigger the function that&#x27;s passed in to the decorator_function, we can add the delay. So now whenever we decorate a function with this particular decorator_function, then it&#x27;s going to delay for two seconds before it runs the function. So let&#x27;s give this decorator function a little bit more of a descriptive name. Let&#x27;s call it a delay_decorator. Well, now what we can do is we can simply use an @ sign and we can call the delay_decorator in front of the methods which we want to delay. So we can add it to all three of them, or we can only add it to some of them. But now when I actually run my function, say_hello for example, you can see that this one because it&#x27;s got the delay decorator it&#x27;s going to wait for two seconds before it prints hello. But if I call say_greeting which is the one that doesn&#x27;t have the decorator above it, then you can see it gets triggered immediately. So this is a really nice way of adding something that you could do before you run the function, Right? or adding some functionality which you can do after the function. Or alternatively, you can modify the function so maybe you wanna run it twice. So now when I say hello, it&#x27;s going to not only delay by two seconds, but it&#x27;s also going to run it twice. This syntax is what we saw when we were creating our Flask app. It&#x27;s got the @ sign and it basically decorates the function below with a decorator function. So putting this function through a machine that could modify the function or add some functionality before or after. Coming back to our definition, a decorator function is simply a function which wraps another function and gives it some additional functionality or modifies the functionality. Now, coming back to this syntax, this @ sign, it&#x27;s what&#x27;s known as syntactic sugar. It&#x27;s some syntax that you can write to make it easier to write an alternative line of code. So let&#x27;s say we wanted to add the decorator to this say_greeting. Well, if instead of using this syntactic sugar with the @ sign and then the name of the function, we could also just call the name of the decorator and then we could pass in the name of our function, say_greeting, and then we would end up with the decorated function as the output from this method. And we can now call the decorated function with the parentheses. So now we&#x27;ve triggered this say_greeting function and we&#x27;ve passed it through the delay decorator. But it&#x27;s much easier to see at a glance what&#x27;s going on by using this @ sign because you can see now you can just trigger this method by its own name and because the @delay_decorator is on top of it, then it&#x27;s going to go through that filter. I recommend spending a few minutes looking at this code which you can access at this URL which is in the course resources, and then trying to recreate this functionality from scratch based on your understanding of what we just talked about. And then once you&#x27;re done, when we head back to our Flask application you can now see that pretty much all of the code is easily understood. We know what this __name__ refers to,, we know that this is a decorator which is going to make sure that we only trigger this function if the user&#x27;s trying to access the URL that is the homepage/. If we wanted to create another function, let&#x27;s call it say_bye. This function could also get a decorator and this decorator will check to see well, if somebody goes to the URL /bye, well then we&#x27;re going to be triggering this method. Effectively the Flask framework is the one that determines which of these methods to call and these methods are only called when the decorator says that it&#x27;s appropriate to do so. Now, if I go ahead and run this code once more, and we go to the URL that is our server, so this we know is the home route or the homepage, but if we go to /bye then we go to the bye route and this method gets rendered. Now in order to make sure that you get a chance writing decorator functions yourself, if you head over to the next lesson, I&#x27;ve got a coding exercise for you to challenge you to create your own decorator functions. And it&#x27;s going to be a really useful decorator function because it&#x27;s going to measure the amount of time that it takes a particular function to run. So for all of that and more, I&#x27;ll see you on the next lesson.
+Motivation: adding the same extra behaviour (a delay, logging, timing) to many functions
+by copy-paste is a maintenance nightmare.
 
 ---
 
-### Key Concepts
+### 2. The Pattern
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **Flask web framework** | Introduced/used in this lecture |
+```python
+import time
+from functools import wraps
+
+
+def delay_decorator(function):
+    def wrapper_function():
+        time.sleep(2)             # do something BEFORE
+        function()                # call the original
+        # ...and/or something AFTER
+    return wrapper_function       # no parentheses — return the function itself
+```
+
+Use it three ways:
+
+```python
+@delay_decorator                  # 1. syntactic sugar
+def say_hello():
+    print("hello")
+
+
+def say_bye():
+    print("bye")
+
+
+say_bye = delay_decorator(say_bye)   # 2. the long way — same thing
+
+decorated = delay_decorator(lambda: print("hi"))   # 3. on any callable
+decorated()
+```
+
+Both forms are equivalent; the `@` is just nicer to read — it's *syntactic sugar*.
 
 ---
 
-### Next Steps
+### 3. Running It
 
-In the last lesson, we had a primer on functions so that we can understand the next step which is the Python decorator. So we&#x27;ve seen that functions can have functionality, inputs, and outputs, functions are first-class objects and can be passed around as arguments, functions can be nested in other functions, and finally, functions can be returned as the output from another function without needing to trigger it. With these four things in mind, we&#x27;re finally ready to tackle the Python decorator. First of all, I&#x27;m actually going to create a Python decorator for you so that we can talk about how it works. Here&#x27;s what a Python decorator function looks like. We started off by creating just a normal function. Let&#x27;s say I call it my decorator_function. This function is going to take another function as an input. Now, inside the decorator_functionn, I&#x27;m going to nest a wrapper_function. And this wrapper_function is then going to trigger the actual function that was passed in to the decorator function. And at the end of calling all the lines in my decorator_function, I&#x27;m going to return my wrapper_function. But remember without the parentheses. Now, basically what we&#x27;ve done is we&#x27;ve created a decorator_function which can do some stuff and it could control the calling of the function that was passed in. Remember that a decorator_function is just a function that wraps another function and gives that function some additional functionality. That&#x27;s quite a mouthful, but let&#x27;s take a look at an example. Let&#x27;s say that I wanted to create a simple function which I&#x27;ll call say_hello. Now this function is going to be the simplest form of function. It has no inputs and it has no outputs and all it does is just going to print hello. Now, what if I don&#x27;t want to run this immediately the moment when I hit run, what if I wanted to add a delay to this function? Well, one way of doing that would be importing the time module and then before we print hello, we can go ahead and run time.sleep and we can sleep for a prespecified number of seconds. So now when I call this method, say_hello, and when I run it, you&#x27;ll see that immediately nothing happens. And then after a two second delay, you can see the print hello actually gets triggered. Now, what if I wanted to create a whole bunch of functions like say_bye and say_greeting. And I wanted to add a delay onto each of these. Well, then I would have to copy and paste this code into all three places. Now, this is a very simple example, but frequently we&#x27;ll want to add some additional piece of functionality to a number of our functions. So this is where the decorator comes in handy. What we could do is before we trigger the function that&#x27;s passed in to the decorator_function, we can add the delay. So now whenever we decorate a function with this particular decorator_function, then it&#x27;s going to delay for two seconds before it runs the function. So let&#x27;s give this decorator function a little bit more of a descriptive name. Let&#x27;s call it a delay_decorator. Well, now what we can do is we can simply use an @ sign and we can call the delay_decorator in front of the methods which we want to delay. So we can add it to all three of them, or we can only add it to some of them. But now when I actually run my function, say_hello for example, you can see that this one because it&#x27;s got the delay decorator it&#x27;s going to wait for two seconds before it prints hello. But if I call say_greeting which is the one that doesn&#x27;t have the decorator above it, then you can see it gets triggered immediately. So this is a really nice way of adding something that you could do before you run the function, Right? or adding some functionality which you can do after the function. Or alternatively, you can modify the function so maybe you wanna run it twice. So now when I say hello, it&#x27;s going to not only delay by two seconds, but it&#x27;s also going to run it twice. This syntax is what we saw when we were creating our Flask app. It&#x27;s got the @ sign and it basically decorates the function below with a decorator function. So putting this function through a machine that could modify the function or add some functionality before or after. Coming back to our definition, a decorator function is simply a function which wraps another function and gives it some additional functionality or modifies the functionality. Now, coming back to this syntax, this @ sign, it&#x27;s what&#x27;s known as syntactic sugar. It&#x27;s some syntax that you can write to make it easier to write an alternative line of code. So let&#x27;s say we wanted to add the decorator to this say_greeting. Well, if instead of using this syntactic sugar with the @ sign and then the name of the function, we could also just call the name of the decorator and then we could pass in the name of our function, say_greeting, and then we would end up with the decorated function as the output from this method. And we can now call the decorated function with the parentheses. So now we&#x27;ve triggered this say_greeting function and we&#x27;ve passed it through the delay decorator. But it&#x27;s much easier to see at a glance what&#x27;s going on by using this @ sign because you can see now you can just trigger this method by its own name and because the @delay_decorator is on top of it, then it&#x27;s going to go through that filter. I recommend spending a few minutes looking at this code which you can access at this URL which is in the course resources, and then trying to recreate this functionality from scratch based on your understanding of what we just talked about. And then once you&#x27;re done, when we head back to our Flask application you can now see that pretty much all of the code is easily understood. We know what this __name__ refers to,, we know that this is a decorator which is going to make sure that we only trigger this function if the user&#x27;s trying to access the URL that is the homepage/. If we wanted to create another function, let&#x27;s call it say_bye. This function could also get a decorator and this decorator will check to see well, if somebody goes to the URL /bye, well then we&#x27;re going to be triggering this method. Effectively the Flask framework is the one that determines which of these methods to call and these methods are only called when the decorator says that it&#x27;s appropriate to do so. Now, if I go ahead and run this code once more, and we go to the URL that is our server, so this we know is the home route or the homepage, but if we go to /bye then we go to the bye route and this method gets rendered. Now in order to make sure that you get a chance writing decorator functions yourself, if you head over to the next lesson, I&#x27;ve got a coding exercise for you to challenge you to create your own decorator functions. And it&#x27;s going to be a really useful decorator function because it&#x27;s going to measure the amount of time that it takes a particular function to run. So for all of that and more, I&#x27;ll see you on the next lesson.
+```python
+say_hello()      # waits 2 seconds, then "hello"
+say_bye()        # name resolution picks the decorated version
+```
+
+Decorators can also:
+
+* run the function **twice**,
+* **measure** its runtime,
+* **retry** it when it fails (Day 49's resilience wrapper).
+
+---
+
+### 4. Decorators That Take Arguments
+
+When the wrapped function has inputs, the wrapper must pass them along:
+
+```python
+def retry(function):
+    @wraps(function)
+    def wrapper(*args, **kwargs):
+        try:
+            return function(*args, **kwargs)
+        except Exception:
+            return function(*args, **kwargs)     # one retry
+    return wrapper
+
+
+@retry
+def greet(name):
+    print(f"Hello {name}")
+
+
+greet("Ada")      # the wrapper forwards the argument
+```
+
+* `*args, **kwargs` accept whatever the original function expects.
+* `@wraps` keeps the original function's `__name__` and docstring (otherwise it becomes
+  `wrapper`, which breaks debugging).
+
+---
+
+### 5. Back to Flask
+
+```python
+@app.route("/")
+def home():
+    return "Hello, World!"
+```
+
+Read it as: "take `home`, register it with Flask so it runs when someone requests `/`".
+`@app.route` isn't delaying or wrapping output — it *registers a route* — but the mechanics
+are identical to `delay_decorator`: a function receives your function and does something
+with it.
+
+---
+
+### Summary Checklist
+
+1. Decorator = function that wraps a function to add/change behaviour.
+2. The decorated function is passed in; the wrapper is returned *without* parentheses.
+3. `@decorator` is syntactic sugar for `func = decorator(func)`.
+4. Wrappers for functions with inputs need `*args, **kwargs` (and `@wraps`).
+5. Flask's `@app.route("/")` is a decorator that registers the function as a URL handler.

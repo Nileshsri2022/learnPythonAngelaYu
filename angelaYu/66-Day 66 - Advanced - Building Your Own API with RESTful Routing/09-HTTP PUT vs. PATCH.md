@@ -1,18 +1,79 @@
-# 🎓 HTTP PUT vs. PATCH
+Here is a structured breakdown of this lesson on `PUT` vs `PATCH`.
 
 ---
 
-### Overview
+### 1. The Bicycle Analogy
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 66 - Advanced - Building Your Own API with RESTful Routing
-**Lecture:** HTTP PUT vs. PATCH
-**Level:** Advanced
+A bike arrives from Amazon with a broken front wheel. Two ways to fix it:
+
+| Option | What Amazon sends | HTTP equivalent |
+|--------|-------------------|-----------------|
+| Replace the whole bike | an entire new bicycle | **PUT** |
+| Send just the wheel | one spare part | **PATCH** |
+
+* **PUT** — you send the **complete** resource to replace the existing one.
+* **PATCH** — you send **only the fields that change**.
 
 ---
 
-### Summary
+### 2. Why PATCH Is Usually Better
 
-So what is the difference between put and patch? Well, here&#x27;s a good analogy. Recently I went onto Amazon and I found a really nice looking bicycle. And because I really wanted to poison my lungs by exercising around London, I clicked on the Buy Now button. So there I was, super happy, super excited for my bicycle to arrive. And then on the day of arrival, I opened up that box and my bicycle was really messed up. The whole front wheel was broken. So I&#x27;m not really sure what happened at the Amazon warehouse, but I got in touch with them and I wanted to try and figure out how we can solve this problem. So there were two ways that they could fix this problem. Option one was they send me an entire new bike. So this is the equivalent of put. You&#x27;re updating your database by sending an entire entry to replace the previous one. Now, the other option Amazon offered was for them to simply send me a new tire. That was the only thing that was broken, the rest of the bike was fine. And in order to save the world from carbon emissions, shipping a wheel is much better than shipping an entire bicycle. And this is the same as Patch. So when you&#x27;re sending a patch request to the server, you&#x27;re only sending the piece of data that needs to be updated. Instead of the entire entry that will be replaced, you&#x27;re simply just updating the thing that needs to be updated. So when we see this in practice, I want you to think back to this bicycle analogy and maybe it&#x27;ll help you try and understand the difference between these two words.
+* Less data over the wire (and less carbon, as Angela points out).
+* No risk of accidentally wiping fields you forgot to include.
+* Better matches what clients actually want to do — "change the coffee price", not
+  "re-send the whole cafe".
 
 ---
+
+### 3. The Same Endpoint, Different Verb
+
+```python
+@app.route("/update-price/<int:cafe_id>", methods=["PATCH"])
+def patch_coffee_price(cafe_id):
+    cafe = db.session.get(Cafe, cafe_id)
+    if cafe is None:
+        return jsonify(error={"Not Found": "Sorry, a cafe with that id was not found."}), 404
+
+    cafe.coffee_price = request.args.get("new_price")
+    db.session.commit()
+    return jsonify(success="Successfully updated the price."), 200
+```
+
+* Only `coffee_price` is touched — every other column keeps its value.
+* A `PUT` version would need the client to send all eleven fields, or values would be
+  overwritten with `None`.
+
+---
+
+### 4. Choosing the Verb
+
+| Verb | Meaning | Send |
+|------|---------|------|
+| `PUT` | replace the whole resource | every field |
+| `PATCH` | update part of the resource | just the changes |
+
+> **Note:** In practice many APIs implement only `PATCH` for updates, and some use `PUT`
+> leniently. The distinction is worth knowing — you'll be asked about it.
+
+---
+
+### 5. Always Handle the Missing Record
+
+Both verbs get an id in the path, and ids can be wrong:
+
+```python
+if cafe is None:
+    return jsonify(error={"Not Found": "…"}), 404
+```
+
+Without that check, `cafe.coffee_price = …` throws `AttributeError` and the client sees a
+500 instead of a helpful 404.
+
+---
+
+### Summary Checklist
+
+1. `PUT` = replace the entire resource; `PATCH` = update only the fields you send.
+2. PATCH is more efficient and safer for small changes like a price.
+3. Both need `methods=[...]` and a `404` guard for unknown ids.
+4. Test with Postman: watch the field change in `/all` afterwards.

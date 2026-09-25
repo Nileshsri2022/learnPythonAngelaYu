@@ -1,32 +1,29 @@
-# 📖 Day 46 Goals: what you will make by the end of the day
+Here is a structured breakdown of this lesson on the goals for Day 46.
 
 ---
 
-### Overview
+### 1. The Musical Time Machine
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 46 - Intermediate+ Create a Spotify Playlist using the Musical Time Machine
-**Lecture:** Day 46 Goals: what you will make by the end of the day
-**Level:** N/A
+A mixtape of the hits from a particular period of your life is a time machine in
+audio form. Today's project automates it:
 
----
-
-### Summary
-
-Hey guys, welcome to Day 46 of 100 Days of Code. Today we&#x27;ve got a pretty special project for you. It&#x27;s a musical time machine project. So what does that mean? Well, recently I received a mixed tape from a friend and the mix tape contained all of the top songs from the period of time when we went to school together. And it was a really, really beautiful gift and it was a really nice way of jogging your memories for that particular time point in your life. This got me thinking, and I thought about how music can take you back into a particular time in your life as if it just transported you. By listening to the same songs that were hits during that period of time it was like as if I was being transported back and could relive a moment in my childhood. And you might have the same experience. Maybe there&#x27;s certain songs that were really popular in your childhood that brings back memories, or maybe for a particular relationship, or maybe a holiday that you went on. Trying to jog these memories by using music is a really, really fantastic way of reminiscing and savoring some of your favorite moments in time. So what we&#x27;re going to be building today is a Python time machine, not the sort of time machine that might take a human back in time, but it will go back in time to find the music that was in the top 100 shots that was being played all over the radio so that you can relive that period of time once more through music. Billboard compiles a list of the top 100 songs. So these are the most played songs during a particular week. And if you go to chart/hot-100, you&#x27;ll see it for the current week, but there&#x27;s also a feature where you can change the date to any data in the past 20 years. So if we select a random date in year 2000, you can see that the songs that come up here, and it depends on your age but some of these artists you might have never heard of like N Sync or Destiny&#x27;s child or Vertical Horizon. But if you listen to these tracks in order, then it will be almost like you&#x27;ve been transported back to year 2000, August 12 and you&#x27;re just listening to the things on the radio. This is how we are going to approach this task. First, we&#x27;re going to use Beautiful Soup to scrape the top 100 songs from a particular date of your choice. And then we&#x27;re going to extract all of the song titles from the list, and then we&#x27;re going to use the Spotify API to create a playlist for that particular date. And we&#x27;re going to see right through Spotify for each of the songs and add those songs to our new playlist. So that by the end of this whole process, we end up with a playlist that has the top 100 songs for a particular date in the past. So if you&#x27;ve got an anniversary coming up or a birthday coming up, this might just be the perfect present where you create a playlist of the top of that 100 songs that was playing on the day that you met your wife or your husband, or maybe when you started a friendship or started a new job, and you can send them this playlist as your gift to jog their memories and remind them of that day in the past. So are you ready to build the time machine? If you are, head over to the next lesson while you will find step by step instructions and a lot of challenges that&#x27;s going to get you to use all the skills you learned about how do you use Beautiful Soup as well as the Spotify API in order to complete this project. So head over there now.
+> "Pick a date → get the **Billboard Hot 100** from that day → create a **Spotify
+> playlist** with all 100 songs."
 
 ---
 
-### Key Concepts
+### 2. The Pipeline
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **random module** | Introduced/used in this lecture |
+| Step | Tool |
+|------|------|
+| 1. Scrape the Hot 100 for a date | `requests` + BeautifulSoup (Day 45) |
+| 2. Authenticate with Spotify | Spotipy + OAuth |
+| 3. Search each song | Spotify search API |
+| 4. Create playlist + add tracks | Spotify playlists API |
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey guys, welcome to Day 46 of 100 Days of Code. Today we&#x27;ve got a pretty special project for you. It&#x27;s a musical time machine project. So what does that mean? Well, recently I received a mixed tape from a friend and the mix tape contained all of the top songs from the period of time when we went to school together. And it was a really, really beautiful gift and it was a really nice way of jogging your memories for that particular time point in your life. This got me thinking, and I thought about how music can take you back into a particular time in your life as if it just transported you. By listening to the same songs that were hits during that period of time it was like as if I was being transported back and could relive a moment in my childhood. And you might have the same experience. Maybe there&#x27;s certain songs that were really popular in your childhood that brings back memories, or maybe for a particular relationship, or maybe a holiday that you went on. Trying to jog these memories by using music is a really, really fantastic way of reminiscing and savoring some of your favorite moments in time. So what we&#x27;re going to be building today is a Python time machine, not the sort of time machine that might take a human back in time, but it will go back in time to find the music that was in the top 100 shots that was being played all over the radio so that you can relive that period of time once more through music. Billboard compiles a list of the top 100 songs. So these are the most played songs during a particular week. And if you go to chart/hot-100, you&#x27;ll see it for the current week, but there&#x27;s also a feature where you can change the date to any data in the past 20 years. So if we select a random date in year 2000, you can see that the songs that come up here, and it depends on your age but some of these artists you might have never heard of like N Sync or Destiny&#x27;s child or Vertical Horizon. But if you listen to these tracks in order, then it will be almost like you&#x27;ve been transported back to year 2000, August 12 and you&#x27;re just listening to the things on the radio. This is how we are going to approach this task. First, we&#x27;re going to use Beautiful Soup to scrape the top 100 songs from a particular date of your choice. And then we&#x27;re going to extract all of the song titles from the list, and then we&#x27;re going to use the Spotify API to create a playlist for that particular date. And we&#x27;re going to see right through Spotify for each of the songs and add those songs to our new playlist. So that by the end of this whole process, we end up with a playlist that has the top 100 songs for a particular date in the past. So if you&#x27;ve got an anniversary coming up or a birthday coming up, this might just be the perfect present where you create a playlist of the top of that 100 songs that was playing on the day that you met your wife or your husband, or maybe when you started a friendship or started a new job, and you can send them this playlist as your gift to jog their memories and remind them of that day in the past. So are you ready to build the time machine? If you are, head over to the next lesson while you will find step by step instructions and a lot of challenges that&#x27;s going to get you to use all the skills you learned about how do you use Beautiful Soup as well as the Spotify API in order to complete this project. So head over there now.
+1. Scraping feeds an API — the two superpowers combine.
+2. Input: a date. Output: a playlist.

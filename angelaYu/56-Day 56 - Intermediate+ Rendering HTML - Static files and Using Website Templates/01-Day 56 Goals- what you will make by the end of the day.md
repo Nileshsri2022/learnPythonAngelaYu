@@ -1,30 +1,55 @@
-# 📖 Day 56 Goals: what you will make by the end of the day
+Here is a structured breakdown of this lesson on the goals for Day 56.
 
 ---
 
-### Overview
+### 1. What Today Adds
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 56 - Intermediate+ Rendering HTML/Static files and Using Website Templates
-**Lecture:** Day 56 Goals: what you will make by the end of the day
-**Level:** Intermediate+ Rendering HTML
+Yesterday we returned HTML as Python strings — painful and unmaintainable. Today we do it
+properly:
 
----
-
-### Summary
-
-Hey guys, and welcome to day 56 of 100 Days of Code. It&#x27;s Angela here and today we are diving deeper into web development with Flask. We&#x27;re going to be covering a bunch of things, including how to include static files on your website like local images or local videos, as well as how to render HTML and CSS files. Previously, when we looked into web design and we learned about creating websites using HTML and CSS, we were able to create it as a separate file with the proper structure and styling. And we want to apply that now to our Flask applications. And we want to be able to show the user a HTML website with CSS styling. Now at the very end of today we&#x27;re going to be building out a beautiful personal name card application. It&#x27;s the 21st century and we no longer have to hand people name cards. Instead, you could create a website, put your name on it and have all the links to the relevant pages that you need and to show off your beautiful design as well as give people your contact details. That&#x27;s the goal for today. Head over to the next lesson and let&#x27;s get started.
+| Topic | Payoff |
+|-------|--------|
+| **Rendering HTML files** | `render_template("index.html")` instead of giant strings |
+| **Static files** | local images, CSS, videos served from a `static/` folder |
+| **Website templates** | use free HTML/CSS templates and wire them into Flask |
 
 ---
 
-### Key Concepts
+### 2. The Final Project: A Personal Name Card
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Flask web framework** | Introduced/used in this lecture |
+Nobody hands out paper business cards anymore. Today's project is a **digital name card**:
+
+* your name in a big heading,
+* an avatar image,
+* links to your social/professional pages,
+* a beautiful background and styling from a free template.
+
+The goal is to prove you can take *any* HTML/CSS website off the shelf and serve it from a
+Python server after a small amount of path fixing.
 
 ---
 
-### Next Steps
+### 3. The Two Magic Folder Names
 
-Hey guys, and welcome to day 56 of 100 Days of Code. It&#x27;s Angela here and today we are diving deeper into web development with Flask. We&#x27;re going to be covering a bunch of things, including how to include static files on your website like local images or local videos, as well as how to render HTML and CSS files. Previously, when we looked into web design and we learned about creating websites using HTML and CSS, we were able to create it as a separate file with the proper structure and styling. And we want to apply that now to our Flask applications. And we want to be able to show the user a HTML website with CSS styling. Now at the very end of today we&#x27;re going to be building out a beautiful personal name card application. It&#x27;s the 21st century and we no longer have to hand people name cards. Instead, you could create a website, put your name on it and have all the links to the relevant pages that you need and to show off your beautiful design as well as give people your contact details. That&#x27;s the goal for today. Head over to the next lesson and let&#x27;s get started.
+Flask is a framework, so it has rules:
+
+```
+my-personal-site/
+├── server.py            # the Flask app
+├── templates/           # HTML files MUST live here
+│   └── index.html
+└── static/              # CSS, images, JS, videos MUST live here
+    ├── styles.css
+    └── images/
+```
+
+Get these names right and most of the wiring just works.
+
+---
+
+### Summary Checklist
+
+1. `render_template()` for HTML files; `static/` for assets.
+2. Folder names `templates` and `static` are mandatory, lowercase, at project root.
+3. Free templates (HTML5 UP, etc.) can be dropped in — you fix the paths, not the design.
+4. Deliverable: your own name-card site served by Flask.

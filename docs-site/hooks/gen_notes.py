@@ -40,6 +40,9 @@ TRACKS = {
 NOTE_RE = re.compile(r"^(\d+)\s*[.\-]?\s*(.*)$")
 DASHES_RE = re.compile(r"^-{5,}\s*$")
 DAY_PREFIX_RE = re.compile(r"^Day\s*\d+\s*[-–]?\s*(.*)$")
+FENCE_RE = re.compile(r"^\s*(```|~~~)")
+# Characters that would break a markdown link label in SUMMARY.md (literate-nav).
+UNSAFE_LABEL_RE = re.compile(r"[\[\]{}`|<>]")
 
 NAV_DAY_MAX = 36        # sidebar label length for day titles
 NAV_LECTURE_MAX = 50    # sidebar label length for lecture titles
@@ -73,16 +76,82 @@ def short_title(text: str, maxlen: int = NAV_DAY_MAX) -> str:
 
 
 def first_h1(text: str) -> str | None:
+    """Return the first real H1, ignoring '#' comments inside fenced code blocks.
+
+    Without the fence check, a Python comment like '# [{"French": "poitrine"}]'
+    inside a code block is mistaken for the page title, and the resulting nav
+    label breaks literate-nav's markdown parsing.
+    """
+    in_fence = False
+    fence = ""
     for line in text.splitlines():
+        m = FENCE_RE.match(line)
+        if m:
+            marker = m.group(1)
+            if not in_fence:
+                in_fence, fence = True, marker
+            elif line.strip().startswith(fence):
+                in_fence, fence = False, ""
+            continue
+        if in_fence:
+            continue
         if line.startswith("# "):
             return clean_title(line[2:])
     return None
+
+
+def nav_label(text: str) -> str:
+    """Make a title safe to embed as literate-nav link text; strip [ ] { } ` |."""
+    return re.sub(r"\s+", " ", UNSAFE_LABEL_RE.sub("", text)).strip()
 
 
 def github_url(path: Path) -> str:
     from urllib.parse import quote
     rel = path.relative_to(REPO).as_posix()
     return GITHUB_BASE + quote(rel)
+
+
+# Markdown links/images to files that live in the repo but not in the site
+# (main.py, style.css, screenshots...). They are pointed at GitHub instead of
+# being copied into the docs, which keeps the built site warning-free.
+REL_LINK_RE = re.compile(r"(!?\[[^\]]*\]\()([^)\s]+)(\))")
+
+
+def rewrite_repo_links(text: str, note_path: Path) -> str:
+    """Point relative links to project files at their GitHub location."""
+    out: list[str] = []
+    in_fence = False
+    fence = ""
+    for line in text.splitlines():
+        m = FENCE_RE.match(line)
+        if m:
+            marker = m.group(1)
+            if not in_fence:
+                in_fence, fence = True, marker
+            elif line.strip().startswith(fence):
+                in_fence, fence = False, ""
+            out.append(line)
+            continue
+        if not in_fence and "](" in line:
+            line = REL_LINK_RE.sub(
+                lambda mm: _link_or_github(mm, note_path), line
+            )
+        out.append(line)
+    return "\n".join(out) + ("\n" if text.endswith("\n") else "")
+
+
+def _link_or_github(m: "re.Match[str]", note_path: Path) -> str:
+    prefix, target, suffix = m.group(1), m.group(2), m.group(3)
+    if re.match(r"^(https?:|mailto:|#|/)", target) or target.endswith((".md", ".txt")):
+        return m.group(0)
+    try:
+        resolved = (note_path.parent / target).resolve()
+        resolved.relative_to(REPO)
+    except (ValueError, OSError):
+        return m.group(0)
+    if not resolved.is_file():
+        return m.group(0)
+    return f"{prefix}{github_url(resolved)}{suffix}"
 
 
 # --------------------------------------------------------------------------
@@ -212,8 +281,8 @@ for day in sorted(titles):
     for num, title, path in notes:
         base = f"{num}-{slugify(title)}" if num is not None else slugify(title)
         slug = unique_slug(base)
-        write(f"{section}/{slug}.md",
-              path.read_text(encoding="utf-8", errors="replace"))
+        body = path.read_text(encoding="utf-8", errors="replace")
+        write(f"{section}/{slug}.md", rewrite_repo_links(body, path))
         label = f"{num}. {title}" if num is not None else title
         toc.append((label, f"{slug}.md", slug))
 
@@ -254,11 +323,11 @@ for day in sorted(titles):
 
     # ---- nav: days carry only their lecture notes --------------------------
     day_index = f"{section}/index.md"
-    nav_day = f"    - [Day {day} · {html.escape(short_title(day_title))}]({day_index})"
+    nav_day = f"    - [Day {day} · {nav_label(short_title(day_title))}]({day_index})"
     tracks_nav[track].append(nav_day)
     for label, link, _ in toc:
         short = label if len(label) <= NAV_LECTURE_MAX else label[:NAV_LECTURE_MAX].rsplit(" ", 1)[0] + "…"
-        tracks_nav[track].append(f"        - [{html.escape(short)}]({section}/{link})")
+        tracks_nav[track].append(f"        - [{nav_label(short)}]({section}/{link})")
 
     totals["notes"] += len(notes)
     totals["transcripts"] += len(trans_links)

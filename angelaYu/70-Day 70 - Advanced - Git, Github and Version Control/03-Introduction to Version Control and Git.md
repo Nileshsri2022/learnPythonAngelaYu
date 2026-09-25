@@ -1,30 +1,67 @@
-# 🎓 Introduction to Version Control and Git
+Here is a structured breakdown of this lesson introducing version control and Git.
 
 ---
 
-### Overview
+### 1. The Problem: "Save Point 1", "Save Point 2", "Final_final_v3"
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 70 - Advanced - Git, Github and Version Control
-**Lecture:** Introduction to Version Control and Git
-**Level:** Advanced
+You write code, it grows, and at some point you change something and break everything.
+Without version control you have two options: keep dozens of copied folders, or despair.
 
----
-
-### Summary
-
-In this module, I want to introduce you to how Git works and how you can use it to achieve various powerful ends. And I&#x27;m going to be talking about and showing you how you can use Git on the command line to do things such as Version Control or how to Clone Repositories, how to Fork, make Pull Requests, and Merge Repositories and a whole bunch of really, really exciting things. So let&#x27;s talk about Version Control in its simplest form. Let&#x27;s say that I create a new code file and I write a few lines in it. Now I decide to put it under version control using Git and let&#x27;s say that I call this save point number one. Now this is my first version, so later on as I progress I write maybe a few more lines of code. And at this point I decide to make another save point and I call this my second version. Further down the line, I accidentally screw up my entire code file and it&#x27;s irreparable, and I get to the point where I would rather burn my entire code file rather than having to try and fix it. You do get into these situations because very often your code is interlinked and each class depends on another, and sometimes you can screw up in a way where you know all hope is lost, and I simply just want to roll back to the last save point. I can do that using Git. You can either compare your current code file, so the current mess that you&#x27;ve made, against a previous version, so at any of the save points before. Alternatively, you can simply just roll back to a previous version, and it doesn&#x27;t have to be the one that was immediately previous. You can go as far back or as far forwards as you like, as long as you know which version you want. In the next lesson, I&#x27;m going to show you Version Control using Git locally on your computer, and we&#x27;re going to use the command line to do this. So I&#x27;ll see you there.
+**Version control** records *save points* — snapshots of your project you can go back to at
+any time.
 
 ---
 
-### Key Concepts
+### 2. What Git Gives You
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
+| Capability | Why it saves you |
+|------------|------------------|
+| Save points (commits) | return to any previous state |
+| Diffs | compare today's mess with the last working version |
+| Time travel | move backwards *and* forwards between versions |
+| Branches | try something risky without touching working code |
+| History | see what changed, when, and why |
+
+Because code is interconnected (class A depends on class B), a small mistake can cascade.
+Being able to roll back 20 minutes — or 20 commits — is what keeps you fast.
 
 ---
 
-### Next Steps
+### 3. Git vs GitHub
 
-In this module, I want to introduce you to how Git works and how you can use it to achieve various powerful ends. And I&#x27;m going to be talking about and showing you how you can use Git on the command line to do things such as Version Control or how to Clone Repositories, how to Fork, make Pull Requests, and Merge Repositories and a whole bunch of really, really exciting things. So let&#x27;s talk about Version Control in its simplest form. Let&#x27;s say that I create a new code file and I write a few lines in it. Now I decide to put it under version control using Git and let&#x27;s say that I call this save point number one. Now this is my first version, so later on as I progress I write maybe a few more lines of code. And at this point I decide to make another save point and I call this my second version. Further down the line, I accidentally screw up my entire code file and it&#x27;s irreparable, and I get to the point where I would rather burn my entire code file rather than having to try and fix it. You do get into these situations because very often your code is interlinked and each class depends on another, and sometimes you can screw up in a way where you know all hope is lost, and I simply just want to roll back to the last save point. I can do that using Git. You can either compare your current code file, so the current mess that you&#x27;ve made, against a previous version, so at any of the save points before. Alternatively, you can simply just roll back to a previous version, and it doesn&#x27;t have to be the one that was immediately previous. You can go as far back or as far forwards as you like, as long as you know which version you want. In the next lesson, I&#x27;m going to show you Version Control using Git locally on your computer, and we&#x27;re going to use the command line to do this. So I&#x27;ll see you there.
+| | What it is |
+|--|-----------|
+| **Git** | the version-control program that runs locally on your machine |
+| **GitHub** | a website that hosts Git repositories, for sharing and collaborating |
+
+Git works offline; GitHub is where the copies live so others (and future-you, on another
+machine) can reach them.
+
+---
+
+### 4. The Vocabulary You'll Meet
+
+* **Repository (repo)** — a project tracked by Git (a folder containing a hidden `.git`).
+* **Working directory** — the files you're editing right now.
+* **Staging area** — files selected for the next save point.
+* **Commit** — a save point, with a message.
+* **Remote** — a repo hosted elsewhere (GitHub).
+* **Branch** — an independent line of development.
+
+---
+
+### 5. What's Coming
+
+```
+create a repo → make commits → push to GitHub → ignore files you shouldn't commit
+→ clone someone else's repo → branch & merge → fork & pull request
+```
+
+---
+
+### Summary Checklist
+
+1. Version control = save points you can always return to.
+2. Git is local; GitHub hosts remote copies.
+3. Commits and branches let you experiment without fear.
+4. Learn the vocabulary — every Git tutorial assumes it.

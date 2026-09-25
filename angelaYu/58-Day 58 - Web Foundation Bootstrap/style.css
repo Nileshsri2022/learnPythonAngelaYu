@@ -1,0 +1,36 @@
+/* Day 58 - TinDog custom styling (loaded after Bootstrap, so it overrides it) */
+
+/* Animated gradient background (adapted from Manuel Pinto's CodePen).
+   Add class="gradient-background" to any section to use it. */
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Push the coloured band down from the very top of the page */
+#title {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#testimonials img {
+    object-fit: cover;
+}
+
+/* Cards get a soft lift instead of the default flat border */
+.card {
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}

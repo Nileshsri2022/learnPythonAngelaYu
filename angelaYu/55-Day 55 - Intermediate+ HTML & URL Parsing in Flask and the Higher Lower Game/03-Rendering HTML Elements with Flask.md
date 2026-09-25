@@ -1,31 +1,81 @@
-# 📖 Rendering HTML Elements with Flask
+Here is a structured breakdown of this lesson on rendering HTML with Flask.
 
 ---
 
-### Overview
+### 1. Right Now, Flask Wraps Your Text in a Bare Body
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 55 - Intermediate+ HTML & URL Parsing in Flask and the Higher Lower Game
-**Lecture:** Rendering HTML Elements with Flask
-**Level:** N/A
+```python
+return f"Hello {name}!"
+```
 
----
-
-### Summary
-
-Now in the last lesson, we talked a little bit about how to get different routes to work by using the app dot route decorator, as well as how we can create variable paths by using this angle bracket syntax and how we can convert the path into a pre-specified data type by using this particular structure. Now, we also looked at how to run the App in debug mode so that we can auto reload our server and also get access to the flask debugger. Now, in this lesson, I want to talk a little bit about how we can render actual HTML, because at the moment, what happens is we&#x27;re simply just returning a string and we&#x27;re getting flask to do whatever it wants with it. And what that means. If we go into the Chrome inspector, by going to view and then developer and then develop a tools is we can see it. It just stuffed that whole F-string into a body tag without any real HTML tags that gives it structure. So that&#x27;s usually not what you would want when you&#x27;re creating a website. So let&#x27;s see if we can start creating some HTML. Instead. Now the simplest way to do this is flask actually accepts HTML in the return. So we could just a simply say, if we wanted to create an H one by adding an H one opening and closing tag here, and if I hit save to refresh my server and then go to my home route, then you can see this is now inside and H one inside the body. Now, of course you can change this to whatever target is you want, and it should still work. Now, once we can start rendering HTML, we can also start using the HTML attributes, by the way, if any of this that I&#x27;m talking about HTML or CSS or attributes or tags sounds unfamiliar, it might be because you&#x27;ve skipped the sessions on each balance CSS, which we went through a few, Two days ago. So have a quick search for that. If all of this is confusing and it might be a good time to do a revision on that. Anyways. Now coming back to my H one tag, let&#x27;s say I wanted to give it some CSS, which is just inline CSS. So I&#x27;m going to set the style and give it some CSS code. For example, I could set the text, the line CSS property to center, and now if I hit save and I refresh on my homepage, my text is now center aligned, and you can see if I select this H one, you can see that style being applied right here. Anything that we can do with inline styling that you saw in the CSS modules or changing the code to any sort of HTML tag we can do in the return. Now, what if you wanted to render more than one HTML element? Well, that&#x27;s possible as well. All you have to do is just continue typing. So let&#x27;s say we wanted to create a paragraph tag. Well, we could simply create it like this. So if I hit save and refresh, you can see, this is my H one, and this is a paragraph, and this is the updated structure of my HTML file now because pie charm doesn&#x27;t really like you going too far over and creating very long lines of code because it&#x27;s difficult to read. One of the neat tricks that it has is if you want to split a string at any point, all you have to do is hit enter, and it will add in this backslash for you, which basically is the equivalent of the same code that we had before. But it&#x27;s now much easier to read. So you can add in as many lines of HTML as you want in this fashion. For example, if we wanted to add a another line, then we would go inside the paragraph quotation Mark hit enter to insert another line. And here we can add our image element. Our image element is a self closing tags. We don&#x27;t need the closing tag, but it does need a source. And this source could be a image that we find online. So let&#x27;s see if we can find a picture of a kitten. This one looks pretty good. Let&#x27;s go ahead and copy the image address here by right clicking. And then let&#x27;s piece that in here as the image source. Now, if I go ahead and hit, save and go back to my website and reload it, you can see that is my little cat. Now you can add other attributes, do the image tag. For example, you can change the width to you only 200 pixels so that it would fit in to this site a little bit better, or you can manipulate it in any way you want. Now, the great thing about the image tag is we can also add gifts as well, and it&#x27;ll be rendered in our browser. So Giphy is a great source of gifts from all over the internet. So let&#x27;s find an animated kitten on him. This one is very cute. If we go to copy link and then copy the gift link, and we replace this URL, that&#x27;s currently inside the source with this new URL, then we would end up with our gift of being rendered as an image. Now, one thing to note is that as we&#x27;re changing these source attributes or the style attributes, the tax let&#x27;s going in there is going in as a string with the quotation marks. So this will clash with any outer quotation marks. So be sure that if you&#x27;ve got a return as a single quoted string, that in the middle, if you need to have quotes, it will be double quotes basically has to be opposite of each other. If you have single quotes on the outside, then you&#x27;re going to be using double quotes on the inside. If you are using the opposite, then it&#x27;s double quotes on the outside that it has to be single quote on the insight let&#x27;s hit, save and see if this worked, go back to our home page, hit refresh, and you can see there is a fairy cute kitten being rendered in HTML from a flask server. So we&#x27;ve now leveled up a website a little bit more. We can now render HTML. We can put an inline styling and we can add HTML elements to our heart&#x27;s content. Now in the next lesson, I&#x27;ve got a little bit of a challenge for you. And the idea is for you to practice what you learned yesterday about decorators. It&#x27;s a bit of a advanced topic, but once you get used to it, it&#x27;s really, really handy. So for all of that and more head of it in the next lesson,
+View-source shows Flask stuffed the string into `<body>` with no structure. Fine for a
+test; not a website.
 
 ---
 
-### Key Concepts
+### 2. Return Real HTML
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Flask web framework** | Introduced/used in this lecture |
+Flask returns whatever string you give it — so give it HTML:
+
+```python
+@app.route("/")
+def home():
+    return "<h1 style='text-align: center'>Hello, World!</h1>"
+```
+
+Refresh → the heading is centred because the browser parsed the tags and the **inline CSS**
+exactly as it would on a static page. Everything from Days 41–44 works here.
 
 ---
 
-### Next Steps
+### 3. Multiple Elements and Multiline Strings
 
-Now in the last lesson, we talked a little bit about how to get different routes to work by using the app dot route decorator, as well as how we can create variable paths by using this angle bracket syntax and how we can convert the path into a pre-specified data type by using this particular structure. Now, we also looked at how to run the App in debug mode so that we can auto reload our server and also get access to the flask debugger. Now, in this lesson, I want to talk a little bit about how we can render actual HTML, because at the moment, what happens is we&#x27;re simply just returning a string and we&#x27;re getting flask to do whatever it wants with it. And what that means. If we go into the Chrome inspector, by going to view and then developer and then develop a tools is we can see it. It just stuffed that whole F-string into a body tag without any real HTML tags that gives it structure. So that&#x27;s usually not what you would want when you&#x27;re creating a website. So let&#x27;s see if we can start creating some HTML. Instead. Now the simplest way to do this is flask actually accepts HTML in the return. So we could just a simply say, if we wanted to create an H one by adding an H one opening and closing tag here, and if I hit save to refresh my server and then go to my home route, then you can see this is now inside and H one inside the body. Now, of course you can change this to whatever target is you want, and it should still work. Now, once we can start rendering HTML, we can also start using the HTML attributes, by the way, if any of this that I&#x27;m talking about HTML or CSS or attributes or tags sounds unfamiliar, it might be because you&#x27;ve skipped the sessions on each balance CSS, which we went through a few, Two days ago. So have a quick search for that. If all of this is confusing and it might be a good time to do a revision on that. Anyways. Now coming back to my H one tag, let&#x27;s say I wanted to give it some CSS, which is just inline CSS. So I&#x27;m going to set the style and give it some CSS code. For example, I could set the text, the line CSS property to center, and now if I hit save and I refresh on my homepage, my text is now center aligned, and you can see if I select this H one, you can see that style being applied right here. Anything that we can do with inline styling that you saw in the CSS modules or changing the code to any sort of HTML tag we can do in the return. Now, what if you wanted to render more than one HTML element? Well, that&#x27;s possible as well. All you have to do is just continue typing. So let&#x27;s say we wanted to create a paragraph tag. Well, we could simply create it like this. So if I hit save and refresh, you can see, this is my H one, and this is a paragraph, and this is the updated structure of my HTML file now because pie charm doesn&#x27;t really like you going too far over and creating very long lines of code because it&#x27;s difficult to read. One of the neat tricks that it has is if you want to split a string at any point, all you have to do is hit enter, and it will add in this backslash for you, which basically is the equivalent of the same code that we had before. But it&#x27;s now much easier to read. So you can add in as many lines of HTML as you want in this fashion. For example, if we wanted to add a another line, then we would go inside the paragraph quotation Mark hit enter to insert another line. And here we can add our image element. Our image element is a self closing tags. We don&#x27;t need the closing tag, but it does need a source. And this source could be a image that we find online. So let&#x27;s see if we can find a picture of a kitten. This one looks pretty good. Let&#x27;s go ahead and copy the image address here by right clicking. And then let&#x27;s piece that in here as the image source. Now, if I go ahead and hit, save and go back to my website and reload it, you can see that is my little cat. Now you can add other attributes, do the image tag. For example, you can change the width to you only 200 pixels so that it would fit in to this site a little bit better, or you can manipulate it in any way you want. Now, the great thing about the image tag is we can also add gifts as well, and it&#x27;ll be rendered in our browser. So Giphy is a great source of gifts from all over the internet. So let&#x27;s find an animated kitten on him. This one is very cute. If we go to copy link and then copy the gift link, and we replace this URL, that&#x27;s currently inside the source with this new URL, then we would end up with our gift of being rendered as an image. Now, one thing to note is that as we&#x27;re changing these source attributes or the style attributes, the tax let&#x27;s going in there is going in as a string with the quotation marks. So this will clash with any outer quotation marks. So be sure that if you&#x27;ve got a return as a single quoted string, that in the middle, if you need to have quotes, it will be double quotes basically has to be opposite of each other. If you have single quotes on the outside, then you&#x27;re going to be using double quotes on the inside. If you are using the opposite, then it&#x27;s double quotes on the outside that it has to be single quote on the insight let&#x27;s hit, save and see if this worked, go back to our home page, hit refresh, and you can see there is a fairy cute kitten being rendered in HTML from a flask server. So we&#x27;ve now leveled up a website a little bit more. We can now render HTML. We can put an inline styling and we can add HTML elements to our heart&#x27;s content. Now in the next lesson, I&#x27;ve got a little bit of a challenge for you. And the idea is for you to practice what you learned yesterday about decorators. It&#x27;s a bit of a advanced topic, but once you get used to it, it&#x27;s really, really handy. So for all of that and more head of it in the next lesson,
+```python
+@app.route("/")
+def home():
+    return ('<h1 style="text-align: center">Hello!</h1>'
+            '<p>This is a paragraph.</p>'
+            '<img src="https://media.giphy.com/media/…/giphy.gif" width="200">')
+```
+
+* Python's **implicit string concatenation** joins adjacent literals — press Enter inside
+  the parentheses and PyCharm inserts the backslash/continuation for you.
+* `<img>` is a self-closing tag: it needs `src` (and looks better with `width`), and
+  animated GIFs render just like images.
+
+> **Tip:** Watch your quote nesting. If the outer string uses `"`, use `'` inside the HTML
+> attributes — or the other way round — otherwise the string terminates early.
+
+---
+
+### 4. Read It in DevTools
+
+Chrome → Elements shows:
+
+```html
+<body>
+  <h1 style="text-align: center">Hello, World!</h1>
+  <p>This is a paragraph.</p>
+  <img src="…" width="200">
+</body>
+```
+
+You wrote the content; the browser built the document.
+
+---
+
+### 5. Why This Is Only a Stepping Stone
+
+Returning markup as one long Python string gets ugly fast — no syntax highlighting, no
+reuse, no separation of concerns. **Templates** (Day 56) fix that: keep the HTML in its own
+file and let Flask fill in the blanks.
+
+---
+
+### Summary Checklist
+
+1. Flask accepts HTML in the return value — tags, attributes and inline CSS all work.
+2. Chain adjacent string literals to keep long markup readable.
+3. `<img src="…" width="…">` renders pictures and GIFs.
+4. Match outer/inner quotes when embedding attributes.
+5. This works, but templates are the clean way — that's tomorrow.

@@ -1,32 +1,65 @@
-# 🎓 Day 71 Goals - Learn to Deploy Your Website
+Here is a structured breakdown of this lesson on the goals for Day 71.
 
 ---
 
-### Overview
+### 1. Today Your Website Goes Live
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 71 - Advanced - Deploying Your Web Application
-**Lecture:** Day 71 Goals - Learn to Deploy Your Website
-**Level:** Advanced
+Everything so far has run on `127.0.0.1` — your machine only. Today the Flask blog is
+published to the internet with a shareable URL anyone can visit, including from a phone.
 
 ---
 
-### Summary
+### 2. The Tools
 
-Hey guys, welcome to day 70 of 100 Days of Code. Now, today is a crucial time point in our journey of learning to build websites because we&#x27;re finally going to be publishing our Flask website onto the Internet. And in order to do this, we&#x27;re going to be using the help of a number of tools, including Git and GitHub, Heroku and also something called gunicorn. And with their powers combined, we&#x27;ll end up with our website being hosted live on the Internet with URL that we can share to anybody in the world and they&#x27;ll be able to go and access and use our blog website that we&#x27;ve spent so long building and perfecting. And you&#x27;ll even be able to load it up on your phone and see it in its full glory. And along the way, we&#x27;re going to learn about version control using a technology called git. And also we&#x27;re going to be upgrading our database from something that is more suited to development which is SQLite, and we&#x27;re going to be taking that to the next step, making it production ready using PostgreSQL. So that&#x27;s all yet to come. So if you head over to the next lesson, let&#x27;s get started by learning about Git and version control.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Flask web framework** | Introduced/used in this lecture |
-| 3 | **SQLite database** | Introduced/used in this lecture |
+| Tool | Job |
+|------|-----|
+| **Git + GitHub** | version control and the source of truth the host deploys from |
+| **Gunicorn** | a real WSGI server to run Flask in production |
+| **A hosting provider** | a computer that's always on, running your app |
+| **PostgreSQL** | a production database to replace SQLite |
 
 ---
 
-### Next Steps
+### 3. The Deployment Path
 
-Hey guys, welcome to day 70 of 100 Days of Code. Now, today is a crucial time point in our journey of learning to build websites because we&#x27;re finally going to be publishing our Flask website onto the Internet. And in order to do this, we&#x27;re going to be using the help of a number of tools, including Git and GitHub, Heroku and also something called gunicorn. And with their powers combined, we&#x27;ll end up with our website being hosted live on the Internet with URL that we can share to anybody in the world and they&#x27;ll be able to go and access and use our blog website that we&#x27;ve spent so long building and perfecting. And you&#x27;ll even be able to load it up on your phone and see it in its full glory. And along the way, we&#x27;re going to learn about version control using a technology called git. And also we&#x27;re going to be upgrading our database from something that is more suited to development which is SQLite, and we&#x27;re going to be taking that to the next step, making it production ready using PostgreSQL. So that&#x27;s all yet to come. So if you head over to the next lesson, let&#x27;s get started by learning about Git and version control.
+```
+1. .gitignore            keep secrets and local junk out of the repo
+2. git init / commit     put the project under version control
+3. environment variables read secrets from config, not source code
+4. gunicorn              serve the app with a production-grade server
+5. push to GitHub        the host pulls the code from there
+6. hosting provider      create a web service, wire it to the repo
+7. PostgreSQL            swap the development database for a real one
+```
+
+---
+
+### 4. What Changes When You Go Live
+
+| Development | Production |
+|-------------|------------|
+| `flask run` dev server | gunicorn (WSGI server) |
+| SQLite file | PostgreSQL (managed database) |
+| secrets in code | secrets in environment variables |
+| localhost only | public URL, HTTPS, real users |
+| `debug=True` | **must** be off |
+
+> **⚠️ Warning:** Deploying with `debug=True` exposes the interactive debugger and your
+> code's internals to the entire internet. Turn it off before you push.
+
+---
+
+### 5. Outcomes
+
+* A live URL you can send to anyone.
+* A repeatable deploy pipeline: commit → push → the platform rebuilds.
+* The vocabulary to follow any deployment guide (Procfile, dyno, environment config).
+
+---
+
+### Summary Checklist
+
+1. Today: development project → live website.
+2. Git/GitHub + gunicorn + host + PostgreSQL.
+3. Production differences: real server, real database, env-var secrets, debug off.
+4. The seven-step path above is the checklist for the whole day.

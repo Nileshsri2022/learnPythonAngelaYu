@@ -1,31 +1,55 @@
-# 📖 Day 52 Goals: what you will make by the end of the day
+Here is a structured breakdown of this lesson on the goals for Day 52.
 
 ---
 
-### Overview
+### 1. The Idea: Grow a Following by Following
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 52 - Intermediate+ Instagram Follower Bot
-**Lecture:** Day 52 Goals: what you will make by the end of the day
-**Level:** N/A
+The trick an Instagram consultant shared: find an account whose audience matches yours,
+open its **followers list**, and follow those people one by one. Many will follow back.
 
----
+Example: a food brand follows the followers of an established food account — those people
+are exactly the audience you want.
 
-### Summary
-
-Hey guys, welcome to day 52 of 100 Days of Code. Today I&#x27;ve got yet another pretty fun project for you. It is a Instagram follower bot. So here&#x27;s the thing is. Have you ever felt a little bit lonely? Have you ever wanted more friends? Well, I can&#x27;t really get you more friends, but I could figure out a way of getting you more followers on Instagram. So recently I was talking to a Instagram consultant. This is somebody who actually advises businesses and startups on how they can build their Instagram presence. And they&#x27;ve worked with a lot of successful companies. And one of the secrets that they shared with me, which I thought was really cool actually, is let&#x27;s say that you are somebody who&#x27;s trying to build a brand around cooking. So you could do is you could look at all the accounts on Instagram that are already, um, cooking related. One of my favorite probably to this day is a company called ChefSteps. They just have the coolest content and they have amazing YouTube videos with tutorials. And a lot of the stuff that they make are just gorgeous, like real molecular gastronomy and everything looks amazing. Let&#x27;s say that you are trying to build a company where it was also doing something that was food related and you want to get more followers for your company. One of the ways that you could do it is if you think about it, if you find a company that has a similar demographic or a similar audience to yours, basically people who like food or people who like cooking, well, what you could do is you could go to their Instagram account and then look at their followers. And then you can go through this list of people who follow ChefSteps and follow each of these accounts. Now, for a lot of these people, they are small individuals who are just interested in cooking or food. So if you have something that&#x27;s food related and you&#x27;re following somebody, then they might notice you as well. And in turn, you&#x27;ll probably get more followers. So I thought this was a really cool idea and it&#x27;s something that&#x27;s really ripe for automation, because who wants to go through a list of 247,000 people and click on each of these buttons. Nobody, right? So we&#x27;re going to do this using code. More specifically, Selenium and Python. Here&#x27;s what it looks like when I run my code. It&#x27;s gonna log into Instagram automatically and then it&#x27;s going to go to the account that I want to replicate followers for. And then it&#x27;s going to click on that link followers and it&#x27;s going to start following each of these individual accounts one by one automatically. And you can see my mouse is nowhere near there. Yeah. That&#x27;s the goal for today. If you&#x27;re building a business, if you&#x27;re building a startup or if you&#x27;re building your own custom brand, or if you just want more followers on Instagram, this might be something that you would be interested in. And it definitely helps you tap into some new skills with Selenium and Python. So once you&#x27;re ready, head over to the next lesson and put your skills to the test.
+The problem: the target account had **247,000 followers**. Nobody is clicking that list
+by hand. Perfect automation job.
 
 ---
 
-### Key Concepts
+### 2. What the Bot Does
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Selenium web automation** | Introduced/used in this lecture |
+1. Log in to Instagram automatically.
+2. Navigate to the target account's profile.
+3. Click the **followers** link (opens a modal list).
+4. Scroll/click through the list, hitting **Follow** on each account.
+
+All while your mouse sits untouched.
 
 ---
 
-### Next Steps
+### 3. Why It's a Good Selenium Exercise
 
-Hey guys, welcome to day 52 of 100 Days of Code. Today I&#x27;ve got yet another pretty fun project for you. It is a Instagram follower bot. So here&#x27;s the thing is. Have you ever felt a little bit lonely? Have you ever wanted more friends? Well, I can&#x27;t really get you more friends, but I could figure out a way of getting you more followers on Instagram. So recently I was talking to a Instagram consultant. This is somebody who actually advises businesses and startups on how they can build their Instagram presence. And they&#x27;ve worked with a lot of successful companies. And one of the secrets that they shared with me, which I thought was really cool actually, is let&#x27;s say that you are somebody who&#x27;s trying to build a brand around cooking. So you could do is you could look at all the accounts on Instagram that are already, um, cooking related. One of my favorite probably to this day is a company called ChefSteps. They just have the coolest content and they have amazing YouTube videos with tutorials. And a lot of the stuff that they make are just gorgeous, like real molecular gastronomy and everything looks amazing. Let&#x27;s say that you are trying to build a company where it was also doing something that was food related and you want to get more followers for your company. One of the ways that you could do it is if you think about it, if you find a company that has a similar demographic or a similar audience to yours, basically people who like food or people who like cooking, well, what you could do is you could go to their Instagram account and then look at their followers. And then you can go through this list of people who follow ChefSteps and follow each of these accounts. Now, for a lot of these people, they are small individuals who are just interested in cooking or food. So if you have something that&#x27;s food related and you&#x27;re following somebody, then they might notice you as well. And in turn, you&#x27;ll probably get more followers. So I thought this was a really cool idea and it&#x27;s something that&#x27;s really ripe for automation, because who wants to go through a list of 247,000 people and click on each of these buttons. Nobody, right? So we&#x27;re going to do this using code. More specifically, Selenium and Python. Here&#x27;s what it looks like when I run my code. It&#x27;s gonna log into Instagram automatically and then it&#x27;s going to go to the account that I want to replicate followers for. And then it&#x27;s going to click on that link followers and it&#x27;s going to start following each of these individual accounts one by one automatically. And you can see my mouse is nowhere near there. Yeah. That&#x27;s the goal for today. If you&#x27;re building a business, if you&#x27;re building a startup or if you&#x27;re building your own custom brand, or if you just want more followers on Instagram, this might be something that you would be interested in. And it definitely helps you tap into some new skills with Selenium and Python. So once you&#x27;re ready, head over to the next lesson and put your skills to the test.
+| Challenge | Skill |
+|-----------|-------|
+| Login page with changing UI | locators + waits |
+| Followers list in a **scrollable modal** | scroll a container, not the page |
+| Buttons that read *Follow* / *Following* / *Requested* | conditional logic |
+| Very long list | loops + rate limits |
+| Pop-ups ("you've followed too many people") | defensive handling |
+
+---
+
+### 4. House Rules
+
+* Instagram rate-limits and may temporarily block accounts that follow too fast.
+  Follow ~10–20 accounts, pause, and stop long before the site tells you to.
+* Practise on the course clone (**Share-a-Naan**) so a real account is never at risk.
+* Only follow people you'd genuinely be happy to have follow you back.
+
+---
+
+### Summary Checklist
+
+1. Follow the followers of a similar account — many follow back.
+2. Bot: log in → open profile → click followers → follow each one.
+3. New mechanics today: switching into a scrollable modal window of results.
+4. Be gentle: rate limits are real, and the practice clone exists for a reason.

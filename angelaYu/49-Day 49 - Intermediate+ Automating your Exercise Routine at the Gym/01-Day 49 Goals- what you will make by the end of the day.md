@@ -1,28 +1,73 @@
-# 📖 Day 49 Goals: what you will make by the end of the day
+Here is a structured breakdown of this lesson on the goals for Day 49.
 
 ---
 
-### Overview
+### 1. The Problem: Bookings Sell Out at Midnight
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 49 - Intermediate+ Automating your Exercise Routine at the Gym
-**Lecture:** Day 49 Goals: what you will make by the end of the day
-**Level:** N/A
+Meeting rooms, tennis courts, spin classes — the booking window always opens when you're
+asleep, and by morning everything is gone. Today we automate the whole thing with Selenium.
 
 ---
 
-### Summary
+### 2. The Practice Gym: "Snack & Lift"
 
-Hey, guys. Welcome to day 49 of 100 Days of Code. We&#x27;re almost halfway. And today we&#x27;ve got a really special project for you. You know that feeling when you&#x27;re trying to book something? But by the time you remember to do it, it&#x27;s already booked out. I remember encountering this problem, trying to book meeting rooms, tennis courts, or the spin classes at my gym. Have you ever been in this situation? The booking system always seems to open at midnight, but by this time you&#x27;re already in your pajamas dreaming about code instead of cardio. Well, today we&#x27;re going to solve that problem with selenium. We&#x27;ll practice writing our selenium code on my dream gym that I&#x27;m calling Snack and Lift. The motto is lift weights, eat snacks. Repeat. Easy. The landing page is pretty basic, but I think the design and functionality is fairly close to other gym websites that I&#x27;ve used. I&#x27;ve added some testimonials by other people who felt seen. If you have any testimonial suggestions, feel free to post them in the comments section. In terms of functionality, the main things to understand is that we&#x27;re simulating the entire gym experience locally in your browser. When you load up the website, it sets up a database in your browser that already contains some users and some bookings. For example, you can use the student at Test.com email and the password of password one two, three to login and view the bookings page. I&#x27;ve set this up for you so that you can see what it looks like for an existing account. Here you can see that we&#x27;ve got some classes booked and when you click this button, you can book a class or join the waitlist for that class on the My Bookings page. You can see all the bookings that were made, and here you can cancel a booking or leave the waitlist. Now let&#x27;s log out and take a look at the admin panel. If you log in with the admin credentials, you get some more fine grained control over the website and the database. This is handy when you&#x27;ve run your selenium code to book gym classes, and you&#x27;d like to run the code again after making a small change. In this case, it&#x27;s a good idea to have the database in exactly the same state before you ran your code for the first time. This is why I&#x27;ve got some information at the top to show what&#x27;s in the database. And I&#x27;ve got two buttons at the bottom. If you click clear Bookings only, then you will delete all the bookings that are currently in the database. If you click Reset All Data, then you restore the booking system to its initial state with only the default bookings. You&#x27;ll delete all the users that you&#x27;ve registered to. The stats at the top should show you that everything has been reset. Remember how I said the database lives in your browser instead of the gym server? You can see the database in Chrome&#x27;s developer console. If you go to the application tab, you should see that under storage there is an Indexeddb with the gyms data. If you open a new browser or a different user profile, then you will have a different copy of this database. What this means is that if you register a user or make a booking in one profile, that booking won&#x27;t show up in the other profile. This is why, as a first step, we&#x27;ll make sure that every time selenium runs, we&#x27;ll use the same Chrome profile. So that&#x27;s your profile picture icon here. Most people just have one. But in case you&#x27;re somebody like me which like 3 or 4, then this is something you should look out for. This way your bot will always see the same bookings and user data. In the later part of the day, you&#x27;ll be presented with a challenge to make your code work even when some requests fail. This is what the network simulation option is for. This is off by default and you should only enable it at the end. The time simulation is here to make sure your script can run as expected, even if a day passes. You&#x27;ll use these two options to QA or test your own code and make sure it works under different conditions at the end of the day. This project is going to teach you some seriously powerful automation skills. We&#x27;re not just clicking buttons here. We&#x27;re going to set up persistent browser profiles so our bot remembers who we are, just like a real user. Handle dynamic content that changes based on the day and time. Deal with different button states. Is the class available full? Are we already booked on a waitlist? Use function wrappers and higher order functions to implement a retry logic for when the network decides to take a coffee break, and even do some quality assurance by verifying our bookings actually went through. These aren&#x27;t just gym booking skills. Once you&#x27;ve mastered these techniques, you can automate all sorts of repetitive booking tasks on the web. We&#x27;ll start simple just logging in and booking one class, but by the end, your bot will be booking multiple classes and handle retries even when the website has issues. So grab your favorite snack, the gym approves, fire up PyCharm and let&#x27;s build a bot that never skips leg day or any day for that matter.
+The course ships a **gym website that runs entirely in your browser** — no server needed.
+
+| Piece | Detail |
+|-------|--------|
+| Database | **IndexedDB** inside Chrome (DevTools → Application → Storage) |
+| Test user | `student@test.com` / `password123` |
+| Admin user | extra control panel over classes, bookings, users |
+| "Clear Bookings only" | wipes bookings, keeps users |
+| "Reset All Data" | back to the factory state — run this *before every bot run* |
+
+> **Note:** Because the database lives in the browser, a **different Chrome profile sees a
+> different database**. Registering or booking in one profile has no effect on another.
 
 ---
 
-### Key Concepts
+### 4. Why the Chrome Profile Matters
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **Selenium web automation** | Introduced/used in this lecture |
+The bot must always use the **same Chrome profile**, or it will look at an empty database
+(and have to log in again). Most people have one profile — if you have several, pick the
+right one.
 
 ---
+
+### 5. Simulators for Testing
+
+Two toggles exist purely for quality assurance:
+
+* **Time simulation** — pretend a day has passed, so you can test "book the *upcoming*
+  Tuesday" logic without waiting a week.
+* **Network simulation** — make requests fail occasionally, so you can prove your
+  retry logic actually works.
+
+> Turn network simulation **off** while developing, then on at the end for the resilience
+> challenge.
+
+---
+
+### 6. Skills You'll Practise
+
+* Persistent browser profiles (the bot "remembers" who it is).
+* Handling content that depends on today's date.
+* Dealing with button states: *available*, *full*, *already booked*, *waitlisted*.
+* Retry logic implemented with **function wrappers / higher-order functions**.
+* QA: verifying the bookings really landed on the *My Bookings* page.
+
+---
+
+### 7. The Shape of the Build
+
+Start simple — log in and book one class — then grow: multiple classes, both weekdays,
+counters, verification, time-travel QA and finally network resilience.
+
+---
+
+### Summary Checklist
+
+1. Reset the browser database before each run; always reuse the same Chrome profile.
+2. `student@test.com` / `password123` gets you a working account.
+3. Time + network simulators exist for QA — leave them off until the end.
+4. Final bot: logs in, books *next* Tuesday/Thursday classes, counts, verifies, retries.

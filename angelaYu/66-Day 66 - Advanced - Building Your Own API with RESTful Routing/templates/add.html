@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add a cafe</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 520px; margin: 40px auto; }
+        label { display: block; margin-top: 14px; font-size: 0.9rem; }
+        input[type="text"], input[type="url"] { width: 100%; padding: 8px; }
+        button { margin-top: 20px; padding: 10px 18px; }
+    </style>
+</head>
+<body>
+    <h1>Add a cafe</h1>
+
+    <!-- POST /add reads these with request.form.get(...) -->
+    <form action="{{ url_for('add_cafe') }}" method="post">
+        <label>Name <input type="text" name="name" required></label>
+        <label>Map URL <input type="url" name="map_url" required></label>
+        <label>Image URL <input type="url" name="img_url" required></label>
+        <label>Location <input type="text" name="location" required></label>
+        <label>Seats <input type="text" name="seats" required></label>
+        <label>Coffee price <input type="text" name="coffee_price" required></label>
+
+        <label><input type="checkbox" name="has_wifi"> Has wifi</label>
+        <label><input type="checkbox" name="has_sockets"> Has sockets</label>
+        <label><input type="checkbox" name="has_toilet"> Has toilet</label>
+        <label><input type="checkbox" name="can_take_calls"> Can take calls</label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
