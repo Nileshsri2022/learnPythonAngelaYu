@@ -1,27 +1,44 @@
-# 🔧 Turtle Challenge 3 - Drawing Different Shapes
+Here is a structured breakdown of Turtle Challenge 3 — drawing different shapes.
 
 ---
 
-### Overview
+### 1. The Task
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
-**Lecture:** Turtle Challenge 3 - Drawing Different Shapes
-**Level:** Intermediate
+Draw a **triangle, square, pentagon, hexagon, heptagon, octagon, nonagon and decagon**,
+each in a different colour.
 
 ---
 
-### Summary
+### 2. The Key Insight — Exterior Angles
 
-All right, so the next challenge gets a little bit harder. It&#x27;s like we&#x27;re doing our sit ups now. In this challenge, you&#x27;re going to be drawing a triangle, square, pentagon, hexagon, heptagon, octagon, nonagon, and decagon. So from three-sided shape to ten-sided shape and each of those shapes is going to be drawn with a random color, and each of the sides are going to be 100 in terms of length, and the final outcome should look something like this. All of these shapes overlaid on each other and drawn out in sequence. So you&#x27;ll have to think a little bit about this because we know that a square has 90-degree angles. So we could get our robot to go forwards and then turn right 90 degrees and then go forwards again. But what about a Pentagon? Well, a pentagon, each of the corners has a 72 degree angle. So what&#x27;s the actual relationship? How can we work this out? Well, we know that to turn a full circle, it&#x27;s 360 degrees. So the way you work out the angle of each of these shapes is by dividing 360 by the number of sides. So 360 divided by five is 72. So each of the corners is 72 degrees. Using this knowledge and what you&#x27;ve learned about Turtle, go ahead and see if you can complete this challenge. Pause video now and give it a go. All right, so I&#x27;m going to delete the previous code and we&#x27;re going to write the code that&#x27;s going to draw all of these shapes. The first thing I want to do is I want to put down that equation. So we know that if we have 360 degrees divided by the number of sides, then we get the angle, right? So let&#x27;s save that into a variable called angle. And then all we have to do is to get our robot to go forwards by 100, we said. And then to get it to turn right and the angle that it&#x27;s going to turn right by is the one that we defined at the top there. So then we just need this to be repeated for as many times as we have number of sides. So we could create a for loop, for example. And the range is going to take into account the number of sites. So now if the number of sites is equal to let&#x27;s say five, let&#x27;s say we&#x27;re trying to draw a pentagon, then this would be the code. So let&#x27;s shift that along. And now if we go ahead and run this code, you can see it draws us a pentagon, a five-sided shape. So how can we get this loop to run for the different sides? How can we get it to go from a three-sided shape, a triangle, all the way to a ten-sided shape, a decagon? To do this, instead of setting the number of sides statically like this, why don&#x27;t we create a function? Let&#x27;s call it draw_shape. And this function is going to take the number of sides that this shape has as an input. And then the rest of this code can be indented inside the function. And it probably makes sense to only calculate the angle once when we need to draw the shape because for the given number of sides, that angle is going to be the same across the entire shape. For example, if it was a square then we&#x27;re going to go from one to four drawing this four times. So now later on, we can define another for loop and this for loop is going to go through all of the different number of sides that we need. Now, if we want a range of numbers between 3 and 10, we actually need to write the function 3, 11, because the stop number is excluded so it&#x27;ll stop at 10. As we loop through this range. this shape_side_n is going to take on the value depending on where we are in the range. So when we&#x27;re first drawing this, we&#x27;re going to draw a triangle with three sides so then we can pass this shape_side_n into our draw_shape function and that should go from 3 to 10. So let&#x27;s run our code and see it draw our triangle first and then our square and then it just keeps on going until it draws all of the shapes that we need. Now, the very last part of the challenge is to make each of the lines a different random color. So how can we do this? So, of course, we&#x27;re going to go to our good friend Google and we&#x27;re going to search for the turtle colors in Python. I first tried to Google this without the python, and I got the different colors of various turtles, which was really fascinating but that&#x27;s not what I wanted. So if we take a look at the first link this comes from a website called Trinket, and it has this interactive color palette where you can select one of these colors that you like and then you&#x27;ll get the turtle name, which then you can copy and paste into maybe a list. Let&#x27;s call it colors. And you can put as many colors into this palette as you want, and you can make it as extensive or as short as you want it to be. So here&#x27;s a list that I created earlier. And now, if we go ahead and set our turtle&#x27;s color, so let&#x27;s go ahead and get Tim and set his color to a random color from this list which we know to be as simple as simply importing the random module and then we can get hold of the random. choice and then inside that method, we can pass in our list of colors so that it picks a random color from that list. So now let&#x27;s run it again, and you can see each time the shape is being drawn it&#x27;s picking a random color from our list of colors. So there you have it. That&#x27;s the solution to this challenge. And this was a little bit more challenging I would say because we&#x27;re doing functions and loops and you have to get hold of some colors and you have to figure all of that out. But hopefully you&#x27;ve managed just fine and you&#x27;re ready to move on to the next challenge.
+Every polygon's exterior angles sum to **360°**. A shape with `n` sides turns
+`360 / n` degrees at each corner:
+
+```python
+import random
+from turtle import Turtle
+
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue",
+           "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+
+def draw_shape(num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        timmy.forward(100)
+        timmy.right(angle)
+
+for shape_side_n in range(3, 11):
+    timmy.color(random.choice(colours))
+    draw_shape(shape_side_n)
+```
+
+One loop inside another: the outer loop picks the shape (3→10 sides) and colour; the
+inner loop draws it.
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **random module** | Introduced/used in this lecture |
-
----
+1. Turn angle = `360 / number_of_sides`.
+2. Triangle through decagon with one parameterised function.
+3. Nested loops: one for the series, one for the shape.

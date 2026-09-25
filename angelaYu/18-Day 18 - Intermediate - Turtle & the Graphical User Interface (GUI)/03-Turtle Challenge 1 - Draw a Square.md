@@ -1,37 +1,34 @@
-# 🔧 Turtle Challenge 1 - Draw a Square
+Here is a structured breakdown of Turtle Challenge 1 — drawing a square.
 
 ---
 
-### Overview
+### 1. The Task
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
-**Lecture:** Turtle Challenge 1 - Draw a Square
-**Level:** Intermediate
+Make the turtle draw a **square** — the first shape every turtle programmer draws.
 
 ---
 
-### Summary
+### 2. The Solution
 
-All right. Now, the first turtle challenge I&#x27;ve got for you is pretty easy. It&#x27;s kind of like doing your stretches before we get started with the proper workout. So in this challenge, you&#x27;re going to be using turtle to draw a square. It&#x27;s going to be a simple 100 by 100 square, and it doesn&#x27;t matter where it is on the screen. As long as you can get it to draw this, then consider yourself successful. Pause the video, have a read through the documentation, have a think about the challenge and go ahead and complete it. All right. So I&#x27;m going to comment out the previous lines of code other than the line where we created our timmy_ the_turtle. Now to draw a square is pretty simple. All we have to do is to get it to go forwards by a hundred paces, and then we turn left or turn right by 90 degrees. And then we get it to repeat this process one time for each of the sides. And when we run the code, now you can see it draws a simple square. Now, of course, because we&#x27;re programmers and we&#x27;re lazy and we don&#x27;t like looking at repeated code, a much simpler way of doing this is to simply create a for loop. And we&#x27;re going to use the range operator to say that this loop should run four times and then let&#x27;s indent these two lines of code. And now it will do exactly the same as before but this time we&#x27;ve only had to write three lines of code instead of a million. This is probably the best solution, but I will also take this solution because after all, we&#x27;re just doing the warmup right? Now, while doing that exercise you might have realized that it&#x27;s actually really painful to keep calling our object timmy_the_turtle with such a long name. But now that we&#x27;ve written it in so many lines especially if you created this version of the code, it&#x27;s actually quite painful to go through each of them and change its name. Remember in PyCharm we have a really simple way of changing the name of a variable or a function, basically anything that we&#x27;ve named ourselves. All we have to do is right- click on the name, refactor and rename, and we can change it to something really simple like how about Tim. Now we&#x27;ve drastically made our code look a lot simpler just by doing that one thing. I&#x27;ll try to remind you of some of these shortcuts as we go along, but once you&#x27;re ready, head over to the next challenge.
+```python
+from turtle import Turtle
 
----
+timmy = Turtle()
 
-### Key Concepts
+for _ in range(4):
+    timmy.forward(100)
+    timmy.right(90)
+```
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+* A square = **four** sides with a **90°** turn between them.
+* `for _ in range(4):` — the underscore convention says the counter itself is unused.
 
----
-
-### 🏋️ Practice Exercise
-
-All right. Now, the first turtle challenge I&#x27;ve got for you is pretty easy. It&#x27;s kind of like doing your stretches before we get started with the proper workout. So in this challenge, you&#x27;re going to be using turtle to draw a square. It&#x27;s going to be a simple 100 by 100 square, and it doesn&#x27;t matter where it is on the screen. As long as you can get it to draw this, then consider yourself successful. Pause the video, have a read through the documentation, have a think about the challenge and go ahead and complete it. All right. So I&#x27;m going to comment out the previous lines of code other than the line where we created our timmy_ the_turtle. Now to draw a square is pretty simple. All we have to do is to get it to go forwards by a hundred paces, and then we turn left or turn right by 90 degrees. And then we get it to repeat this process one time for each of the sides. And when we run the code, now you can see it draws a simple square. Now, of course, because we&#x27;re programmers and we&#x27;re lazy and we don&#x27;t like looking at repeated code, a much simpler way of doing this is to simply create a for loop. And we&#x27;re going to use the range operator to say that this loop should run four times and then let&#x27;s indent these two lines of code. And now it will do exactly the same as before but this time we&#x27;ve only had to write three lines of code instead of a million. This is probably the best solution, but I will also take this solution because after all, we&#x27;re just doing the warmup right? Now, while doing that exercise you might have realized that it&#x27;s actually really painful to keep calling our object timmy_the_turtle with such a long name. But now that we&#x27;ve written it in so many lines especially if you created this version of the code, it&#x27;s actually quite painful to go through each of them and change its name. Remember in PyCharm we have a really simple way of changing the name of a variable or a function, basically anything that we&#x27;ve named ourselves. All we have to do is right- click on the name, refactor and rename, and we can change it to something really simple like how about Tim. Now we&#x27;ve drastically made our code look a lot simpler just by doing that one thing. I&#x27;ll try to remind you of some of these shortcuts as we go along, but once you&#x27;re ready, head over to the next challenge.
+> **Note:** `right(90)` turns the *turtle*; exterior angles are what matter for shapes.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-All right. Now, the first turtle challenge I&#x27;ve got for you is pretty easy. It&#x27;s kind of like doing your stretches before we get started with the proper workout. So in this challenge, you&#x27;re going to be using turtle to draw a square. It&#x27;s going to be a simple 100 by 100 square, and it doesn&#x27;t matter where it is on the screen. As long as you can get it to draw this, then consider yourself successful. Pause the video, have a read through the documentation, have a think about the challenge and go ahead and complete it. All right. So I&#x27;m going to comment out the previous lines of code other than the line where we created our timmy_ the_turtle. Now to draw a square is pretty simple. All we have to do is to get it to go forwards by a hundred paces, and then we turn left or turn right by 90 degrees. And then we get it to repeat this process one time for each of the sides. And when we run the code, now you can see it draws a simple square. Now, of course, because we&#x27;re programmers and we&#x27;re lazy and we don&#x27;t like looking at repeated code, a much simpler way of doing this is to simply create a for loop. And we&#x27;re going to use the range operator to say that this loop should run four times and then let&#x27;s indent these two lines of code. And now it will do exactly the same as before but this time we&#x27;ve only had to write three lines of code instead of a million. This is probably the best solution, but I will also take this solution because after all, we&#x27;re just doing the warmup right? Now, while doing that exercise you might have realized that it&#x27;s actually really painful to keep calling our object timmy_the_turtle with such a long name. But now that we&#x27;ve written it in so many lines especially if you created this version of the code, it&#x27;s actually quite painful to go through each of them and change its name. Remember in PyCharm we have a really simple way of changing the name of a variable or a function, basically anything that we&#x27;ve named ourselves. All we have to do is right- click on the name, refactor and rename, and we can change it to something really simple like how about Tim. Now we&#x27;ve drastically made our code look a lot simpler just by doing that one thing. I&#x27;ll try to remind you of some of these shortcuts as we go along, but once you&#x27;re ready, head over to the next challenge.
+1. Shape = loop of (move, turn).
+2. Square: 4 sides, right angles.
+3. Underscore loop variable for "just repeat N times".

@@ -1,29 +1,42 @@
-# 🔧 Importing Modules, Installing Packages, and Working with Aliases
+Here is a structured breakdown of this lesson on import styles and aliases.
 
 ---
 
-### Overview
+### 1. The Three Ways to Import
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
-**Lecture:** Importing Modules, Installing Packages, and Working with Aliases
-**Level:** Intermediate
+```python
+# 1. Import the whole module — use module.name
+import turtle
+timmy = turtle.Turtle()
+
+# 2. Import specific names — use them directly
+from turtle import Turtle
+timmy = Turtle()
+
+# 3. Import with an alias — shorten noisy names
+import turtle as t
+timmy = t.Turtle()
+```
+
+All three run the same code; they differ in **namespacing and readability**.
+
+---
+
+### 2. Which to Use?
+
+| Style | Good for | Watch out |
+|-------|----------|-----------|
+| `import module` | clarity about where names come from | verbose |
+| `from module import name` | frequent use of a few names | name collisions |
+| `import module as alias` | long names (`as t`, `as pd`, `as plt`) | obscure if overused |
+
+> **Warning:** `from turtle import *` imports *everything* into your namespace — it
+> makes code hard to trace. Avoid it.
 
 ---
 
-### Summary
+### Summary Checklist
 
-So, we&#x27;re importing the turtle module in order to use it in our code. So I want to spend a few minutes just quickly talking about all the ways that we can import modules. So we&#x27;ve already seen the Basic Import and it&#x27;s very simple, we have the keyword import and then we have the Module name that we want to import. So if we had just imported our turtle module with the simple import, then in order to create a new turtle, we would have to say the module name and then the name of the class, and we would create a new turtle like this. Now this is perfectly fine, but it would make it so much more convenient if we were using that Turtle class a lot to write our code like this. This way, we don&#x27;t have to keep writing turtle.Turtle() or turtle.Whatever else it is that we want to import. And this code is again pretty simple, we have the keyword &quot;from&quot;, we have the keyword &quot;import&quot;, we have the Module name, and also the Thing in the module that we want to import. As you&#x27;ve seen, with this kind of syntax, we can simply write... And this means that if we were creating a lot of turtles, let&#x27;s say, instead of just creating tim, we also created tom and terry, then we don&#x27;t have to keep writing turtle.Turtle(), turtle.Turtle() every single time. So this from import is really helpful if you&#x27;re going to use this thing that you&#x27;re importing a lot and you don&#x27;t want to keep writing the name of the module in front of it. Now you can actually go one step further, instead of saying just from turtle import whatever it is you want, you can actually import everything by using the asterisk. Now you can use everything that&#x27;s in that module as if it were in the current file. And this has advantages as well as disadvantages, because it can make it really hard to see where each of these classes or methods come from. So for example, if I just wrote forward(), you can see I can, I can do this, but it&#x27;s really confusing to just see this method somewhere in isolation, because it&#x27;s like, &quot;Well, what is moving forward? What&#x27;s actually happening? Where does this come from?&quot; And it&#x27;s more obvious when you import a module like random. So from random import everything. And then somewhere else in our code, we might just write something like, choice(), and this is a method from random, where we can pick a random item from a sequence like a list. Now this code works, but it&#x27;s really confusing. Like, &quot;How is this choice() working? Where does it come from? Which module enables this capability?&quot; Instead we just have the method whack right in our code, and it&#x27;s very confusing as to its origins. So amongst the Python community, it&#x27;s very unusual that you&#x27;ll see good code written like this. I want you to know what it does, because you might come across it in the wild, just so you understand what it&#x27;s actually doing, but I want you to try and avoid writing code like this. Instead, if you&#x27;re using something from a module many times, so more than three times, then you can think about using this &quot;from import&quot;, but if you&#x27;re only using it once or twice, then just import the whole module and write out this turtle.Turtle(). So you can see that this module is the one that contains this class and that is imported and we&#x27;re using it to create this object. It&#x27;s just a lot more expressive in terms of the code. Now the final thing I want to show you, which is quite a useful thing, is how to Alias Modules. So for example, we can import our turtle as &quot;t&quot;. So what this does is we import from the turtle module and we give that module an alias name, so a name that we define. And what this means is that if you were to create your new object from the module turtle, instead of writing out turtle every single time, you can just write &quot;t&quot;, and it will represent the entire module. So sometimes you&#x27;ll have modules which are really, really long. So it could have a really long name and you don&#x27;t want to type it out every single time. So you give it an alias name and it will be exactly the same as referring to the entire name of the module. And you can create a turtle like this. Now, even though we&#x27;ve been writing import, there are some modules that you can&#x27;t just import, right? So for example, if I wanted to import the heroes module, which is something that I can use to generate hero names like Decepticon or Leopardon or Askew-Tronics, then I can use one of the functions that&#x27;s in that module, heroes, called generate. But if I just go into my code and I straight up try to import this module, which is called heroes, then you can see I get an error and the error says, there&#x27;s &quot;No module named heroes.&quot; Why is it that I can&#x27;t do this, but I can import turtle? Well, the reason is because turtle is a module that&#x27;s packaged with the Python standard library, and this is a small library of code which contains just the basics to get you started. Like a core set when you buy a board game or like the basic track pieces when you buy a set of Hot Wheels. So you can imagine this library of code as like a family library, easily accessible, but very small. Now, if we wanted to access the whole world of Python modules and packages, then we need to go to a much bigger library. And that is, of course, the Python packages, which are hosted on the internet and we can install into our project as and when we need them. So this way, our final project doesn&#x27;t become gigantic because we&#x27;ve got all of the modules loaded into it from the internet, instead, we only plug and play whatever it is we need. So PyCharm is actually already smart enough to know that I probably want a module that I haven&#x27;t installed. And you can see that as soon as I click on this error with the red underline, I get a red light bulb over here. And if I click on it, it gives me the prompt to install this package called heroes. And once it&#x27;s done, then we can actually tap into this module and we can say heroes.gen(), and this is going to generate us a new hero name. So let&#x27;s go ahead and run our code. And you can see we&#x27;ve got a name called Galvatron, which is not bad, actually. So it&#x27;s important to remember that when you try to import something that hasn&#x27;t been installed, like this villains package, then when you try to run the code, you&#x27;ll get an error that says, &quot;No module named villains&quot;. And this should prompt you to think, &quot;Uh, maybe that module is not a part of the Python standard library like turtle, and I actually have to install it.&quot; Just remember that before you can import a module, sometimes if it&#x27;s not bundled with the Python standard library, then you might have to install it. Now what happens when you install a package is it gets installed into the local virtual environment, which as we said previously, is on a per project basis. So this is stored in the .venv or virtual environment folder, and you can see it here, heroes and villains, as well as other modules in Python. Now, for the most part, you don&#x27;t need to touch this folder at all, you can leave it as it is already set up for you. And when you create new projects in PyCharm, it usually gets created automatically for you. So this is an important differentiation between modules, like what we import here, and software. So when you install software, for example, PyCharm, you only need to install it once and it&#x27;s available globally across your computer. Now with a virtual environment, and with these packages, they get installed into the project that you&#x27;re building. So for example, today we&#x27;re building day-18-start, and these two modules are available in this project, but if I was to start a new project, then you&#x27;ll see that those packages are not installed by default. So they&#x27;re not global. The reason why we need to work with virtual environments when using Python is actually a bit of a historical problem. So previously, there was a version of Python called Python 2, and then people wanted new features to Python, so they created Python 3. However, sadly, Python 3 is not what we call backward-compatible with Python 2. So it means that if you have code that&#x27;s written in Python 2, and then you try to add Python 3 to that project, it&#x27;s not going to work. So you kind of have to make a choice, either Python 2 project, or projects written in Python 3. Now, we all know that Python 3 is the future, but that doesn&#x27;t mean that there isn&#x27;t a lot of existing projects written in Python 2. So the transition has been really, really slow, and virtual environments help us in a way by defining a small sandbox for our project. So we can decide whether we want to use Python 2 or Python 3 for our project, and then because we&#x27;re in a virtual environment, we can install the modules that we need, for example, the heroes module, which works with Python 3, but not Python 2. And we know that because we have our virtual environment set up for each and every project, and it&#x27;s different for every single project, then when we install each module, we know that it&#x27;s compatible, we know that that particular version works with all of the other packages that we have installed, and it&#x27;s kind of like freezing that project in time, so that you know, once you compile everything, once your program runs, you can continue running that program as and when you want, even if things like Python change versions, or your modules change versions. So that&#x27;s one of the reasons why we want to use PyCharm to handle and install our modules, because it means that it works with the rest of our virtual environment. It ensures that there are no errors that occur when we install it. And we maintain the version that we use, so that our final project works as expected. Now some of you might have seen that you can also install these packages using pip. So you could go into the terminal and write &quot;pip install...&quot; and pick one of these projects. But as you can imagine, with virtual environments, with the different projects having different virtual environments, you might install these modules into the wrong location, and that means your project won&#x27;t be able to access them outside of the sandbox. So I recommend following the video and doing what I do in the videos, so that we can all be on the same page and we can all learn as quickly as possible.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **Module imports** | Introduced/used in this lecture |
-| 4 | **random module** | Introduced/used in this lecture |
-
----
+1. Three import styles: module, named, aliased.
+2. Aliases are convention (`t`, `pd`, `plt`) — learn to recognise them.
+3. Prefer explicit imports; skip `import *`.
