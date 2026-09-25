@@ -1,31 +1,80 @@
-# 📖 URL Building with Flask
+Here is a structured breakdown of this lesson on URL building with Flask.
 
 ---
 
-### Overview
+### 1. The Problem with Hard-Coded Links
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 57 - Intermediate+ Templating with Jinja in Flask Applications
-**Lecture:** URL Building with Flask
-**Level:** N/A
+```html
+<a href="/blog">Go to blog</a>
+```
 
----
-
-### Summary
-
-So now that we&#x27;ve seen some of the things that we can do with templating and Jinja, I want to talk to you about something called URL building. And this is a way that allows us to direct the user to a specific page in our website and web app. Now, what that means is that for example, on our main homepage, we could actually have a link to the blogs page. The way that we would do that is in our index.html here, we could create a anchor tag, for example, in the body here. And we could say Go to blog. And then for the Href of this anchor tag, this is where we&#x27;re going to use the Jinja template to build out the href. So we&#x27;re going to add the curly braces in and dynamically work out the href. And in every Jinja template, we have access to a method called url_for. So we can say url_for, and then because this is Python, we can add some parameters when we call this method. And what it&#x27;s expecting is the name of a function in your Flask server. So you could, for example, hit up home or guess or blog. And in our case, this blog is what we want. So to make it right a little bit more clear because we&#x27;ve got the route which is called /blog, and we&#x27;ve got the function which is called blog. I&#x27;m going to change this to get_blog. So once you render this blog page, we can call this method get_blog by saying URL for, and then passing a string. So because we&#x27;ve got some quotation marks around the outside, we&#x27;re going to use some single quotes on the inside. And in between a single quotes is the name of that method, get_blog, like this. Now, what it&#x27;s going to do is it&#x27;s going to generate a hyperlink that&#x27;s going to be based on what it takes to get to this particular route and call this particular method. So now if I go ahead and update this and go to my homepage here, you&#x27;ll see there&#x27;s a new link that says go to blog. And when I click on it, it takes me to the blog page. Now, another thing that you might want to do is when you navigate to a URL inside your web app, you might want to add in some parameters. You can add parameters when you are using url_for in the same way that you did it when you did render_template. So that you can create the name of the parameter and the value and it is a keyword argument that comes after the first parameter. So here we could say, for example, url_for get_blog, and then we could just say a number equals three. So now when the user clicks on this anchor tag, it&#x27;s going to look for a method called get_blog on our server.py which is right here, and then it&#x27;s going to pass over any subsequent keyword arguments as parameters. So we can catch those parameters inside the app route. So we can say / and then we can use our angle brackets which we&#x27;ve always done to give parts of the URL a identifier, and we can call this num or number, whatever you like. And we&#x27;ll also need to add that to the input to this method and just to prove that it works, I&#x27;m going to print it out. So now let&#x27;s go ahead and rerun our code. And if we go back to our homepage and I click on go to blog and it goes to the blog website and it inserts that three into that part of the URL, and if I take a look in the console, you can see it printed out that number which got passed all the way from the index.html to the server. And finally, inside this method it was caught and it could be printed. And it could also be further propagated into another template if need be. So now that we&#x27;ve done all the theory, in the next lesson, it&#x27;s time to tackle the final project and we&#x27;re going to be building out our blog website with styling and also with templating. So for all of that and more, head over to the next lesson.
+Works — until you rename the route to `/posts`. Now every template holding that string is
+broken, and you have to grep the whole project.
 
 ---
 
-### Key Concepts
+### 2. `url_for()` — Let Flask Build the URL
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Flask web framework** | Introduced/used in this lecture |
+```html
+<a href="{{ url_for('get_blog') }}">Go to blog</a>
+```
+
+* `url_for` is available in **every** Jinja template.
+* It takes the **name of the view function** (not the route string) as its first argument.
+* Flask looks the function up and generates the correct URL for it.
+
+> **Tip:** Rename the route and nothing breaks — `url_for` follows the function, not the
+> path.
 
 ---
 
-### Next Steps
+### 3. Passing Arguments
 
-So now that we&#x27;ve seen some of the things that we can do with templating and Jinja, I want to talk to you about something called URL building. And this is a way that allows us to direct the user to a specific page in our website and web app. Now, what that means is that for example, on our main homepage, we could actually have a link to the blogs page. The way that we would do that is in our index.html here, we could create a anchor tag, for example, in the body here. And we could say Go to blog. And then for the Href of this anchor tag, this is where we&#x27;re going to use the Jinja template to build out the href. So we&#x27;re going to add the curly braces in and dynamically work out the href. And in every Jinja template, we have access to a method called url_for. So we can say url_for, and then because this is Python, we can add some parameters when we call this method. And what it&#x27;s expecting is the name of a function in your Flask server. So you could, for example, hit up home or guess or blog. And in our case, this blog is what we want. So to make it right a little bit more clear because we&#x27;ve got the route which is called /blog, and we&#x27;ve got the function which is called blog. I&#x27;m going to change this to get_blog. So once you render this blog page, we can call this method get_blog by saying URL for, and then passing a string. So because we&#x27;ve got some quotation marks around the outside, we&#x27;re going to use some single quotes on the inside. And in between a single quotes is the name of that method, get_blog, like this. Now, what it&#x27;s going to do is it&#x27;s going to generate a hyperlink that&#x27;s going to be based on what it takes to get to this particular route and call this particular method. So now if I go ahead and update this and go to my homepage here, you&#x27;ll see there&#x27;s a new link that says go to blog. And when I click on it, it takes me to the blog page. Now, another thing that you might want to do is when you navigate to a URL inside your web app, you might want to add in some parameters. You can add parameters when you are using url_for in the same way that you did it when you did render_template. So that you can create the name of the parameter and the value and it is a keyword argument that comes after the first parameter. So here we could say, for example, url_for get_blog, and then we could just say a number equals three. So now when the user clicks on this anchor tag, it&#x27;s going to look for a method called get_blog on our server.py which is right here, and then it&#x27;s going to pass over any subsequent keyword arguments as parameters. So we can catch those parameters inside the app route. So we can say / and then we can use our angle brackets which we&#x27;ve always done to give parts of the URL a identifier, and we can call this num or number, whatever you like. And we&#x27;ll also need to add that to the input to this method and just to prove that it works, I&#x27;m going to print it out. So now let&#x27;s go ahead and rerun our code. And if we go back to our homepage and I click on go to blog and it goes to the blog website and it inserts that three into that part of the URL, and if I take a look in the console, you can see it printed out that number which got passed all the way from the index.html to the server. And finally, inside this method it was caught and it could be printed. And it could also be further propagated into another template if need be. So now that we&#x27;ve done all the theory, in the next lesson, it&#x27;s time to tackle the final project and we&#x27;re going to be building out our blog website with styling and also with templating. So for all of that and more, head over to the next lesson.
+If the route has a variable part, pass it as a keyword argument:
+
+```python
+@app.route("/blog/<int:number>")
+def get_blog(number):
+    print(number)
+    return render_template("blog.html", posts=all_posts)
+```
+
+```html
+<a href="{{ url_for('get_blog', number=3) }}">Go to blog #3</a>
+```
+
+Clicking it requests `/blog/3`; the value arrives in the function's `number` parameter.
+That value can then be printed, used to filter data, or handed to another template.
+
+---
+
+### 4. `url_for` Works for Static Files Too
+
+```html
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<img src="{{ url_for('static', filename='images/avatar.png') }}" alt="avatar">
+```
+
+* The `'static'` endpoint is built in.
+* `filename=` is relative to the `static/` folder.
+* Flask generates `/static/styles.css` — so the link keeps working if the app is ever
+  mounted under a sub-path (e.g. `/myapp/static/styles.css`).
+
+---
+
+### 5. Why Bother?
+
+| Hard-coded | `url_for` |
+|------------|-----------|
+| Breaks when paths change | Follows the view function |
+| Must be edited in every template | One source of truth |
+| Breaks if deployed under a subfolder | Always generates the right prefix |
+
+---
+
+### Summary Checklist
+
+1. `{{ url_for('function_name') }}` builds links from view functions.
+2. Extra keyword arguments become URL variables: `url_for('get_blog', number=3)`.
+3. `url_for('static', filename='…')` for CSS/images/JS.
+4. Use it everywhere — it's the difference between a template and a fragile one.
