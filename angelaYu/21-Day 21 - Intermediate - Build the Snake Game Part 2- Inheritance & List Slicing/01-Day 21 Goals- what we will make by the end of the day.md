@@ -1,30 +1,27 @@
-# 🔧 Day 21 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 21 goals — the Snake Game, Part 2 (finishing it).
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 21
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 21 - Intermediate - Build the Snake Game Part 2: Inheritance & List Slicing
-**Lecture:** Day 21 Goals: what we will make by the end of the day
-**Level:** Intermediate
-
----
-
-### Summary
-
-Hey guys, welcome to Day 21 of 100 Days of Code. Today we&#x27;re going to learn about class inheritance, slicing, and we&#x27;re going to be finishing up our snake game. Today I wanted to introduce you to another really important concept in Object Oriented Programming, which is the idea that classes can inherit from other classes, inheriting attributes, inheriting methods, basically a way to make it simpler to modify classes and give them more capabilities. Now we&#x27;re also going to be looking at how Python allows us to slice things like lists and dictionaries. And we&#x27;re going to be looking at how we can do that. And once we&#x27;ve acquired all of these skills, then we&#x27;ll be able to finish up our snake game and complete the last four stages. So detecting collision with food, creating a scoreboard, detecting collision with the wall and with the tail. Once you are ready, head over to the next lesson and let&#x27;s get started learning about class inheritance.
+* **Class inheritance** — classes extending other classes
+* **Collision detection** with food, walls, and the snake's own tail
+* A **scoreboard** using turtle text
+* **List & tuple slicing** for cleaner code
 
 ---
 
-### Key Concepts
+### 2. What We're Adding to Snake
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
+1. **Food** — a blue dot that relocates randomly when eaten; the snake grows.
+2. **Scoreboard** — score updates on every bite.
+3. **Game over** — hitting a wall or your own tail ends the game.
+4. Polish — slicing makes the tail-collision code elegant.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey guys, welcome to Day 21 of 100 Days of Code. Today we&#x27;re going to learn about class inheritance, slicing, and we&#x27;re going to be finishing up our snake game. Today I wanted to introduce you to another really important concept in Object Oriented Programming, which is the idea that classes can inherit from other classes, inheriting attributes, inheriting methods, basically a way to make it simpler to modify classes and give them more capabilities. Now we&#x27;re also going to be looking at how Python allows us to slice things like lists and dictionaries. And we&#x27;re going to be looking at how we can do that. And once we&#x27;ve acquired all of these skills, then we&#x27;ll be able to finish up our snake game and complete the last four stages. So detecting collision with food, creating a scoreboard, detecting collision with the wall and with the tail. Once you are ready, head over to the next lesson and let&#x27;s get started learning about class inheritance.
+1. Inheritance = take an existing class's abilities and add extras.
+2. Every game mechanic here reduces to a **distance or coordinate check**.
+3. Slicing cleans up "everything except the head" logic.
