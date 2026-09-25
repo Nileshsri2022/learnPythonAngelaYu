@@ -1,27 +1,37 @@
-# 🔧 Why do we need OOP and how does it work?
+Here is a structured breakdown of this lesson on why we need OOP and how it works.
 
 ---
 
-### Overview
+### 1. The Problem OOP Solves
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 16 - Intermediate - Object Oriented Programming (OOP)
-**Lecture:** Why do we need OOP and how does it work?
-**Level:** Intermediate
-
----
-
-### Summary
-
-Hey! Welcome to Day 16 of 100 Days of Code. Now today, we&#x27;re going to be pulling out the big guns, we&#x27;re going to be learning about Object Oriented Programming otherwise known as OOP. Why are we learning about it? Well, if you think back to yesterday&#x27;s project, some of you I&#x27;m sure at some point during the project, would have had this feeling of what on earth is going on with my code? And the reason is because our code is getting more complex, it&#x27;s trying to do a lot of things, and it&#x27;s trying to manage a whole bunch of relationships. So one function is changing a variable, and then that same function is doing something else to another variable. And at some point, the logic of our code starts looking very, very spaghetti- like. And it&#x27;s at this point where it&#x27;s really hard to track and remember what&#x27;s actually going on in our code. So this style of programming is called Procedural Programming where we set up procedures or functions that do particular things. And then one procedure leads to another procedure, and all in all, the computer&#x27;s mostly working from top to bottom and then jumping out into a function as needed. Procedural programming is one of the earliest paradigms of Programming. In fact, back in the days when we had older languages like Fortran and COBOL, they rely pretty much exclusively on procedural programming like what we&#x27;ve been doing. But the increase in complexity, the increase in the number of relationships that we need to remember and manage starts making it look a bit like the dating history of the Kardashians. And it gets very, very confusing because everybody has been in touch with somebody else. Now, the kind of relationships I prefer are one to one, me and my couch. So how can we maintain a simple relationship in our code while being able to write more and more complex projects? Well, this is where the Object-Oriented paradigm comes in really handy. Now let&#x27;s imagine that you&#x27;re tasked with creating the program for a self- driving car. Now, as you can imagine, this is a pretty complex project and it&#x27;s many, many notches above the coffee machine that we&#x27;ve been struggling with so far. But what if you broke it down? What is a self-driving car? What are the different components that make up a self-driving car? Well, it probably needs some sort of camera module to keep track of what&#x27;s on the road and to recognize what&#x27;s on the road, it will probably need a form of lane detection to know if we&#x27;re actually within the lane or if we need to turn off or if we need to park, and it will need some way of navigating so that when the user says, I want to go to the bank, they identify the branch they want to go to, and then the navigation gets set up and the car knows how to get there. And finally, you&#x27;ll probably need some form of fuel management, right? What should happen when the fuel gets low? Should it go and automatically recharge at a specified point? Now I&#x27;m obviously simplifying this task. There&#x27;s a lot, a lot more that goes into making an automated car. But we&#x27;ve already managed to break it down into several modules that we can think about tackling, right? But imagine if you have a whole team who are all working on this project and within that team, there&#x27;s sub-teams who are working on each of these different modules. Well then by splitting up this big complex task into separate modules, then we can all work on this car simultaneously, massively improving our productivity, making it much quicker to eventually build all the software for this car. Plus on top of that, a lot of these modules are reusable. So if it just so happens that the next year we&#x27;re tasked with building a drone, well, a lot of those programming modules that we built, like the camera module, the fuel management, the navigation, that&#x27;s all going to be incredibly useful in our drone delivery software as well. And because we&#x27;ve taken out these individual chunks of code and modularized them using Object Oriented Programming, we won&#x27;t have to code them up again in the same way that we might need to if we were using procedural programming. So what exactly is all Object Oriented Programming? We&#x27;ve seen that we can split a larger task into that smaller pieces. And each of those pieces can be worked on by separate teams, separate people, and also each of those pieces become reusable if we need the same functionality in the future. But Object Oriented Programming actually takes that concept even further. And I think the best way to explain it is to imagine that you are tasked with running a restaurant. So you take over this restaurant from your long lost uncle and you realize that it&#x27;s actually really hard running a restaurant. So, first off, you have to be the receptionist and you reserve seats for your restaurant visitor&#x27;s and then when they order something, you have to be the waitress and bring them their order. And then of course the order needs to be cooked up, right? So you&#x27;re also gonna run into the kitchen and be the chef, create the thing that they ordered and finally, you&#x27;re also going to be the cleaner tidying up after everybody once they&#x27;ve left. As you can imagine, if you were one person having to do all of these tasks, that&#x27;s going to be a pretty rough day. There are in fact one-man restaurants, and I&#x27;ve seen some work really in well Japan, where you have one person who&#x27;s taking the order, who&#x27;s making the food, who&#x27;s tidying up after you. But the limitation here though, is that look at how many seats he has. You can&#x27;t have a large restaurant running everything by yourself. In the same way we can&#x27;t create a very complex and really large software project if we are using a procedural style of programming where we&#x27;re sort of running a one man band. It gets very, very complex and very hard to manage very quickly. So lets consider the alternative. What if we had just hired a bunch of people where they each have their own individual roles. They&#x27;re trained for it, they know what to do. The waiter knows how to wait and the chef knows how to cook. Well, in this case, you could just be the manager and you can manage all of your staff and tell them what it is that they need to do. But then you won&#x27;t have to worry about the nitty-gritty details of exactly how they need to go about doing their jobs. So for example, you don&#x27;t need to tell the waiter how to wait on customers and you don&#x27;t need to tell the chef how to cook an egg because they already know how to do that. And we can use the same concept to simplify the relationships in our code and make it scalable for a larger and more complex project.
+Real programs model real-world things — users, cars, coffee machines — each with
+**state** (data) and **behaviour** (actions). Scattered lists and functions get tangled
+fast. **Object-Oriented Programming** bundles state + behaviour into **objects**.
 
 ---
 
-### Key Concepts
+### 2. The Mental Model
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+* A **class** is a *blueprint* — it defines what data and actions every instance will have.
+* An **object** is a *thing built from that blueprint* — each with its own state.
+
+Analogy: one car blueprint (class); many cars built from it (objects) — each with its own
+colour and mileage, all able to *drive* (behaviour).
+
+```python
+import turtle
+timmy = turtle.Turtle()     # object built from the Turtle blueprint
+timmy.color("coral")        # attribute: its state
+timmy.forward(100)          # method: its behaviour
+```
+
+Everything in Python is an object — lists, strings, even functions have methods you've
+been calling all along.
 
 ---
+
+### Summary Checklist
+
+1. OOP = organising code into objects that hold **attributes** (data) and **methods** (actions).
+2. Class = blueprint; object = one concrete instance.
+3. You've used OOP already: `"hi".upper()`, `my_list.append(x)`.
