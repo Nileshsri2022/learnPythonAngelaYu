@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 66 - Advanced - Building Your Own API with RESTful Routing
+Lecture: Day 66 Goals: Build Your Own REST API Service
+----------------------------------------
+
+[No transcript available for this lecture]

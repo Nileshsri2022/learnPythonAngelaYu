@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 51 - Intermediate+ Internet Speed X Complaint Bot
+Lecture: Step 4 - Building an X Bot to Tweet at your Internet Provider
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 74 - Advanced - Aggregate & Merge Data with Pandas: Analyse the LEGO Dataset
+Lecture: Find the Oldest and Largest LEGO Sets
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 33 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier
+Lecture: Day 33 Goals: what you will make by the end of the day
+----------------------------------------
+
+Hey guys, Welcome to Day 33 of 100 Days of Code. It's Angela here and today we're going to be learning about application programming interfaces, also known as APIs. What are we going to use it for? Well, we're going to learn this technology so that we're able to create an ISS tracker. So this is the international space station and it floats high above in the sky and it circles earth many, many times a day. Here's a video that's taken from the ISS and you can see how glorious earth looks in the eyes of the ISS. And what we're going to try to do is we're going to try and track where the ISS is currently at in the sky. And at the time point when the ISS is in the night sky, right above where we are, then we're going to send ourselves an email telling us to look up and spot the fast-moving ISS. Once you are ready, head over to the next lesson and we'll get started learning about APIs.

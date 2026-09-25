@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 67 - Advanced - Blog Capstone Project Part 3 - RESTful Routing
+Lecture: Requirement 1 - Be Able to GET Blog Post Items
+----------------------------------------
+
+[No transcript available for this lecture]

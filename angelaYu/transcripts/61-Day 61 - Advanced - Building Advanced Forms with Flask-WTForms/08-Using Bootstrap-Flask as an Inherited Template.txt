@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 61 - Advanced - Building Advanced Forms with Flask-WTForms
+Lecture: Using Bootstrap-Flask as an Inherited Template
+----------------------------------------
+
+[No transcript available for this lecture]

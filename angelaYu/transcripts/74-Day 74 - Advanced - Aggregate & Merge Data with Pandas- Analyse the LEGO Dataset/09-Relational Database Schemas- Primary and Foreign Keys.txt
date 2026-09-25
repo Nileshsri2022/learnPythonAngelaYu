@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 74 - Advanced - Aggregate & Merge Data with Pandas: Analyse the LEGO Dataset
+Lecture: Relational Database Schemas: Primary and Foreign Keys
+----------------------------------------
+
+[No transcript available for this lecture]

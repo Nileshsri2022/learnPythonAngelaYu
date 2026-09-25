@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 74 - Advanced - Aggregate & Merge Data with Pandas: Analyse the LEGO Dataset
+Lecture: Visualise the Number of Sets Published over Time
+----------------------------------------
+
+[No transcript available for this lecture]

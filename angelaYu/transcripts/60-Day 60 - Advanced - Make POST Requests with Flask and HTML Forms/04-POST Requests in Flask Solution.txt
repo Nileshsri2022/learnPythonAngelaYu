@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 60 - Advanced - Make POST Requests with Flask and HTML Forms
+Lecture: POST Requests in Flask Solution
+----------------------------------------
+
+[No transcript available for this lecture]

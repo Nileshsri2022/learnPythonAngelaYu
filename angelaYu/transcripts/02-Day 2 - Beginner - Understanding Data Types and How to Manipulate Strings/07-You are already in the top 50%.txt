@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 2 - Beginner - Understanding Data Types and How to Manipulate Strings
+Lecture: You are already in the top 50%
+----------------------------------------
+
+Hey, you've completed day 2, so you haven't just done one lesson, you've actually done two now in a row, which is fantastic. And in fact, you are now above 50% of all the people who start something and never finish. But I know you, I know you're not one of those people. I know you're going to keep going and you're going to get this in the bag. So keep going, have a rest, have a good night's sleep. And I'll see you bright and early tomorrow morning.

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 59 - Advanced - Blog Capstone Project Part 2 - Adding Styling
+Lecture: Step 6 - Fetch and render the blog posts from an API
+----------------------------------------
+
+[No transcript available for this lecture]

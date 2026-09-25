@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 39 - Intermediate+ Capstone Part 1: Flight Deal Finder
+Lecture: Step 5 - Check all the flights in your sheet
+----------------------------------------
+
+[No transcript available for this lecture]

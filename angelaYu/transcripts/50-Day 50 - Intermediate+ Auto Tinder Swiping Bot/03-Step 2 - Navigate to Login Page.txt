@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 50 - Intermediate+ Auto Tinder Swiping Bot
+Lecture: Step 2 - Navigate to Login Page
+----------------------------------------
+
+[No transcript available for this lecture]

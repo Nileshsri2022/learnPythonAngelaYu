@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 78 - Advanced - Linear Regression and Data Visualisation with Seaborn
+Lecture: Day 78 Goals: what you will make by the end of the day
+----------------------------------------
+
+[No transcript available for this lecture]

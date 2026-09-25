@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 77 - Advanced - Computation with NumPy and N-Dimensional Arrays
+Lecture: NumPy's ndarray - Incredible Power at Your Fingertips!
+----------------------------------------
+
+[No transcript available for this lecture]

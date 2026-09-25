@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 12 - Beginner - Scope & Number Guessing Game
+Lecture: Don't be too hard on yourself
+----------------------------------------
+
+Well done on completing day 12. Now, one of the things that I really, really want to say to everybody is don't be so hard on yourself, because I know that I do it too, you know. Sometimes your inner voice says, "Oh, I can't believe you missed a day." Or like, "why couldn't you get the answer the first time?" It doesn't mean that you failed. As long as you keep trying, you're succeeding. So don't worry if you've missed a day here or there, don't worry if you had to do one day in two days or if you didn't get solutions straight away. As long as you keep going at it, you're going to succeed eventually. And remember, I believe in you.

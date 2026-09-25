@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 39 - Intermediate+ Capstone Part 1: Flight Deal Finder
+Lecture: Step 3 - Get flights and prices for a single city
+----------------------------------------
+
+[No transcript available for this lecture]

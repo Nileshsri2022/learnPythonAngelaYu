@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 49 - Intermediate+ Automating your Exercise Routine at the Gym
+Lecture: Step 5: Add counters to your script to provide a neat summary
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 46 - Intermediate+ Create a Spotify Playlist using the Musical Time Machine
+Lecture: Step 2 - Youtube Music - Re-use your Browser's Requests to Authenticate
+----------------------------------------
+
+[No transcript available for this lecture]

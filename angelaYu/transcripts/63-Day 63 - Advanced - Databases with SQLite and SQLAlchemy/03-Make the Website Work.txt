@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 63 - Advanced - Databases with SQLite and SQLAlchemy
+Lecture: Make the Website Work
+----------------------------------------
+
+[No transcript available for this lecture]
