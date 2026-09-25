@@ -1,36 +1,37 @@
-# 📖 Challenge: Use Python Decorators to Style HTML Tags
+Here is a structured breakdown of this challenge lesson on styling decorators.
 
 ---
 
-### Overview
+### 1. The Challenge
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 55 - Intermediate+ HTML & URL Parsing in Flask and the Higher Lower Game
-**Lecture:** Challenge: Use Python Decorators to Style HTML Tags
-**Level:** N/A
+Wrap route outputs in `<em>`, `<b>`, `<u>` — using decorators, not string literals:
+
+```python
+def make_emphasis(function):
+    def wrapper():
+        return "<em>" + function() + "</em>"
+    return wrapper
+
+def make_underlined(function):
+    def wrapper():
+        return "<u>" + function() + "</u>"
+    return wrapper
+
+@app.route("/bye")
+@make_bold
+@make_emphasis
+@make_underlined
+def bye():
+    return "Bye!"
+```
+
+* Decorators **stack**: the bottom one wraps first; each outer layer adds its tags.
+* Note `wrapper()` takes no arguments here — that's exactly the problem `*args`/`**kwargs`
+  solve on the next lesson, when wrapped functions need inputs.
 
 ---
 
-### Summary
+### Summary Checklist
 
-All right guys. So in yesterday&#x27;s lessons that we talked about, Python decorators, and we did quite a few exercises around that. Now, in order to test your knowledge and make sure that you haven&#x27;t forgotten how to use it, I&#x27;ve got a challenge for you to apply your knowledge of decorators. Here&#x27;s the challenge in this route that I&#x27;ve got here, which is just forward slash bye. One of the things that we learnt in the last lesson is that we can turn this into an HTML element by simply wrapping it around HTML tags. So for example, if I wanted to turn this BI into a bolded, by that I could add the B tag around it. So now if I hit save and I go to my forest slash buy route, then you can see that this text is now bolded. Like, so now I can continue wrapping the text around more tags. If I wanted a turn in a tallit, then I can wrap it around some emphasis tags. So the EMT tag, and this will make it look like this. And finally, I can also make it underlined by wrapping it inside a you tag like this. So now it&#x27;s bold emphasized and underlined, which looks like this. Now, what I want to do though, is I don&#x27;t really want to add all of this using strings because it&#x27;s prone to errors and it could be making typos, and it&#x27;s just a bit of a pain to edit. So what I want to do instead is under the first App dot route decorator, which is important to identify the route to render what&#x27;s in this method. I want to be able to add some other decorators. For example, let&#x27;s say I added a decorator that I created somewhere up there called make bolt. And if I hit save, you can see it&#x27;s done the same thing. It&#x27;s added the B tag around that text. I can also add some my other ones that I made earlier, like make emphasis and make underlined. So now I can add a whole bunch of decorators to my by function. And once that&#x27;s rendered, you can see it&#x27;s got the bold, it&#x27;s got the emphasis and it&#x27;s got the underline. And that was much easier because I&#x27;ve got the auto suggest from PI jam. And also I&#x27;ve got my decorator working in the background. So your task is this, your task is to create these three decorators, which each will achieve the named effect. So either making the text bold, making emphasize, or making an underlined. So this is a bit of a revision and a bit of a challenge. I&#x27;ll let you pause the video and complete this challenge. And in the next lesson, I&#x27;ll reveal the solution code. Give that 10 minutes, give it a good go and see if you can complete this challenge.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-All right guys. So in yesterday&#x27;s lessons that we talked about, Python decorators, and we did quite a few exercises around that. Now, in order to test your knowledge and make sure that you haven&#x27;t forgotten how to use it, I&#x27;ve got a challenge for you to apply your knowledge of decorators. Here&#x27;s the challenge in this route that I&#x27;ve got here, which is just forward slash bye. One of the things that we learnt in the last lesson is that we can turn this into an HTML element by simply wrapping it around HTML tags. So for example, if I wanted to turn this BI into a bolded, by that I could add the B tag around it. So now if I hit save and I go to my forest slash buy route, then you can see that this text is now bolded. Like, so now I can continue wrapping the text around more tags. If I wanted a turn in a tallit, then I can wrap it around some emphasis tags. So the EMT tag, and this will make it look like this. And finally, I can also make it underlined by wrapping it inside a you tag like this. So now it&#x27;s bold emphasized and underlined, which looks like this. Now, what I want to do though, is I don&#x27;t really want to add all of this using strings because it&#x27;s prone to errors and it could be making typos, and it&#x27;s just a bit of a pain to edit. So what I want to do instead is under the first App dot route decorator, which is important to identify the route to render what&#x27;s in this method. I want to be able to add some other decorators. For example, let&#x27;s say I added a decorator that I created somewhere up there called make bolt. And if I hit save, you can see it&#x27;s done the same thing. It&#x27;s added the B tag around that text. I can also add some my other ones that I made earlier, like make emphasis and make underlined. So now I can add a whole bunch of decorators to my by function. And once that&#x27;s rendered, you can see it&#x27;s got the bold, it&#x27;s got the emphasis and it&#x27;s got the underline. And that was much easier because I&#x27;ve got the auto suggest from PI jam. And also I&#x27;ve got my decorator working in the background. So your task is this, your task is to create these three decorators, which each will achieve the named effect. So either making the text bold, making emphasize, or making an underlined. So this is a bit of a revision and a bit of a challenge. I&#x27;ll let you pause the video and complete this challenge. And in the next lesson, I&#x27;ll reveal the solution code. Give that 10 minutes, give it a good go and see if you can complete this challenge.
-
----
-
-### Next Steps
-
-All right guys. So in yesterday&#x27;s lessons that we talked about, Python decorators, and we did quite a few exercises around that. Now, in order to test your knowledge and make sure that you haven&#x27;t forgotten how to use it, I&#x27;ve got a challenge for you to apply your knowledge of decorators. Here&#x27;s the challenge in this route that I&#x27;ve got here, which is just forward slash bye. One of the things that we learnt in the last lesson is that we can turn this into an HTML element by simply wrapping it around HTML tags. So for example, if I wanted to turn this BI into a bolded, by that I could add the B tag around it. So now if I hit save and I go to my forest slash buy route, then you can see that this text is now bolded. Like, so now I can continue wrapping the text around more tags. If I wanted a turn in a tallit, then I can wrap it around some emphasis tags. So the EMT tag, and this will make it look like this. And finally, I can also make it underlined by wrapping it inside a you tag like this. So now it&#x27;s bold emphasized and underlined, which looks like this. Now, what I want to do though, is I don&#x27;t really want to add all of this using strings because it&#x27;s prone to errors and it could be making typos, and it&#x27;s just a bit of a pain to edit. So what I want to do instead is under the first App dot route decorator, which is important to identify the route to render what&#x27;s in this method. I want to be able to add some other decorators. For example, let&#x27;s say I added a decorator that I created somewhere up there called make bolt. And if I hit save, you can see it&#x27;s done the same thing. It&#x27;s added the B tag around that text. I can also add some my other ones that I made earlier, like make emphasis and make underlined. So now I can add a whole bunch of decorators to my by function. And once that&#x27;s rendered, you can see it&#x27;s got the bold, it&#x27;s got the emphasis and it&#x27;s got the underline. And that was much easier because I&#x27;ve got the auto suggest from PI jam. And also I&#x27;ve got my decorator working in the background. So your task is this, your task is to create these three decorators, which each will achieve the named effect. So either making the text bold, making emphasize, or making an underlined. So this is a bit of a revision and a bit of a challenge. I&#x27;ll let you pause the video and complete this challenge. And in the next lesson, I&#x27;ll reveal the solution code. Give that 10 minutes, give it a good go and see if you can complete this challenge.
+1. Stacked decorators = nested wrappers, bottom-up.
+2. Each decorator adds its markup around the return value.
