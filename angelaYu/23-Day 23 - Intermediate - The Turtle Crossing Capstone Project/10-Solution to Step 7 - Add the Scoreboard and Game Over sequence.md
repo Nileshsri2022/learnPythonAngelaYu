@@ -1,28 +1,73 @@
-# 🔧 Solution to Step 7 - Add the Scoreboard and Game Over sequence
+Here is a structured breakdown of Step 7 — the scoreboard and game over.
 
 ---
 
-### Overview
+### 1. The `Scoreboard`
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 23 - Intermediate - The Turtle Crossing Capstone Project
-**Lecture:** Solution to Step 7 - Add the Scoreboard and Game Over sequence
-**Level:** Intermediate
+Displays the **level** (not a point count) top-right, and GAME OVER on a squish:
+
+```python
+from turtle import Turtle
+
+FONT = ("Courier", 24, "normal")
+
+
+class Scoreboard(Turtle):
+
+    def __init__(self):
+        super().__init__()
+        self.level = 1
+        self.hideturtle()
+        self.penup()
+        self.goto(-280, 250)
+        self.update_level()
+
+    def update_level(self):
+        self.clear()
+        self.write(f"Level: {self.level}", align="left", font=FONT)
+
+    def increase_level(self):
+        self.level += 1
+        self.update_level()
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write("GAME OVER", align="center", font=FONT)
+```
 
 ---
 
-### Summary
+### 2. Wiring It All Together
 
-In the last lesson, we figured out how to detect when our turtle reaches the other side of the screen. And when this happens, we return the turtle player to its original position and we also increase the speed of the cars by the move increment that we defined as a constant. So in this lesson, what we&#x27;re going to do is the final step, which is to create a scoreboard that keeps track of which level the turtle player is on, and also when the turtle hits one of the cars to display the words game over in the center of the screen. To do that, we&#x27;re of course going to go inside our scoreboard class and again we&#x27;re going to need the help of the turtle class. So let&#x27;s import that from the turtle module and I&#x27;m going to make my scoreboard a subclass of the turtle class. So it&#x27;s now inheriting from the turtle class. And once we&#x27;ve defined our init and managed to get it to inherit everything from the superclass, then our scoreboard is now able to do everything a turtle class can do. What do we want it to do? Well, we have to initialize it with a couple of things first. For example, we probably want to start out by hiding the turtle, we just want to use it as a pen to draw. And in addition, we don&#x27;t want it to move and draw. So we&#x27;re going to pull the pen up. We&#x27;re going to be using the write method instead. And what we want to write is the level, right? So the current level that the player is on. In order to do that, we also have to keep track of the level. So let&#x27;s go ahead and create a new attribute which I&#x27;ll call level and let&#x27;s start at level 1. So then we can insert this right here with self.level and in addition to writing this text, we can define what we want the alignment to be. So I want this to be on the left and also what the font to be. So I&#x27;m going to use this font that was declared up here as a constant. Now, inside our main.py next to where we&#x27;ve defined our player and our car_ manager I&#x27;m going to create this new scoreboard object and that&#x27;s going to be created from the scoreboard class. Now notice when I run the code as it is, you can see that our level is left-aligned, it&#x27;s got the font that we defined and it&#x27;s writing the text that we want, but it&#x27;s not in the right position. To define the position we have to do that right before we tell the scoreboard to write, so right here, but after where we&#x27;ve got our penup. So this way we don&#x27;t draw a path to where we&#x27;re going to. So now we&#x27;re going to define self.goto, and I&#x27;m just going to get it to go to probably the top left corner. So that&#x27;s going to be probably -280 and then it&#x27;s going to be +280 on the Y. Now, if we just check the positioning, you can see that it&#x27;s a little bit too far up on the Y-axis. So it lets move it down a little bit and you can tweak these things until you get to the point where you&#x27;re happy with its positioning. So I think this looks pretty good. Now, in addition to writing the level, we actually have to update it every time the player levels up, right? And they do that when there&#x27;s a successful crossing. So at some point here, we should be able to call scoreboard and we should be able to get the scoreboard to increase the level. So let&#x27;s go into scoreboard and let&#x27;s define that function, increase_ level. And the first thing to do when we&#x27;re increasing the level is of course getting hold of this self.level and then adding one to it each time. In addition, we&#x27;re going to need the level to be rewritten again. So let&#x27;s cut this out of the init and let&#x27;s instead define a custom method which we&#x27;ll call update_scoreboard. Yeah. Inside this update_scoreboard, we can write the current level. So now inside the init we can call self.update_scoreboard and also when we increase the level, we can call self.update_scoreboard. Now at the moment, as it is, it&#x27;s going to overwrite what used to be on the scoreboard. So at the moment it&#x27;s on level 1, but once I make a successful crossing, you can see that level 2 is going to be overwritten over level 1. To prevent that when we update the scoreboard, we have to get the scoreboard to clear itself so that it deletes all the previous stuff that it wrote. This way when we actually run our code you can see that our scoreboard will refresh and clear the previous text and write the new text each time. So now the final thing to do is to write the words game over in the middle of the screen when the game ends. To do that, I&#x27;m going to create another method here which I&#x27;ll call game_over. And inside this method, we&#x27;re going to get our turtle to go to the center. So we&#x27;re going to say self.goto and the center is, of course, at (0, 0), and then we&#x27;re going to get it to write, but this time we&#x27;re not going to write the level anymore. Instead, we&#x27;re going to just write the words GAME OVER in all caps. And I want the alignment to be centered and I want the font to be the default font. Now, when we actually detect a collision, not only is game_is_on going to be false, but also we&#x27;re going to get the scoreboard to show the game over sequence. So now we can run our code and you can see that when my turtle collides with a car, then it says game over in the center. And because when we wrote game over, we didn&#x27;t clear any of the previous texts, the user can see at the highest level that they managed to reach. That&#x27;s it. That&#x27;s the entire game. Hopefully you&#x27;ve managed to build this entire game by yourself and you&#x27;re just here to check a few niggling issues. But if you struggled with this code, then I really recommend to review the previous lessons where we created the snake game or when we created this turtle crossing game and try to see if you can create these two games from scratch by yourself by looking at how the game works. Because if you continue forward, things are only gonna get more complex. And I&#x27;m assuming that you&#x27;re going to take the time to review and revise before you continue. So have fun playing with the turtle crossing game and be sure to let me know in the Q/A what your highest level is that you managed to reach and also remember to attach a picture or it didn&#x27;t happen. And this is a great project for you to customize. So think about what you might want to change like the colors or the shapes and make the game really your own and then take a screenshot of it and share it with us in the Q/A so that we can all appreciate and congratulate you on your work.
+```python
+scoreboard = Scoreboard()
+player = Player()
+car_manager = CarManager()
+
+screen.onkey(player.move_up, "Up")
+
+game_is_on = True
+while game_is_on:
+    time.sleep(0.1)
+    screen.update()
+    car_manager.create_car()
+    car_manager.move_cars()
+
+    for car in car_manager.all_cars:
+        if player.distance(car) < 25:
+            game_is_on = False
+            scoreboard.game_over()
+
+    if player.is_at_finish_line():
+        player.go_to_start()
+        car_manager.level_up()
+        scoreboard.increase_level()
+```
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Class definitions (class)** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **Module imports** | Introduced/used in this lecture |
-
----
+1. Scoreboard shows levels; `clear()` + rewrite on every change.
+2. main.py coordinates: spawn, move, collide, finish — the whole game in ~20 lines.
+3. Runnable full game: [`main.py`](main.py) (+ `player.py`, `car_manager.py`, `scoreboard.py`)
