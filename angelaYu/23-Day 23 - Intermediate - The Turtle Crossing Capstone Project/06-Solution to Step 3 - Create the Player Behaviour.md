@@ -1,0 +1,28 @@
+# 🔧 Solution to Step 3 - Create the Player Behaviour
+
+---
+
+### Overview
+
+**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
+**Chapter:** Day 23 - Intermediate - The Turtle Crossing Capstone Project
+**Lecture:** Solution to Step 3 - Create the Player Behaviour
+**Level:** Intermediate
+
+---
+
+### Summary
+
+All right. So just as previously, we&#x27;ve split up this large problem of building the game into five smaller sub-parts. Firstly, moving the turtle, controlling it with the keypress, creating and moving the cars automatically across the screen, detecting a collision with the car and detecting when the turtle reaches the other side. Finally, we create a scoreboard that keeps track of which level we&#x27;re on and also that shows game over at the end. So the first step is to move the turtle using a keypress. The turtle can only go forwards, and every time we hit the Up key the turtle moves forward by a set amount until it reaches the other side of the screen. This is the first thing that we&#x27;re going to tackle. Now, because this is related to the functionality of the player, let&#x27;s go ahead and create this inside the player class. I&#x27;m going to delete that pass and I&#x27;m also going to import the turtle class from the turtle module. Now, our player is going to inherit from this turtle class. So inside our init, we&#x27;re going to need to add the super.init or you can add it automatically using the light bulb. So now this player class can do everything that a turtle class can do and we can make it do even more. The first thing we&#x27;re going to do is we&#x27;re going to set the shape of our player and we&#x27;re gonna set it to a turtle. The next thing we&#x27;re going to do is we&#x27;re going to call penup so that this turtle just remains a shape and it doesn&#x27;t draw. Finally, we need to get it to the starting position and get it to face North. We can do that by setting self.goto and then we can set it to go to the starting position, which you can see is a tuple because it&#x27;s enclosed inside parentheses and you&#x27;ve got values separated by a comma. Finally, we&#x27;re going to set the heading of our turtle so that it faces North, which is 90 degrees. So now all we have to do is go back into our main.py, after we&#x27;ve set up our screen, let&#x27;s go ahead and create a new player from the player class. Let&#x27;s go ahead and run this code. ... And you can see that we&#x27;ve got our little turtle showing up here at the center of the bottom of the screen and it&#x27;s facing North. So now the next thing we need to do is to get that turtle to move upwards every time we hit the Up key. That means we&#x27;re going to need to get our screen to listen for events. After calling screen.listen, we&#x27;re going to get the screen to listen to a keystroke. So we can use onkey to set the Up key as the key to listen to. And then when that happens, then we&#x27;re going to call player. go_up. And remember that when we&#x27;re calling methods inside the listener, we don&#x27;t want to add the parentheses because this will trigger it at the point where it evaluates this line of code. Instead, we want to trigger this function only when this Up key is detected. So now all that&#x27;s left to do is to go into our player.py and define that function go_up. So how can we move our turtle up? Well, we can get our turtle so self, and then we can get it to move forwards by a distance. And the distance is going to be the move distance that&#x27;s set in this constant here. This means that later on when we want to change the move distance if we want it to go further each time, we can just edit it at the top of the file instead of digging through the code. Now let&#x27;s run our code again and let&#x27;s just make sure that it works. So now every time I hit the Up key my turtle moves up and it keeps on going until it reaches the other side of the screen. So that&#x27;s the first step completed. Now, if you think you can complete the next step by yourself, then head back to that list of problems broken down and see if you can tackle the next one by yourself. If you can&#x27;t or if you need some extra help, then you can always come back to the videos and I&#x27;ll walk you through the steps one by one.
+
+---
+
+### Key Concepts
+
+| # | Concept | Description |
+|---|---------|-------------|
+| 1 | **Class definitions (class)** | Introduced/used in this lecture |
+| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+| 3 | **Module imports** | Introduced/used in this lecture |
+
+---

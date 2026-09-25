@@ -1,0 +1,32 @@
+# 🔧 Day 27 Goals: what we will make by the end of the day
+
+---
+
+### Overview
+
+**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
+**Chapter:** Day 27 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs
+**Lecture:** Day 27 Goals: what we will make by the end of the day
+**Level:** Intermediate
+
+---
+
+### Summary
+
+Hey guys, welcome to Day 27 of 100 Days of Code. Today we&#x27;re going to be diving into a Graphical User Interfaces using TKinter, and we&#x27;re also going to be learning more about function arguments. So we&#x27;ve already seen a little bit of graphical user interfaces when we use our turtle module, but I wanna go a little bit more in depth, and I want to show you one of the most popular ways of creating a graphical user interface. For example, a program like this in a separate window, and we&#x27;re going to be using the inbuilt TKinter module to do this. So we&#x27;re going to learn how to create labels, how to create buttons, how to respond to those button clicks as well as things like text inputs and how to lay out and design your programs. And while we&#x27;re doing all of this, we&#x27;re going to be looking at more advanced features of Python functions, including things such as how to set default arguments and what these Args and Kwargs are. So a way of being able to pass an undefined amount of inputs into a function, and we&#x27;ll apply these advanced concepts to build a unit converter program using TKinter. This program is going to help us convert miles to kilometers or liters to gallons, or whatever little conversion that you might often use. For example, let&#x27;s say that I ran 10 miles and I want to know how many kilometers that is. If I go ahead and click calculate, you can see it generates the equivalent value in kilometers, and you can see that our whole program is nicely laid out. So it says 10 miles is equal to 16 in kilometers, and it&#x27;s fully responsive to our inputs. This is what we&#x27;re going to be making as our project, a fully-fledged Python graphical user interface program that uses our Python code. So once you are ready, head over to the next lesson and let&#x27;s get started by learning a bit more about TKinter.
+
+---
+
+### Key Concepts
+
+| # | Concept | Description |
+|---|---------|-------------|
+| 1 | **while loops** | Introduced/used in this lecture |
+| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+| 3 | **Tkinter GUI framework** | Introduced/used in this lecture |
+
+---
+
+### Next Steps
+
+Hey guys, welcome to Day 27 of 100 Days of Code. Today we&#x27;re going to be diving into a Graphical User Interfaces using TKinter, and we&#x27;re also going to be learning more about function arguments. So we&#x27;ve already seen a little bit of graphical user interfaces when we use our turtle module, but I wanna go a little bit more in depth, and I want to show you one of the most popular ways of creating a graphical user interface. For example, a program like this in a separate window, and we&#x27;re going to be using the inbuilt TKinter module to do this. So we&#x27;re going to learn how to create labels, how to create buttons, how to respond to those button clicks as well as things like text inputs and how to lay out and design your programs. And while we&#x27;re doing all of this, we&#x27;re going to be looking at more advanced features of Python functions, including things such as how to set default arguments and what these Args and Kwargs are. So a way of being able to pass an undefined amount of inputs into a function, and we&#x27;ll apply these advanced concepts to build a unit converter program using TKinter. This program is going to help us convert miles to kilometers or liters to gallons, or whatever little conversion that you might often use. For example, let&#x27;s say that I ran 10 miles and I want to know how many kilometers that is. If I go ahead and click calculate, you can see it generates the equivalent value in kilometers, and you can see that our whole program is nicely laid out. So it says 10 miles is equal to 16 in kilometers, and it&#x27;s fully responsive to our inputs. This is what we&#x27;re going to be making as our project, a fully-fledged Python graphical user interface program that uses our Python code. So once you are ready, head over to the next lesson and let&#x27;s get started by learning a bit more about TKinter.

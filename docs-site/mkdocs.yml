@@ -1,0 +1,72 @@
+site_name: 100 Days of Python — Study Notes
+site_description: >-
+  Personal study notes and transcripts for Angela Yu's 100 Days of Code
+  Python Pro Bootcamp, with full-text search.
+repo_url: https://github.com/Nileshsri2022/learnPythonAngelaYu
+repo_name: Nileshsri2022/learnPythonAngelaYu
+
+docs_dir: docs
+site_dir: site
+
+# GitHub Pages serves the site under /learnPythonAngelaYu/ — mkdocs needs to know
+# the final URL so canonical links, the sitemap and search resolve correctly.
+site_url: https://nileshsri2022.github.io/learnPythonAngelaYu/
+
+# Rebuild when the underlying course material changes.
+watch:
+  - ../angelaYu
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - navigation.prune
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - gen-files:
+      scripts:
+        - hooks/gen_notes.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys

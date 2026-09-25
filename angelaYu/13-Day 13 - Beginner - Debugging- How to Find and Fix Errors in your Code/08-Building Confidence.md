@@ -1,0 +1,18 @@
+# 🐍 Building Confidence
+
+---
+
+### Overview
+
+**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
+**Chapter:** Day 13 - Beginner - Debugging: How to Find and Fix Errors in your Code
+**Lecture:** Building Confidence
+**Level:** Beginner
+
+---
+
+### Summary
+
+Well done for completing day 13. Now you might still be thinking, &quot;Hey Angela, I&#x27;ve completed 13 days and I still don&#x27;t feel all that confident about writing code in Python. What&#x27;s going on here? Am I just not meant to be a programmer?&quot; What I would have to say to you is, you know, confidence is earned. Like, you can only go so far pretending to be confident. But once you&#x27;ve gone over a number of hurdles, once you&#x27;ve solved problems that you&#x27;ve never solved before, then you start building up those skills. And then the next time you encounter something hard, you&#x27;ll think back and you&#x27;ll think, well, this is not as hard as that other thing I did before. So as you keep jumping over hurdles, as you keep solving difficult things, as you keep struggling and overcoming it, you&#x27;re going to build confidence in your programming. So, again, just keep going. You got this.
+
+---
