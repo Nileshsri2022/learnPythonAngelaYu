@@ -1,30 +1,28 @@
-# 📖 Day 32 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 32 goals and the project you'll have built by the end of the day.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 32
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 32 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)
-**Lecture:** Day 32 Goals: what we will make by the end of the day
-**Level:** N/A
-
----
-
-### Summary
-
-Hey there, welcome to day 32 of 100 Days of Code. Now, today we&#x27;re going to be learning about email SMTP and the date time module. Basically, we&#x27;re going to learn how to send email using Python code. And we&#x27;re going to determine when we send the email using this daytime time module. And once we&#x27;ve learned all of those skills, we&#x27;re going to be building a really interesting and possibly helpful tool where we can automate a happy birthday email to all of our friends and family. So, I probably only remember a handful of people&#x27;s emails off by heart and the rest of the time, I rely pretty much on Facebook telling me that it&#x27;s so, and so&#x27;s birthday. And I end up writing on their timeline. But if Facebook didn&#x27;t tell me, I would probably not remember. Now I know some friends of mine are really good at remembering everybody&#x27;s birthday, even if they don&#x27;t go on the Facebook and they&#x27;ll send you a message every year showing how good of a friend they are. And it always makes me feel a little bit bad inside. So what&#x27;s our solution? To remember everybody&#x27;s date of birth? No. We&#x27;re going to build a Python program. And this Python program is going to be the automated birthday wisher. All we have to do it is create a spreadsheet of all of our friend&#x27;s birthdays and then create a bunch of emails and we&#x27;ll randomly pick an email to send to each of these friends. And this program is going to teach us some skills in Python helping us level up as a programmer. But it also makes us better people because our friends will feel like we remember their birthdays and help our friends feel more appreciated. Email SMTP is a module that comes pre-bundled with Python and it helps us send email using Python code. And daytime is another Python module that helps us figure out what today&#x27;s date is or how to format a particular date and time. And in our case, it&#x27;s going to help us figure out if today happens to be the day of one of our friend&#x27;s birthdays, in which case we&#x27;ll send them a birthday email. So that&#x27;s the plan. Head over to the next lesson and we&#x27;ll get started by learning how to send email.
+* **SMTP** — sending email programmatically via `smtplib`
+* **`datetime`** — working with dates, times and weekday checks
+* Combining both into scheduled, automated email jobs
 
 ---
 
-### Key Concepts
+### 2. The Project: Automated Birthday Wisher
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+* `birthdays.csv` holds name, email, year, month, day.
+* The script checks every day: is today anyone's birthday?
+* If yes → pick a random letter template, replace `[NAME]`, **email it**.
+* Scheduled with **GitHub Actions** so it runs daily in the cloud, free.
+
+Plus Challenge 1: Monday-morning motivational quote emails.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey there, welcome to day 32 of 100 Days of Code. Now, today we&#x27;re going to be learning about email SMTP and the date time module. Basically, we&#x27;re going to learn how to send email using Python code. And we&#x27;re going to determine when we send the email using this daytime time module. And once we&#x27;ve learned all of those skills, we&#x27;re going to be building a really interesting and possibly helpful tool where we can automate a happy birthday email to all of our friends and family. So, I probably only remember a handful of people&#x27;s emails off by heart and the rest of the time, I rely pretty much on Facebook telling me that it&#x27;s so, and so&#x27;s birthday. And I end up writing on their timeline. But if Facebook didn&#x27;t tell me, I would probably not remember. Now I know some friends of mine are really good at remembering everybody&#x27;s birthday, even if they don&#x27;t go on the Facebook and they&#x27;ll send you a message every year showing how good of a friend they are. And it always makes me feel a little bit bad inside. So what&#x27;s our solution? To remember everybody&#x27;s date of birth? No. We&#x27;re going to build a Python program. And this Python program is going to be the automated birthday wisher. All we have to do it is create a spreadsheet of all of our friend&#x27;s birthdays and then create a bunch of emails and we&#x27;ll randomly pick an email to send to each of these friends. And this program is going to teach us some skills in Python helping us level up as a programmer. But it also makes us better people because our friends will feel like we remember their birthdays and help our friends feel more appreciated. Email SMTP is a module that comes pre-bundled with Python and it helps us send email using Python code. And daytime is another Python module that helps us figure out what today&#x27;s date is or how to format a particular date and time. And in our case, it&#x27;s going to help us figure out if today happens to be the day of one of our friend&#x27;s birthdays, in which case we&#x27;ll send them a birthday email. So that&#x27;s the plan. Head over to the next lesson and we&#x27;ll get started by learning how to send email.
+1. Email + dates = the basis of all scheduled automation.
+2. Gmail needs an **app password** (regular passwords are blocked).
+3. GitHub Actions cron keeps a script alive without your machine.
