@@ -1,37 +1,69 @@
-# 📖 Challenge: Use Selenium in a Blank Project & Scrape a Different Piece of Data
+Here is a structured breakdown of this challenge on setting up Selenium in a blank project.
 
 ---
 
-### Overview
+### 1. The Challenge
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 48 - Intermediate+ Selenium Webdriver Browser and Game Playing Bot
-**Lecture:** Challenge: Use Selenium in a Blank Project & Scrape a Different Piece of Data
-**Level:** N/A
+In a brand-new file `interaction.py`, fetch the **Wikipedia main page** and print the
+number of articles in English (the "6,900,000+ articles" link).
 
 ---
 
-### Summary
+### 2. Inspect Before You Code
 
-In this lesson, I have another super quick challenge for you so you can practice setting up the Selenium webdriver in a blank project and scraping a different piece of data from a website. This time we&#x27;re going to work with the Wikipedia main page. So you&#x27;re going to head over to the Course Resources and find the link to this page, or you can just type it in. Back in our project, I&#x27;m going to create a new file and I&#x27;m going to call this interaction.py. Now, in this new Python file, we&#x27;re going to interact with this Wikipedia webpage. And as a challenge to you, the first thing I want you to do is to figure out how you can get a hold of this particular number and print it out inside our interaction.py. Remember that you&#x27;ll need to import Selenium and also use the webdriver to get hold of this page and then find this particular number and finally print it out. And then when you&#x27;re ready to run it, all you have to do is right-click and then Run this interaction.py and it&#x27;ll work and you should see the outcome being printed in your console. So pause the video now and give that a go. Alright, so here&#x27;s the solution. First, we&#x27;re going to go into the Selenium package, which we&#x27;ve already installed into this project so we don&#x27;t have to install it again. And then we&#x27;re going to import the webdriver. Now using the web driver, we&#x27;re going to create a new driver from the Chrome browser, But this is what we put to initialize a new Chrome driver. Now once we&#x27;ve created our driver, now we can use the driver to navigate to our webpage, which is done using get(). And this is the URL, which we&#x27;ll copy and paste into here. And once we&#x27;ve gotten hold of this page, then we&#x27;re going to try to narrow down on this particular element. So let&#x27;s go ahead and Inspect it. And you can see that it&#x27;s inside an anchor tag with no particular identifiers. There&#x27;s no id, there&#x27;s no name, there&#x27;s no class. But this anchor tag lives in a div that has an id. So this articlecount is going to be a unique identifier for the div that holds this particular anchor tag. So we can narrow in on this anchor tag using our CSS selectors. So we can say driver.find_element(By.CSS_SELECTOR...) make sure that it&#x27;s element, not elements. And then inside here we&#x27;re going to put our selector, which is first the id of articlecount, and that is going to be proceeded with a pound sign. And then inside that div with that id, we&#x27;re looking for the first anchor tag. Now notice that inside that div, there&#x27;s actually two anchor tags. But by using this find_element(By.CSS_SELECTOR...), it&#x27;s only going to give us the first one that matches this criteria. So this is going to be our article_count. And now what we want to do is we want to print the article_count.text. So now let&#x27;s go ahead and right-click and Run our interaction.py. It should open up our browser to this page. And now it should have found and printed out that number. So this is what we&#x27;ve been doing so far, creating our driver, opening webpages, and then finding specific elements and printing some sort of property, but the next step is to actually form some sort of interaction with the webpage. For example, clicking on a link, or typing something into the search bar, because after all, when we&#x27;re working with websites, it&#x27;s often that we&#x27;ll need to interact with it in order to navigate to new pages and get hold of specific pieces of information that we&#x27;re interested in. And that&#x27;s what I&#x27;m going to show you in the next lesson. So I&#x27;ll see you there.
+```html
+<div id="articlecount">
+  <a href="/wiki/Special:Statistics">6 902 000+ articles</a>
+</div>
+```
 
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **Module imports** | Introduced/used in this lecture |
-| 2 | **Selenium web automation** | Introduced/used in this lecture |
+The anchor tag has no id, class or name — but its parent `<div>` has a unique **id**, and
+the anchor is the first `<a>` inside it.
 
 ---
 
-### 🏋️ Practice Exercise
+### 3. The Solution
 
-In this lesson, I have another super quick challenge for you so you can practice setting up the Selenium webdriver in a blank project and scraping a different piece of data from a website. This time we&#x27;re going to work with the Wikipedia main page. So you&#x27;re going to head over to the Course Resources and find the link to this page, or you can just type it in. Back in our project, I&#x27;m going to create a new file and I&#x27;m going to call this interaction.py. Now, in this new Python file, we&#x27;re going to interact with this Wikipedia webpage. And as a challenge to you, the first thing I want you to do is to figure out how you can get a hold of this particular number and print it out inside our interaction.py. Remember that you&#x27;ll need to import Selenium and also use the webdriver to get hold of this page and then find this particular number and finally print it out. And then when you&#x27;re ready to run it, all you have to do is right-click and then Run this interaction.py and it&#x27;ll work and you should see the outcome being printed in your console. So pause the video now and give that a go. Alright, so here&#x27;s the solution. First, we&#x27;re going to go into the Selenium package, which we&#x27;ve already installed into this project so we don&#x27;t have to install it again. And then we&#x27;re going to import the webdriver. Now using the web driver, we&#x27;re going to create a new driver from the Chrome browser, But this is what we put to initialize a new Chrome driver. Now once we&#x27;ve created our driver, now we can use the driver to navigate to our webpage, which is done using get(). And this is the URL, which we&#x27;ll copy and paste into here. And once we&#x27;ve gotten hold of this page, then we&#x27;re going to try to narrow down on this particular element. So let&#x27;s go ahead and Inspect it. And you can see that it&#x27;s inside an anchor tag with no particular identifiers. There&#x27;s no id, there&#x27;s no name, there&#x27;s no class. But this anchor tag lives in a div that has an id. So this articlecount is going to be a unique identifier for the div that holds this particular anchor tag. So we can narrow in on this anchor tag using our CSS selectors. So we can say driver.find_element(By.CSS_SELECTOR...) make sure that it&#x27;s element, not elements. And then inside here we&#x27;re going to put our selector, which is first the id of articlecount, and that is going to be proceeded with a pound sign. And then inside that div with that id, we&#x27;re looking for the first anchor tag. Now notice that inside that div, there&#x27;s actually two anchor tags. But by using this find_element(By.CSS_SELECTOR...), it&#x27;s only going to give us the first one that matches this criteria. So this is going to be our article_count. And now what we want to do is we want to print the article_count.text. So now let&#x27;s go ahead and right-click and Run our interaction.py. It should open up our browser to this page. And now it should have found and printed out that number. So this is what we&#x27;ve been doing so far, creating our driver, opening webpages, and then finding specific elements and printing some sort of property, but the next step is to actually form some sort of interaction with the webpage. For example, clicking on a link, or typing something into the search bar, because after all, when we&#x27;re working with websites, it&#x27;s often that we&#x27;ll need to interact with it in order to navigate to new pages and get hold of specific pieces of information that we&#x27;re interested in. And that&#x27;s what I&#x27;m going to show you in the next lesson. So I&#x27;ll see you there.
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+driver.get("https://en.wikipedia.org/wiki/Main_Page")
+
+# #articlecount a  -> the first <a> inside the element with id="articlecount"
+article_count = driver.find_element(By.CSS_SELECTOR, "#articlecount a")
+print(article_count.text)
+
+driver.quit()
+```
+
+* `#` means *id* in a CSS selector; a space means *descendant of*.
+* `find_element` (singular) returns only the **first** matching anchor — the div actually
+  contains two, and the second is "About Wikipedia".
 
 ---
 
-### Next Steps
+### 4. Setup Reminder
 
-In this lesson, I have another super quick challenge for you so you can practice setting up the Selenium webdriver in a blank project and scraping a different piece of data from a website. This time we&#x27;re going to work with the Wikipedia main page. So you&#x27;re going to head over to the Course Resources and find the link to this page, or you can just type it in. Back in our project, I&#x27;m going to create a new file and I&#x27;m going to call this interaction.py. Now, in this new Python file, we&#x27;re going to interact with this Wikipedia webpage. And as a challenge to you, the first thing I want you to do is to figure out how you can get a hold of this particular number and print it out inside our interaction.py. Remember that you&#x27;ll need to import Selenium and also use the webdriver to get hold of this page and then find this particular number and finally print it out. And then when you&#x27;re ready to run it, all you have to do is right-click and then Run this interaction.py and it&#x27;ll work and you should see the outcome being printed in your console. So pause the video now and give that a go. Alright, so here&#x27;s the solution. First, we&#x27;re going to go into the Selenium package, which we&#x27;ve already installed into this project so we don&#x27;t have to install it again. And then we&#x27;re going to import the webdriver. Now using the web driver, we&#x27;re going to create a new driver from the Chrome browser, But this is what we put to initialize a new Chrome driver. Now once we&#x27;ve created our driver, now we can use the driver to navigate to our webpage, which is done using get(). And this is the URL, which we&#x27;ll copy and paste into here. And once we&#x27;ve gotten hold of this page, then we&#x27;re going to try to narrow down on this particular element. So let&#x27;s go ahead and Inspect it. And you can see that it&#x27;s inside an anchor tag with no particular identifiers. There&#x27;s no id, there&#x27;s no name, there&#x27;s no class. But this anchor tag lives in a div that has an id. So this articlecount is going to be a unique identifier for the div that holds this particular anchor tag. So we can narrow in on this anchor tag using our CSS selectors. So we can say driver.find_element(By.CSS_SELECTOR...) make sure that it&#x27;s element, not elements. And then inside here we&#x27;re going to put our selector, which is first the id of articlecount, and that is going to be proceeded with a pound sign. And then inside that div with that id, we&#x27;re looking for the first anchor tag. Now notice that inside that div, there&#x27;s actually two anchor tags. But by using this find_element(By.CSS_SELECTOR...), it&#x27;s only going to give us the first one that matches this criteria. So this is going to be our article_count. And now what we want to do is we want to print the article_count.text. So now let&#x27;s go ahead and right-click and Run our interaction.py. It should open up our browser to this page. And now it should have found and printed out that number. So this is what we&#x27;ve been doing so far, creating our driver, opening webpages, and then finding specific elements and printing some sort of property, but the next step is to actually form some sort of interaction with the webpage. For example, clicking on a link, or typing something into the search bar, because after all, when we&#x27;re working with websites, it&#x27;s often that we&#x27;ll need to interact with it in order to navigate to new pages and get hold of specific pieces of information that we&#x27;re interested in. And that&#x27;s what I&#x27;m going to show you in the next lesson. So I&#x27;ll see you there.
+The blank project needs Selenium installed (`pip install selenium`) and Chrome present.
+The driver is created, the page fetched, the element located, the text printed.
+
+---
+
+### 5. Where This Is Heading
+
+So far we can *read* a page. The next lesson adds the two actions that make automation
+useful: **clicking** links/buttons and **typing** into fields.
+
+> **Tip:** Use `find_element` whenever you want a single item, and `find_elements` when you
+> want to loop over many — mixing them up is the most common Selenium bug.
+
+---
+
+### Summary Checklist
+
+1. New project + `pip install selenium` (reuse the package once installed).
+2. `#id descendant` CSS selector reaches anonymous elements by their container.
+3. `.text` extracts the visible value.
+4. Next: interacting with the page — click and type.
