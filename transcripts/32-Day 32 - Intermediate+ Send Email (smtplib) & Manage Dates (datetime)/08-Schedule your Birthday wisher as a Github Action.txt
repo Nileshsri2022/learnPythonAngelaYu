@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 32 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)
+Lecture: Schedule your Birthday wisher as a Github Action
+----------------------------------------
+
+[No transcript available for this lecture]

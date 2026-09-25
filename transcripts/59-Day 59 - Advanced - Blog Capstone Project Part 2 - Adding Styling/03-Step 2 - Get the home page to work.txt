@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 59 - Advanced - Blog Capstone Project Part 2 - Adding Styling
+Lecture: Step 2 - Get the home page to work
+----------------------------------------
+
+[No transcript available for this lecture]

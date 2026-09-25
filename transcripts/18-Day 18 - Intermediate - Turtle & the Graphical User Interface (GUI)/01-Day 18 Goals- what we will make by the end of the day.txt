@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
+Lecture: Day 18 Goals: what we will make by the end of the day
+----------------------------------------
+
+Hey guys, welcome to Day 18 of 100 Days of Code. Now, today, we're going to learn about some really exciting things. We're going to look deeper into turtle graphics, starting to do things with graphics, with the help of the turtle module. And we're also going to be learning about Python tuples as well as looking deeper into importing modules in Python. By the end of today, we will have written some code that is capable of generating million dollar pieces of odd work. So we're looking at a Damien Hirst, which sold for 1.275 million pounds a little while ago. And we're going to be using Python turtle to create a similarly beautiful dot spot painting, which could be randomized and create beautiful pieces of art like this one. Once you're ready, head over to the next lesson and let's get started.

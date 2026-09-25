@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 48 - Intermediate+ Selenium Webdriver Browser and Game Playing Bot
+Lecture: Challenge: Create an Automated Game Playing Bot
+----------------------------------------
+
+[No transcript available for this lecture]

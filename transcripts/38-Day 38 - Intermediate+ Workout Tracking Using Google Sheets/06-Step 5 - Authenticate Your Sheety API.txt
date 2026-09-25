@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 38 - Intermediate+ Workout Tracking Using Google Sheets
+Lecture: Step 5 - Authenticate Your Sheety API
+----------------------------------------
+
+[No transcript available for this lecture]

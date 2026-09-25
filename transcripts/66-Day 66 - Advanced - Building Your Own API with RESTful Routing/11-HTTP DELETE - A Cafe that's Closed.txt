@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 66 - Advanced - Building Your Own API with RESTful Routing
+Lecture: HTTP DELETE - A Cafe that's Closed
+----------------------------------------
+
+[No transcript available for this lecture]

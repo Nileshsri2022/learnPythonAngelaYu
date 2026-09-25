@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 35 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS
+Lecture: Use Github Actions (again) to automate the Rain Alert Python Script
+----------------------------------------
+
+[No transcript available for this lecture]

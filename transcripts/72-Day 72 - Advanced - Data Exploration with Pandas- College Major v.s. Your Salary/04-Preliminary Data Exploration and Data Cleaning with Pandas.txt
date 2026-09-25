@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 72 - Advanced - Data Exploration with Pandas: College Major v.s. Your Salary
+Lecture: Preliminary Data Exploration and Data Cleaning with Pandas
+----------------------------------------
+
+[No transcript available for this lecture]

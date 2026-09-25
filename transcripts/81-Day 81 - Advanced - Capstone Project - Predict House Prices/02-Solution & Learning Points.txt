@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 81 - Advanced - Capstone Project - Predict House Prices
+Lecture: Solution & Learning Points
+----------------------------------------
+
+[No transcript available for this lecture]

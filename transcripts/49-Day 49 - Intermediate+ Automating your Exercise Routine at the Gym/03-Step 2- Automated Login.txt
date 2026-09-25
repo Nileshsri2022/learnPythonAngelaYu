@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 49 - Intermediate+ Automating your Exercise Routine at the Gym
+Lecture: Step 2: Automated Login
+----------------------------------------
+
+[No transcript available for this lecture]

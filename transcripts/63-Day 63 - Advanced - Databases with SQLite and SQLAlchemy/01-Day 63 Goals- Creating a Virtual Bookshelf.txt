@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 63 - Advanced - Databases with SQLite and SQLAlchemy
+Lecture: Day 63 Goals: Creating a Virtual Bookshelf
+----------------------------------------
+
+[No transcript available for this lecture]

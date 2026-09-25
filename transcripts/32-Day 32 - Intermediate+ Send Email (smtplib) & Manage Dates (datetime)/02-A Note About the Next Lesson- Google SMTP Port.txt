@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 32 - Intermediate+ Send Email (smtplib) & Manage Dates (datetime)
+Lecture: A Note About the Next Lesson: Google SMTP Port
+----------------------------------------
+
+[No transcript available for this lecture]

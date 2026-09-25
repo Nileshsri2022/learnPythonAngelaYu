@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 80 - Advanced - The Tragic Discovery of Handwashing: t-Tests & Distributions
+Lecture: Analysing the Yearly Data Split By Clinic
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 75 - Advanced - Google Trends Data: Resampling and Visualising Time Series
+Lecture: Learning Points & Summary
+----------------------------------------
+
+[No transcript available for this lecture]

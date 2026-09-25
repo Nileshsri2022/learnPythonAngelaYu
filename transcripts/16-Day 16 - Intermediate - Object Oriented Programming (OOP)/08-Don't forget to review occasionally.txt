@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 16 - Intermediate - Object Oriented Programming (OOP)
+Lecture: Don't forget to review occasionally
+----------------------------------------
+
+Hey, guys, well done on completing day 16. Now, this is a big milestone. You've completed a lot of lessons now. But it's really important to spend some time to review what you've learned because it's very easy to just watch videos and keep going and feel like you're making progress, but if you don't go back and check some of the things that you've learned and make sure that it's really solidified in your own understanding. Maybe try a variation of the project, maybe switch things up, maybe attempt the code challenge, maybe try out one of the tutorials but by typing the code yourself. Just make sure that you spend some time reviewing what you've learned instead of just plowing ahead. This way you'll have a much more solid understanding and you'll be able to progress more confidently.

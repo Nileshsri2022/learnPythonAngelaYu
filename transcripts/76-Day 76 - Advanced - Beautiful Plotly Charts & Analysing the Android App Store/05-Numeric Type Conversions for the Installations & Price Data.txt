@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 76 - Advanced - Beautiful Plotly Charts & Analysing the Android App Store
+Lecture: Numeric Type Conversions for the Installations & Price Data
+----------------------------------------
+
+[No transcript available for this lecture]

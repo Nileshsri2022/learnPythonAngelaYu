@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 68 - Advanced - Authentication with Flask
+Lecture: Day 68 Goals - Login and Registering Users with Authentication
+----------------------------------------
+
+[No transcript available for this lecture]

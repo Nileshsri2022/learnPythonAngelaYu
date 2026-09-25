@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 79 - Advanced - Analysing the Nobel Prize with Plotly, Matplotlib & Seaborn
+Lecture: A Choropleth Map and the Countries with the Most Prizes
+----------------------------------------
+
+[No transcript available for this lecture]

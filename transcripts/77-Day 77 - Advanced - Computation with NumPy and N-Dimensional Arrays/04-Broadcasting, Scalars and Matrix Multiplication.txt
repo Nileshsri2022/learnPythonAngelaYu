@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 77 - Advanced - Computation with NumPy and N-Dimensional Arrays
+Lecture: Broadcasting, Scalars and Matrix Multiplication
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 1 - Beginner - Working with Variables in Python to Manage Data
+Lecture: DO NOT SKIP - Download and Setup PyCharm for Learning
+----------------------------------------
+
+[No transcript available for this lecture]

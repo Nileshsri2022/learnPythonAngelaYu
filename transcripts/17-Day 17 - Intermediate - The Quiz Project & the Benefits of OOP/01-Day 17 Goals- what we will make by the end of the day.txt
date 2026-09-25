@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 17 - Intermediate - The Quiz Project & the Benefits of OOP
+Lecture: Day 17 Goals: what we will make by the end of the day
+----------------------------------------
+
+Hey guys, welcome to day 17 of 100 Days of Code. Now, today we're going to be focusing on how we actually create the classes that we've been using in yesterday's lessons. Today's final project that we're going to be building up towards is a quiz game. So we're going to be able to create a true-false quiz, and we'll be able to play the quiz, answer the questions and keep track of score. But we're gonna be building this completely using Object Oriented Programming. We're going to be creating our classes ourselves and then using the objects created from those classes in order to build this game. And once you're done, this is what you'll be able to create. Question one, A slug's blood is green, true or false. True. Now, if you want to have a play around with the final project to get a feel for how it works, then you'll find a link to this final version of the quiz game in the course resources. But once you're ready, then head over to the next lesson and we're going to get started by learning how to create our own custom classes. So, for all of that and more, I'll see you there.

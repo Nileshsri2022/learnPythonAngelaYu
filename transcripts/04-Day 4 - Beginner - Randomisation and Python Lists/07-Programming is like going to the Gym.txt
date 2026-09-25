@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 4 - Beginner - Randomisation and Python Lists
+Lecture: Programming is like going to the Gym
+----------------------------------------
+
+Hey, well done for completing day 4. I can see that you're really putting in the repetitions, putting in the practice. And this is what's going to take you really far, because we all know that programming is not something that you can just learn passively. You can't sit in front of a TV, watch somebody talk about programming and all of a sudden become a programmer. You have to put in the hours and the effort. It's a little bit like going to the gym really. You're never going to become muscular and strong if you just watch a bodybuilding show, right? Even, you know, if you watch Arnold Schwartzenegger every day, eight hours, eight hours a day, you will never develop those muscles that he has unless you actually hit the gym. So our version of the gym is coding. We're going to hit the coding editor and we're going to type every day until we get it. So have a break, have a rest and come back tomorrow refreshed. And we're going to put in some more reps and we're going to train you up to become a great programmer.

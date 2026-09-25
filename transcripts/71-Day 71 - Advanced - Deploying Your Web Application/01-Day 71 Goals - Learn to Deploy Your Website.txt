@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 71 - Advanced - Deploying Your Web Application
+Lecture: Day 71 Goals - Learn to Deploy Your Website
+----------------------------------------
+
+Hey guys, welcome to day 70 of 100 Days of Code. Now, today is a crucial time point in our journey of learning to build websites because we're finally going to be publishing our Flask website onto the Internet. And in order to do this, we're going to be using the help of a number of tools, including Git and GitHub, Heroku and also something called gunicorn. And with their powers combined, we'll end up with our website being hosted live on the Internet with URL that we can share to anybody in the world and they'll be able to go and access and use our blog website that we've spent so long building and perfecting. And you'll even be able to load it up on your phone and see it in its full glory. And along the way, we're going to learn about version control using a technology called git. And also we're going to be upgrading our database from something that is more suited to development which is SQLite, and we're going to be taking that to the next step, making it production ready using PostgreSQL. So that's all yet to come. So if you head over to the next lesson, let's get started by learning about Git and version control.

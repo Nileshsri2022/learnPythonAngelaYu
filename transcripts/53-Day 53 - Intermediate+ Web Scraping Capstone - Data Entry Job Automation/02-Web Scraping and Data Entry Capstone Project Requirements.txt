@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 53 - Intermediate+ Web Scraping Capstone - Data Entry Job Automation
+Lecture: Web Scraping and Data Entry Capstone Project Requirements
+----------------------------------------
+
+[No transcript available for this lecture]

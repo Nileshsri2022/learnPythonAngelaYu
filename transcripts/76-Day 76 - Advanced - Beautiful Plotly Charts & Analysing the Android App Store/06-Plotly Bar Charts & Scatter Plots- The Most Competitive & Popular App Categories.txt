@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 76 - Advanced - Beautiful Plotly Charts & Analysing the Android App Store
+Lecture: Plotly Bar Charts & Scatter Plots: The Most Competitive & Popular App Categories
+----------------------------------------
+
+[No transcript available for this lecture]

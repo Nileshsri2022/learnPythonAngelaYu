@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 76 - Advanced - Beautiful Plotly Charts & Analysing the Android App Store
+Lecture: Day 76 Goals: what you will make by the end of the day
+----------------------------------------
+
+[No transcript available for this lecture]

@@ -1,0 +1,6 @@
+Course: 100 Days of Code™: The Complete Python Pro Bootcamp
+Chapter: Day 63 - Advanced - Databases with SQLite and SQLAlchemy
+Lecture: Build a SQLite Database into the Flask Website
+----------------------------------------
+
+[No transcript available for this lecture]
