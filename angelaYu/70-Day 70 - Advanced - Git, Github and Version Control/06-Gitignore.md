@@ -1,31 +1,99 @@
-# 🎓 Gitignore
+Here is a structured breakdown of this lesson on `.gitignore`.
 
 ---
 
-### Overview
+### 1. Why Ignore Files?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 70 - Advanced - Git, Github and Version Control
-**Lecture:** Gitignore
-**Level:** Advanced
+Some files should never be committed:
 
----
+| Kind | Example | Why |
+|------|---------|-----|
+| **Secrets** | `secrets.txt`, `.env`, API keys | pushed to a public repo, they're public |
+| **OS junk** | `.DS_Store` (macOS), `Thumbs.db` (Windows) | meaningless to everyone else |
+| **Local settings** | `.idea/`, `.vscode/`, editor configs | personal preference, not project code |
+| **Generated files** | `__pycache__/`, `*.pyc`, `venv/`, `node_modules/` | huge, reproducible, never edited by hand |
+| **Databases** | `*.db`, `instance/` | local data, may hold user information |
 
-### Summary
-
-All right guys, in this lesson, we&#x27;re going to be talking all about the .gitignore, and how you can set rules to prevent committing certain files to your local and remote Git repositories. So first things first, let&#x27;s bring up terminal. And what we&#x27;re going to do is we&#x27;re going to cd into our desktop, and we&#x27;re going to create a new directory here called Project. Just say that we have this brand new project. And now if we go into our project, and we create a whole bunch of files to simulate this example project. So let&#x27;s say we&#x27;ve got something called file1.txt, and we&#x27;ve got a whole bunch of other ones, file2, file3, and we&#x27;ve also got something called secrets file. So we&#x27;ve now got four files, and just to illustrate the use cases of when we might want to have a .gitignore file, so say if you have this file that has some, you know, secret passwords or API keys, basically stuff that you don&#x27;t want to be committed, especially you don&#x27;t want it to be hosted on an open platform like GitHub. There have been horror stories of people having their Amazon AWS secret keys in their projects and that getting pushed to their remote on GitHub, and within seconds, their entire AWS account has been, basically, used up and wiped clean. So it&#x27;s really, really important to think about some of these things and to be aware of what you are putting onto this public platform. Another type of file that you might want to add into a .gitignore, or you might want to not upload to GitHub are files that are to do with your local settings or your user preferences. And there&#x27;s a whole bunch of these types of utility files that you don&#x27;t really want another person to have to download and copy into their project folder if they&#x27;re cloning or if they&#x27;re forking your project. So a really common example that people tend to add to their .gitignore files are what are called .DS_Store files. .DS_Store files are basically a settings file that saves a certain things like, you know, how you like your icons to be arranged in a particular project folder. So let&#x27;s say if we go in here, and we just have a look at arranged by, arranged by none, and then I&#x27;m going to move my files around, and let&#x27;s say that this is just my preference for how I want my files to be shown inside this project folder. Now, the .DS_Store file is a hidden file, so you won&#x27;t be able to see it inside your finder, but, of course, we as command line experts (chuckles) know that we can simply do a ls -a to see all of the hidden files that are inside our project folder. And you can see there it is, .DS_Store. So that&#x27;s not something that&#x27;s going to be of any use to anybody else, and we don&#x27;t want to have to clutter our GitHub remote repository or anybody else&#x27;s computer with that file. So we&#x27;re going to add that to our .gitignore as well. Getting onto the point of creating and using a .gitignore file, the first thing you have to do is to make it, right? And to do that we&#x27;re just going to create a hidden file. So using the dot in front of the file name, and it&#x27;s going to be called .gitignore. Now the case and the wording matters a huge deal, because we&#x27;re using Git and it&#x27;s looking for this specific file. So make sure that when you&#x27;re using it, it looks exactly like this. Let&#x27;s create that file. And of course it doesn&#x27;t appear, because it&#x27;s a hidden file, but we can see it using ls -a, and we can also open it inside VS Code like this. Here is where we add the files that should be ignored when we commit our project to Git. Let me first show you what happens when we don&#x27;t have anything inside our .gitignore. And I&#x27;m going to go through the normal process of setting up Git and committing it. First, if you remember, I have to use git init to initialize an empty Git repository inside my projects directory. And then I&#x27;m going to use git add . to add all the files that are currently inside this directory to the Git staging area. So hit Enter, and we can have a look at what&#x27;s been added by using git status. And you can see that all of these files are added into the staging area, and they&#x27;re going to be committed if I go ahead and do git commit. So that&#x27;s not what we want. And instead, I don&#x27;t want to commit the .DS_Store and I also don&#x27;t want to commit my secrets.txt file. First things first, I&#x27;m going to basically undo what I&#x27;ve just done. So I&#x27;m going to remove all of these files from my staging area, and then I&#x27;m going to add them later on once I&#x27;ve got my .gitignore set up. Basically we&#x27;re just undoing the last step. To do that, I&#x27;m going to write, git rm --cached, and I&#x27;m going to use the -r flag for recursive, and I&#x27;m going to use a dot to say that everything inside the current directory should be removed from the staging area. So now if I hit Enter, you can see that all of these things have been removed from the Git staging area, and if I do a git status again, you can see that all of these files are no longer tracked to be committed. So now this is the point where we&#x27;re going to use that .gitignore file, and we&#x27;re going to add the file names that we want to be ignored when we&#x27;re adding and committing to Git. In order to add individual files, you can simply specify the file name on each and every new line. So, for example, if we want to ignore the .DS_Store, we can simply write .DS_Store. So exactly the same upper and lower casing as the name of the file. And if we wanted to ignore the secrets.txt file, then all we have to do is just to specify it in here on a new line. Now with .gitignore it has certain rules. So, for example, you can use the pound sign (#) to comment. So, for example, you can say, you know, &quot;#Log files&quot;, right? To be ignored. Another thing you can do is use wild cards. So if you use the asterisk (*) and you say, *.txt, that means that when you commit your project, all of the files that have a text extension will be ignored. All right, so I&#x27;m going to get rid of that, because I do want to commit the file1 and file2 and file3 to Git, but I want it to ignore the .DS_Store and the secrets.txt files. Now we&#x27;re ready to add our files to our staging area. So let&#x27;s again use git add . and use git status to see what&#x27;s been added. So you can see that the only files are added are the .gitignore, the file 1, 2, 3, but the .DS_Store, as well as, the secrets.txt are ignored as per the specifications in our .gitignore file. Now if I go ahead and commit this as my &quot;Initial commit&quot;, then the only files are going to be put onto my local commit are going to be these four. And similarly, if I push this to GitHub, it will also be only these four files. Now let&#x27;s open a new Flask project and let me show you how you would add a .gitignore file for your Python projects. So let&#x27;s just call this Test, and I&#x27;m going to put it inside my desktop. So after I open the project, I&#x27;m going to create a new virtual environment. And I&#x27;m going to install all the modules from the requirements.txt file, then I&#x27;m going to open the terminal and create a .gitignore file. Then we&#x27;re going to open our .gitignore, and in here I&#x27;m going to add some of the files that will be ignored for our Python project. If you go to github.com/github, so this is a repository owned by the GitHub team, they have a repository called gitignore, and it&#x27;s basically a pre-made collection of useful .gitignore templates. And if you have a search in here, you can find that you&#x27;ve got Python, and you&#x27;re going to see that this is a prebuilt template for some of the files that you probably won&#x27;t want to upload to GitHub or any other remote repository. So these have the file extensions for things that are virtual environments or environment settings, and it&#x27;s basically all pre-made for you. So you can simply just copy all of this and put it into your .gitignore file that you created earlier on. So just straight up paste. And if you remember from earlier on, we said that the lines that start off with a pound sign are the comments, and these ones are extensions that you would ignore. And you might want to add things like .DS_store into here as well. So you can have something like # Project-wide. So for example, the .DS_Store that we mentioned earlier on, and if you hit Save... Now, if we go into terminal, and we&#x27;re inside our test folder, so we&#x27;re going to do a git init, git add ., git status to see what&#x27;s going to be committed. And then we&#x27;re going to say, git commit -m &quot;Initial commit&quot;. There we go, and now, once you&#x27;re ready to commit and add all of this to your remote, then it will ignore all of these common user-related files that are not going to be useful to your collaborators or anybody who wants to contribute on GitHub. That was just a quick tidbit about using .gitignore, and I know that some of you guys have been asking about, you know, where should you put your API keys, where should you put your sensitive data? And you have to make sure that when you are uploading your projects with these secret keys and passwords, to make sure that you set up a .gitignore file, and to include those things in there. All right, so that&#x27;s all for this lesson. In the next lesson I want to talk about Git Clone, and how to clone various repositories to your local system. So for all of that and more in the next lesson. So I&#x27;ll see you there.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Flask web framework** | Introduced/used in this lecture |
+> **⚠️ Warning:** Horror stories are real: an AWS secret key pushed to GitHub can be found
+> by bots within *seconds*, and the account drained before you notice.
 
 ---
 
-### Next Steps
+### 2. Creating the File
 
-All right guys, in this lesson, we&#x27;re going to be talking all about the .gitignore, and how you can set rules to prevent committing certain files to your local and remote Git repositories. So first things first, let&#x27;s bring up terminal. And what we&#x27;re going to do is we&#x27;re going to cd into our desktop, and we&#x27;re going to create a new directory here called Project. Just say that we have this brand new project. And now if we go into our project, and we create a whole bunch of files to simulate this example project. So let&#x27;s say we&#x27;ve got something called file1.txt, and we&#x27;ve got a whole bunch of other ones, file2, file3, and we&#x27;ve also got something called secrets file. So we&#x27;ve now got four files, and just to illustrate the use cases of when we might want to have a .gitignore file, so say if you have this file that has some, you know, secret passwords or API keys, basically stuff that you don&#x27;t want to be committed, especially you don&#x27;t want it to be hosted on an open platform like GitHub. There have been horror stories of people having their Amazon AWS secret keys in their projects and that getting pushed to their remote on GitHub, and within seconds, their entire AWS account has been, basically, used up and wiped clean. So it&#x27;s really, really important to think about some of these things and to be aware of what you are putting onto this public platform. Another type of file that you might want to add into a .gitignore, or you might want to not upload to GitHub are files that are to do with your local settings or your user preferences. And there&#x27;s a whole bunch of these types of utility files that you don&#x27;t really want another person to have to download and copy into their project folder if they&#x27;re cloning or if they&#x27;re forking your project. So a really common example that people tend to add to their .gitignore files are what are called .DS_Store files. .DS_Store files are basically a settings file that saves a certain things like, you know, how you like your icons to be arranged in a particular project folder. So let&#x27;s say if we go in here, and we just have a look at arranged by, arranged by none, and then I&#x27;m going to move my files around, and let&#x27;s say that this is just my preference for how I want my files to be shown inside this project folder. Now, the .DS_Store file is a hidden file, so you won&#x27;t be able to see it inside your finder, but, of course, we as command line experts (chuckles) know that we can simply do a ls -a to see all of the hidden files that are inside our project folder. And you can see there it is, .DS_Store. So that&#x27;s not something that&#x27;s going to be of any use to anybody else, and we don&#x27;t want to have to clutter our GitHub remote repository or anybody else&#x27;s computer with that file. So we&#x27;re going to add that to our .gitignore as well. Getting onto the point of creating and using a .gitignore file, the first thing you have to do is to make it, right? And to do that we&#x27;re just going to create a hidden file. So using the dot in front of the file name, and it&#x27;s going to be called .gitignore. Now the case and the wording matters a huge deal, because we&#x27;re using Git and it&#x27;s looking for this specific file. So make sure that when you&#x27;re using it, it looks exactly like this. Let&#x27;s create that file. And of course it doesn&#x27;t appear, because it&#x27;s a hidden file, but we can see it using ls -a, and we can also open it inside VS Code like this. Here is where we add the files that should be ignored when we commit our project to Git. Let me first show you what happens when we don&#x27;t have anything inside our .gitignore. And I&#x27;m going to go through the normal process of setting up Git and committing it. First, if you remember, I have to use git init to initialize an empty Git repository inside my projects directory. And then I&#x27;m going to use git add . to add all the files that are currently inside this directory to the Git staging area. So hit Enter, and we can have a look at what&#x27;s been added by using git status. And you can see that all of these files are added into the staging area, and they&#x27;re going to be committed if I go ahead and do git commit. So that&#x27;s not what we want. And instead, I don&#x27;t want to commit the .DS_Store and I also don&#x27;t want to commit my secrets.txt file. First things first, I&#x27;m going to basically undo what I&#x27;ve just done. So I&#x27;m going to remove all of these files from my staging area, and then I&#x27;m going to add them later on once I&#x27;ve got my .gitignore set up. Basically we&#x27;re just undoing the last step. To do that, I&#x27;m going to write, git rm --cached, and I&#x27;m going to use the -r flag for recursive, and I&#x27;m going to use a dot to say that everything inside the current directory should be removed from the staging area. So now if I hit Enter, you can see that all of these things have been removed from the Git staging area, and if I do a git status again, you can see that all of these files are no longer tracked to be committed. So now this is the point where we&#x27;re going to use that .gitignore file, and we&#x27;re going to add the file names that we want to be ignored when we&#x27;re adding and committing to Git. In order to add individual files, you can simply specify the file name on each and every new line. So, for example, if we want to ignore the .DS_Store, we can simply write .DS_Store. So exactly the same upper and lower casing as the name of the file. And if we wanted to ignore the secrets.txt file, then all we have to do is just to specify it in here on a new line. Now with .gitignore it has certain rules. So, for example, you can use the pound sign (#) to comment. So, for example, you can say, you know, &quot;#Log files&quot;, right? To be ignored. Another thing you can do is use wild cards. So if you use the asterisk (*) and you say, *.txt, that means that when you commit your project, all of the files that have a text extension will be ignored. All right, so I&#x27;m going to get rid of that, because I do want to commit the file1 and file2 and file3 to Git, but I want it to ignore the .DS_Store and the secrets.txt files. Now we&#x27;re ready to add our files to our staging area. So let&#x27;s again use git add . and use git status to see what&#x27;s been added. So you can see that the only files are added are the .gitignore, the file 1, 2, 3, but the .DS_Store, as well as, the secrets.txt are ignored as per the specifications in our .gitignore file. Now if I go ahead and commit this as my &quot;Initial commit&quot;, then the only files are going to be put onto my local commit are going to be these four. And similarly, if I push this to GitHub, it will also be only these four files. Now let&#x27;s open a new Flask project and let me show you how you would add a .gitignore file for your Python projects. So let&#x27;s just call this Test, and I&#x27;m going to put it inside my desktop. So after I open the project, I&#x27;m going to create a new virtual environment. And I&#x27;m going to install all the modules from the requirements.txt file, then I&#x27;m going to open the terminal and create a .gitignore file. Then we&#x27;re going to open our .gitignore, and in here I&#x27;m going to add some of the files that will be ignored for our Python project. If you go to github.com/github, so this is a repository owned by the GitHub team, they have a repository called gitignore, and it&#x27;s basically a pre-made collection of useful .gitignore templates. And if you have a search in here, you can find that you&#x27;ve got Python, and you&#x27;re going to see that this is a prebuilt template for some of the files that you probably won&#x27;t want to upload to GitHub or any other remote repository. So these have the file extensions for things that are virtual environments or environment settings, and it&#x27;s basically all pre-made for you. So you can simply just copy all of this and put it into your .gitignore file that you created earlier on. So just straight up paste. And if you remember from earlier on, we said that the lines that start off with a pound sign are the comments, and these ones are extensions that you would ignore. And you might want to add things like .DS_store into here as well. So you can have something like # Project-wide. So for example, the .DS_Store that we mentioned earlier on, and if you hit Save... Now, if we go into terminal, and we&#x27;re inside our test folder, so we&#x27;re going to do a git init, git add ., git status to see what&#x27;s going to be committed. And then we&#x27;re going to say, git commit -m &quot;Initial commit&quot;. There we go, and now, once you&#x27;re ready to commit and add all of this to your remote, then it will ignore all of these common user-related files that are not going to be useful to your collaborators or anybody who wants to contribute on GitHub. That was just a quick tidbit about using .gitignore, and I know that some of you guys have been asking about, you know, where should you put your API keys, where should you put your sensitive data? And you have to make sure that when you are uploading your projects with these secret keys and passwords, to make sure that you set up a .gitignore file, and to include those things in there. All right, so that&#x27;s all for this lesson. In the next lesson I want to talk about Git Clone, and how to clone various repositories to your local system. So for all of that and more in the next lesson. So I&#x27;ll see you there.
+At the root of the repository:
+
+```bash
+touch .gitignore
+```
+
+Note the leading dot — it's a hidden file. `ls -a` reveals it.
+
+---
+
+### 3. Writing the Rules
+
+One pattern per line; `#` starts a comment:
+
+```gitignore
+# Secrets
+secrets.txt
+.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Local database
+instance/
+*.db
+
+# Editors
+.idea/
+.vscode/
+```
+
+| Pattern | Matches |
+|---------|---------|
+| `file.txt` | that file, anywhere in the repo |
+| `*.pyc` | all `.pyc` files |
+| `folder/` | the whole folder (trailing slash = directory) |
+| `!important.txt` | an exception — re-include this file |
+
+---
+
+### 4. Verify It's Working
+
+```bash
+git status           # ignored files no longer appear as untracked
+git check-ignore -v secrets.txt   # which rule is ignoring this file?
+```
+
+---
+
+### 5. If You Already Committed a Secret
+
+Ignoring a file does **not** untrack it. Remove it from the index and then commit:
+
+```bash
+git rm --cached secrets.txt
+echo "secrets.txt" >> .gitignore
+git commit -m "Stop tracking secrets.txt"
+```
+
+And if a real key was pushed: **rotate the key immediately**. Git history keeps the old
+commit, so treat the secret as compromised — deleting the file is not enough.
+
+---
+
+### Summary Checklist
+
+1. `.gitignore` excludes secrets, OS files, local config, caches, virtualenvs and databases.
+2. Patterns: `name`, `*.ext`, `folder/`, `!exception`, `#` for comments.
+3. `git status` / `git check-ignore -v` confirm the rules apply.
+4. Already committed? `git rm --cached <file>` and rotate any leaked credential.

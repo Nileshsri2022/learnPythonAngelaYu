@@ -1,27 +1,99 @@
-# 🎓 Branching and Merging
+Here is a structured breakdown of this lesson on branching and merging.
 
 ---
 
-### Overview
+### 1. Why Branches?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 70 - Advanced - Git, Github and Version Control
-**Lecture:** Branching and Merging
-**Level:** Advanced
+A branch is an independent line of development. Use one when you:
 
----
+* build a risky feature you might throw away,
+* fix a bug while `main` stays stable,
+* work with others without overwriting each other's code.
 
-### Summary
-
-Now, in the last lesson, we spoke about some of the more basic variants of version control. In this lesson, I want to talk about Branches and Branching. Now let&#x27;s start off with a simple example, say if we had Version 1 and 2, so two commits that were made to our local repository, and at this point, we realize that we want to maybe try out something different, maybe build a new feature, or just to mess around with a new idea or concept. What we can do is instead of continuing to commit to the main branch that you see here, we can also create a side branch. After the second commit, we create a new branch and we start committing to this new branch or this experimental branch. We add some features and we write some code. Simultaneously, we can continue working on the main branch, putting out all those essential updates or bits of code that are maintaining our main project, but at the same time we can continue to update and work on this experimental branch trying things out and committing our experiments to this experimental branch. So now we have two branches that are parallel to each other and they can be developed simultaneously. If at some point in the future that we decide that that experiment was really fruitful, and the feature that we built in it was really, really great and we&#x27;d like to merge it back to the main branch or to the main project, then that can be done really easily as well by simply placing a merge request in. And we can bring all of those changes that we experimented with, that we messed around with, back to the main project and check to see if there&#x27;s any conflict with the main branch code and if not, or if after a little bit of editing, then we can bring all of those changes into the main working branch. And then we can continue working from here onto to the next commit or we can make more branches. And very often what you see in practice is that there&#x27;ll be multiple branches being worked on at the same time for any given large project. And the reason is because sometimes you&#x27;re developing new features, sometimes you are fixing bugs and all of these things may break your main project, so you don&#x27;t want to do it on the main branch. You only want to put it onto the main branch once you know that everything is working fine, and then you can bring your code back to the working copy ready for shipment and deployment. Let&#x27;s take a look at how this would work in reality. Now let&#x27;s say we navigate back to our Story directory, and inside here we&#x27;ve still got our previous three chapters and they are under version control. So if we just have a look at &quot;git log&quot;, you can see that this is currently the most recent commit and it&#x27;s also mirrored in our remote. Let&#x27;s try and do this locally first. If I decided that I want to create a new branch, you can simply just write &quot;git branch&quot; and specify the name of your new branch. I&#x27;m going to add a space-related plot to my story, so let&#x27;s call our branch, &quot;alien-plot.&quot; Hit Enter. And now you can check out what branches you have by just writing &quot;git branch&quot; without the name and you can see that you&#x27;ve got one branch called, alien-plot and another one called main, and the asterisks (*) shows you which branch you are currently on. So we&#x27;re currently on the main branch. We can switch to the alien-plot by simply writing &quot;git checkout alien-plot&quot;. Okay. As it says, we have now switched to the branch called, alien-plot. Now, it is inside this branch that I&#x27;m going to make some changes to my chapters. Now I&#x27;m going to make some completely nonsensical modification to my files. So let&#x27;s change chapter 1. Let&#x27;s change chapter2. Okay. There we go. Okay, so we&#x27;ve made some modifications to chapter1 and chapter2, and we&#x27;ve decided to change some of the pre-existing written text to integrate a space-themed or alien-themed plot. Let&#x27;s go ahead and commit that. So remember, we have to do &quot;git add .&quot; and then &quot;git commit -m...&quot; and our message is going to be &quot;modify chapter 1 and 2 to have alien theme&quot;. Okay, now hit Enter and we&#x27;ve made our commits. Now if we do a &quot;git log&quot;, we can see that we have two commits made on the main branch and we have one commit made on the alien plot-branch. So now let&#x27;s say that we go back onto our main branch. Whenever you&#x27;re confused where you are, you can always do a &quot;git branch&quot; to check and see where the asterisks is. And the asterisks is obviously where you are. So let&#x27;s do a &quot;git checkout main&quot; to go back to the main branch. So you can see that our main branch is unchanged with respect to the space or alien plot that we did just now. Nothing has changed over here. So while on the main branch, I&#x27;m going to create a new file, I&#x27;m going to call it chapter4.txt. And inside chapter four, let&#x27;s add something. Okay. And hit, Enter and Save. By the way, I have no idea what I&#x27;m typing. I&#x27;m now making up and destroying, probably in the process a masterpiece, but it&#x27;s okay. So we now have a chapter4 on our main branch and I&#x27;m going to go ahead and do a &quot;git add .&quot; and &quot;git commit&quot;. Now there&#x27;s ways of combining add and commit together in the same command, but I think if you&#x27;re new to git, it&#x27;s always good to really know in your head exactly what&#x27;s going on. So I recommend actually separating those two bits out. Let&#x27;s go ahead and give it a commit message. &quot;add chapter 4.&quot; Okay, so &quot;git log&quot;. Let&#x27;s see, what have we got? We are currently only looking at the main branch and we have three commits. This is the position of our remote. So on our GitHub repository, this was the latest commit that it could see. But on our local git repository, this is in fact the latest commit, the one that we just made where we added chapter4. And you can see that if I switch between the branches, say, if I go over to alien-plot branch and hit Enter, you can see that our local files actually changed as I switched branches. Let&#x27;s just say that I&#x27;m quite happy with the changes that I&#x27;ve made in terms of my alien-plot addition and I would like to merge these changes back into my main branch. So I&#x27;ve done a little bit of experimentation on a separate branch, I&#x27;ve, you know, messed with a few things and I think it was a great experiment. So I&#x27;m going to put it back into our main branch. In order to do that, what you have to do is go back to the main branch. So &quot;git checkout main&quot; and while we&#x27;re on the main branch we&#x27;re going to merge the changes inside the alien-plot branch. So we use the command &quot;git merge&quot; and we&#x27;re going to specify the branch name which was, &quot;alien-plot&quot; hit Enter. And this opens up Vim, which is a text editor, and this allows you to add a merge message if you wish. And alternatively, as we&#x27;re going to do here, we&#x27;re just going to leave it empty and you&#x27;re going to write, &quot;:q!&quot; to save and quit. And you can see now I&#x27;ve actually absorbed those changes from the alien plot. And you can see that because if I do &quot;git branch&quot;, I am on the main branch. The alien plot branch still exists by the way. If you have a look at &quot;git log&quot;, you can see that I&#x27;ve got some of the previous commits, but I&#x27;ve also got this merge branch alien-plot which was my most recent commit. Now, at this point let&#x27;s do a &quot;git push&quot; to our &quot;origin main&quot; and remember to add the &quot;-u&quot; flag. That&#x27;s completed. And let&#x27;s check it out online. If we go over to our story repository, you can see that there&#x27;s now five commits. We modified Chapter 1 and 2. We added chapter 4 and we merged the alien-plot branch. So if you go into insights and go to Network now, if I zoom in on this Network graph, then you can see this is the process that we&#x27;ve gone through. This is the main branch where we did chapter 1 and chapter 2 and then at this point, after I created chapter 2 and 3, I created a new branch. And while inside this branch I made a commit that modified chapter 1 and 2 to have an alien theme. And then on the main branch, I continued developing the main branch, adding a chapter 4, but subsequently, I realized that I did a great job adding alien themes to our storyline and I decided to merge it back into the main branch. This is basically a graphical representation of what&#x27;s been going on. So that was us creating a branch and merging it. Now, why don&#x27;t you go ahead and have a go and create your own repository both locally as well as on GitHub? And, you know, write a story or write a poem, anything you like, and check out the amazingness that is Branching using git.
+`main` stays the working version; branches are where experiments happen safely.
 
 ---
 
-### Key Concepts
+### 2. The Commands
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+```bash
+git branch                      # list branches (* marks the current one)
+git checkout -b feature-x       # create AND switch to a new branch
+git checkout main               # switch back
+git branch -d feature-x         # delete a merged branch
+```
+
+> **Note:** `git switch -c feature-x` is the modern equivalent of `checkout -b`; both work.
 
 ---
+
+### 3. Working on the Branch
+
+```bash
+git checkout -b dog-branch
+# edit files
+git add .
+git commit -m "Teach the dog to fetch"
+git push -u origin dog-branch      # publish the branch (needed for PRs)
+```
+
+Commits made here don't touch `main` until you merge.
+
+---
+
+### 4. Merging
+
+```bash
+git checkout main               # the branch you're merging INTO
+git merge dog-branch            # bring the other branch's commits in
+```
+
+Two possible outcomes:
+
+| Result | Meaning |
+|--------|---------|
+| **Fast-forward / clean merge** | no conflicting edits — done |
+| **Merge conflict** | both branches changed the same lines |
+
+Conflict markers look like:
+
+```
+<<<<<<< HEAD
+price = 3
+=======
+price = 4
+>>>>>>> dog-branch
+```
+
+Edit the file to keep what you want, delete the markers, then:
+
+```bash
+git add .
+git commit -m "Resolve merge conflict in pricing"
+```
+
+---
+
+### 5. Good Habits
+
+* One branch per feature or fix — small, focused changes merge easily.
+* Merge often; long-lived branches drift and conflict.
+* Keep `main` deployable at all times.
+* Delete the branch after merging.
+
+```bash
+git checkout main
+git merge dog-branch
+git push
+git branch -d dog-branch
+```
+
+---
+
+### Summary Checklist
+
+1. Branches let you experiment without risking `main`.
+2. `git checkout -b name` creates and switches; `git branch` lists.
+3. Merge by checking out the target branch and running `git merge <other>`.
+4. Conflicts are edited by hand, then `git add` + `commit`.
+5. Push branches when you want a pull request; delete them once merged.
