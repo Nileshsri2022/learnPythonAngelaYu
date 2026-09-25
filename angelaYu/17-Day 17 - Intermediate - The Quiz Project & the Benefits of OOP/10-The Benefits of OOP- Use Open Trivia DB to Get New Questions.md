@@ -1,33 +1,39 @@
-# 🔧 The Benefits of OOP: Use Open Trivia DB to Get New Questions
+Here is a structured breakdown of the OOP payoff — swapping in the Open Trivia Database.
 
 ---
 
-### Overview
+### 1. The Payoff
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 17 - Intermediate - The Quiz Project & the Benefits of OOP
-**Lecture:** The Benefits of OOP: Use Open Trivia DB to Get New Questions
-**Level:** Intermediate
+Because the quiz engine consumes **Question objects**, the data source can change without
+touching `QuizBrain` at all. The course's `data.py` fetches fresh questions from the
+**Open Trivia Database** (opentdb.com):
 
----
-
-### Summary
-
-So I&#x27;m sure you&#x27;ve had a few gos with your quiz now and you&#x27;ve answered all the questions and you know all the correct answers. It&#x27;s a little bit dry if we only have one question bank, right? Wouldn&#x27;t it be nice to be able to switch out the question data with some new questions? Now you could certainly write your own questions, just change each of the texts and the answers to whatever question you want to add. An alternative though, is to use the Open Trivia database, which is a free-to-use user contributed trivia question database and it has over 3000 verified questions to pick from. In the course resources I&#x27;ve got a link to the open TDB, the open trivia database, and we can go ahead and take a look at their API to see how we can generate some questions. For example, if I wanted 10 questions on, let&#x27;s say computers and I want the difficulty to be easy and I want to select the type to be true or false And then I&#x27;m going to go and click generate API URL. Now that I&#x27;ve got my URL, I can open up a new tab and go to that location. Now, we&#x27;ll get some data generated in a JSON format which is a JavaScript object notation but it actually looks pretty much the same as a Python dictionary. So let&#x27;s go ahead and copy everything that&#x27;s here and then go into our data.py and I&#x27;m going to replace the entire question data with what I got just now. Now once you paste it in, it&#x27;s going to be very hard to read. So we&#x27;ll need to go to code and then reformat code in order to get it to look a little bit more normal. So you can see that we&#x27;ve got this dictionary and it has two key-value pairs. One is a response code and another is a list which is under the key results. If I go and reformat this again, you can see that results is comprised of 10 dictionaries. Now, each of these dictionaries contain a whole bunch of key-value pairs and inside each of these key-value pairs it has a bunch of things including the category, that type, the difficulty, the question, the correct answer, and the incorrect answers. So what we can see here is we have a dictionary and then we have these two key value pairs. So you can simply just get rid of the enclosing dictionary and leave it so that you have this as a list of dictionaries. Now, if we go and reformat our code so that we can see each of these dictionary objects, you can see there&#x27;s a total of five key value pairs and they each have the keys category, type, question, which is the question text and the correct answer which is a string that&#x27;s true or false. These are the two bits of information that we&#x27;re interested in. So can you figure out how you can modify the main.py in order to get our quiz to start working again with this new data? Pause the video and complete this challenge. All right. So we&#x27;ve got our question data from the data file, but now we have to change the names of these keys. Whereas before it was called text and answer, now it&#x27;s called question and correct answer. So the question_text is under the key question and correct answer is under the key correct _answer. So just by changing those two things and pasting all of that data in we can already get started with this brand new quiz. And you can play with it and mess around with different data from the open trivia database, change the category, change the difficulty, and you have endless number of questions to play with. And this really brings about some of the advantages of Object Oriented Programming. Notice how only our main.py file actually has knowledge of how each of these classes work and behave. Our QuizBrain actually didn&#x27;t need to be touched at all when we changed our data over. This is modularity at its best. We&#x27;re able to completely switch up the question data to a different language, to a different topic, to a different format, and the quiz brain doesn&#x27;t care. All it has to concern itself with is how to track which question we&#x27;re on, how to get the next question, how to check the answer. And as long as it&#x27;s able to do that and perform the functionality of a quiz, it&#x27;s unconcerned by where the data comes from, how it&#x27;s formatted, and it will continue to work. So, as you can imagine, if your colleague was working on quiz brain, they don&#x27;t actually need to know how the data looks or how it&#x27;s structured. And you, on the other hand, could be working on the data, getting hold of each of these pieces of data or writing the quiz. And you can already see how we&#x27;ve got a piece of program that&#x27;s able to be far more complex than what we used to be able to create with simple procedural code.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **JSON data handling** | Introduced/used in this lecture |
+```python
+# data.py — new question format from the API
+response = requests.get("https://opentdb.com/api.php?amount=10&type=boolean")
+question_data = response.json()["results"]
+# each item: {"question": ..., "correct_answer": ..., ...}
+```
 
 ---
 
-### 🏋️ Practice Exercise
+### 2. The Only Change Needed
 
-So I&#x27;m sure you&#x27;ve had a few gos with your quiz now and you&#x27;ve answered all the questions and you know all the correct answers. It&#x27;s a little bit dry if we only have one question bank, right? Wouldn&#x27;t it be nice to be able to switch out the question data with some new questions? Now you could certainly write your own questions, just change each of the texts and the answers to whatever question you want to add. An alternative though, is to use the Open Trivia database, which is a free-to-use user contributed trivia question database and it has over 3000 verified questions to pick from. In the course resources I&#x27;ve got a link to the open TDB, the open trivia database, and we can go ahead and take a look at their API to see how we can generate some questions. For example, if I wanted 10 questions on, let&#x27;s say computers and I want the difficulty to be easy and I want to select the type to be true or false And then I&#x27;m going to go and click generate API URL. Now that I&#x27;ve got my URL, I can open up a new tab and go to that location. Now, we&#x27;ll get some data generated in a JSON format which is a JavaScript object notation but it actually looks pretty much the same as a Python dictionary. So let&#x27;s go ahead and copy everything that&#x27;s here and then go into our data.py and I&#x27;m going to replace the entire question data with what I got just now. Now once you paste it in, it&#x27;s going to be very hard to read. So we&#x27;ll need to go to code and then reformat code in order to get it to look a little bit more normal. So you can see that we&#x27;ve got this dictionary and it has two key-value pairs. One is a response code and another is a list which is under the key results. If I go and reformat this again, you can see that results is comprised of 10 dictionaries. Now, each of these dictionaries contain a whole bunch of key-value pairs and inside each of these key-value pairs it has a bunch of things including the category, that type, the difficulty, the question, the correct answer, and the incorrect answers. So what we can see here is we have a dictionary and then we have these two key value pairs. So you can simply just get rid of the enclosing dictionary and leave it so that you have this as a list of dictionaries. Now, if we go and reformat our code so that we can see each of these dictionary objects, you can see there&#x27;s a total of five key value pairs and they each have the keys category, type, question, which is the question text and the correct answer which is a string that&#x27;s true or false. These are the two bits of information that we&#x27;re interested in. So can you figure out how you can modify the main.py in order to get our quiz to start working again with this new data? Pause the video and complete this challenge. All right. So we&#x27;ve got our question data from the data file, but now we have to change the names of these keys. Whereas before it was called text and answer, now it&#x27;s called question and correct answer. So the question_text is under the key question and correct answer is under the key correct _answer. So just by changing those two things and pasting all of that data in we can already get started with this brand new quiz. And you can play with it and mess around with different data from the open trivia database, change the category, change the difficulty, and you have endless number of questions to play with. And this really brings about some of the advantages of Object Oriented Programming. Notice how only our main.py file actually has knowledge of how each of these classes work and behave. Our QuizBrain actually didn&#x27;t need to be touched at all when we changed our data over. This is modularity at its best. We&#x27;re able to completely switch up the question data to a different language, to a different topic, to a different format, and the quiz brain doesn&#x27;t care. All it has to concern itself with is how to track which question we&#x27;re on, how to get the next question, how to check the answer. And as long as it&#x27;s able to do that and perform the functionality of a quiz, it&#x27;s unconcerned by where the data comes from, how it&#x27;s formatted, and it will continue to work. So, as you can imagine, if your colleague was working on quiz brain, they don&#x27;t actually need to know how the data looks or how it&#x27;s structured. And you, on the other hand, could be working on the data, getting hold of each of these pieces of data or writing the quiz. And you can already see how we&#x27;ve got a piece of program that&#x27;s able to be far more complex than what we used to be able to create with simple procedural code.
+The construction loop adapts to the new *field names* — nothing else:
+
+```python
+question_bank = []
+for question in question_data:
+    question_bank.append(Question(question["question"], question["correct_answer"]))
+```
+
+`QuizBrain` is untouched. That's the **benefit of OOP**: boundaries between data, model
+and engine mean each part can evolve independently.
 
 ---
+
+### Summary Checklist
+
+1. Same engine, new data source — change one loop, keep the classes.
+2. Decoupled design = easy swaps, easy tests, easy reuse.
+3. Your quiz now has effectively unlimited questions. 🌍
