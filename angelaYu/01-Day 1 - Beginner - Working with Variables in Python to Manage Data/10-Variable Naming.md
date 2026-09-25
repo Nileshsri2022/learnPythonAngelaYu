@@ -1,31 +1,63 @@
-# 🐍 Variable Naming
+Here is a structured breakdown of everything covered in this lesson on variable naming.
 
 ---
 
-### Overview
+### 1. The Golden Rule: Make It Readable
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 1 - Beginner - Working with Variables in Python to Manage Data
-**Lecture:** Variable Naming
-**Level:** Beginner
-
----
-
-### Summary
-
-Now, when it comes to naming your variables, you can pretty much call it whatever it is you want. So instead of calling this name, I could have just called it n, and I could have called this l, and as long as I&#x27;m consistent, so if I wanted to get the length of n, then I would have to change this as well. And if I wanted to print out l, then I have to change this as well. But there&#x27;s a couple of rules that you should probably follow, and the most important one is to make your code readable. Because if you come back to this in 6 months, 12 months, n and l is not going to have a lot of meaning for you. So try to make sure that it actually makes sense to you. And if you want to, you can actually have multiple words in the name of your variable. So for example, if you wanted to call this username, then you would write the word user, and then you would separate each of the words with an underscore. But you can&#x27;t have a space in between. This is not valid code. And if you try to run it, you&#x27;ll get a SyntaxError. So the name of the variable has to be one single unit. And in order to separate words in Python we use the underscore. Now if you want to use numbers in the name of your variable you can. So for example length1, length2, but they can&#x27;t be at the beginning of the name of the variables. So you can&#x27;t say 1length, or 3length. That will generate a syntax error as well. Finally, there&#x27;s certain privileged words that we use, for example, the names of our functions like print and input. And it&#x27;s usually good practice to not use them as the names of your variables, because you can see that syntax highlighting gets messed up because it thinks that it&#x27;s actually input() function you&#x27;re trying to create. And even though often when you run your app it might not have any issues, this is really bad practice because it&#x27;s very confusing. So try to make sure that all the names of your variables get highlighted like the other variables in the same color. Now, the final thing to remember is that if you decide to call your variable this particular name, N-A-M-E, and at a later point, you make a typo and you spell it wrong, so maybe instead of name, you said, nama, this is not going to work. And when you run your code, you&#x27;ll get what&#x27;s called a NameError because it says this name is not defined. And the idea is that you would look at where the error is, Line 2, print nama, and you&#x27;ll see, &quot;Oh, that&#x27;s not right.&quot; It&#x27;s meant to be spelled, N-A-M-E, so you&#x27;ll have to go and fix it in order for your code to work. Now remember that this is not because Python is doing any sort of spell checking for you. It&#x27;s like, &quot;Oh, that&#x27;s not how you spell name.&quot; No. In fact, if you decided to call this nama, and you later on use it as nama, there&#x27;s no problems. Other than this green squiggly underline which tells you that there is a typo in this word, Python doesn&#x27;t actually care, and that&#x27;s why your file is still checked because very often you might be in the situation where you need to create something that is unique, right? You might have a player in your video game called Nama and you decide to call it that. It&#x27;s totally up to you. And the only thing that Python really cares about is that you are consistent. This is the name that&#x27;s associated with this piece of data, later on, when you want to use this piece of data, you use this name to refer to it. And as long as these two spellings are identical, then the computer doesn&#x27;t care at all. So when you get a NameError in your code, you now know it&#x27;s probably because you&#x27;ve misspelled or mistyped one of the variable names somewhere in your code. Now, in the next lesson, I&#x27;ve prepared a quiz for you where you&#x27;ll get to select which variable names are valid, and which ones are not good practice. Have a go at that over on the next lesson.
+You *can* name a variable almost anything — `name`, `n`, `l` — as long as you use it
+consistently. But `n` and `l` mean nothing when you come back to the code in 6 or 12 months.
+**Pick names that describe the data they hold.**
 
 ---
 
-### Key Concepts
+### 2. The Naming Rules
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **input() function** | Introduced/used in this lecture |
+```python
+user_name = "Angela"   # ✅ multiple words joined with underscores
+length1 = 10           # ✅ numbers are fine (but not first)
+```
+
+* **Multiple words:** separate them with an **underscore** — `user_name`.
+  Spaces are **not allowed**: `user name` is a `SyntaxError`.
+* **Numbers:** allowed in the name, but **not at the start** — `1length` is a `SyntaxError`.
+
+> This style of `snake_case` naming is the Python convention.
 
 ---
 
-### Next Steps
+### 3. Don't Reuse Function Names
 
-Now, when it comes to naming your variables, you can pretty much call it whatever it is you want. So instead of calling this name, I could have just called it n, and I could have called this l, and as long as I&#x27;m consistent, so if I wanted to get the length of n, then I would have to change this as well. And if I wanted to print out l, then I have to change this as well. But there&#x27;s a couple of rules that you should probably follow, and the most important one is to make your code readable. Because if you come back to this in 6 months, 12 months, n and l is not going to have a lot of meaning for you. So try to make sure that it actually makes sense to you. And if you want to, you can actually have multiple words in the name of your variable. So for example, if you wanted to call this username, then you would write the word user, and then you would separate each of the words with an underscore. But you can&#x27;t have a space in between. This is not valid code. And if you try to run it, you&#x27;ll get a SyntaxError. So the name of the variable has to be one single unit. And in order to separate words in Python we use the underscore. Now if you want to use numbers in the name of your variable you can. So for example length1, length2, but they can&#x27;t be at the beginning of the name of the variables. So you can&#x27;t say 1length, or 3length. That will generate a syntax error as well. Finally, there&#x27;s certain privileged words that we use, for example, the names of our functions like print and input. And it&#x27;s usually good practice to not use them as the names of your variables, because you can see that syntax highlighting gets messed up because it thinks that it&#x27;s actually input() function you&#x27;re trying to create. And even though often when you run your app it might not have any issues, this is really bad practice because it&#x27;s very confusing. So try to make sure that all the names of your variables get highlighted like the other variables in the same color. Now, the final thing to remember is that if you decide to call your variable this particular name, N-A-M-E, and at a later point, you make a typo and you spell it wrong, so maybe instead of name, you said, nama, this is not going to work. And when you run your code, you&#x27;ll get what&#x27;s called a NameError because it says this name is not defined. And the idea is that you would look at where the error is, Line 2, print nama, and you&#x27;ll see, &quot;Oh, that&#x27;s not right.&quot; It&#x27;s meant to be spelled, N-A-M-E, so you&#x27;ll have to go and fix it in order for your code to work. Now remember that this is not because Python is doing any sort of spell checking for you. It&#x27;s like, &quot;Oh, that&#x27;s not how you spell name.&quot; No. In fact, if you decided to call this nama, and you later on use it as nama, there&#x27;s no problems. Other than this green squiggly underline which tells you that there is a typo in this word, Python doesn&#x27;t actually care, and that&#x27;s why your file is still checked because very often you might be in the situation where you need to create something that is unique, right? You might have a player in your video game called Nama and you decide to call it that. It&#x27;s totally up to you. And the only thing that Python really cares about is that you are consistent. This is the name that&#x27;s associated with this piece of data, later on, when you want to use this piece of data, you use this name to refer to it. And as long as these two spellings are identical, then the computer doesn&#x27;t care at all. So when you get a NameError in your code, you now know it&#x27;s probably because you&#x27;ve misspelled or mistyped one of the variable names somewhere in your code. Now, in the next lesson, I&#x27;ve prepared a quiz for you where you&#x27;ll get to select which variable names are valid, and which ones are not good practice. Have a go at that over on the next lesson.
+Avoid naming variables after built-in functions like `print` or `input`:
+
+```python
+input = "Angela"   # bad idea
+```
+
+* The syntax highlighting immediately gets confused — it colours it like the function.
+* It might still run, but it's very confusing and can break things later. Bad practice.
+
+> **Tip:** Healthy variable names get highlighted in the *same colour* as your other
+> variables. If the colour changes, you've probably shadowed a function name.
+
+---
+
+### 4. Typos Cause `NameError`s
+
+If you define a variable `name` and later misspell it as `nama`:
+
+```python
+name = "Angela"
+print(nama)   # NameError: name 'nama' is not defined
+```
+
+* Python is **not** spell-checking you — if you'd called it `nama` everywhere, it would work fine.
+* A `NameError` means: *this name was never defined*. Check the line number in the error and fix the spelling.
+
+---
+
+### Summary Checklist
+
+1. Readable, descriptive names beat short cryptic ones.
+2. `snake_case` with underscores; no spaces; numbers never first.
+3. Never name variables after functions (`print`, `input`, …).
+4. `NameError` = a name that doesn't exist — usually a typo.

@@ -1,22 +1,26 @@
-# 🐍 Share and Show off your Project!
+Here is a short wrap-up note for this end-of-Day-3 lecture.
 
 ---
 
-### Overview
+### 1. The Message
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 3 - Beginner - Control Flow and Logical Operators
-**Lecture:** Share and Show off your Project!
-**Level:** Beginner
+The most important thing in learning to program is **making the code your own**. With
+Treasure Island the sky's the limit:
 
----
-
-### Summary
-
-Hey, I hope you had fun building the Treasure Island project. Now remember that the most important thing when it comes to programming and learning this new skill is to really make the code your own. So with this project, really the sky&#x27;s the limit. You can take your creativity and run with it. Make the story, your own, change it up, change the game. Make it something that you imagined it to be. And I can&#x27;t wait to play your game. So once you&#x27;ve created your own version, be sure to share it in the comments below so we can all play it and we can all admire your hard work. So have a go at that and I&#x27;ll see you tomorrow.
+* Write **your own story** and choices.
+* Add more doors, more levels, sillier Game Over messages.
+* Change it into a completely different adventure.
 
 ---
 
-### Next Steps
+### 2. Share It
 
-Hey, I hope you had fun building the Treasure Island project. Now remember that the most important thing when it comes to programming and learning this new skill is to really make the code your own. So with this project, really the sky&#x27;s the limit. You can take your creativity and run with it. Make the story, your own, change it up, change the game. Make it something that you imagined it to be. And I can&#x27;t wait to play your game. So once you&#x27;ve created your own version, be sure to share it in the comments below so we can all play it and we can all admire your hard work. So have a go at that and I&#x27;ll see you tomorrow.
+Post your version (e.g. in the course Q&A or with friends) so others can play it —
+explaining your code to someone else is one of the fastest ways to solidify learning.
+
+---
+
+### Summary Checklist
+
+1. Day 3 complete — your programs can now **make decisions**. 🎉
+2. Next up: Day 4 — **randomisation** and **Python lists**.

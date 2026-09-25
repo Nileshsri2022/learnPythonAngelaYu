@@ -1,26 +1,25 @@
-# 🐍 Programming is like going to the Gym
+Here is a short wrap-up note for this end-of-Day-4 lecture.
 
 ---
 
-### Overview
+### 1. The Message
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 4 - Beginner - Randomisation and Python Lists
-**Lecture:** Programming is like going to the Gym
-**Level:** Beginner
+**Programming is like going to the gym.** You can't get strong by watching someone else
+lift weights — even eight hours a day. Muscle comes from reps; skill comes from *typing
+code yourself*, every day.
 
----
-
-### Summary
-
-Hey, well done for completing day 4. I can see that you&#x27;re really putting in the repetitions, putting in the practice. And this is what&#x27;s going to take you really far, because we all know that programming is not something that you can just learn passively. You can&#x27;t sit in front of a TV, watch somebody talk about programming and all of a sudden become a programmer. You have to put in the hours and the effort. It&#x27;s a little bit like going to the gym really. You&#x27;re never going to become muscular and strong if you just watch a bodybuilding show, right? Even, you know, if you watch Arnold Schwartzenegger every day, eight hours, eight hours a day, you will never develop those muscles that he has unless you actually hit the gym. So our version of the gym is coding. We&#x27;re going to hit the coding editor and we&#x27;re going to type every day until we get it. So have a break, have a rest and come back tomorrow refreshed. And we&#x27;re going to put in some more reps and we&#x27;re going to train you up to become a great programmer.
+* Watching tutorials = watching bodybuilding shows.
+* **Writing code = hitting the gym.**
 
 ---
 
-### Key Concepts
+### 2. Keep the Streak
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+Four days in a row now. Rest, recover, and come back tomorrow for Day 5 — **loops**.
 
 ---
+
+### Summary Checklist
+
+1. You can't learn to code passively — put in the reps.
+2. Daily practice beats intensity; show up again tomorrow. 💪

@@ -1,30 +1,61 @@
-# 🐍 Nested if statements and elif statements
+Here is a structured breakdown of everything covered in this lesson on nested `if` statements and `elif` statements.
 
 ---
 
-### Overview
+### 1. Nested `if` Statements
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 3 - Beginner - Control Flow and Logical Operators
-**Lecture:** Nested if statements and elif statements
-**Level:** Beginner
+Sometimes a second condition only matters when the first one **already passed** — e.g. first
+check the rider is tall enough, *then* decide adult vs. child price. That is a **nested
+`if`**: an `if`/`else` written *inside* another one, indented a further level:
+
+```python
+height = int(input("What is your height in cm? "))
+
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age? "))
+    if age <= 18:
+        print("Please pay $7.")
+    else:
+        print("Please pay $12.")
+else:
+    print("Sorry, you have to grow taller before you can ride.")
+```
+
+* The inner `if/else` only runs when the outer condition is `True`.
+* Both conditions must hold to reach the innermost code — and note the **double indentation**.
 
 ---
 
-### Summary
+### 2. `elif` — Checking Several Alternatives
 
-In previous lessons, we learned about using the if and else statements to check whether if somebody is over 120cm or not, and allow them to actually purchase a ticket if they are over a certain height. Now, in addition to the height, there&#x27;s another condition that we need to check for, namely their age. If somebody is over 18 years old, then they should be paying the adult price, which is let&#x27;s say $12, but if they are 18 or under, then they should only be paying $7. So how can we represent this extra condition that we need to check for in our code? Well, we could use something called a nested if else statement. We&#x27;ve seen our if else statements look like this, where it&#x27;s only got two choices, if this condition is true, do this, otherwise do that. But in a nested if statement, once the first condition has passed, we can check for another condition, and then we can have another if else statement inside this if condition. In order for this thing to happen, this has to be true, and this also has to be true. In order for this to happen, this condition has to be true, but this condition has to be false. So essentially the computer first looks at the larger picture, which is this first condition, and decides on whether if it should go into the else block here or if it should go into the nested block inside the if statement. So now this is what our flowchart looks like, in the first if statement, we check whether if their height is over 120cm, if no, then the if statements all end. You can&#x27;t write, you can&#x27;t buy a ticket. But if yes, we actually take them to yet another if statement where we check their age. If their age is 18 or under, then we give them a $7 ticket. If they&#x27;re over 18, then they have to pay $12. So the place where we&#x27;re going to nest, our if statement is inside here. Notice how it&#x27;s indented. So it&#x27;s already inside this if block. And this already has to be true. Now here we&#x27;re going to create another if and else statement. And the condition checks for their age. So we better ask them for an age. Let&#x27;s say age equals, convert the input to an int. And, &quot;What is your age?&quot; So now that we&#x27;ve gotten hold of their age, we can see if their age is less than or equal to 18. Well in this case we&#x27;re going to give them the $7 ticket. But else namely if this is not true, if their age is over 18, well, in that case, we&#x27;re going to give them the $12 ticket. So now we have a nested if statement because this if and else statement lives inside this if statement. So this condition will only be checked if this is already deemed to be true. Now let&#x27;s say our situation got a little bit more complex. The boss comes over, checks our code and says, wait, wait, wait, wait. There&#x27;s actually more price tiers than that. In fact, if you&#x27;re less than 12 years old, you pay $5. If you&#x27;re between 12 and 18, you pay $7. And if you&#x27;re over 18, then you pay the full adult price, which is $12. Now there are three possibilities. So how do we represent this in our if statement? Well, we could use something called the elif. Instead of having a simple if else statement where there&#x27;s only one condition, if it&#x27;s true, do this, otherwise do that. You can add as many elif conditions as you want. So we can check for condition1, if that&#x27;s true, then do A, but if that&#x27;s not true, then we can continue and check for condition2. If condition2 is true, well then we can do B. And finally, if none of those conditions were true, we can do this final thing. Our flowchart now looks something like this, and this is the logic that we&#x27;re trying to program. Once we&#x27;re inside this nested if statement, we&#x27;re going to check if their age is under 12, in which case they should pay $5. If they&#x27;re between 12 and 18, then they should pay $7. And finally, if they&#x27;re over 18, then they should pay $12. Now, the first thing I&#x27;m going to check is if the age is less than 12 under this condition, they should pay $5. So let&#x27;s change that to 5. Now the next condition should be created using an elif, which stands for else-if. So, it means, if this is not true, else if, can you check if this is true? Well, in that case then we should do this. For example, if the age is not less than 12, so they&#x27;re over 12, then are they under 18? Well then this condition basically catches everybody who&#x27;s between 12 and 18. And finally, if they&#x27;re not less than or equal to 18 and they&#x27;re not less than 12, then that&#x27;s everybody else who is over 18. Now remember that we can use as many elif conditions between the if and else as we like. So I could add another elif that checks whether if the age is less than, say, 22. Well, in this case, do something else, and then I can keep going with these elif&#x27;s until I&#x27;m done with all my conditions. So have a play around with this code. Write it yourself, see if it makes sense, and then mess around with the elif&quot;s so that it does what you expect it to do. And then once you&#x27;re ready, go ahead and head over to the next lesson where I&#x27;ve got a coding challenge for you.
+`elif` (else-if) adds more branches to the *same* check, e.g. mid-life pricing:
+
+```python
+if age < 12:
+    print("Please pay $5.")
+elif age <= 18:
+    print("Please pay $7.")
+else:
+    print("Please pay $12.")
+```
+
+Python tests each condition **top to bottom** and runs the **first** one that is `True`,
+skipping the rest.
 
 ---
 
-### Key Concepts
+### 3. `if` / `elif` / `else` vs. Multiple `if`s
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+| Pattern | How many branches run? |
+|---------|------------------------|
+| `if` / `elif` / `else` | **Exactly one** — the first True branch |
+| Several separate `if`s | **Every** branch whose condition is True |
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-In previous lessons, we learned about using the if and else statements to check whether if somebody is over 120cm or not, and allow them to actually purchase a ticket if they are over a certain height. Now, in addition to the height, there&#x27;s another condition that we need to check for, namely their age. If somebody is over 18 years old, then they should be paying the adult price, which is let&#x27;s say $12, but if they are 18 or under, then they should only be paying $7. So how can we represent this extra condition that we need to check for in our code? Well, we could use something called a nested if else statement. We&#x27;ve seen our if else statements look like this, where it&#x27;s only got two choices, if this condition is true, do this, otherwise do that. But in a nested if statement, once the first condition has passed, we can check for another condition, and then we can have another if else statement inside this if condition. In order for this thing to happen, this has to be true, and this also has to be true. In order for this to happen, this condition has to be true, but this condition has to be false. So essentially the computer first looks at the larger picture, which is this first condition, and decides on whether if it should go into the else block here or if it should go into the nested block inside the if statement. So now this is what our flowchart looks like, in the first if statement, we check whether if their height is over 120cm, if no, then the if statements all end. You can&#x27;t write, you can&#x27;t buy a ticket. But if yes, we actually take them to yet another if statement where we check their age. If their age is 18 or under, then we give them a $7 ticket. If they&#x27;re over 18, then they have to pay $12. So the place where we&#x27;re going to nest, our if statement is inside here. Notice how it&#x27;s indented. So it&#x27;s already inside this if block. And this already has to be true. Now here we&#x27;re going to create another if and else statement. And the condition checks for their age. So we better ask them for an age. Let&#x27;s say age equals, convert the input to an int. And, &quot;What is your age?&quot; So now that we&#x27;ve gotten hold of their age, we can see if their age is less than or equal to 18. Well in this case we&#x27;re going to give them the $7 ticket. But else namely if this is not true, if their age is over 18, well, in that case, we&#x27;re going to give them the $12 ticket. So now we have a nested if statement because this if and else statement lives inside this if statement. So this condition will only be checked if this is already deemed to be true. Now let&#x27;s say our situation got a little bit more complex. The boss comes over, checks our code and says, wait, wait, wait, wait. There&#x27;s actually more price tiers than that. In fact, if you&#x27;re less than 12 years old, you pay $5. If you&#x27;re between 12 and 18, you pay $7. And if you&#x27;re over 18, then you pay the full adult price, which is $12. Now there are three possibilities. So how do we represent this in our if statement? Well, we could use something called the elif. Instead of having a simple if else statement where there&#x27;s only one condition, if it&#x27;s true, do this, otherwise do that. You can add as many elif conditions as you want. So we can check for condition1, if that&#x27;s true, then do A, but if that&#x27;s not true, then we can continue and check for condition2. If condition2 is true, well then we can do B. And finally, if none of those conditions were true, we can do this final thing. Our flowchart now looks something like this, and this is the logic that we&#x27;re trying to program. Once we&#x27;re inside this nested if statement, we&#x27;re going to check if their age is under 12, in which case they should pay $5. If they&#x27;re between 12 and 18, then they should pay $7. And finally, if they&#x27;re over 18, then they should pay $12. Now, the first thing I&#x27;m going to check is if the age is less than 12 under this condition, they should pay $5. So let&#x27;s change that to 5. Now the next condition should be created using an elif, which stands for else-if. So, it means, if this is not true, else if, can you check if this is true? Well, in that case then we should do this. For example, if the age is not less than 12, so they&#x27;re over 12, then are they under 18? Well then this condition basically catches everybody who&#x27;s between 12 and 18. And finally, if they&#x27;re not less than or equal to 18 and they&#x27;re not less than 12, then that&#x27;s everybody else who is over 18. Now remember that we can use as many elif conditions between the if and else as we like. So I could add another elif that checks whether if the age is less than, say, 22. Well, in this case, do something else, and then I can keep going with these elif&#x27;s until I&#x27;m done with all my conditions. So have a play around with this code. Write it yourself, see if it makes sense, and then mess around with the elif&quot;s so that it does what you expect it to do. And then once you&#x27;re ready, go ahead and head over to the next lesson where I&#x27;ve got a coding challenge for you.
+1. **Nested `if`** = a second check inside a first check (extra indentation).
+2. **`elif`** chains multiple exclusive branches; only the first `True` runs.
+3. Indentation level shows which `if` a block belongs to.
