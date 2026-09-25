@@ -1,31 +1,100 @@
-# 📖 Solution and Walkthrough for the Name Card Final Project
+Here is a structured breakdown of the walkthrough for the Name Card final project.
 
 ---
 
-### Overview
+### 1. Set Up and Drop the Template In
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 56 - Intermediate+ Rendering HTML/Static files and Using Website Templates
-**Lecture:** Solution and Walkthrough for the Name Card Final Project
-**Level:** Intermediate+ Rendering HTML
+```python
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+Then:
+
+1. Create `templates/` and `static/`.
+2. Move `index.html` → `templates/`.
+3. Move `assets/` and `images/` → `static/`.
 
 ---
 
-### Summary
+### 2. First Run: HTML Only
 
-All right, so let&#x27;s go ahead and run through the solution. The first thing I&#x27;m going to do is to head over to the website and download the template. Once I&#x27;ve downloaded the template, I&#x27;m going to unzip the file and get access to all the files inside. Now I&#x27;ve already set up my Flask server which is pretty simple by now. I&#x27;ve created my app, I&#x27;ve set up the home routes and I&#x27;ve set my app to run on debug mode. Now I have to create the necessary directories. So I&#x27;m going to need a directory called templates, and I&#x27;m also going to need one called static. With those two folders in place I can now start moving over the relevant parts of these files; index.html goes into templates, assets and images go into static. Right Now, one of the first things we&#x27;re going to try and do is just to see if this works. So we&#x27;re gonna start up our server and try to render that index.html. And if you&#x27;ve got another project running in the background which is using our server address, then you are going to get an error that says address already in use. So just make sure you stop any other files from running and then run this again. So here&#x27;s our webpage with just the HTML. It&#x27;s very, very simple, and it doesn&#x27;t have any of the styling or the images. So we&#x27;re going to have to fix that by going into the index.html and figuring out which parts of it need to be changed. Now notice that in the download, we got two folders; assets and images which are now both inside static. So we&#x27;re going to have to find and replace anything that is assets and change that to static/assets, ... and also do the same with images, right? There&#x27;s actually not a lot of code in here. You can pretty much scroll from the top to the bottom and you can see there&#x27;s not a lot of stuff here. So now that we&#x27;ve fixed those paths, let&#x27;s see if we can hit save and go back to refresh our website. Now, if you are getting what I&#x27;m seeing here which is the CSS file being rendered from the previous project where we got hold of the portfolio site, that remember is because the CSS file is a static file and it&#x27;s being cached by the Chrome browser. So as I mentioned before, you have to hold down shift and hit refresh in order to get the new static files to come over. So now that we&#x27;ve got all of this, it&#x27;s time to actually edit the text and the links. Going into here, we can see that here is the h1 which we can change quite easily, ... and you can of course add your hrefs to these links for Twitter, Instagram, Facebook, copy your Twitter URL and change the Href here to that if you wish. And you can change the footer as well. Now, remember because we didn&#x27;t buy these templates and we&#x27;re using it for personal use, we should really attribute the source where we got it from. So I&#x27;ll just leave that as it is. Now, if I hit save, you can see I&#x27;ve pretty much updated all the text to what I want. And you can see that this avatar image has disappeared and the reason is because when I was doing the finding and replacing, I wasn&#x27;t careful enough and I didn&#x27;t add in the final trailing slash which should in fact be right here. So this is going to now render the avatar image. But of course at the moment, it&#x27;s just this blank gradient image inside the images folder. So what we can do is we can simply replace it with our own image. So, here in my downloads folder, I&#x27;ve got an image called angela.png. So I&#x27;m going to move my own image into the images folder and refactor that. And then back in our index.html, I&#x27;m going to point towards that image by changing this file path. So now I can go ahead and delete this avatar image. And if I hit save and go back to my website, you can see my photo now shows up inside the image. The next thing I want to add is a background image under this gradient here. So one of the best places to find great images for commercial use is a website called Unsplash. So if we look for some sort of image that we could put as the background, maybe a beach or a sea, you can see there&#x27;s thousands of images that you can choose from. And they all look incredibly beautiful, and they&#x27;re all large, all HD. I&#x27;ve decided to go with this picture of the seashore. And if I go ahead and click on download free, it should download the large JPEG image onto my computer. So now I&#x27;m going to go ahead and rename that image to the same name as the original background image which is just a bg.jpeg. Right. Like that. And now I can delete this file and replace it with my own background. So remember that the background image here it is actually being rendered from the CSS files. And if you look inside the main.css you can see here where it sets the background image, it&#x27;s actually generating a gradient and it&#x27;s overlaying that on top of something inside the images folder called bg.jpeg. So instead of changing it all over here, all we just did is just name our image the same as what they had before. Now, if we go ahead and rerun our website, go back to our website and hard reload, remember by holding down shift and clicking on the reload button, you can see that image has now been brought in behind this gradient. Now the last step is to change that title so that it says our name instead of a placeholder text. So let&#x27;s go ahead and change the title ... to our name and there we have it. We&#x27;re now serving up this beautiful website which we got completely from a template that somebody else&#x27;s developed. And all we needed to do was to have enough understanding of HTML, CSS and how Python servers work in order to customize it for our own purposes. I hope you enjoyed building this with me and I hope you&#x27;ll look through some of the other templates and start messing around with some of them to create your own custom websites.
+The page loads with no styling and no images — expected. Fix the paths by find & replace:
+
+| Find | Replace |
+|------|---------|
+| `assets/` | `static/assets/` |
+| `images/` | `static/images/` |
+
+Save and reload; the CSS and images arrive.
+
+> **Note:** Seeing the *previous* project's CSS is the browser cache, not a bug — Shift +
+> refresh (hard reload) to pull the new static files.
 
 ---
 
-### Key Concepts
+### 3. The Trailing-Slash Bug
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Flask web framework** | Introduced/used in this lecture |
+One image (the avatar) stays missing. The replacement dropped a slash, leaving something
+like:
+
+```html
+<img src="static/imagesavatar.png">      <!-- wrong -->
+<img src="static/images/avatar.png">     <!-- right -->
+```
+
+Find it, fix it, reload.
 
 ---
 
-### Next Steps
+### 4. Make It Yours
 
-All right, so let&#x27;s go ahead and run through the solution. The first thing I&#x27;m going to do is to head over to the website and download the template. Once I&#x27;ve downloaded the template, I&#x27;m going to unzip the file and get access to all the files inside. Now I&#x27;ve already set up my Flask server which is pretty simple by now. I&#x27;ve created my app, I&#x27;ve set up the home routes and I&#x27;ve set my app to run on debug mode. Now I have to create the necessary directories. So I&#x27;m going to need a directory called templates, and I&#x27;m also going to need one called static. With those two folders in place I can now start moving over the relevant parts of these files; index.html goes into templates, assets and images go into static. Right Now, one of the first things we&#x27;re going to try and do is just to see if this works. So we&#x27;re gonna start up our server and try to render that index.html. And if you&#x27;ve got another project running in the background which is using our server address, then you are going to get an error that says address already in use. So just make sure you stop any other files from running and then run this again. So here&#x27;s our webpage with just the HTML. It&#x27;s very, very simple, and it doesn&#x27;t have any of the styling or the images. So we&#x27;re going to have to fix that by going into the index.html and figuring out which parts of it need to be changed. Now notice that in the download, we got two folders; assets and images which are now both inside static. So we&#x27;re going to have to find and replace anything that is assets and change that to static/assets, ... and also do the same with images, right? There&#x27;s actually not a lot of code in here. You can pretty much scroll from the top to the bottom and you can see there&#x27;s not a lot of stuff here. So now that we&#x27;ve fixed those paths, let&#x27;s see if we can hit save and go back to refresh our website. Now, if you are getting what I&#x27;m seeing here which is the CSS file being rendered from the previous project where we got hold of the portfolio site, that remember is because the CSS file is a static file and it&#x27;s being cached by the Chrome browser. So as I mentioned before, you have to hold down shift and hit refresh in order to get the new static files to come over. So now that we&#x27;ve got all of this, it&#x27;s time to actually edit the text and the links. Going into here, we can see that here is the h1 which we can change quite easily, ... and you can of course add your hrefs to these links for Twitter, Instagram, Facebook, copy your Twitter URL and change the Href here to that if you wish. And you can change the footer as well. Now, remember because we didn&#x27;t buy these templates and we&#x27;re using it for personal use, we should really attribute the source where we got it from. So I&#x27;ll just leave that as it is. Now, if I hit save, you can see I&#x27;ve pretty much updated all the text to what I want. And you can see that this avatar image has disappeared and the reason is because when I was doing the finding and replacing, I wasn&#x27;t careful enough and I didn&#x27;t add in the final trailing slash which should in fact be right here. So this is going to now render the avatar image. But of course at the moment, it&#x27;s just this blank gradient image inside the images folder. So what we can do is we can simply replace it with our own image. So, here in my downloads folder, I&#x27;ve got an image called angela.png. So I&#x27;m going to move my own image into the images folder and refactor that. And then back in our index.html, I&#x27;m going to point towards that image by changing this file path. So now I can go ahead and delete this avatar image. And if I hit save and go back to my website, you can see my photo now shows up inside the image. The next thing I want to add is a background image under this gradient here. So one of the best places to find great images for commercial use is a website called Unsplash. So if we look for some sort of image that we could put as the background, maybe a beach or a sea, you can see there&#x27;s thousands of images that you can choose from. And they all look incredibly beautiful, and they&#x27;re all large, all HD. I&#x27;ve decided to go with this picture of the seashore. And if I go ahead and click on download free, it should download the large JPEG image onto my computer. So now I&#x27;m going to go ahead and rename that image to the same name as the original background image which is just a bg.jpeg. Right. Like that. And now I can delete this file and replace it with my own background. So remember that the background image here it is actually being rendered from the CSS files. And if you look inside the main.css you can see here where it sets the background image, it&#x27;s actually generating a gradient and it&#x27;s overlaying that on top of something inside the images folder called bg.jpeg. So instead of changing it all over here, all we just did is just name our image the same as what they had before. Now, if we go ahead and rerun our website, go back to our website and hard reload, remember by holding down shift and clicking on the reload button, you can see that image has now been brought in behind this gradient. Now the last step is to change that title so that it says our name instead of a placeholder text. So let&#x27;s go ahead and change the title ... to our name and there we have it. We&#x27;re now serving up this beautiful website which we got completely from a template that somebody else&#x27;s developed. And all we needed to do was to have enough understanding of HTML, CSS and how Python servers work in order to customize it for our own purposes. I hope you enjoyed building this with me and I hope you&#x27;ll look through some of the other templates and start messing around with some of them to create your own custom websites.
+1. **Avatar** — move your photo into `static/images/`, rename the old placeholder out of
+   the way and update the `src`.
+2. **Background** — the CSS composes a gradient *over* `images/bg.jpeg`. Rather than edit
+   the CSS, download a nice photo (Unsplash is a good free source), rename it `bg.jpeg` and
+   replace the placeholder.
+3. **Text and links** — update the `<h1>`, the social `href`s and the footer.
+4. **Title** — change `<title>` so the tab shows your name.
+5. Hard reload after each static-file swap.
+
+---
+
+### 5. Also Noticed Along the Way
+
+| Error | Cause | Fix |
+|-------|-------|-----|
+| `Address already in use` | another Flask server running on port 5000 | stop the other app, rerun |
+| Stale styling | Chrome cache | Shift + refresh |
+| Blurry gradient images | template's licensed placeholders | replace with your own images |
+
+---
+
+### 6. Done
+
+You're serving a designer-quality template from a Python server, with your own content —
+achieved with HTML, CSS and just enough Flask. Apply the same recipe to a portfolio site:
+screenshot your projects, link each one, publish.
+
+> **Tip:** Keep the template credit in the footer for personal use; buy the commercial
+> licence if you're using it to sell something.
+
+---
+
+### Summary Checklist
+
+1. Two folders + two find-and-replaces gets a template running on Flask.
+2. Hard reload (Shift + refresh) whenever static files change.
+3. Replace placeholders *by filename* to avoid touching CSS.
+4. Fix broken paths one by one via the DevTools console 404s.
+5. Personalise text, avatar, background, title — then ship it.
