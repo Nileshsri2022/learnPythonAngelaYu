@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('get_all_posts') }}">My Blog</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        {% for post in posts %}
+            <article>
+                <h2>{{ post["title"] }}</h2>
+                <h3>{{ post["subtitle"] }}</h3>
+                <p>{{ post["body"] }}</p>
+            </article>
+            <hr>
+        {% endfor %}
+    </main>
+    <footer>Made with Flask &amp; Jinja — Day 57.</footer>
+</body>
+</html>

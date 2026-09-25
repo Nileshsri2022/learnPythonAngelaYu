@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About — My Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('get_all_posts') }}">My Blog</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h1>About Me</h1>
+        <p>100 Days of Code in progress: Python, APIs, Selenium and now
+           Flask. This blog is the Day 57 capstone.</p>
+    </main>
+    <footer>Made with Flask &amp; Jinja — Day 57.</footer>
+</body>
+</html>

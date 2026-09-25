@@ -1,28 +1,44 @@
-# 📖 Multiline Statements with Jinja
+Here is a structured breakdown of this lesson on multiline Jinja statements.
 
 ---
 
-### Overview
+### 1. Loops and Conditionals
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 57 - Intermediate+ Templating with Jinja in Flask Applications
-**Lecture:** Multiline Statements with Jinja
-**Level:** N/A
+```html
+{% for post in posts %}
+    <h2>{{ post["title"] }}</h2>
+    <p>{{ post["subtitle"] }}</p>
+{% endfor %}
+
+{% if posts %}
+    <p>{{ posts|length }} posts found.</p>
+{% endif %}
+```
+
+Every `{% if %}` / `{% for %}` needs its `{% endif %}` / `{% endfor %}` — the HTML in
+between renders once per iteration.
+
+---
+
+### 2. Feeding the Loop
+
+```python
+BLOGS_URL = "https://api.npoint.io/…"      # npoint.io = free JSON hosting
+response = requests.get(BLOGS_URL)
+all_posts = response.json()
+
+@app.route("/blog")
+def blog():
+    return render_template("blog.html", posts=all_posts)
+```
+
+* npoint.io hosts a JSON list you can edit in a browser — stand-in for a database
+  until Day 67.
+* Jinja even takes Python filters: `|length`, `|title`, `|upper`.
 
 ---
 
-### Summary
+### Summary Checklist
 
-In the previous lessons, we&#x27;ve seen how we can use the Jinja markup in order to insert bits of Python code into the HTML template. Now, in this lesson, I want to demystify some of the other markup like the {% and some of these keywords. Now, what we&#x27;ve been able to do with this markup is to specify single line expressions in Python. But what if we wanted to create multiline statements like an if statement or a for loop? Well, we would have to use some slightly different markup. I&#x27;m going to go ahead and create a new HTML file which I&#x27;ll call blog. And this will have the title of blog and in the body what I want to do is to render all the titles of all the blogs I have. Now in order to get hold of some data for our blogs, we&#x27;re going to use a service called endpoint. And this is a really neat service which just acts as JSON storage bin. So basically you can create your own API with your own JSON data and you don&#x27;t even have to log in. It&#x27;s as simple as clicking on, create JSON bin, and then here you can create some, um, keys, some values or a list of values. And once you&#x27;ve done that, you can go ahead and access this bin at this particular API and you can see it sends you that JSON back. So you can update anything in here and you can get that data coming back to you via this API. That means that I could create some blog posts where each blog post has an ID, a title, a subtitle and body. And I&#x27;ve only got three blog posts in my list. But you can now use this as if it were an API simply by heading to this address, which you&#x27;ll find in the course resources. Now, what we&#x27;re going to do is we&#x27;re going to pull down these blog posts as if it was an API, and we&#x27;re going to try and display all of the titles and all of the subtitles. Inside our server.py, if we go ahead and set up a new app.route, and this route is going to be /blog, then here we&#x27;re going to create a blog function which is going to fetch all the blogs from this URL. So I&#x27;m going to copy the URL of my API and you can do that in the course resources. And then we&#x27;re going to put this as the blog URL. Now I&#x27;m going to use requests. get to get hold of the data at that URL, and then I can tap into the data by saying response.json and this will give me all of the blog posts. So we&#x27;ll call that all posts. And now I&#x27;m going to render my blog.html and I&#x27;m going to pass in all the posts under a keyword called posts... like this. So I&#x27;ve fetched all of those posts, I&#x27;ve passed it into a variable called all_post, and I&#x27;m sending that value over to the blog.html under the name posts. So now going to my blog.html, I should be able to catch that post. And if we were just writing Python straightaway, then we would be able to say something like for blog posts in posts, let&#x27;s go ahead and create an h1 where we have the blog post title, and let&#x27;s create a h2 where we have the blog post subtitle. And it would, in an ideal world, loop through all the posts it received and for each of the blog posts, render an h1 for the title and h2 for the subtitle. Now, in fact, using Jinja, we can pretty much do exactly this, but we have to alter things a little bit. Firstly, when we have a multiline statement, we&#x27;re going to have to add a curly brace and then a percentage sign for each of the lines. So not just from the beginning to the end, but for each of the lines that&#x27;s Python code that spans multi lines we have to enclose it inside this kind of markup. So notice the direction of the curly braces and also notice the presence of the percentage signs. Now inside the part where we insert it into HTML elements, we can do just as we did before, pass through the blog post and render it as a single line expression like this. But because we&#x27;re working inside an HTML file, we also have to specify when our for loop actually ends. And that very end is also going to be enclosed inside one of these percentage curly brace. And there&#x27;s a special key word that comes from Jinja which is called endfor in order to specify at the end of the for loop. We&#x27;ll just have to add it in like this. Now, if we go ahead and hit save, and now if we run our code and try to bring up our blog website, you should see that it&#x27;s pulled in all of the articles in our fake blog, the life of cactus, top 15 things to do when you&#x27;re bored, and introduction to intermittent fasting. It&#x27;s a really random blog that we&#x27;re starting and it&#x27;s created an h1 for each of the titles and h2 for each of the subtitles. And it&#x27;s done this without us having to pass out each of the title, subtitles. We&#x27;ve actually been able to do all of that just with a for loop inside our template. Now you can do the same thing using an if statement. All you have to do is to, again, enclose every line in the statement with {%, and then at the very end of your block of code, of your statement, you have to add the endif keyword as well. See if you can modify this so that we only print out the title for the blog post which has an ID of 2. All right, in this case, all we have to do is add an if statement down here. We&#x27;re going to say if the blog post that we&#x27;re currently looping on has an ID that&#x27;s equal to 2, well, in that case, we actually want to render the title and subtitle, but otherwise, we&#x27;re not going to. All we have to do is add in the markup. So starting at the first if statement, we add the {% at the beginning and at the end, and at the very end of the if statement we add the {% and that keyword endif to say that this is the end of the if statement. So now if we hit save and we go back to our blog, you can see that it&#x27;s only going to show the second article, the one with ID of 2.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **JSON data handling** | Introduced/used in this lecture |
-| 3 | **random module** | Introduced/used in this lecture |
-
----
+1. `{% for %}…{% endfor %}` renders lists into HTML.
+2. Data from anywhere (API, list, DB) → template variable.
