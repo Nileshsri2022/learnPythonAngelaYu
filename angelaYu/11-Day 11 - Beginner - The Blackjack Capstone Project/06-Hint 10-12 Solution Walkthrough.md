@@ -1,32 +1,53 @@
-# 🐍 Hint 10-12 Solution Walkthrough
+Here is a structured walkthrough of Blackjack Hints 10–12 — the drawing loops.
 
 ---
 
-### Overview
+### 1. Hints 10–11: The User's Turn
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 11 - Beginner - The Blackjack Capstone Project
-**Lecture:** Hint 10-12 Solution Walkthrough
-**Level:** Beginner
+While the game isn't over, offer another card; standing ends the user's turn:
 
----
+```python
+while not is_game_over:
+    user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+    if user_should_deal == "y":
+        user_cards.append(deal_card())
+        user_score = calculate_score(user_cards)
+        if user_score == 0 or user_score > 21:
+            is_game_over = True
+    else:
+        is_game_over = True
+```
 
-### Summary
-
-Now let&#x27;s move on to Hint Number 10. It says that if the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards list, if no, then the game has again ended. Over here in the if statement, we can add an else, because if the game hasn&#x27;t ended, as in they haven&#x27;t gone over 21 or nobody&#x27;s got a blackjack, then we&#x27;re going to ask the user if they want to get another card. I&#x27;m going to use an input, and I&#x27;m going to ask the user to type &#x27;y&#x27; to get another card, otherwise type &#x27;n&#x27; to pass. And I&#x27;m going to save this input inside a variable which I&#x27;ll call user_should_deal. Now we can check to see if this variable is equal to &#x27;y&#x27;, well, in that case, we&#x27;re going to add another card to the user&#x27;s card list by doing the same thing that we did in the beginning, where we dealt two cards to each player by saying usercards.append(), and inside the parentheses, the thing that we want to append is the output from deal_card(). So just a quick check to make sure you&#x27;ve got all the parentheses there. And then we&#x27;re ready to address the else. If they didn&#x27;t type &#x27;y&#x27;, then that means they don&#x27;t want another card. Well then in this case, the game has again ended. So we can say is_game_over = True. Let&#x27;s take a look at the next step. How can we get our game to repeat itself? So Hint Number 11 tells us that the score will need to be rechecked with every new card drawn, and the checks in Hint 9 need to be repeated until the game ends. Notice how we&#x27;ve got this, flag is_game_over, which is set to True whenever the game ends. It starts off being False, and what this means is we can actually create a while loop, which basically keeps on calculating the user_score, and the computer_score, makes all of these checks, which are in Hint 9, and then repeats itself until the game ends. Let&#x27;s go ahead and do that. After all the initial setup, we&#x27;re going to create a while loop, and the while loop is going to be active until the game is over. So we can say while not is_game_over, then go ahead and carry out all of these instructions. So calculate the user_score, calculate the computer_score, check that nobody&#x27;s gone over 21 and nobody&#x27;s gotten a blackjack, and if the user wants more cards, then they should, if they don&#x27;t, then the game is over. So let&#x27;s go ahead and run and test our code. You can see that the first two cards we get are 10 and 5, which makes up a score of 15. So 15 is kind of nowhere near 21, so let&#x27;s go ahead and type &#x27;y&#x27; to get another card. You can see that our while loop is active. And it goes back to getting another card. And we end up with 10, 5, and 10, which unfortunately means that we&#x27;re over 21, and so we lose. But if I tried this and I typed &#x27;n&#x27;, then you can see the game ends immediately. That worked perfectly. So now let&#x27;s go back and tackle the next part. Hint number 12 says once the user is done, it&#x27;s time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17. So the while loop is responsible for dealing with when the user wants to keep drawing cards, but once that&#x27;s done, then we can tackle Hint Number 12, which is how does the computer actually play? What is its strategy? Well, we know that the computer has to keep drawing cards as long as it has a score of less than 17, but of course, 0 which represents a blackjack, is also less than 17, but we don&#x27;t want it to draw a card if it has a blackjack. We can represent this logic using a while loop, while the computer_score is not equal to 0, and the computer_score is less than 17, then in this case we want to keep drawing cards. We&#x27;re going to take the computer&#x27;s cards, and we&#x27;re going to use the append to add a card by dealing another card to the computer. And then we&#x27;re going to recalculate the computer_score so that it updates, and this while loop is evaluated on the latest score. So the computer_score is going to equal calculate_score() using the computer_cards, and that means that the updated computer_score is equal to the return value from calculate_score(). Now one thing you&#x27;ll notice here is that we&#x27;ve got a warning underline for the computer_score, and when we hover underneath it it says the &quot;Name &#x27;computer_score&#x27; can be undefined.&quot; So what does it mean here? Well notice that we first define this variable computer_score inside this other while loop. Now we&#x27;re hoping that hopefully this happens first, and by the time we reach Line 46, we already have a value for computer_score, and this will happen in pretty much all cases. But just in case there is a glitch, and there is no value for computer_score, or even in the case where this entire while loop is skipped, then this computer_score will be equal to undefined. It won&#x27;t actually exist. That variable won&#x27;t have been created for us to check whether or not if it equals to 0, or if it&#x27;s greater or less than 17. So how can we fix this? Well, right up here where we&#x27;ve got our user_cards and computer_cards where we defined all of our empty variables, we should go ahead and define this computer_score right here. Now we can&#x27;t set it to equal 0 by default, because that means blackjack in our game. So let&#x27;s set it to a number that we, when we test our code, will know for sure there is an issue. Let&#x27;s set it to a negative number. So notice how as soon as I&#x27;ve got that variable defined somewhere outside of the while loop, this warning now goes away and it will always have a value, even if it is a value that signifies there&#x27;s something wrong with our code. And that will help us debug as well. Now you&#x27;ll notice that we&#x27;ve actually got a similar situation with the user_score. The user_score is only defined inside this while loop, so it&#x27;s created as a variable here and only assigned as a variable here. And in future if we want to use it, we also need to do the same thing. So let&#x27;s just also create a user_score and set it to -1 as well. So now that we&#x27;ve completed Hint number 12, it&#x27;s time to move on to the next video where we&#x27;re going to go through the final hints.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **List .append() method** | Introduced/used in this lecture |
+Every draw **re-scores** the hand — an ace may need re-demoting, and 21+ ends the loop.
 
 ---
 
-### Next Steps
+### 2. Hint 12: The Dealer's Strategy
 
-Now let&#x27;s move on to Hint Number 10. It says that if the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards list, if no, then the game has again ended. Over here in the if statement, we can add an else, because if the game hasn&#x27;t ended, as in they haven&#x27;t gone over 21 or nobody&#x27;s got a blackjack, then we&#x27;re going to ask the user if they want to get another card. I&#x27;m going to use an input, and I&#x27;m going to ask the user to type &#x27;y&#x27; to get another card, otherwise type &#x27;n&#x27; to pass. And I&#x27;m going to save this input inside a variable which I&#x27;ll call user_should_deal. Now we can check to see if this variable is equal to &#x27;y&#x27;, well, in that case, we&#x27;re going to add another card to the user&#x27;s card list by doing the same thing that we did in the beginning, where we dealt two cards to each player by saying usercards.append(), and inside the parentheses, the thing that we want to append is the output from deal_card(). So just a quick check to make sure you&#x27;ve got all the parentheses there. And then we&#x27;re ready to address the else. If they didn&#x27;t type &#x27;y&#x27;, then that means they don&#x27;t want another card. Well then in this case, the game has again ended. So we can say is_game_over = True. Let&#x27;s take a look at the next step. How can we get our game to repeat itself? So Hint Number 11 tells us that the score will need to be rechecked with every new card drawn, and the checks in Hint 9 need to be repeated until the game ends. Notice how we&#x27;ve got this, flag is_game_over, which is set to True whenever the game ends. It starts off being False, and what this means is we can actually create a while loop, which basically keeps on calculating the user_score, and the computer_score, makes all of these checks, which are in Hint 9, and then repeats itself until the game ends. Let&#x27;s go ahead and do that. After all the initial setup, we&#x27;re going to create a while loop, and the while loop is going to be active until the game is over. So we can say while not is_game_over, then go ahead and carry out all of these instructions. So calculate the user_score, calculate the computer_score, check that nobody&#x27;s gone over 21 and nobody&#x27;s gotten a blackjack, and if the user wants more cards, then they should, if they don&#x27;t, then the game is over. So let&#x27;s go ahead and run and test our code. You can see that the first two cards we get are 10 and 5, which makes up a score of 15. So 15 is kind of nowhere near 21, so let&#x27;s go ahead and type &#x27;y&#x27; to get another card. You can see that our while loop is active. And it goes back to getting another card. And we end up with 10, 5, and 10, which unfortunately means that we&#x27;re over 21, and so we lose. But if I tried this and I typed &#x27;n&#x27;, then you can see the game ends immediately. That worked perfectly. So now let&#x27;s go back and tackle the next part. Hint number 12 says once the user is done, it&#x27;s time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17. So the while loop is responsible for dealing with when the user wants to keep drawing cards, but once that&#x27;s done, then we can tackle Hint Number 12, which is how does the computer actually play? What is its strategy? Well, we know that the computer has to keep drawing cards as long as it has a score of less than 17, but of course, 0 which represents a blackjack, is also less than 17, but we don&#x27;t want it to draw a card if it has a blackjack. We can represent this logic using a while loop, while the computer_score is not equal to 0, and the computer_score is less than 17, then in this case we want to keep drawing cards. We&#x27;re going to take the computer&#x27;s cards, and we&#x27;re going to use the append to add a card by dealing another card to the computer. And then we&#x27;re going to recalculate the computer_score so that it updates, and this while loop is evaluated on the latest score. So the computer_score is going to equal calculate_score() using the computer_cards, and that means that the updated computer_score is equal to the return value from calculate_score(). Now one thing you&#x27;ll notice here is that we&#x27;ve got a warning underline for the computer_score, and when we hover underneath it it says the &quot;Name &#x27;computer_score&#x27; can be undefined.&quot; So what does it mean here? Well notice that we first define this variable computer_score inside this other while loop. Now we&#x27;re hoping that hopefully this happens first, and by the time we reach Line 46, we already have a value for computer_score, and this will happen in pretty much all cases. But just in case there is a glitch, and there is no value for computer_score, or even in the case where this entire while loop is skipped, then this computer_score will be equal to undefined. It won&#x27;t actually exist. That variable won&#x27;t have been created for us to check whether or not if it equals to 0, or if it&#x27;s greater or less than 17. So how can we fix this? Well, right up here where we&#x27;ve got our user_cards and computer_cards where we defined all of our empty variables, we should go ahead and define this computer_score right here. Now we can&#x27;t set it to equal 0 by default, because that means blackjack in our game. So let&#x27;s set it to a number that we, when we test our code, will know for sure there is an issue. Let&#x27;s set it to a negative number. So notice how as soon as I&#x27;ve got that variable defined somewhere outside of the while loop, this warning now goes away and it will always have a value, even if it is a value that signifies there&#x27;s something wrong with our code. And that will help us debug as well. Now you&#x27;ll notice that we&#x27;ve actually got a similar situation with the user_score. The user_score is only defined inside this while loop, so it&#x27;s created as a variable here and only assigned as a variable here. And in future if we want to use it, we also need to do the same thing. So let&#x27;s just also create a user_score and set it to -1 as well. So now that we&#x27;ve completed Hint number 12, it&#x27;s time to move on to the next video where we&#x27;re going to go through the final hints.
+Once the user stands, the computer plays by its fixed rule — **draw while under 17**:
+
+```python
+while computer_score != 0 and computer_score < 17:
+    computer_cards.append(deal_card())
+    computer_score = calculate_score(computer_cards)
+```
+
+* `!= 0` — a dealer blackjack (0) means they stop immediately.
+* `< 17` — the house must keep hitting until at least 17.
+
+---
+
+### 3. Show the Final Hands
+
+```python
+print(f"Your final hand: {user_cards}, final score: {user_score}")
+print(f"Computer's final hand: {computer_cards}, final score: {computer_score}")
+```
+
+---
+
+### Summary Checklist
+
+1. User loop: draw or stand, re-scoring after every card.
+2. Dealer loop: hit while score < 17 (and isn't blackjack).
+3. Two different loops with different conditions — each player's strategy.
