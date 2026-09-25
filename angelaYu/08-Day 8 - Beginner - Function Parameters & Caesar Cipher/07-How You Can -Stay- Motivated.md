@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-8 lecture.
+# How You Can -Stay- Motivated
 
 ---
 

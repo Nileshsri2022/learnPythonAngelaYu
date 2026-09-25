@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 19 goals — the start of the Snake Game.
+# Day 19 Goals- what we will make by the end of the day
 
 ---
 

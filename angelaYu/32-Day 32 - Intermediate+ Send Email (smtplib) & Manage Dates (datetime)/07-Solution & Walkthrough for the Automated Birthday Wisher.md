@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the Birthday Wisher solution.
+# Solution & Walkthrough for the Automated Birthday Wisher
 
 ---
 

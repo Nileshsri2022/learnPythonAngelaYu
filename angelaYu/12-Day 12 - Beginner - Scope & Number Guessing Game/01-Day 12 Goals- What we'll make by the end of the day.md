@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 12 goals and the project you'll have built by the end of the day.
+# Day 12 Goals- What we'll make by the end of the day
 
 ---
 
@@ -14,7 +14,7 @@ Here is a structured breakdown of the Day 12 goals and the project you'll have b
 
 ### 2. The End-of-Day Project: Number Guessing Game
 
-```
+```text
 Welcome to the Number Guessing Game!
 I'm thinking of a number between 1 and 100.
 Choose a difficulty. Type 'easy' or 'hard': easy

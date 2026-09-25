@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Day 53 capstone goals.
+# Day 53 Goals- what you will make by the end of the day
 
 ---
 
@@ -29,7 +29,7 @@ does.
 Zillow's real markup changes constantly (and blocks scraping), so the course provides a
 **stable clone**:
 
-```
+```text
 https://appbrewery.github.io/Zillow-Clone/
 ```
 

@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Mile → Km converter project.
+# Mile to Kilometers Converter Project
 
 ---
 
 ### 1. The Design (grid layout)
 
-```
+```text
 is equal to
 [entry] Miles  →  [label0] Km   [Calculate]
 ```

@@ -1,4 +1,4 @@
-Here is a structured breakdown of Turtle Challenge 5 — drawing a spirograph.
+# Turtle Challenge 5 - Draw a Spirograph
 
 ---
 

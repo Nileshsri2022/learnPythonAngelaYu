@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on serving static files with Flask.
+# Serving Static Files using Flask
 
 ---
 
@@ -7,7 +7,7 @@ Here is a structured breakdown of this lesson on serving static files with Flask
 Render a real HTML page and the image and CSS are missing. Chrome DevTools → *Console*
 shows why:
 
-```
+```text
 GET http://127.0.0.1:5000/angela.png        404 (NOT FOUND)
 GET http://127.0.0.1:5000/styles.css        404 (NOT FOUND)
 ```
@@ -18,7 +18,7 @@ The HTML asked for files next to the page; Flask isn't looking there.
 
 ### 2. The Rule: Static Files Live in `static/`
 
-```
+```text
 my-personal-site/
 ├── server.py
 ├── templates/

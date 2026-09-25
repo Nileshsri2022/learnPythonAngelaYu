@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Step 2 — getting the news articles.
+# Solution & Walkthrough for Step 2 - Get the News Articles
 
 ---
 

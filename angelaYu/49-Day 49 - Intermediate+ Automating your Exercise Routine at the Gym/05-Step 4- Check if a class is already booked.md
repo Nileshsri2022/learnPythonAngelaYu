@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on checking whether a class is already booked.
+# Step 4- Check if a class is already booked
 
 ---
 

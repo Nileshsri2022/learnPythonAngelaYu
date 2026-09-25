@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating a Snake class (moving to OOP).
+# Create a Snake Class & Move to OOP
 
 ---
 

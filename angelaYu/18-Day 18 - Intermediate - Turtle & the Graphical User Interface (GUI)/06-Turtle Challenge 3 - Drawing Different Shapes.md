@@ -1,4 +1,4 @@
-Here is a structured breakdown of Turtle Challenge 3 — drawing different shapes.
+# Turtle Challenge 3 - Drawing Different Shapes
 
 ---
 

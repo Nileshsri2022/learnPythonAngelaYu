@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-22 lecture.
+# Picturing fears- even the worst-case scenario is not so scary
 
 ---
 

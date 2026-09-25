@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 1 goals and the project you'll have built by the end of the day.
+# Day 1 Goals- what we will make by the end of the day
 
 ---
 

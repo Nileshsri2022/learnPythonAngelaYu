@@ -35,7 +35,7 @@ git commit -m "Add chapter 1"    # save point with a message
 git commit -am "Fix typo"        # stage+commit tracked files only
 ```
 
-```
+```text
 working directory --(add)--> staging area --(commit)--> history
 ```
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on passing authentication status to templates.
+# Passing Authentication Status to Templates
 
 ---
 
@@ -69,7 +69,7 @@ def secrets():
 
 ### 5. The Complete Site
 
-```
+```text
 /         home   — nav reflects auth state
 /register POST   — hash password, save user, redirect to login
 /login    POST   — check_password_hash, login_user, flash, redirect

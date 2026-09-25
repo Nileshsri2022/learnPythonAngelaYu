@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Name Card final project.
+# Final Project - Name Card Website Template
 
 ---
 

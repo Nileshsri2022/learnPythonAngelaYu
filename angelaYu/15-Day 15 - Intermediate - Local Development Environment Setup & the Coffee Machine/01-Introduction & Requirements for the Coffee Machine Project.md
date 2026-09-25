@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 15 project briefing — the Coffee Machine.
+# Introduction & Requirements for the Coffee Machine Project
 
 ---
 
@@ -12,7 +12,7 @@ curriculum project) rather than an online IDE.
 
 ### 2. The Requirements
 
-```
+```text
 What would you like? (espresso/latte/cappuccino): latte
 Please insert coins.
 How many quarters?: 10

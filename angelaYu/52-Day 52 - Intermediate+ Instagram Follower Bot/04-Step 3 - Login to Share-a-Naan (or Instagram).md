@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on logging in.
+# Step 3 - Login to Share-a-Naan (or Instagram)
 
 ---
 
@@ -10,7 +10,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 LOGIN_URL = "https://www.instagram.com/"      # or the Share-a-Naan clone
-
 
 def login(self):
     self.driver.get(LOGIN_URL)

@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the NATO Alphabet solution.
+# Solution & Walkthrough for the NATO Alphabet Project
 
 ---
 
@@ -22,7 +22,7 @@ print(output_list)
 ```
 
 **Output for `abroad`:**
-```
+```python
 ['Alfa', 'Bravo', 'Romeo', 'Oscar', 'Alfa', 'Delta']
 ```
 

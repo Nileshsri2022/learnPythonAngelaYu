@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on breaking a complex problem down into a flow chart.
+# How to break a Complex Problem down into a Flow Chart
 
 ---
 

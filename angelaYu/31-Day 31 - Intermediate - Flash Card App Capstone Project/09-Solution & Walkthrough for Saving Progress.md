@@ -1,10 +1,10 @@
-Here is a structured walkthrough of the save-progress solution.
+# Solution & Walkthrough for Saving Progress
 
 ---
 
 ### 1. The Complete Data Flow
 
-```
+```text
 startup:   words_to_learn.csv exists? ──no──▶ french_words.csv (all words)
                      │yes
                      ▼

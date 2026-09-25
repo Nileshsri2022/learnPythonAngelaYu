@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 30 goals and how the Password Manager improves.
+# Day 30 Goals- what you will make by the end of the day
 
 ---
 

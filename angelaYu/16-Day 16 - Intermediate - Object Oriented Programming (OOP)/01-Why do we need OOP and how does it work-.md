@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on why we need OOP and how it works.
+# Why do we need OOP and how does it work
 
 ---
 

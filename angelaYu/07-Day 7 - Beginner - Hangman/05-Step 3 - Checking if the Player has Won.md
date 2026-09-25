@@ -1,4 +1,4 @@
-Here is a structured breakdown of Hangman Step 3 — checking if the player has won.
+# Step 3 - Checking if the Player has Won
 
 ---
 

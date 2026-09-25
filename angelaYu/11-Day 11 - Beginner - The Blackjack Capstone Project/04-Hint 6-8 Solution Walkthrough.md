@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Blackjack Hints 6–8 — the `calculate_score()` function.
+# Hint 6-8 Solution Walkthrough
 
 ---
 

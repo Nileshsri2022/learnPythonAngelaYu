@@ -1,4 +1,4 @@
-Here is a structured breakdown of Hangman Step 4 — keeping track of the player's lives.
+# Step 4 - Keeping Track of the Player's Lives
 
 ---
 

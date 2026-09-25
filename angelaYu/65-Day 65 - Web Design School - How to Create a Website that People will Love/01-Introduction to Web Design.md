@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson introducing web design.
+# Introduction to Web Design
 
 ---
 

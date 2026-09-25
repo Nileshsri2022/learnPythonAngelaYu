@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on modifying a global variable.
+# How to Modify a Global Variable
 
 ---
 

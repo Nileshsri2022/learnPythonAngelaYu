@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 44 project — Motivational Poster Website.
+# Day 44 Project - Motivational Poster Website
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 17 goals and the project you'll have built by the end of the day.
+# Day 17 Goals- what we will make by the end of the day
 
 ---
 
@@ -12,7 +12,7 @@ Here is a structured breakdown of the Day 17 goals and the project you'll have b
 
 ### 2. The Project: True/False Quiz
 
-```
+```text
 Q.1: A slug's blood is green. (True/False): true
 You got it right!
 Your current score is: 1/1

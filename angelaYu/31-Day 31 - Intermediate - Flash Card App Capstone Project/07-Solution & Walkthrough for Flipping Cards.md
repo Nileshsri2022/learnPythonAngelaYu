@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the flip-card solution.
+# Solution & Walkthrough for Flipping Cards
 
 ---
 

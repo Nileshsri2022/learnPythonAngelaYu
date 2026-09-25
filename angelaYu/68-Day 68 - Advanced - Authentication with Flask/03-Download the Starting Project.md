@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on downloading the starting project.
+# Download the Starting Project
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on downloading the starting projec
 
 The course provides a small Flask site so you can concentrate on authentication:
 
-```
+```text
 flask-auth/
 ├── main.py             # Flask app + SQLite database
 ├── templates/
@@ -44,7 +44,6 @@ from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
-
 
 class User(UserMixin, db.Model):
     __tablename__ = "users"

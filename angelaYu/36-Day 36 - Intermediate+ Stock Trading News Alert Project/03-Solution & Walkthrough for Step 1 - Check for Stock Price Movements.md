@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Step 1 — checking stock price movements.
+# Solution & Walkthrough for Step 1 - Check for Stock Price Movements
 
 ---
 

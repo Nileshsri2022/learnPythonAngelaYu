@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding methods to a class.
+# Adding Methods to a Class
 
 ---
 

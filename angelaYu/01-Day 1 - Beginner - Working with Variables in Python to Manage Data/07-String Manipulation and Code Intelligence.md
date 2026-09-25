@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on string manipulation and code intelligence.
+# String Manipulation and Code Intelligence
 
 ---
 
@@ -12,7 +12,7 @@ print("Hello world!\nHello world!\nHello world!")
 ```
 
 **Output:**
-```
+```text
 Hello world!
 Hello world!
 Hello world!
@@ -33,7 +33,7 @@ print("Hello" + "Angela")
 ```
 
 **Output:**
-```
+```python
 HelloAngela
 ```
 
@@ -45,7 +45,7 @@ print("Hello" + " " + "Angela")  # a " " string in between
 ```
 
 **Output:**
-```
+```text
 Hello Angela
 Hello Angela
 ```

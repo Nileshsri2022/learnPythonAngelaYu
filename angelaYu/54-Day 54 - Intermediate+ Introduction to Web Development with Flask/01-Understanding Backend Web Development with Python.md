@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on backend web development with Python.
+# Understanding Backend Web Development with Python
 
 ---
 
@@ -56,7 +56,7 @@ The client never talks to the database directly.
 
 The end-to-end pattern is:
 
-```
+```text
 user request → server logic → database → rendered page → user
 ```
 

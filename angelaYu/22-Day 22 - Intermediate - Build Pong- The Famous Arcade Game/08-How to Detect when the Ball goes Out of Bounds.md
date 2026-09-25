@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on detecting out-of-bounds.
+# How to Detect when the Ball goes Out of Bounds
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating windows and labels.
+# Creating Windows and Labels with Tkinter
 
 ---
 

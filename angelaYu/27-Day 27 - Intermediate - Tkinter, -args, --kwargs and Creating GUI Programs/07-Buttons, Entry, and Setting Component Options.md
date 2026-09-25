@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on buttons, entry fields and options.
+# Buttons, Entry, and Setting Component Options
 
 ---
 

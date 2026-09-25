@@ -1,4 +1,4 @@
-Here is a structured breakdown of this challenge on styling HTML tags with decorators.
+# Challenge- Use Python Decorators to Style HTML Tags
 
 ---
 
@@ -46,12 +46,10 @@ def make_bold(function):
         return "<b>" + function() + "</b>"
     return wrapper
 
-
 def make_emphasis(function):
     def wrapper():
         return "<em>" + function() + "</em>"
     return wrapper
-
 
 def make_underline(function):
     def wrapper():

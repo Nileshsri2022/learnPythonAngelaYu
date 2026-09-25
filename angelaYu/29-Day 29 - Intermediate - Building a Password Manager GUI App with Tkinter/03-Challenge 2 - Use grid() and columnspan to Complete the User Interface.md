@@ -1,10 +1,10 @@
-Here is a structured breakdown of Challenge 2 — the grid layout.
+# Challenge 2 - Use grid() and columnspan to Complete the User Interface
 
 ---
 
 ### 1. The Target
 
-```
+```text
 row 0:                 [logo canvas]
 row 1:  Website:       [entry.............] [search*]
 row 2:  Email/Username:[entry.............]

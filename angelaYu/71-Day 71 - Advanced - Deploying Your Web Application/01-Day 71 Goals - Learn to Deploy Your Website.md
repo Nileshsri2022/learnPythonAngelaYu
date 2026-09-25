@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 71.
+# Day 71 Goals - Learn to Deploy Your Website
 
 ---
 
@@ -22,7 +22,7 @@ published to the internet with a shareable URL anyone can visit, including from 
 
 ### 3. The Deployment Path
 
-```
+```text
 1. .gitignore            keep secrets and local junk out of the repo
 2. git init / commit     put the project under version control
 3. environment variables read secrets from config, not source code

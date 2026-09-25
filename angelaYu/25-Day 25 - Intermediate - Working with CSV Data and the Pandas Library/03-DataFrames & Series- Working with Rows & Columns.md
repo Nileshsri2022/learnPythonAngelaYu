@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on DataFrames and Series.
+# DataFrames & Series- Working with Rows & Columns
 
 ---
 

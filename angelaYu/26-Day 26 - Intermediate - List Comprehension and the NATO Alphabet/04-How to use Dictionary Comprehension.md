@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on dictionary comprehension.
+# How to use Dictionary Comprehension
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on the list offset and appending items to lists.
+# Understanding the Offset and Appending Items to Lists
 
 ---
 

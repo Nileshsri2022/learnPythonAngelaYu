@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on other Tkinter widgets.
+# Other Tkinter Widgets- Radiobuttons, Scales, Checkbuttons and more
 
 ---
 

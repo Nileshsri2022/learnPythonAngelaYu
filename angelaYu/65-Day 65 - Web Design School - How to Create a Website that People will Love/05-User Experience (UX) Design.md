@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on user experience (UX) design.
+# User Experience (UX) Design
 
 ---
 

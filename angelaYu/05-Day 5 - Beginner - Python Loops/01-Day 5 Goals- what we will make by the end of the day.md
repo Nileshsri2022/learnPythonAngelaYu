@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 5 goals and the project you'll have built by the end of the day.
+# Day 5 Goals- what we will make by the end of the day
 
 ---
 

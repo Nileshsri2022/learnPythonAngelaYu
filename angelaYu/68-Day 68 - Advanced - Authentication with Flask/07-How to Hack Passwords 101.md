@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on how passwords get hacked.
+# How to Hack Passwords 101
 
 ---
 
@@ -39,7 +39,7 @@ cracks one and knows all three.
 
 ### 4. Demo: The Same Hash, Three Users
 
-```
+```text
 angela  →  5f4dcc3b5aa765d61d8327deb882cf99   ← all three rows
 tony    →  5f4dcc3b5aa765d61d8327deb882cf99      have the same
 emily   →  5f4dcc3b5aa765d61d8327deb882cf99      hash

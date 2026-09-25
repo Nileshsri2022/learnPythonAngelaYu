@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating the bot class.
+# Step 2 - Create a Class
 
 ---
 
@@ -8,7 +8,6 @@ Same design as Day 51's bot — state + behaviour + its own driver:
 
 ```python
 from selenium import webdriver
-
 
 class InstaFollower:
     def __init__(self, similar_account, username, password):

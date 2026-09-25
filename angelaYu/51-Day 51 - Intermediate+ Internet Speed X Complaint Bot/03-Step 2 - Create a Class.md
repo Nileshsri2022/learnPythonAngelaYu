@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating the bot class.
+# Step 2 - Create a Class
 
 ---
 
@@ -14,7 +14,6 @@ in one place instead of loose globals.
 
 ```python
 from selenium import webdriver
-
 
 class InternetSpeedTwitterBot:
     def __init__(self, promised_down, promised_up):

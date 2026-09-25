@@ -1,4 +1,4 @@
-Here is a structured breakdown of Caesar Cipher Part 3 — reorganising the code.
+# Caesar Cipher Part 3 - Reorganising our Code
 
 ---
 

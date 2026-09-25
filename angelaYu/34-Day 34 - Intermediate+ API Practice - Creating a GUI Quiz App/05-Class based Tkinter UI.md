@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the class-based Tkinter UI.
+# Class based Tkinter UI
 
 ---
 
@@ -10,7 +10,6 @@ Instead of module-level widgets, the whole interface becomes a `QuizInterface` c
 import tkinter
 
 THEME_COLOR = "#375362"
-
 
 class QuizInterface:
 

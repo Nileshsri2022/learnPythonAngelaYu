@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on detecting collisions with food.
+# Detect Collisions with Food
 
 ---
 
@@ -9,7 +9,6 @@ A food is a small blue circle that is also a turtle — **inheritance in action*
 ```python
 from turtle import Turtle
 import random
-
 
 class Food(Turtle):
 

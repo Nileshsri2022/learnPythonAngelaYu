@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Hurdle 4 coding challenge (variable heights) and its solution.
+# Jumping over Hurdles with Variable Heights
 
 ---
 

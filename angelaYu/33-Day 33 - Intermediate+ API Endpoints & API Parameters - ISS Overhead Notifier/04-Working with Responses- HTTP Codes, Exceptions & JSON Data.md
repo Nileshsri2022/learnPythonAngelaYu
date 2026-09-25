@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on response codes.
+# Working with Responses- HTTP Codes, Exceptions & JSON Data
 
 ---
 

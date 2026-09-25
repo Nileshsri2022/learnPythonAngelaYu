@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on automating the login.
+# Step 2- Automated Login
 
 ---
 

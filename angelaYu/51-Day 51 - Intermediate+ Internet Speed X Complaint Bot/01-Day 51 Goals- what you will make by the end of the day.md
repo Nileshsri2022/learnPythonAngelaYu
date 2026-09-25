@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 51.
+# Day 51 Goals- what you will make by the end of the day
 
 ---
 
@@ -10,7 +10,7 @@ you, in public, where customer-service teams actually pay attention.
 
 **The pipeline:**
 
-```
+```text
 speedtest.net  →  read download/upload  →  compare with what you pay for  →  tweet at your ISP
 ```
 

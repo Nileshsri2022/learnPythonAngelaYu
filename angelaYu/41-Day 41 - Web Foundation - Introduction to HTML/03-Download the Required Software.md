@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the required software.
+# Download the Required Software
 
 ---
 
@@ -15,7 +15,7 @@ Here is a structured breakdown of this lesson on the required software.
 
 ### 2. Project Setup
 
-```
+```text
 movie-ranking/
 └── index.html
 ```

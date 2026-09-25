@@ -1,4 +1,4 @@
-Here is a structured breakdown of Caesar Cipher Part 1 — encryption.
+# Caesar Cipher Part 1 - Encryption
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of Caesar Cipher Part 1 — encryption.
 
 Line the alphabet up against a shifted copy of itself. With a **shift of 3**:
 
-```
+```text
 Plain:  a b c d e f g ...
 Cipher: d e f g h i j ...
 ```

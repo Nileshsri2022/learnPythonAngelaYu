@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 5 — car collision detection.
+# Solution to Step 5 - Detect when the Turtle collides with a Car -squish
 
 ---
 

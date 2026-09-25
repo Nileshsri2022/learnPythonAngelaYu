@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the WhatsApp fallback.
+# Can't use SMS- Try WhatsApp instead
 
 ---
 

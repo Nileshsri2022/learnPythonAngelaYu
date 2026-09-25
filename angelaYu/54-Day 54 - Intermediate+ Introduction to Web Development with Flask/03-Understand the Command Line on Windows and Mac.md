@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the command line.
+# Understand the Command Line on Windows and Mac
 
 ---
 

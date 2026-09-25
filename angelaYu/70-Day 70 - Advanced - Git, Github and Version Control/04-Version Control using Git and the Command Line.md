@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on version control with Git on the command line.
+# Version Control using Git and the Command Line
 
 ---
 
@@ -78,7 +78,7 @@ git reset --hard <hash>    # discard everything after <hash> (destructive!)
 
 ### 6. The Daily Loop
 
-```
+```text
 edit files → git status → git add <files> → git commit -m "why"
 ```
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on dialog boxes.
+# Dialog Boxes and Pop-Ups in Tkinter
 
 ---
 

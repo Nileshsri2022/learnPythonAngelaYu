@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating the playlist and adding tracks.
+# Step 4 - Spotify - Create and Add to your Playlist
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 5 — Sheety authentication.
+# Step 5 - Authenticate Your Sheety API
 
 ---
 

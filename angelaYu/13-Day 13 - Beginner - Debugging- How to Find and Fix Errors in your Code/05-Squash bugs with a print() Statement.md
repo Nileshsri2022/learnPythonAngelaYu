@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on squashing bugs with print() statements.
+# Squash bugs with a print() Statement
 
 ---
 

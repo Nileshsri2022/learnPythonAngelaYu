@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on choosing difficulty.
+# Choose Your Difficulty
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 3 final project — Treasure Island.
+# Day 3 Project- Treasure Island
 
 ---
 
@@ -10,7 +10,7 @@ A **choose-your-own-adventure** game. The story branches on three choices:
 2. **Lake** — type `wait` for a boat or `swim` across (swim → attacked by a trout, Game Over).
 3. **House with three doors** — `red` (fire), `blue` (beasts), `yellow` (**You Win!**).
 
-```
+```text
 You're at a crossroad. Where do you want to go? Type "left" or "right"
 left
 You've come to a lake. There's an island in the middle of the lake.

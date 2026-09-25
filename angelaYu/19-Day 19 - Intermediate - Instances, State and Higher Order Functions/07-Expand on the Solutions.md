@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-19 lecture.
+# Expand on the Solutions
 
 ---
 

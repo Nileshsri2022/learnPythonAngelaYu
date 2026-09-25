@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 11 goals — your first capstone project.
+# Day 11 Goals- what we will make by the end of the day
 
 ---
 

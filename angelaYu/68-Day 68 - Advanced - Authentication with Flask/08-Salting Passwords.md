@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on salting passwords.
+# Salting Passwords
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on salting passwords.
 
 Before hashing, generate a **random string (the salt)** and combine it with the password:
 
-```
+```text
 hash(password + salt)  →  stored digest
 salt                  →  stored next to the digest (it's not secret)
 ```
@@ -20,14 +20,14 @@ The salt is not a key — it can sit in plain view in the database.
 
 Without salt:
 
-```
+```text
 angela: qwerty  →  5f4dcc3b5aa765d61d8327deb882cf99
 emily:  qwerty  →  5f4dcc3b5aa765d61d8327deb882cf99     ← identical
 ```
 
 With salt:
 
-```
+```text
 angela: hash("qwerty" + "x7Kd2…")  →  a1b2c3…
 emily:  hash("qwerty" + "9pQz4…")  →  7f8e9d…          ← different
 ```

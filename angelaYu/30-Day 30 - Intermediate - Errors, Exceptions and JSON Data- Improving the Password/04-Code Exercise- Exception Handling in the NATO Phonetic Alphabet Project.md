@@ -1,4 +1,4 @@
-Here is a structured breakdown of the NATO exception-handling exercise.
+# Code Exercise- Exception Handling in the NATO Phonetic Alphabet Project
 
 ---
 

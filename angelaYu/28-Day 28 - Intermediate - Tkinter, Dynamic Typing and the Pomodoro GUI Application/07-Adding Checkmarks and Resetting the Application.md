@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on checkmarks and reset.
+# Adding Checkmarks and Resetting the Application
 
 ---
 

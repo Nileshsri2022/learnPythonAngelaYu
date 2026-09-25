@@ -1,10 +1,10 @@
-Here is a structured breakdown of Step 2 — the Part 2 starting project.
+# Step 2 - Download the Starting Project
 
 ---
 
 ### 1. What's New vs. Part 1
 
-```
+```text
 main.py                  — now also loads users and emails them
 data_manager.py          — get_destination_data() AND get_customer_emails()
 flight_search.py         — search for both direct and 1-stop flights

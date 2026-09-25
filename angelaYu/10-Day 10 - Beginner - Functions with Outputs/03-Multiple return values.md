@@ -1,58 +1,63 @@
-Here is a structured breakdown of everything covered in this lesson on multiple return values.
+# Multiple return values
+
+A function can contain several `return` statements — but **only the first one that
+runs** does anything, because `return` ends the function immediately.
 
 ---
 
-### 1. More Than One `return` Statement
+### 1. `return` Is the End of the Function
 
-A function can have several `return`s in different branches — but **only one ever runs**,
-because the first `return` executed ends the function:
+```python
+def format_name(f_name, l_name):
+    return f"{f_name.title()} {l_name.title()}"
+    print("this line is never reached")     # dead code — after return
+```
+
+Any code after a `return` inside the same block is unreachable. The moment the
+computer meets `return`, it exits the function.
+
+---
+
+### 2. Several `return`s, in Different Branches
+
+You *can* have many `return` keywords — one per branch:
 
 ```python
 def format_name(f_name, l_name):
     if f_name == "" or l_name == "":
-        return "You didn't provide valid inputs."   # early exit
-    return f"{f_name.title()} {l_name.title()}"     # normal path
+        return "You didn't provide valid inputs."      # early exit
+    return f"Result: {f_name.title()} {l_name.title()}"  # normal path
 ```
 
-This is the standard pattern for **validating input**: bail out early with a message, or
-proceed to the main logic.
+When the function is called with inputs, only one of these lines executes.
 
 ---
 
-### 2. Returning Several Values at Once
+### 3. Guarding Against Empty Input
 
-Python functions can return **multiple values** as a tuple, unpacked on arrival:
-
-```python
-def get_coordinates():
-    x = 10
-    y = 20
-    return x, y
-
-px, py = get_coordinates()   # px = 10, py = 20
-```
-
----
-
-### 3. Days of the Week Exercise
+Put it together with `input()` and the problem becomes obvious:
 
 ```python
-def days_in_month(month, year):
-    if month > 12 or month < 1:
-        return "Invalid month"
-    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if month == 2 and is_leap(year):
-        return 29
-    return month_days[month - 1]
+print(format_name(input("What is your first name? "),
+                  input("What is your last name? ")))
 ```
 
-* Early `return` handles the invalid case.
-* The final `return` answers the normal case.
+* Leave both blank **without** the guard → `.title()` runs on empty strings and you
+  get a meaningless `Result: ` line.
+* With the guard → the function exits early with a message that tells the caller what
+  went wrong.
+
+> **Note:** an empty `return` (just the keyword) is also legal: the function ends and
+> the caller receives `None`, which prints as `None`. Returning a **message** is
+> usually friendlier than returning nothing — it says what went wrong.
 
 ---
 
 ### Summary Checklist
 
-1. Multiple `return`s = multiple exit points; the first one hit wins.
-2. Early return is the classic validation pattern.
-3. `return a, b` returns a tuple; `x, y = f()` unpacks it.
+1. `return` immediately ends the function; later lines in that block never run.
+2. Multiple `return` statements are fine — one per branch, only one executes.
+3. Use an **early return** to escape invalid input before doing real work.
+4. A bare `return` gives back `None`; a message (`"You didn't provide valid inputs."`)
+   is more useful to whoever calls the function.
+5. The pattern generalises: validate → exit early, otherwise → main logic.

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on parsing HTML and making soup.
+# Parsing HTML and Making Soup
 
 ---
 

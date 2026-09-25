@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on setting up a WSGI server with gunicorn.
+# Setup a WSGI server with gunicorn
 
 ---
 

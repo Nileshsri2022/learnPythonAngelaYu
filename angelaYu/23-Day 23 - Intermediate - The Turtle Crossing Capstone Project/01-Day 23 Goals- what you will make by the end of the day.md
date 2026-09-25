@@ -1,22 +1,41 @@
-# 🔧 Day 23 Goals: what you will make by the end of the day
+# Day 23 Goals: what you will make by the end of the day
+
+Day 23 starts the second capstone project: **Turtle Crossing** — a lane-dodging game
+in the spirit of *Crossy Road*.
 
 ---
 
-### Overview
+### 1. The Game
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 23 - Intermediate - The Turtle Crossing Capstone Project
-**Lecture:** Day 23 Goals: what you will make by the end of the day
-**Level:** Intermediate
+A busy multi-lane highway runs across the screen, with **randomly generated cars**
+driving horizontally. The player controls a turtle that can only move **forwards**,
+and must reach the far side without being hit.
 
----
-
-### Summary
-
-Hey guys, welcome to Day 23 of 100 Days of Code. Now, today we&#x27;re going to be building towards our second capstone project, and this is going to be a turtle crossing game. You might&#x27;ve played Crossy Road. So this is a similar concept. We have a whole bunch of cars going across a super busy multi-lane highway and our turtle is the player who has to cross the road. This is what the gameplay looks like. The player controls the turtle which can only go forwards, and there&#x27;s a whole bunch of randomly generated cars which are going horizontally across the screen. Now, once a player reaches the other side of the screen, the cars speed up, but the player goes back to the starting position, ready to cross the screen again. Now, at some point when the player turtle hits a car, then that is game over. It&#x27;s a pretty simple game, but it&#x27;s going to test you on a lot of things that you&#x27;ve learned so far, including how to great classes, how to inherit classes, how do you use the objects created from those classes and also your knowledge of the turtle coordinate system and the turtle game engine. Once you are ready, head over to the next lesson where you&#x27;ll find the starting code for this project, and also you&#x27;ll be able to choose your difficulty level. So head over there and get started now.
+| Event | What happens |
+|-------|--------------|
+| Player reaches the other side | `level += 1` — **all cars speed up**, turtle resets to the start |
+| Turtle collides with a car | **Game over** |
 
 ---
 
-### Next Steps
+### 2. Why This Project
 
-Hey guys, welcome to Day 23 of 100 Days of Code. Now, today we&#x27;re going to be building towards our second capstone project, and this is going to be a turtle crossing game. You might&#x27;ve played Crossy Road. So this is a similar concept. We have a whole bunch of cars going across a super busy multi-lane highway and our turtle is the player who has to cross the road. This is what the gameplay looks like. The player controls the turtle which can only go forwards, and there&#x27;s a whole bunch of randomly generated cars which are going horizontally across the screen. Now, once a player reaches the other side of the screen, the cars speed up, but the player goes back to the starting position, ready to cross the screen again. Now, at some point when the player turtle hits a car, then that is game over. It&#x27;s a pretty simple game, but it&#x27;s going to test you on a lot of things that you&#x27;ve learned so far, including how to great classes, how to inherit classes, how do you use the objects created from those classes and also your knowledge of the turtle coordinate system and the turtle game engine. Once you are ready, head over to the next lesson where you&#x27;ll find the starting code for this project, and also you&#x27;ll be able to choose your difficulty level. So head over there and get started now.
+It deliberately revisits almost everything from the first three weeks:
+
+* **Classes & inheritance** — a `CarManager` that spawns many `Car` objects (Day 16–21)
+* **Objects from classes** — cars, the player, the scoreboard (Day 17–19)
+* **Turtle coordinates & the game loop** — `y` increases upwards, screen updates,
+  collision detection (Day 20–22)
+
+> **Tip:** Get the starter code and pick your difficulty in the next lecture. If you get
+> stuck, the following lectures walk through the solution **one step at a time** —
+> try each step yourself first.
+
+---
+
+### Summary Checklist
+
+1. Turtle Crossing = the *Crossy Road* pattern: move forwards, dodge traffic, level up.
+2. Reaching the far side speeds the cars up and resets the player.
+3. Hitting a car ends the game.
+4. The project is designed to test classes, inheritance, objects and turtle coordinates.

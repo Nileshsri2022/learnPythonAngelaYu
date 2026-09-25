@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on authenticating users with Flask-Login.
+# Authenticating Users with Flask-Login
 
 ---
 
@@ -25,7 +25,6 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, curren
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-
 @login_manager.user_loader
 def load_user(user_id):
     """Given a session's user id, return the matching User object."""
@@ -47,7 +46,6 @@ def login():
     if user and check_password_hash(user.password, password):
         login_user(user)
         return redirect(url_for("secrets"))
-
 
 @app.route("/logout")
 def logout():
@@ -82,7 +80,7 @@ def secrets():
 
 ### 5. The Whole Flow
 
-```
+```text
 register → hash the password → save the user
 login    → check_password_hash → login_user() → session cookie
 request  → user_loader() → current_user is the real User object

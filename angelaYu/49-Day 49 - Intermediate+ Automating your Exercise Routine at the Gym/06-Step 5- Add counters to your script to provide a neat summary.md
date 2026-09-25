@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding counters for a neat summary.
+# Step 5- Add counters to your script to provide a neat summary
 
 ---
 
@@ -50,7 +50,7 @@ def print_summary(booked, waitlisted, skipped, failed) -> None:
     print("=" * 34)
 ```
 
-```
+```text
 ==================================
   Snack & Lift booking summary
 ==================================

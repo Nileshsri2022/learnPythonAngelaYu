@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on installing and setting up Selenium WebDriver.
+# How to Install & Set Up Selenium
 
 ---
 

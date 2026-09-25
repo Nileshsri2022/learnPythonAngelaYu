@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 3 — flipping the cards.
+# Step 3 - Flip the Cards!
 
 ---
 

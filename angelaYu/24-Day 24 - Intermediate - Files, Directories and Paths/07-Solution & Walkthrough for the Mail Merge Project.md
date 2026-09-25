@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the Mail Merge solution.
+# Solution & Walkthrough for the Mail Merge Project
 
 ---
 

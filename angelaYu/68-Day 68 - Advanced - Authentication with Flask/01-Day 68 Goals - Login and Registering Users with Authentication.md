@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 68.
+# Day 68 Goals - Login and Registering Users with Authentication
 
 ---
 
@@ -21,7 +21,7 @@ Two jobs authentication does:
 
 A deliberately tiny site with two buttons and one prize:
 
-```
+```text
 /            Home  →  [Register]  [Login]
 /register    Pick username + password
 /login       Enter them again

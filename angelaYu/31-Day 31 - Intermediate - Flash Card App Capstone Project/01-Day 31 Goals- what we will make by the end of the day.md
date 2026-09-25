@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 31 goals — the Flash Card App capstone.
+# Day 31 Goals- what we will make by the end of the day
 
 ---
 

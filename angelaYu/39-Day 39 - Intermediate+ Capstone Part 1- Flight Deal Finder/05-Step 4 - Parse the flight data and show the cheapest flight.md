@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 4 — parsing flight data.
+# Step 4 - Parse the flight data and show the cheapest flight
 
 ---
 

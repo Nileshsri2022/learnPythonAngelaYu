@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on showing the next question in the GUI.
+# Python Typing & Showing the Next Question in the GUI
 
 ---
 

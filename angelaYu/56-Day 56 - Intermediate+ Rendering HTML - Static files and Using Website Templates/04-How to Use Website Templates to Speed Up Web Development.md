@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on using website templates.
+# How to Use Website Templates to Speed Up Web Development
 
 ---
 
@@ -42,7 +42,7 @@ Instead of editing each `src` by hand, use Find & Replace:
 Sites like **HTML5 UP** publish beautiful, responsive, free HTML/CSS templates. Download
 one, and:
 
-```
+```text
 downloaded-template/
 ├── index.html     → templates/
 ├── assets/        → static/assets/

@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the data-fetching solution.
+# Solution & Walkthrough for getting Trivia Questions
 
 ---
 
@@ -24,11 +24,11 @@ This is the OOP payoff again: **the engine doesn't care where data came from.**
 
 Some questions arrive looking like:
 
-```
-&quot;Southern Cross&quot; is the name of the UK&#039;s flag.
+```text
+"Southern Cross" is the name of the UK's flag.
 ```
 
-Those `&quot;` / `&#039;` are **HTML entities** — the next lesson fixes them.
+Those `"` / `'` are **HTML entities** — the next lesson fixes them.
 
 ---
 

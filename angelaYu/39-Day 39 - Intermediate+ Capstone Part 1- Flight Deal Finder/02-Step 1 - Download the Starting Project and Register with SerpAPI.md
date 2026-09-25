@@ -1,10 +1,10 @@
-Here is a structured breakdown of Step 1 — the starting project and SerpAPI.
+# Step 1 - Download the Starting Project and Register with SerpAPI
 
 ---
 
 ### 1. The Starting Files
 
-```
+```text
 main.py            — orchestrates the steps
 data_manager.py    — reads/writes the Google Sheet via Sheety
 flight_search.py   — queries the flight API

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on dynamic typing.
+# Dynamic Typing Explained
 
 ---
 

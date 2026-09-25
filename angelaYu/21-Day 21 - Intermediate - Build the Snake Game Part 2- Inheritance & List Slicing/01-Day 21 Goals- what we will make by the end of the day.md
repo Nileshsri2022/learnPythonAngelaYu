@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 21 goals — the Snake Game, Part 2 (finishing it).
+# Day 21 Goals- what we will make by the end of the day
 
 ---
 

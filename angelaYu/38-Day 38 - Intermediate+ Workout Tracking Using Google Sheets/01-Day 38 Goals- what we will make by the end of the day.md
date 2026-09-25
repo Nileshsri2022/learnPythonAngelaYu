@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 38 goals — the Workout Tracker.
+# Day 38 Goals- what we will make by the end of the day
 
 ---
 
@@ -13,7 +13,7 @@ Here is a structured breakdown of the Day 38 goals — the Workout Tracker.
 
 ### 2. The Project
 
-```
+```text
 Tell me which exercises you did: ran 5k and cycled 20 minutes
 ```
 

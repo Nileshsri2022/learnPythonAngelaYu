@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on setting up the main screen.
+# Set up the Main Screen
 
 ---
 

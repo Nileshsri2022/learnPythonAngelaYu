@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-21 lecture.
+# Stay motivated by remembering the reason you signed up
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on installing Git Bash on Windows.
+# Install Git Bash on Windows
 
 ---
 

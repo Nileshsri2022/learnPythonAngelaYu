@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on generating passwords and the clipboard.
+# Generate a Password & Copy it to the Clipboard
 
 ---
 

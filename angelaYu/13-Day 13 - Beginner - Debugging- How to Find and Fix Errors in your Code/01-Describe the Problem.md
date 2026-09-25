@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on debugging — starting with describing the problem.
+# Describe the Problem
 
 ---
 

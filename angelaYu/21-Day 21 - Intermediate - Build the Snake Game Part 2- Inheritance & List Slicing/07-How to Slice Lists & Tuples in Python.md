@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on slicing lists and tuples.
+# How to Slice Lists & Tuples in Python
 
 ---
 

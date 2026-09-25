@@ -1,4 +1,4 @@
-Here is a structured breakdown of Hangman Step 1 — picking a random word and checking answers.
+# Step 1 - Picking a Random Words and Checking Answers
 
 ---
 

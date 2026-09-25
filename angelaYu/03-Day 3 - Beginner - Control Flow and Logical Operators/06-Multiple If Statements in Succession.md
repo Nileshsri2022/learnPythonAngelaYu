@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on multiple `if` statements in succession.
+# Multiple If Statements in Succession
 
 ---
 

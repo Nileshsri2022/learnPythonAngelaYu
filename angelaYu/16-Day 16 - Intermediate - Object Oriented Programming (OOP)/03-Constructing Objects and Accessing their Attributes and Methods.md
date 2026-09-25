@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on constructing objects and accessing attributes and methods.
+# Constructing Objects and Accessing their Attributes and Methods
 
 ---
 

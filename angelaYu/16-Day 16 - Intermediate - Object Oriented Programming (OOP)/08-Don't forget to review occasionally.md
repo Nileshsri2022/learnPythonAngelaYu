@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-16 lecture.
+# Don't forget to review occasionally
 
 ---
 

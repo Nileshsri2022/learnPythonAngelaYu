@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-18 lecture.
+# Space out your study sessions and stay consistent
 
 ---
 

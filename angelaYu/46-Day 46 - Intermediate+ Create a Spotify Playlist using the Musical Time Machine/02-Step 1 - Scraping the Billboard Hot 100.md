@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on scraping the Billboard Hot 100.
+# Step 1 - Scraping the Billboard Hot 100
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 22 goals — building Pong.
+# Day 22 Goals- what you will make by the end of the day
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating your first Flask web server.
+# Create your First Web Server with Flask
 
 ---
 
@@ -11,11 +11,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def hello_world():
     return "Hello, World!"
-
 
 if __name__ == "__main__":
     app.run()
@@ -34,7 +32,7 @@ Name it `hello.py`, `main.py`, `server.py` — **never** the same name as a pack
 import. A file called `requests.py` shadows the real `requests` package and produces the
 baffling error:
 
-```
+```text
 AttributeError: module 'requests' has no attribute 'get'
 ```
 

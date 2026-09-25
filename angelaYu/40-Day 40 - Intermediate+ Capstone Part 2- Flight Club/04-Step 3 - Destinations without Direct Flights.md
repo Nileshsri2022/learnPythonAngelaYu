@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 3 — handling destinations without direct flights.
+# Step 3 - Destinations without Direct Flights
 
 ---
 

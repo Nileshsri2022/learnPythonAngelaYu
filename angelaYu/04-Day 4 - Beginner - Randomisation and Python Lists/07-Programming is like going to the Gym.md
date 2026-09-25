@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-4 lecture.
+# Programming is like going to the Gym
 
 ---
 

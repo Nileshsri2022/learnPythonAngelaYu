@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Mail Merge challenge briefing.
+# Introducing the Mail Merge Challenge
 
 ---
 
@@ -11,7 +11,7 @@ Classic mail merge — produce one personalised letter per guest:
   `[name]`.
 * **Output:** `./Output/ReadyToSend/` — one finished letter per guest, named after them.
 
-```
+```text
 Dear [name],
 
 You are invited to my Birthday Party on Saturday 24th March...

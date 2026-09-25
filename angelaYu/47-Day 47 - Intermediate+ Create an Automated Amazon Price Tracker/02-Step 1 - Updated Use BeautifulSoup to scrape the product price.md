@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on scraping the product price.
+# Step 1 - Updated Use BeautifulSoup to scrape the product price
 
 ---
 

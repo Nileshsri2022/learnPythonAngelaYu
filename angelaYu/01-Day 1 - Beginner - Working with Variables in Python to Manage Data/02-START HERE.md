@@ -1,4 +1,4 @@
-Here is a structured breakdown of this "START HERE" lecture and how to begin the course.
+# START HERE
 
 ---
 

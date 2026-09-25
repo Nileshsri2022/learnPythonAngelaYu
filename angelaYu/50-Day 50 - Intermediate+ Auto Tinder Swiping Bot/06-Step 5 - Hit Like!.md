@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on hitting Like.
+# Step 5 - Hit Like!
 
 ---
 

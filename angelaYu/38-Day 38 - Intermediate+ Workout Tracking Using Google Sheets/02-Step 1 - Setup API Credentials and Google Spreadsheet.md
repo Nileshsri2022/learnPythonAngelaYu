@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 1 — API credentials and the spreadsheet.
+# Step 1 - Setup API Credentials and Google Spreadsheet
 
 ---
 

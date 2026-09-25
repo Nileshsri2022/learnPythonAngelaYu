@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 10 goals and the project you'll have built by the end of the day.
+# Day 10 Goals- what we will make by the end of the day
 
 ---
 
@@ -15,7 +15,7 @@ This completes the three "flavours" of functions: plain → with inputs → **wi
 
 ### 2. The End-of-Day Project: Calculator
 
-```
+```text
 What's the first number?: 5
 +
 +

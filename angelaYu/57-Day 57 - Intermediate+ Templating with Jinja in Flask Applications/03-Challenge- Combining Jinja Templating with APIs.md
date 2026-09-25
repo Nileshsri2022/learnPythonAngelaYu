@@ -1,4 +1,4 @@
-Here is a structured breakdown of this challenge on combining Jinja templating with APIs.
+# Challenge- Combining Jinja Templating with APIs
 
 ---
 
@@ -22,7 +22,6 @@ import requests
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 
 @app.route("/guess/<name>")
 def guess(name):

@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 5 — checking every destination.
+# Step 5 - Check all the flights in your sheet
 
 ---
 

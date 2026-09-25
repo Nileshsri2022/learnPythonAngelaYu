@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on Python decorators and the `@` syntax.
+# Understanding Python Decorator Functions and the @ Syntax
 
 ---
 
@@ -19,7 +19,6 @@ by copy-paste is a maintenance nightmare.
 import time
 from functools import wraps
 
-
 def delay_decorator(function):
     def wrapper_function():
         time.sleep(2)             # do something BEFORE
@@ -35,10 +34,8 @@ Use it three ways:
 def say_hello():
     print("hello")
 
-
 def say_bye():
     print("bye")
-
 
 say_bye = delay_decorator(say_bye)   # 2. the long way — same thing
 
@@ -79,11 +76,9 @@ def retry(function):
             return function(*args, **kwargs)     # one retry
     return wrapper
 
-
 @retry
 def greet(name):
     print(f"Hello {name}")
-
 
 greet("Ada")      # the wrapper forwards the argument
 ```

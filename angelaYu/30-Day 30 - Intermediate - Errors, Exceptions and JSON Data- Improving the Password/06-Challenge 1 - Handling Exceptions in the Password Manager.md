@@ -1,4 +1,4 @@
-Here is a structured breakdown of Challenge 1 — exception handling in the manager.
+# Challenge 1 - Handling Exceptions in the Password Manager
 
 ---
 

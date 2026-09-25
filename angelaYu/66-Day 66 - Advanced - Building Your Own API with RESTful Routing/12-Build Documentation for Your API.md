@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on documenting your API.
+# Build Documentation for Your API
 
 ---
 
@@ -37,12 +37,12 @@ For each endpoint, show:
 **200 OK**
 ```json
 {"cafes": [{"id": 2, "name": "Cafe Mocha", "location": "London", …}]}
-```
+```text
 
 **404 Not Found**
 ```json
 {"error": {"Not Found": "Sorry, we don't have a cafe at that location."}}
-```
+```text
 ````
 
 ---

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 7 goals and the project you'll build across the whole day.
+# Day 7 Goals- what we will make by the end of the day
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on relative and absolute file paths.
+# Understand Relative and Absolute File Paths
 
 ---
 

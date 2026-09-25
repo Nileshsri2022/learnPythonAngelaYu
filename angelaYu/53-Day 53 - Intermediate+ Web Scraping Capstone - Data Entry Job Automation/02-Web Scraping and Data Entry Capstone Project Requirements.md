@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the capstone requirements.
+# Web Scraping and Data Entry Capstone Project Requirements
 
 ---
 

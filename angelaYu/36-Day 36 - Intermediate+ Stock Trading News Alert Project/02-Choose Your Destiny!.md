@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the "Choose Your Destiny" variant.
+# Choose Your Destiny!
 
 ---
 

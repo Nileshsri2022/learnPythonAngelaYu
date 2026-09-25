@@ -1,4 +1,4 @@
-Here is a structured breakdown of the final debugging tips.
+# Final Debugging Tips
 
 ---
 

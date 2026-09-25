@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 26 goals and the project you'll have built by the end of the day.
+# Day 26 Goals- what you will make by the end of the day
 
 ---
 
@@ -15,7 +15,7 @@ Here is a structured breakdown of the Day 26 goals and the project you'll have b
 
 Type a word → get its NATO phonetic code:
 
-```
+```text
 Enter a word: abroad
 A : Alfa
 B : Bravo

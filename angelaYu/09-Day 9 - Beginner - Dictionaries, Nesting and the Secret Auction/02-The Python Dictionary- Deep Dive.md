@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on the Python dictionary.
+# The Python Dictionary- Deep Dive
 
 ---
 

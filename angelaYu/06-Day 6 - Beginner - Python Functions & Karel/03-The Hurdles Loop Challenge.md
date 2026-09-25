@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Hurdle 1 coding challenge and its solution.
+# The Hurdles Loop Challenge
 
 ---
 

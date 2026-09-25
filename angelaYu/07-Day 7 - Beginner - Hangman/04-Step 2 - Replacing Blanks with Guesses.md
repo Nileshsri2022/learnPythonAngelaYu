@@ -1,4 +1,4 @@
-Here is a structured breakdown of Hangman Step 2 — replacing blanks with guesses.
+# Step 2 - Replacing Blanks with Guesses
 
 ---
 
@@ -7,7 +7,7 @@ Here is a structured breakdown of Hangman Step 2 — replacing blanks with guess
 The player shouldn't see the word — they should see **blanks**, one `_` per letter, with
 correct guesses revealed in place:
 
-```
+```text
 Word: aardvark     Guess: a     Display: a _ _ _ _ a _
 ```
 

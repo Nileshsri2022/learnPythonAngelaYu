@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on navigating to the login page.
+# Step 2 - Navigate to Login Page
 
 ---
 
@@ -32,7 +32,7 @@ WebDriverWait(driver, 10).until(
 Modern sites greet first-time visitors with cookie/consent modals, and these **can cover
 the button you want to click**. Selenium will raise
 
-```
+```text
 ElementClickInterceptedException: element click intercepted
 ```
 

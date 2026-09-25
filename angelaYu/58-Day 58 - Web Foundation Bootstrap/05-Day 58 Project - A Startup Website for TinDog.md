@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the TinDog startup website project.
+# Day 58 Project - A Startup Website for TinDog
 
 ---
 
@@ -20,7 +20,7 @@ Reference: `appbrewery.github.io/tindog`.
 
 Download and unzip the project:
 
-```
+```text
 tindog/
 ├── index.html      # section placeholders + comments
 ├── style.css       # includes the .gradient-background class

@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Blackjack Hint 9 — refactoring and calling `calculate_score()`.
+# Hint 9 Solution Walkthrough- Refactoring and calling calculate_score()
 
 ---
 

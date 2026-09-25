@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 43 project — Colour Vocab Website.
+# Day 43 Project - Colour Vocab Website
 
 ---
 

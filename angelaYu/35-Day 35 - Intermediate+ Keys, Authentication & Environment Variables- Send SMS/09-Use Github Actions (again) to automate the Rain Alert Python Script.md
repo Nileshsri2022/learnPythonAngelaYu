@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on GitHub Actions automation.
+# Use Github Actions (again) to automate the Rain Alert Python Script
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Step 3 — sending the SMS messages.
+# Solution & Walkthrough for Step 3 - Send the SMS Messages
 
 ---
 
@@ -25,7 +25,7 @@ for article in formatted_articles:
 
 ### 2. The Pipeline Complete
 
-```
+```text
 Alpha Vantage ──▶ ±5%? ──▶ NewsAPI ──▶ format ──▶ Twilio SMS
    (prices)       (gate)   (context)   (f-string)  (delivery)
 ```

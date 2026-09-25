@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 2 goals and the project you'll have built by the end of the day.
+# Day 2 Goals- what we will make by the end of the day
 
 ---
 
@@ -16,7 +16,7 @@ Here is a structured breakdown of the Day 2 goals and the project you'll have bu
 
 A program that does the awkward dinner-table maths for you:
 
-```
+```text
 Welcome to the tip calculator!
 What was the total bill? $124.54
 What percentage tip would you like to give? 12

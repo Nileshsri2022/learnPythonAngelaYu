@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on booking both Tuesday *and* Thursday classes.
+# Step 6- Class Booking - Book every Tuesday AND Thursday class
 
 ---
 
@@ -71,7 +71,7 @@ for target in upcoming_dates(TARGET_WEEKDAYS):
 
 By this step the script has real structure:
 
-```
+```text
 login(driver)
 for each target date:
     for each matching card:

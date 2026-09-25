@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on downloading the project files.
+# Downloading Files
 
 ---
 
@@ -11,7 +11,7 @@ nothing to do with today's lesson. Downloading them keeps the focus on **authent
 
 ### 2. What You Should Have
 
-```
+```text
 flask-auth/
 ├── main.py
 ├── instance/

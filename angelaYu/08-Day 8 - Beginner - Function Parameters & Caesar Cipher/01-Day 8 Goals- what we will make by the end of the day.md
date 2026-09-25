@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 8 goals and the project you'll have built by the end of the day.
+# Day 8 Goals- what we will make by the end of the day
 
 ---
 
@@ -15,7 +15,7 @@ Here is a structured breakdown of the Day 8 goals and the project you'll have bu
 One of the oldest encryption schemes, used by Julius Caesar for military messages:
 **shift each letter of the alphabet by a predetermined amount**.
 
-```
+```text
 Type 'encode' to encrypt, type 'decode' to decrypt:
 encode
 Type your message:

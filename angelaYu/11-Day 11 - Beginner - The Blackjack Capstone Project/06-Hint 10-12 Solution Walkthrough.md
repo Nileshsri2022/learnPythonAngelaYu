@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Blackjack Hints 10–12 — the drawing loops.
+# Hint 10-12 Solution Walkthrough
 
 ---
 

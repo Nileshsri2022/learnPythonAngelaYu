@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on setting up your account.
+# Step 1 - Setup Your Account on X (or on Y)
 
 ---
 

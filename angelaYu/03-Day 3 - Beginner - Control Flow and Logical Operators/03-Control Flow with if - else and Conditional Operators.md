@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on control flow with `if` / `else` and conditional operators.
+# Control Flow with if - else and Conditional Operators
 
 ---
 

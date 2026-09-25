@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on self-closing (void) tags.
+# Self Closing Tags
 
 ---
 

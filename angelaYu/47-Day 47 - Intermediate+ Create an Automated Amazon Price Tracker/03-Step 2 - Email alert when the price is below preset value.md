@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the email alert.
+# Step 2 - Email alert when the price is below preset value
 
 ---
 

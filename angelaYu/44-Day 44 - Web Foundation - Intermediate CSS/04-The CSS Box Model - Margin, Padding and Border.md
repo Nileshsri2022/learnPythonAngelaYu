@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the CSS box model.
+# The CSS Box Model - Margin, Padding and Border
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on the CSS box model.
 
 Every element is a box of four layers, from inside out:
 
-```
+```text
 ┌───────────────────────────── margin ─────────────────────────┐
 │  ┌───────────────────────── border ───────────────────────┐  │
 │  │  ┌────────────────────── padding ──────────────────┐   │  │

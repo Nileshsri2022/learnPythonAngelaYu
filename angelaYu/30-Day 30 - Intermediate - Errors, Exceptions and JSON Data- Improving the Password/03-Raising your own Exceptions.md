@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on raising your own exceptions.
+# Raising your own Exceptions
 
 ---
 

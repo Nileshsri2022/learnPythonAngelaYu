@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on endpoints and API calls.
+# API Endpoints and Making API Calls
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on endpoints and API calls.
 
 An **endpoint** is an API's address — a URL that returns data:
 
-```
+```text
 http://api.open-notify.org/iss-now.json
 ```
 

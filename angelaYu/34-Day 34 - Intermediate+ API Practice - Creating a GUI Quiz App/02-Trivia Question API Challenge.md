@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Trivia API challenge.
+# Trivia Question API Challenge
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on the Trivia API challenge.
 
 `data.py` must fetch 10 true/false questions from the **Open Trivia Database**:
 
-```
+```text
 https://opentdb.com/api.php?amount=10&type=boolean
 ```
 

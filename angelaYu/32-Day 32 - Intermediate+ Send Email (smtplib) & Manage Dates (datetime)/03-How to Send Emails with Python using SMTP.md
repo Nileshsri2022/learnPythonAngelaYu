@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on sending email with SMTP.
+# How to Send Emails with Python using SMTP
 
 ---
 

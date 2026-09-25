@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the portfolio projects and why there is no solution code.
+# Where are the Videos and the Solution Code
 
 ---
 

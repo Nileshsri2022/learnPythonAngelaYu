@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-3 lecture.
+# Share and Show off your Project!
 
 ---
 

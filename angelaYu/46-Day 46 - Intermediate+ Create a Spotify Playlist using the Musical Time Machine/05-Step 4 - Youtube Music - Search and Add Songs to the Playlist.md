@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on YouTube Music search quirks.
+# Step 4 - Youtube Music - Search and Add Songs to the Playlist
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the `DELETE /report-closed/<cafe_id>` endpoint.
+# HTTP DELETE - A Cafe that's Closed
 
 ---
 
@@ -8,7 +8,6 @@ Here is a structured breakdown of this lesson on the `DELETE /report-closed/<caf
 
 ```python
 API_KEY = "TopSecretAPIKey"
-
 
 @app.route("/report-closed/<int:cafe_id>", methods=["DELETE"])
 def delete_cafe(cafe_id):

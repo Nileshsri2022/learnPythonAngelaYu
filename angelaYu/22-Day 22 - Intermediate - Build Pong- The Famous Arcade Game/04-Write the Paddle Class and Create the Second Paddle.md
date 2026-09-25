@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Paddle class and the second paddle.
+# Write the Paddle Class and Create the Second Paddle
 
 ---
 
@@ -8,7 +8,6 @@ One class, two instances — the OOP pattern from the turtle race (Day 19):
 
 ```python
 from turtle import Turtle
-
 
 class Paddle(Turtle):
 

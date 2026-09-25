@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 3 — searching flights for one city.
+# Step 3 - Get flights and prices for a single city
 
 ---
 

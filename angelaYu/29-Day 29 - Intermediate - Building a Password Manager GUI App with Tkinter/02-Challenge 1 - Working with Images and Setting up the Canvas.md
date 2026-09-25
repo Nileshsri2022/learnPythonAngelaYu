@@ -1,4 +1,4 @@
-Here is a structured breakdown of Challenge 1 — the logo canvas.
+# Challenge 1 - Working with Images and Setting up the Canvas
 
 ---
 

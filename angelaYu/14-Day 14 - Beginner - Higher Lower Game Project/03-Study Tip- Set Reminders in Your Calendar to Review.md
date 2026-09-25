@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-14 lecture.
+# Study Tip- Set Reminders in Your Calendar to Review
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the different timer sessions.
+# Setting Different Timer Sessions and Values
 
 ---
 

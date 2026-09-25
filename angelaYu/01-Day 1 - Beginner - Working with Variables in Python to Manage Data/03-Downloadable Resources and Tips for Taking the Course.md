@@ -1,4 +1,4 @@
-Here is a structured breakdown of the downloadable resources and the study tips given in this lecture.
+# Downloadable Resources and Tips for Taking the Course
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 56.
+# Day 56 Goals- what you will make by the end of the day
 
 ---
 
@@ -33,7 +33,7 @@ Python server after a small amount of path fixing.
 
 Flask is a framework, so it has rules:
 
-```
+```text
 my-personal-site/
 ├── server.py            # the Flask app
 ├── templates/           # HTML files MUST live here

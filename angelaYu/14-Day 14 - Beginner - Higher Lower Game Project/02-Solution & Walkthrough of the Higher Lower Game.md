@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the Higher Lower Game solution.
+# Solution & Walkthrough of the Higher Lower Game
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on detecting paddle collisions.
+# How to Detect Collisions with the Paddle
 
 ---
 

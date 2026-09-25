@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the HTML boilerplate in depth.
+# HTML Boilerplate
 
 ---
 

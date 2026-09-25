@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on screen setup and creating the snake body.
+# Screen Setup and Creating a Snake Body
 
 ---
 

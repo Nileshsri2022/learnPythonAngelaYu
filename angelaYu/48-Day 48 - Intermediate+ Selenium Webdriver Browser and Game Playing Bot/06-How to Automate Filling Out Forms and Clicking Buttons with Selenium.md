@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on interacting with elements — clicking and typing.
+# How to Automate Filling Out Forms and Clicking Buttons with Selenium
 
 ---
 

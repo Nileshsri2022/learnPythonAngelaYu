@@ -1,4 +1,4 @@
-Here is a structured breakdown of this practice lesson on object attributes and methods.
+# Practice Modifying Object Attributes and Calling Methods
 
 ---
 
