@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on scraping the live site on a schedule.
+# Step 4 - Scrape the live Amazon site
 
 ---
 

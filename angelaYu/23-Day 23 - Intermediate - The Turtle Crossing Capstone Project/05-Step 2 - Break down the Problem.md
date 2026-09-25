@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 2 — breaking down the problem.
+# Step 2 - Break down the Problem
 
 ---
 
@@ -17,7 +17,7 @@ The game splits into five sub-problems (each becoming a class or function):
 
 ### 2. Mapping to Classes
 
-```
+```text
 main.py        — screen, loop, keybinding, condition checks
 player.py      — class Player(Turtle): move(), go_to_start(), is_at_finish_line()
 car_manager.py — class CarManager: create_car(), move_cars(), level_up()

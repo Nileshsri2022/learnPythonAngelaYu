@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on fixing errors and watching for red underlines.
+# Fixing Errors and Watching for Red Underlines
 
 ---
 
@@ -20,7 +20,7 @@ def greet(name)
 Python's error reports end with the **exception type and message** — read that last line
 first:
 
-```
+```text
 Traceback (most recent call last):
   File "main.py", line 5, in <module>
     print(10 / 0)

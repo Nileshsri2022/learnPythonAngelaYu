@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 42 project — Birthday Invite Website.
+# Day 42 Project - Birthday Invite Website
 
 ---
 
@@ -26,7 +26,7 @@ A single page combining *everything* from Day 41–42: headings, paragraphs, lis
     <h3>The Plan</h3>
     <ol>
         <li>Arrive by 7 PM</li>
-        <li>Dinner &amp; cake</li>
+        <li>Dinner & cake</li>
         <li>Games until late</li>
     </ol>
 

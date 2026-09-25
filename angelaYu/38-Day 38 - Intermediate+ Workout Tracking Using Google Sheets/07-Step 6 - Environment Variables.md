@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 6 — environment variables.
+# Step 6 - Environment Variables
 
 ---
 

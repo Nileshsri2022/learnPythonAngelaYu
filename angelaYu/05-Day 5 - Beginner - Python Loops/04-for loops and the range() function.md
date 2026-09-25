@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on `for` loops and the `range()` function.
+# for loops and the range() function
 
 ---
 

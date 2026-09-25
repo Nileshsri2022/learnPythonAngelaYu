@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on how the internet works.
+# How Does the Internet Actually Work
 
 ---
 

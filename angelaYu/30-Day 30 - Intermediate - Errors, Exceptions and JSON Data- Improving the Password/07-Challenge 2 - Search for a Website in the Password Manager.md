@@ -1,4 +1,4 @@
-Here is a structured breakdown of Challenge 2 — the Search button.
+# Challenge 2 - Search for a Website in the Password Manager
 
 ---
 
@@ -32,7 +32,7 @@ credentials; site unknown → friendly miss.
 
 The manager went from *write-only* to a **queryable database**:
 
-```
+```text
 Website: [google] [Search]
 → pop-up: Email: me@mail.com / Password: abc
 ```

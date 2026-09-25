@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on number manipulation and f-Strings.
+# Number Manipulation and F Strings in Python
 
 ---
 

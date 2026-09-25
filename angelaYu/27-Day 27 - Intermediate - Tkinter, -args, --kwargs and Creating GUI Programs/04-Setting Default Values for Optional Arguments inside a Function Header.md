@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on default argument values.
+# Setting Default Values for Optional Arguments inside a Function Header
 
 ---
 

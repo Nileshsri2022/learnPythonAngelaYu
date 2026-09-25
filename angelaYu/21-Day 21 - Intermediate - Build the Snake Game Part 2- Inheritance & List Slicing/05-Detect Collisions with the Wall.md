@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on detecting collisions with the wall.
+# Detect Collisions with the Wall
 
 ---
 

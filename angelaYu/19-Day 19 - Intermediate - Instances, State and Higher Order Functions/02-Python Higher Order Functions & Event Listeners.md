@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on higher-order functions and event listeners.
+# Python Higher Order Functions & Event Listeners
 
 ---
 

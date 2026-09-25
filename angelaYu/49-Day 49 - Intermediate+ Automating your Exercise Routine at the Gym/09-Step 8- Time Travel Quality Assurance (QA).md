@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on quality assurance with the time simulator.
+# Step 8- Time Travel Quality Assurance (QA)
 
 ---
 

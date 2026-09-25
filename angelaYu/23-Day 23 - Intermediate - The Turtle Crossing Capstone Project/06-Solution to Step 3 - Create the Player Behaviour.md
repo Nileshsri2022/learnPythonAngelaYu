@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 3 — the player behaviour.
+# Solution to Step 3 - Create the Player Behaviour
 
 ---
 
@@ -10,7 +10,6 @@ from turtle import Turtle
 STARTING_POSITION = (0, -280)
 MOVE_DISTANCE = 10
 FINISH_LINE_Y = 280
-
 
 class Player(Turtle):
 

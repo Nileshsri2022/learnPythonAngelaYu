@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding a high score to the Snake game.
+# Add a High Score to the Snake Game
 
 ---
 

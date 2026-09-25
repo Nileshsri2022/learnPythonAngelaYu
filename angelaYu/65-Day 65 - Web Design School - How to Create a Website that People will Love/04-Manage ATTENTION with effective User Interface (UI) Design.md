@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on user interface (UI) design.
+# Manage ATTENTION with effective User Interface (UI) Design
 
 ---
 

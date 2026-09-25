@@ -1,4 +1,4 @@
-Here is a structured breakdown of the high-score challenge and its solution.
+# Challenge- Read and Write the High Score to a File in Snake
 
 ---
 

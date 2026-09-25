@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on Flask URL paths and the debugger.
+# Working Flask URL Paths and the Flask Debugger
 
 ---
 
@@ -8,7 +8,6 @@ Here is a structured breakdown of this lesson on Flask URL paths and the debugge
 @app.route("/")
 def home():
     return "Hello, world!"
-
 
 @app.route("/bye")
 def say_bye():
@@ -28,7 +27,6 @@ Angle brackets turn part of the path into a **variable** passed to your function
 @app.route("/username/<name>")
 def greet(name):
     return f"Hello {name}!"
-
 
 @app.route("/username/<name>/1")
 def greet_two(name):
@@ -88,7 +86,7 @@ The error page shows the traceback and a **console** (protected by a PIN printed
 terminal — it stops strangers on the internet from executing code in your app). In that
 console you can inspect variables:
 
-```
+```text
 >>> name
 'Angela'
 ```

@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson introducing the modulo operator.
+# Introducing the Modulo
 
 ---
 

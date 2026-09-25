@@ -1,11 +1,11 @@
-Here is a structured breakdown of this lesson on unescaping HTML entities.
+# Unescaping HTML Entities
 
 ---
 
 ### 1. The Problem
 
-APIs often return text safe for HTML display: `&#039;` for `'`, `&quot;` for `"`,
-`&amp;` for `&`. Printing that raw looks like gibberish.
+APIs often return text safe for HTML display: `'` for `'`, `"` for `"`,
+`&` for `&`. Printing that raw looks like gibberish.
 
 ---
 
@@ -25,7 +25,7 @@ for question in question_data:
     question_bank.append(Question(question_text, question["correct_answer"]))
 ```
 
-**Output before:** `&quot;Southern Cross&quot; is the name of the UK&#039;s flag.`
+**Output before:** `"Southern Cross" is the name of the UK's flag.`
 **Output after:** `"Southern Cross" is the name of the UK's flag.`
 
 > **Tip:** Decode at the data boundary (in `data.py`/the bank loop) so every downstream

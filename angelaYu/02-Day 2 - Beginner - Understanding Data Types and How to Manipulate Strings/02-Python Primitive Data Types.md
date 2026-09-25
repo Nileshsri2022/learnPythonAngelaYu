@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on Python's primitive data types.
+# Python Primitive Data Types
 
 ---
 

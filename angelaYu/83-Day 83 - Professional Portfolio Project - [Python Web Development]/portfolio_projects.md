@@ -78,7 +78,7 @@ git clone …
 pip install -r requirements.txt
 export FLASK_KEY=…
 python main.py
-```
+```text
 
 ## What I learned
 Two or three honest sentences about the hard parts and how you solved them.

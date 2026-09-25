@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Hirst Painting project, Part 1 — extracting RGB values from an image.
+# The Hirst Painting Project Part 1 - How to Extract RGB Values from Images
 
 ---
 

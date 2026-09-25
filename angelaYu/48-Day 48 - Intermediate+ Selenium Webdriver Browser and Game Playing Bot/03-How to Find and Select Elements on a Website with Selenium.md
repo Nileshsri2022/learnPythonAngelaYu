@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on locating elements with Selenium.
+# How to Find and Select Elements on a Website with Selenium
 
 ---
 

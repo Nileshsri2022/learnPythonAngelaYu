@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on upgrading SQLite to PostgreSQL.
+# Upgrade SQLite Database to PostgreSQL
 
 ---
 
@@ -22,7 +22,7 @@ data outlives the code.
 In the hosting dashboard: add a PostgreSQL add-on/plugin (usually one click) and copy the
 connection URL it provides:
 
-```
+```text
 postgresql://user:password@host:5432/dbname
 ```
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on animating the snake segments.
+# Animating the Snake Segments on Screen
 
 ---
 

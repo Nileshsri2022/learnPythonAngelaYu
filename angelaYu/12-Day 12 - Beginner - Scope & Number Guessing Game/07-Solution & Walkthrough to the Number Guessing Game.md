@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the Number Guessing Game solution.
+# Solution & Walkthrough to the Number Guessing Game
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this challenge: building the automated game playing bot.
+# Challenge- Create an Automated Game Playing Bot
 
 ---
 

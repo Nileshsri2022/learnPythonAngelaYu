@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on GitHub and remote repositories.
+# Github and Remote Repositories
 
 ---
 
@@ -53,7 +53,7 @@ git clone <url>             # the way *others* start working on it
 
 Flow of a day:
 
-```
+```text
 pull → code → add → commit → push
 ```
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on looping through Python lists with the `for` loop.
+# Using the for loop with Python Lists
 
 ---
 
@@ -22,7 +22,7 @@ for fruit in fruits:
 ```
 
 **Output:**
-```
+```python
 Apple
 Peach
 Pear
@@ -65,7 +65,7 @@ for fruit in fruits:
 ```
 
 **Output:**
-```
+```text
 Apple
 Apple pie
 Peach

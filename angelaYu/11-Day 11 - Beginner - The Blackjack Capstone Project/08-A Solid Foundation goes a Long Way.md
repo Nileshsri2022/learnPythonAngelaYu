@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-11 lecture.
+# A Solid Foundation goes a Long Way
 
 ---
 

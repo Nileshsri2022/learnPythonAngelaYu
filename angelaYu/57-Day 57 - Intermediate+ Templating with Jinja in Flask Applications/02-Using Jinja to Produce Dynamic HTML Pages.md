@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on producing dynamic HTML pages with Jinja.
+# Using Jinja to Produce Dynamic HTML Pages
 
 ---
 
@@ -23,7 +23,6 @@ Start with the usual Flask app, then create `templates/index.html`:
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():
@@ -58,7 +57,6 @@ import random
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():

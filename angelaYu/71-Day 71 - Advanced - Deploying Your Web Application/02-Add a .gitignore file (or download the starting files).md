@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding a `.gitignore` file.
+# Add a .gitignore file (or download the starting files)
 
 ---
 

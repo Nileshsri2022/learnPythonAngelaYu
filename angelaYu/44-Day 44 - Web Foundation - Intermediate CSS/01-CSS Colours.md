@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on CSS colours.
+# CSS Colours
 
 ---
 

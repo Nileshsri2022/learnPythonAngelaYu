@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 41 project — Movie Ranking.
+# Day 41 Project - Movie Ranking
 
 ---
 
@@ -7,7 +7,7 @@ Here is a structured breakdown of the Day 41 project — Movie Ranking.
 A single HTML page ranking your top three movies, using only headings, paragraphs, `hr`
 and `em`/`strong`:
 
-```
+```text
 <h1>The Best Movies According to Nilesh</h1>
 <p>All-time favourite movies, ranked.</p>
 <hr>

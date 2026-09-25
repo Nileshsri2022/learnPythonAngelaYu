@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Hirst Painting project, Part 2 — drawing the dots.
+# The Hirst Painting Project Part 2 - Drawing the Dots
 
 ---
 

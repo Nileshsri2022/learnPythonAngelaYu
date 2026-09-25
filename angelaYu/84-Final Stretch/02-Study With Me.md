@@ -1,4 +1,4 @@
-Here is a structured breakdown of this "Study With Me" session.
+# Study With Me
 
 ---
 

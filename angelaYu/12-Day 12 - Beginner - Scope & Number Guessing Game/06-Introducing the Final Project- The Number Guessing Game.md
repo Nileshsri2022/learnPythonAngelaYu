@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 12 final project briefing — the Number Guessing Game.
+# Introducing the Final Project- The Number Guessing Game
 
 ---
 
@@ -11,10 +11,10 @@ skill), then build.
 
 ### 2. The Requirements
 
-```
+```text
 Welcome to the Number Guessing Game!
 I'm thinking of a number between 1 and 100.
-Choose a difficulty. Type 'easy' or 'hard': 
+Choose a difficulty. Type 'easy' or 'hard':
 You have 10 attempts remaining to guess the number.
 Make a guess: 50
 Too high / Too low / You got it!

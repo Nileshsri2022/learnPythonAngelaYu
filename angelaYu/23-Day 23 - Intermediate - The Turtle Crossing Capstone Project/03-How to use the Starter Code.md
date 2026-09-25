@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on using the starter code.
+# How to use the Starter Code
 
 ---
 

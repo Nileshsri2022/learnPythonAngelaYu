@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on why we need CSS.
+# Why do we need CSS
 
 ---
 

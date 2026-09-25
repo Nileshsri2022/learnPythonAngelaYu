@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on multiline statements with Jinja.
+# Multiline Statements with Jinja
 
 ---
 
@@ -35,7 +35,6 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 BLOG_URL = "https://api.npoint.io/YOUR_BIN_ID"
-
 
 @app.route("/blog")
 def get_blog():

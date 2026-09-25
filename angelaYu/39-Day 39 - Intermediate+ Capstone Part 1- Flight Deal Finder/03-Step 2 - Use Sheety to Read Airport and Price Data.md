@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 2 — reading destinations via Sheety.
+# Step 2 - Use Sheety to Read Airport and Price Data
 
 ---
 

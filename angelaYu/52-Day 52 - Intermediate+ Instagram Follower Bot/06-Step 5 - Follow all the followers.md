@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on following all the followers.
+# Step 5 - Follow all the followers
 
 ---
 
@@ -7,7 +7,6 @@ Here is a structured breakdown of this lesson on following all the followers.
 ```python
 import random
 import time
-
 
 def follow(self, limit=20):
     dialog = self.driver.find_element(By.CSS_SELECTOR, "div[role='dialog']")

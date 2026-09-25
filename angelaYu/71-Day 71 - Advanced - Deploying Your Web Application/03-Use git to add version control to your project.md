@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding version control with Git.
+# Use git to add version control to your project
 
 ---
 

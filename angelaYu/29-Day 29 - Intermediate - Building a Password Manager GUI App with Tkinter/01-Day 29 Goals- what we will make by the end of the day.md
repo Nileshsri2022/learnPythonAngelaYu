@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 29 goals and the project you'll build.
+# Day 29 Goals- what we will make by the end of the day
 
 ---
 
@@ -14,7 +14,7 @@ Here is a structured breakdown of the Day 29 goals and the project you'll build.
 
 ### 2. The Project: Password Manager
 
-```
+```text
 [logo]
 Website: [___________]           [Generate Password]
 Email/Username: [___________]

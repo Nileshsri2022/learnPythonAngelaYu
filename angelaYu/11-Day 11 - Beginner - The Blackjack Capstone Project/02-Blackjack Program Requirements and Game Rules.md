@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Blackjack rules and program requirements.
+# Blackjack Program Requirements and Game Rules
 
 ---
 

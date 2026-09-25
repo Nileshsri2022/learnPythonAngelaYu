@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on verifying bookings on the *My Bookings* page.
+# Step 7- Verify Class bookings on the -My Bookings- Page
 
 ---
 
@@ -59,7 +59,7 @@ else:
 
 ### 5. Fold It Into the Script
 
-```
+```text
 login → book → verify → summary
 ```
 

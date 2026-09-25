@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-24 lecture.
+# What's the correct solution- What's the best answer- What's the right way
 
 ---
 

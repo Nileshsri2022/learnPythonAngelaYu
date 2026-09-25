@@ -1,31 +1,50 @@
-# 📖 Day 38 Goals: what you will make by the end of the day
+# Day 38 Goals: what you will make by the end of the day
+
+A challenge project with a twist: log your workout in **plain English** and let a
+natural-language API fill in a **Google Sheet** for you.
 
 ---
 
-### Overview
+### 1. The Inspiration
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 38 - Intermediate+ Workout Tracking Using Google Sheets
-**Lecture:** Day 38 Goals: what you will make by the end of the day
-**Level:** N/A
-
----
-
-### Summary
-
-Hey, guys. Welcome to Day 38 of 100 Days of Code. Now, today, I&#x27;ve got a challenge project for you. And this challenge project is going to be building an Exercise Tracking Application using Python and Google Sheets. One of the things I&#x27;ve been trying to do recently is to track my workouts, and I&#x27;ve been doing that on pretty much pen and paper. But wouldn&#x27;t it be nice if we could track the workout that we&#x27;re doing? What time? How long we&#x27;ve been doing the exercises for, and also figure out how many ice creams we can eat because of the workout that we did. So tracking the amount of calories we&#x27;ve used up as well. Now, a lot of the inspiration for this project comes from the recent news on the OpenAI&#x27;s GPT3 AI model. And it&#x27;s a really smart natural language processing model where, for example, if you went onto Wikipedia, you found an article on bread, you decided to use this model to ask it, well, why is bread so fluffy? It can actually search through all of the text and find you the relevant part. So it&#x27;s doing some intelligent stuff behind the scenes to understand what you&#x27;re saying, and also understand what the article is all about, and this is called natural language processing, but it&#x27;s just a very powerful one. Now, in our case, we&#x27;re also going to use natural language processing, and we&#x27;re going to write down the exercises that we did but in a normal English sentence. And at the end of the lesson, I&#x27;m going to show you a way that we can run our Python console online using an online code editor. Now I&#x27;ve pulled up this same page but on the Chrome browser on my mobile phone. So this is what I might do after a gym workout, or after a quick cycle, and what we&#x27;re going to try and do is to get the data to go into our spreadsheet here on Google Sheets. So here I&#x27;m going to type that I ran 5K, and cycled for let&#x27;s say, 20 minutes. So this is my full input and it&#x27;s pretty much just a plain English sentence. Now I&#x27;m going to go ahead and hit Return to trigger the code to run, and immediately you can see that my activities have been logged. So the date and time have been added automatically. It&#x27;s understood that one of my activities was running and it figured out the duration based on the distance, So on average, it might take somebody 31 minutes in order to 5 kilometers. And then it worked out the number of calories I&#x27;ve expended doing that activity. And it did the same thing for my cycling, except this time the duration comes from my input and the calories is calculated automatically. So this is really exciting. And the best part? You&#x27;re going to be building it all by yourself. You&#x27;re going to be using a bunch of things that you&#x27;ve learned so far, including the Python DateTime strftime() method, using APIs, making POST Requests, creating Authorization Headers, and Environment Variables. You&#x27;re going to be doing a bunch of this step-by-step by yourself, and if you head over to the next lesson, there&#x27;s the instructions for how to get started. So I hope you&#x27;re excited to get started and I&#x27;ll see you on the next lesson.
+OpenAI's GPT-3 can answer *"why is bread so fluffy?"* by understanding a Wikipedia
+article — that is **natural language processing** (NLP). This project uses the same
+idea (via Nutritionix) so you never type a table of exercises yourself.
 
 ---
 
-### Key Concepts
+### 2. How It Works
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **datetime module** | Introduced/used in this lecture |
+You type one sentence — *"ran 5K and cycled for 20 minutes"* — and the program:
+
+| Step | Result |
+|------|--------|
+| Understand the exercise name | `running`, `cycling` |
+| Duration | from the distance (5K ≈ **31 min**), or from your own words (*20 min*) |
+| Calories | calculated from **gender, age, weight, height** you configured |
+| Save the row | Sheety appends date/time, exercise, duration and calories to a Google Sheet |
+
+Workout, time, duration and "how many ice creams you earned" — all logged automatically.
 
 ---
 
-### Next Steps
+### 3. Skills You Are Reusing
 
-Hey, guys. Welcome to Day 38 of 100 Days of Code. Now, today, I&#x27;ve got a challenge project for you. And this challenge project is going to be building an Exercise Tracking Application using Python and Google Sheets. One of the things I&#x27;ve been trying to do recently is to track my workouts, and I&#x27;ve been doing that on pretty much pen and paper. But wouldn&#x27;t it be nice if we could track the workout that we&#x27;re doing? What time? How long we&#x27;ve been doing the exercises for, and also figure out how many ice creams we can eat because of the workout that we did. So tracking the amount of calories we&#x27;ve used up as well. Now, a lot of the inspiration for this project comes from the recent news on the OpenAI&#x27;s GPT3 AI model. And it&#x27;s a really smart natural language processing model where, for example, if you went onto Wikipedia, you found an article on bread, you decided to use this model to ask it, well, why is bread so fluffy? It can actually search through all of the text and find you the relevant part. So it&#x27;s doing some intelligent stuff behind the scenes to understand what you&#x27;re saying, and also understand what the article is all about, and this is called natural language processing, but it&#x27;s just a very powerful one. Now, in our case, we&#x27;re also going to use natural language processing, and we&#x27;re going to write down the exercises that we did but in a normal English sentence. And at the end of the lesson, I&#x27;m going to show you a way that we can run our Python console online using an online code editor. Now I&#x27;ve pulled up this same page but on the Chrome browser on my mobile phone. So this is what I might do after a gym workout, or after a quick cycle, and what we&#x27;re going to try and do is to get the data to go into our spreadsheet here on Google Sheets. So here I&#x27;m going to type that I ran 5K, and cycled for let&#x27;s say, 20 minutes. So this is my full input and it&#x27;s pretty much just a plain English sentence. Now I&#x27;m going to go ahead and hit Return to trigger the code to run, and immediately you can see that my activities have been logged. So the date and time have been added automatically. It&#x27;s understood that one of my activities was running and it figured out the duration based on the distance, So on average, it might take somebody 31 minutes in order to 5 kilometers. And then it worked out the number of calories I&#x27;ve expended doing that activity. And it did the same thing for my cycling, except this time the duration comes from my input and the calories is calculated automatically. So this is really exciting. And the best part? You&#x27;re going to be building it all by yourself. You&#x27;re going to be using a bunch of things that you&#x27;ve learned so far, including the Python DateTime strftime() method, using APIs, making POST Requests, creating Authorization Headers, and Environment Variables. You&#x27;re going to be doing a bunch of this step-by-step by yourself, and if you head over to the next lesson, there&#x27;s the instructions for how to get started. So I hope you&#x27;re excited to get started and I&#x27;ll see you on the next lesson.
+* `datetime.strftime()` — stamping each row with today's date and time
+* **GET with headers** — POST/GET calls that need an `x-app-id`/`x-app-key` or
+  `Authorization` header
+* **POST requests** — sending the workout to Sheety to add a row
+* **Environment variables** — keeping both API keys out of your code
+
+And one new trick: run the Python REPL **on your phone's browser** so you can log a
+workout right after the gym.
+
+---
+
+### Summary Checklist
+
+1. Input = a normal English sentence; NLP parses the exercise, duration and calories.
+2. Nutritionix turns "ran 5K" into duration and burned calories using your body data.
+3. Sheety receives a POST and appends the row to a Google Sheet automatically.
+4. Everything else is review: headers, POST, `strftime`, environment variables.
+5. Do it yourself from the starter instructions — this is a challenge day.

@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-12 lecture.
+# Don't be too hard on yourself
 
 ---
 

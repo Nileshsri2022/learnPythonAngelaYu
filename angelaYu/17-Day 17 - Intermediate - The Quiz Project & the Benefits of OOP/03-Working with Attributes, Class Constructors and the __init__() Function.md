@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on attributes, constructors and `__init__()`.
+# Working with Attributes, Class Constructors and the __init__() Function
 
 ---
 

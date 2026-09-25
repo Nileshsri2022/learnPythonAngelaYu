@@ -1,4 +1,4 @@
-Here is a structured breakdown of Hangman Step 5 — the finishing touches.
+# Step 5 - Improving the User Experience
 
 ---
 

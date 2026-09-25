@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 1 final project — the Band Name Generator.
+# Day 1 Project- Band Name Generator
 
 ---
 
@@ -55,7 +55,7 @@ print("Your band name could be " + city + " " + pet)
 ```
 
 **Sample run:**
-```
+```text
 Welcome to the Band Name Generator.
 Which city did you grow up in?
 Bristol

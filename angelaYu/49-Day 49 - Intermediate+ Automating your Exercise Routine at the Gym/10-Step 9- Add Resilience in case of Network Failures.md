@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding resilience for network failures.
+# Step 9- Add Resilience in case of Network Failures
 
 ---
 

@@ -1,59 +1,89 @@
-Here is a structured breakdown of everything covered in this lesson on nesting lists and dictionaries.
+# Nesting Lists and Dictionaries
+
+If a list or dictionary is a **folder**, nesting is putting folders *inside* folders.
+Any combination is legal — and it is how you model more complex, real data.
 
 ---
 
-### 1. What is Nesting?
+### 1. A List as a Value
 
-If a list or dictionary is like a **folder**, nesting is putting folders *inside* folders.
-Any combination is legal:
+Each key can hold only one value — so to store several cities for one country, make that
+value a **list**:
 
 ```python
-# List inside a dictionary (key → list)
 travel_log = {
     "France": ["Paris", "Lille", "Dijon"],
     "Germany": ["Berlin", "Hamburg", "Stuttgart"],
 }
+```
 
-# Dictionary inside a dictionary (key → dict)
+---
+
+### 2. Getting Data Out of a Nested List
+
+Chain the lookups, outside in — first the dictionary key, then the list index:
+
+```python
+print(travel_log["France"])            # ['Paris', 'Lille', 'Dijon']
+print(travel_log["France"][1])         # Lille
+```
+
+`travel_log["France"]` *is* the list, so the second pair of square brackets indexes it.
+
+---
+
+### 3. A List Inside a List (a 2D list)
+
+The same idea works for lists within lists:
+
+```python
+nested_list = ["A", "B", ["C", "D"]]
+
+print(nested_list[2])          # ['C', 'D']
+print(nested_list[2][1])       # D
+```
+
+---
+
+### 4. A Dictionary Inside a Dictionary
+
+Values can be dictionaries too — useful when one record has several fields:
+
+```python
 travel_log = {
-    "France": {"cities_visited": ["Paris", "Lille", "Dijon"], "total_visits": 12},
-    "Germany": {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"], "total_visits": 5},
+    "France": {"cities_visited": ["Paris", "Lille", "Dijon"],
+               "num_times_visited": 8},
+    "Germany": {"cities_visited": ["Berlin", "Hamburg", "Stuttgart"]},
 }
-
-# Dictionary inside a list (each item is a dict)
-travel_log = [
-    {"country": "France", "cities_visited": ["Paris", "Lille", "Dijon"], "total_visits": 12},
-    {"country": "Germany", "cities_visited": ["Berlin", "Hamburg", "Stuttgart"], "total_visits": 5},
-]
 ```
 
-The last form — **a list of dictionaries** — is the workhorse: it's how you store many
-records of the same shape (like rows in a table).
-
----
-
-### 2. Retrieving Nested Data
-
-Chain the lookups from the outside in:
+Note the shape: `travel_log` → country → dictionary → list.
 
 ```python
-print(travel_log[0]["cities_visited"][1])   # Lille
-#            ^item  ^key            ^inner item
+print(travel_log["Germany"])                        # the inner dictionary
+print(travel_log["Germany"]["cities_visited"])      # the list of cities
+print(travel_log["Germany"]["cities_visited"][2])   # Stuttgart
 ```
 
 ---
 
-### 3. Adding to Nested Structures
+### 5. Adding to Nested Structures
+
+Dictionaries are mutable at any depth, and you can add new entries at the top level:
 
 ```python
-travel_log.append({"country": "Italy", "cities_visited": ["Rome"], "total_visits": 3})
-travel_log["France"]["total_visits"] = 13     # edit deep inside
+travel_log["France"]["num_times_visited"] = 9               # edit deep inside
+
+travel_log["Italy"] = [{"cities_visited": ["Rome"],
+                        "total_visits": 3}]                 # new country
 ```
 
 ---
 
 ### Summary Checklist
 
-1. Nesting = collections inside collections; any mix of lists and dicts.
-2. **List of dictionaries** = the standard way to store multiple records.
-3. Access nested data by chaining `[index]["key"][index]`.
+1. Nesting = collections inside collections; any mix of lists and dictionaries.
+2. Access nested data by chaining, outside in: `[key]` then `[index]` then `[key]`…
+3. A **list inside a list** is a 2D list — index it twice: `nested_list[2][1]`.
+4. A **dictionary inside a dictionary** models records with several fields.
+5. Typos in nested keys are the usual bug — copy the key instead of retyping it.

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on what REST is.
+# What is REST
 
 ---
 

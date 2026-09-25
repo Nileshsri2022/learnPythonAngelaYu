@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating a Spotify app and authenticating.
+# Step 2 - Spotify - Create an App & Authenticate
 
 ---
 

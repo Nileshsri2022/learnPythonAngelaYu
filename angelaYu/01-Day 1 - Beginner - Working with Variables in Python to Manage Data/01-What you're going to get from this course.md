@@ -1,4 +1,4 @@
-Here is a structured overview of what this opening lecture promises you'll get from the course.
+# What you're going to get from this course
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on finding and selecting elements.
+# Finding and Selecting Particular Elements with BeautifulSoup
 
 ---
 

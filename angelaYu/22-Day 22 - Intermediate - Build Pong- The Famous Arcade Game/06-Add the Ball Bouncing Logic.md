@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the ball bouncing logic.
+# Add the Ball Bouncing Logic
 
 ---
 

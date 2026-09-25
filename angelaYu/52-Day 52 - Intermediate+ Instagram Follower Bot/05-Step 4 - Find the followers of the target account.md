@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on finding the target account's followers.
+# Step 4 - Find the followers of the target account
 
 ---
 

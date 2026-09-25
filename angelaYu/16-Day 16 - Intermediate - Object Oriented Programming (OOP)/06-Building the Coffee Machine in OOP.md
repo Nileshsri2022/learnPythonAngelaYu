@@ -1,4 +1,4 @@
-Here is a structured breakdown of rebuilding the Coffee Machine in OOP.
+# Building the Coffee Machine in OOP
 
 ---
 

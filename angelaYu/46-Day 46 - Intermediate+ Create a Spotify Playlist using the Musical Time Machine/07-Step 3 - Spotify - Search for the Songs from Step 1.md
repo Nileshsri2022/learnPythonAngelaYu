@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on searching Spotify for the scraped songs.
+# Step 3 - Spotify - Search for the Songs from Step 1
 
 ---
 

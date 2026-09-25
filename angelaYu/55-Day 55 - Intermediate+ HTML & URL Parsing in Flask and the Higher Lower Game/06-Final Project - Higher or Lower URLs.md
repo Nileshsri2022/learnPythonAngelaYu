@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the "Guess the Number" final project.
+# Final Project - Higher or Lower URLs
 
 ---
 
@@ -39,7 +39,6 @@ ANSWER = random.randint(0, 9)
 def home():
     return ('<h1 style="text-align:center; color:red">'
             "Guess a number between 0 and 9</h1>")
-
 
 @app.route("/<int:guess>")
 def guess_number(guess):

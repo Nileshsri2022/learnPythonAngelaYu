@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson introducing Tkinter.
+# History of GUI and Introduction to Tkinter
 
 ---
 

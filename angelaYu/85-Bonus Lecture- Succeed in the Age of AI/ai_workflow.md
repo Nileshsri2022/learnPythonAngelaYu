@@ -33,7 +33,7 @@ already built in this course.
 
 ## 3. A productive loop
 
-```
+```text
 1. I write the smallest version I can
 2. AI reviews it and lists problems
 3. I decide what's right, fix it myself

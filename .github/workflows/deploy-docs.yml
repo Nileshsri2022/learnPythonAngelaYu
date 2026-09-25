@@ -41,8 +41,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r docs-site/requirements.txt
 
+      - name: Notes are normalised
+        run: python3 docs-site/tools/normalize_notes.py --check
+
+      - name: Notes pass the structural + fidelity checks
+        run: python3 docs-site/check_notes.py
+
       - name: Build the site
         run: mkdocs build --strict
+        working-directory: docs-site
+
+      - name: Verify the built site
+        run: python3 check_links.py --external-sample 0
         working-directory: docs-site
 
       - name: Upload Pages artifact

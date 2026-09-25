@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the OOP Coffee Machine solution.
+# Walkthrough and Solution for the OOP Coffee Machine
 
 ---
 
@@ -10,7 +10,6 @@ class MenuItem:
         self.name = name
         self.cost = cost
         self.ingredients = {"water": water, "milk": milk, "coffee": coffee}
-
 
 class Menu:
     def __init__(self):
@@ -28,7 +27,6 @@ class Menu:
             if item.name == order_name:
                 return item
         print("Sorry that item is not available.")
-
 
 class CoffeeMaker:
     def __init__(self):

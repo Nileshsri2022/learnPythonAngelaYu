@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating the scoreboard.
+# Create a Scoreboard and Keep Score
 
 ---
 
@@ -12,7 +12,6 @@ from turtle import Turtle
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
-
 
 class Scoreboard(Turtle):
 

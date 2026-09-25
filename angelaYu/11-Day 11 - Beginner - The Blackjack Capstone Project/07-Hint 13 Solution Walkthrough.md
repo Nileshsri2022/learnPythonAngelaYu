@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Blackjack Hint 13 — the `compare()` function.
+# Hint 13 Solution Walkthrough
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on dismissing all the requests.
+# Step 4 - Dismiss all requests
 
 ---
 
@@ -30,7 +30,6 @@ def click_if_present(driver, by, value, timeout=5):
         return True
     except TimeoutException:
         return False
-
 
 # notifications, location, cookies — order doesn't matter, presence does
 click_if_present(driver, By.CSS_SELECTOR, "button[aria-label='Allow']")

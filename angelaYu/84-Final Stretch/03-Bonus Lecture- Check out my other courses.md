@@ -1,4 +1,4 @@
-Here is a structured breakdown of this bonus lecture.
+# Bonus Lecture- Check out my other courses
 
 ---
 

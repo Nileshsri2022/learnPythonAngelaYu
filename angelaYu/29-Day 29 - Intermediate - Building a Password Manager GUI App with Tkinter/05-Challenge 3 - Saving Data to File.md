@@ -1,4 +1,4 @@
-Here is a structured breakdown of Challenge 3 — saving data to file.
+# Challenge 3 - Saving Data to File
 
 ---
 

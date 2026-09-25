@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Etch-A-Sketch challenge.
+# Challenge- Make an Etch-A-Sketch App
 
 ---
 

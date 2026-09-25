@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the Coffee Machine solution.
+# Solution & Walkthrough for the Coffee Machine Code
 
 ---
 

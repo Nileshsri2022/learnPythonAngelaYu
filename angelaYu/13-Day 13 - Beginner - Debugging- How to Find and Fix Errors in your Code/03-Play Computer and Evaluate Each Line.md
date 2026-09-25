@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on playing computer.
+# Play Computer and Evaluate Each Line
 
 ---
 

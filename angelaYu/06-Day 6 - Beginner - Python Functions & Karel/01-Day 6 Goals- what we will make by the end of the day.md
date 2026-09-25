@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 6 goals and the project you'll have built by the end of the day.
+# Day 6 Goals- what we will make by the end of the day
 
 ---
 

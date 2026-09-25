@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on scraping internet speeds.
+# Step 3 - Get Internet Speeds
 
 ---
 
@@ -11,7 +11,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 SPEEDTEST_URL = "https://www.speedtest.net/"
-
 
 def get_internet_speed(self):
     self.driver.get(SPEEDTEST_URL)

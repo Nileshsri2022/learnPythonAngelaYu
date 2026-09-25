@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Day 10 final project — the Calculator.
+# The Calculator Project
 
 ---
 
 ### 1. What the Program Does
 
-```
+```text
 What's the first number?: 5
 Pick an operation: + - * /   →  *
 What's the next number?: 3

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating a paddle that responds to keys.
+# Create a Paddle that responds to Key Presses
 
 ---
 

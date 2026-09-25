@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Day 4 final project — Rock Paper Scissors.
+# Day 4 Project- Rock Paper Scissors
 
 ---
 
 ### 1. What the Program Does
 
-```
+```text
 What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.
 0
 

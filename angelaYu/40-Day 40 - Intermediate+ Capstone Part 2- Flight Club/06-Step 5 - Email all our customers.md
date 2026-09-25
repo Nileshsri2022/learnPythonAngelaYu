@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 5 — emailing all customers.
+# Step 5 - Email all our customers
 
 ---
 

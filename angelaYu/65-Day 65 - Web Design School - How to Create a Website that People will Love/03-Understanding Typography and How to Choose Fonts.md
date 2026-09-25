@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on typography.
+# Understanding Typography and How to Choose Fonts
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on using OOP: classes and objects.
+# How to use OOP- Classes and Objects
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Ball class and making it move.
+# Write the Ball Class and Make the Ball Move
 
 ---
 
@@ -6,7 +6,6 @@ Here is a structured breakdown of this lesson on the Ball class and making it mo
 
 ```python
 from turtle import Turtle
-
 
 class Ball(Turtle):
 

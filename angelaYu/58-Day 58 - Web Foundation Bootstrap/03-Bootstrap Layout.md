@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Bootstrap layout system.
+# Bootstrap Layout
 
 ---
 

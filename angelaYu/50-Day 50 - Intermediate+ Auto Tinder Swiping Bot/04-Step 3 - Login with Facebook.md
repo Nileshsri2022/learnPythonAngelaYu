@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on logging in with Facebook.
+# Step 3 - Login with Facebook
 
 ---
 

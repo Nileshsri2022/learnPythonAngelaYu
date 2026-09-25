@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on signing up to a hosting provider.
+# Sign up to a hosting provider and create your web service
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 36 goals — the Stock Trading News Alert.
+# Day 36 Goals- what we will make by the end of the day
 
 ---
 
@@ -20,7 +20,7 @@ Monitor Tesla (TSLA):
 3. **NewsAPI** — fetch the top 3 company articles.
 4. **Twilio** — SMS you: the move (🔺/🔻 + percent) plus each headline.
 
-```
+```text
 TSLA: 🔺4.2%
 Headline: Tesla shares surge after...
 Brief: ...

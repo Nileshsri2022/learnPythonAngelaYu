@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the grid layout solution.
+# Solution to the Creating the Grid Layout
 
 ---
 

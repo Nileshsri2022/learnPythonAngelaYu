@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the UI solution.
+# Solution & Walkthrough for Creating the UI
 
 ---
 

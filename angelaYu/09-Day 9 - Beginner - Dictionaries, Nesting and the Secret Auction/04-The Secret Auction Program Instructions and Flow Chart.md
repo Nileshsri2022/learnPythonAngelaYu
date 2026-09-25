@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 9 final project — the Secret Auction.
+# The Secret Auction Program Instructions and Flow Chart
 
 ---
 

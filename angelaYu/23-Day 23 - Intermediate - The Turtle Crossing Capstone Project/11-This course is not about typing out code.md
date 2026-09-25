@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-23 lecture.
+# This course is not about typing out code
 
 ---
 

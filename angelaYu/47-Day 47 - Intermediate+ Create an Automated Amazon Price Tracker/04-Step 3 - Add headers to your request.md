@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on request headers.
+# Step 3 - Add headers to your request
 
 ---
 

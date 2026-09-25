@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on pushing your project to GitHub.
+# Push to your remote on Github
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson applying the four pillars in practice.
+# Web Design in Practice - Let's apply what we've learnt!
 
 ---
 

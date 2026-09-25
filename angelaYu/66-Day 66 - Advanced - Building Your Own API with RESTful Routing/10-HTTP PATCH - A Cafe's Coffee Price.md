@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the `PATCH /update-price/<cafe_id>` endpoint.
+# HTTP PATCH - A Cafe's Coffee Price
 
 ---
 

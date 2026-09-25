@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating a YouTube Music playlist.
+# Step 3 - Youtube Music - Create a Playlist
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on reading CSV data.
+# Reading CSV Data in Python
 
 ---
 
@@ -7,7 +7,7 @@ Here is a structured breakdown of this lesson on reading CSV data.
 **Comma-Separated Values** — a plain-text table. First row = column names; each following
 line = a record:
 
-```
+```python
 temperature,day_of_week
 12,Monday
 14,Tuesday

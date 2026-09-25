@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on type hints and arrows.
+# Python Typing- Type Hints and Arrows
 
 ---
 

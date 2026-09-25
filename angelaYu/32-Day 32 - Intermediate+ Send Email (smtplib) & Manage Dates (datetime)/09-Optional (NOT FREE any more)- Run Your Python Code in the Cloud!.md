@@ -1,4 +1,4 @@
-Here is a structured breakdown of this optional lesson on cloud hosting.
+# Optional (NOT FREE any more)- Run Your Python Code in the Cloud!
 
 ---
 

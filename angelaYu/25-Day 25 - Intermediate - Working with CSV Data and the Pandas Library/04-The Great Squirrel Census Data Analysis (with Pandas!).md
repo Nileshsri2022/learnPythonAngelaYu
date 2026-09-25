@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Squirrel Census analysis.
+# The Great Squirrel Census Data Analysis (with Pandas!)
 
 ---
 
@@ -13,7 +13,7 @@ every squirrel spotted in Central Park, including fur colour.
 
 Count squirrels by primary fur colour and output a small summary CSV:
 
-```
+```text
 Fur Color,Count
 gray,2473
 red,392

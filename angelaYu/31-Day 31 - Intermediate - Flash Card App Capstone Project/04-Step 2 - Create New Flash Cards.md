@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 2 — creating new flash cards.
+# Step 2 - Create New Flash Cards
 
 ---
 

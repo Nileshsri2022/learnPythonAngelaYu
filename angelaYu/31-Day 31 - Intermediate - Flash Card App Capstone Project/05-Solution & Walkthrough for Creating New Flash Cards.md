@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the flash-card logic.
+# Solution & Walkthrough for Creating New Flash Cards
 
 ---
 
@@ -20,14 +20,12 @@ except FileNotFoundError:
 else:
     to_learn = data.to_dict(orient="records")
 
-
 def next_card():
     global current_card, flip_timer
     current_card = random.choice(to_learn)
     canvas.itemconfig(card_title_text, text="French", fill="black")
     canvas.itemconfig(card_word_text, text=current_card["French"], fill="black")
     flip_timer = window.after(3000, func=flip_card)
-
 
 def flip_card():
     canvas.itemconfig(card_title_text, text="English", fill="white")

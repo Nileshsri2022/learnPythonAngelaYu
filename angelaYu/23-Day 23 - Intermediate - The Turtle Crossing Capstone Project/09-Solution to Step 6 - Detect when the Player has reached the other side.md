@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 6 — detecting when the player crosses.
+# Solution to Step 6 - Detect when the Player has reached the other side
 
 ---
 

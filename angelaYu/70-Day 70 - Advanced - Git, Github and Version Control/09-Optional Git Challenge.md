@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the optional Git challenge.
+# Optional Git Challenge
 
 ---
 

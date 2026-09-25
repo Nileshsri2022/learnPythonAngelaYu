@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on tuples and random RGB colours.
+# Python Tuples and How to Generate Random RGB Colours
 
 ---
 

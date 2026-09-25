@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on controlling the snake with keypresses.
+# How to Control the Snake with a Keypress
 
 ---
 

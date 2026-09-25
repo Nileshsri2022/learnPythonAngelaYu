@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Day 2 final project — the Tip Calculator.
+# Day 2 Project- Tip Calculator
 
 ---
 
 ### 1. What the Program Does
 
-```
+```text
 Welcome to the tip calculator!
 What was the total bill? 124.56
 What percentage tip would you like to give? 12

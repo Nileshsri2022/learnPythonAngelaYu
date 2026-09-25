@@ -1,4 +1,4 @@
-Here is a structured breakdown of Challenge 1 — Monday motivational emails.
+# Challenge 1 - Send Motivational Quotes on Mondays via Email
 
 ---
 

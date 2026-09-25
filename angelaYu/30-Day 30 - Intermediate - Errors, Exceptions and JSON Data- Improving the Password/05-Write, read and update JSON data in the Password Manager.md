@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on JSON in the Password Manager.
+# Write, read and update JSON data in the Password Manager
 
 ---
 

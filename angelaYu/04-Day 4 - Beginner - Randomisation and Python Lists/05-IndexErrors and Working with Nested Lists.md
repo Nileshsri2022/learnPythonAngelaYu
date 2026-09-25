@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on IndexErrors and working with nested lists.
+# IndexErrors and Working with Nested Lists
 
 ---
 

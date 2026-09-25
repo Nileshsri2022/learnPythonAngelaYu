@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 20 goals — the Snake Game, Part 1.
+# Day 20 Goals- what we will make by the end of the day
 
 ---
 

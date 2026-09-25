@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on rendering HTML files with Flask.
+# Rendering HTML Files with Flask
 
 ---
 
@@ -9,11 +9,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     return "Hello, World!"
-
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -47,7 +45,7 @@ In PyCharm, *New → HTML File* gives you the boilerplate:
 Flask will only find HTML in a folder named **`templates`** (lowercase), at the project
 root:
 
-```
+```text
 my-personal-site/
 ├── server.py
 └── templates/
@@ -62,7 +60,6 @@ my-personal-site/
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def home():

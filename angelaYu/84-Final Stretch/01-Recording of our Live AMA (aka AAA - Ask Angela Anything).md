@@ -1,4 +1,4 @@
-Here is a structured breakdown of this live AMA (Ask Angela Anything) session.
+# Recording of our Live AMA (aka AAA - Ask Angela Anything)
 
 ---
 

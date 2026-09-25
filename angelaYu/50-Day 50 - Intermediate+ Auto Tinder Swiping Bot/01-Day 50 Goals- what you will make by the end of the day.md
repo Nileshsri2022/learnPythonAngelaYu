@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 50.
+# Day 50 Goals- what you will make by the end of the day
 
 ---
 

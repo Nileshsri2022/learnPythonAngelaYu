@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 6 final project — Escaping the Maze.
+# Final Project- Escaping the Maze
 
 ---
 

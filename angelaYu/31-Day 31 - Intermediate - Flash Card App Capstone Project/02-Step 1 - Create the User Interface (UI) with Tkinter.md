@@ -1,10 +1,10 @@
-Here is a structured breakdown of Step 1 — the UI.
+# Step 1 - Create the User Interface (UI) with Tkinter
 
 ---
 
 ### 1. What to Build
 
-```
+```text
 row 0:                 [title: French / English]
 row 1:   [canvas: card_front.png / card_back.png with word text]
 row 2:            [✘ button]        [✔ button]

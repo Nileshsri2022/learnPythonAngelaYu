@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on adding Python packages and using PyPI.
+# How to Add Python Packages and use PyPi
 
 ---
 
@@ -29,7 +29,7 @@ table.align = "l"                     # modify an attribute
 print(table)
 ```
 
-```
+```text
 +--------------+----------+
 | Pokemon Name |   Type   |
 +--------------+----------+

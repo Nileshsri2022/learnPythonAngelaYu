@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on namespaces: local vs. global scope.
+# Namespaces- Local vs. Global Scope
 
 ---
 

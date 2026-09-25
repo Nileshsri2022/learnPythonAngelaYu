@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on forking and pull requests.
+# Forking and Pull Requests
 
 ---
 
@@ -14,7 +14,7 @@ contribute code you need a two-step dance: **fork**, then **pull request**.
 Click **Fork** in the top-right of a repository. GitHub creates `yourname/repo` — a full
 copy on your account, which you *do* have push access to.
 
-```
+```text
 github.com/original-owner/project   ← upstream (read-only to you)
 github.com/yourname/project         ← your fork (yours to change)
 ```

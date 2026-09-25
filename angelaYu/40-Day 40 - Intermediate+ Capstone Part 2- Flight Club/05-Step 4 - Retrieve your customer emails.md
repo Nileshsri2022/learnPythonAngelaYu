@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 4 — retrieving customer emails.
+# Step 4 - Retrieve your customer emails
 
 ---
 

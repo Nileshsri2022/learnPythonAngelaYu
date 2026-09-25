@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the three ways to add CSS.
+# How to add CSS
 
 ---
 

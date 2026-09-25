@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the `GET /random` endpoint.
+# HTTP GET - a Random Cafe
 
 ---
 
@@ -9,7 +9,6 @@ Here is a structured breakdown of this lesson on the `GET /random` endpoint.
 ```python
 import random
 from flask import jsonify
-
 
 @app.route("/random")
 def get_random_cafe():

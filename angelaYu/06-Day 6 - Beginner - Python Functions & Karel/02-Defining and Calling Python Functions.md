@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on defining and calling Python functions.
+# Defining and Calling Python Functions
 
 ---
 

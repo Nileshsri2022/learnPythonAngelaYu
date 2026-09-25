@@ -1,10 +1,10 @@
-Here is a structured breakdown of the UI challenge.
+# Challenge - Complete the Application's User Interface (UI)
 
 ---
 
 ### 1. The Target Layout
 
-```
+```text
 [row 0]            TIMER (label, columnspan=3)
 [row 1]   Start    CANVAS(tomato)    Reset
 [row 2]            ✔ ✔               (label, columnspan=3)

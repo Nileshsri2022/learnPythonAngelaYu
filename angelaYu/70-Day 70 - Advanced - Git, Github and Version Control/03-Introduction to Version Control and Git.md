@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson introducing version control and Git.
+# Introduction to Version Control and Git
 
 ---
 
@@ -52,7 +52,7 @@ machine) can reach them.
 
 ### 5. What's Coming
 
-```
+```text
 create a repo → make commits → push to GitHub → ignore files you shouldn't commit
 → clone someone else's repo → branch & merge → fork & pull request
 ```

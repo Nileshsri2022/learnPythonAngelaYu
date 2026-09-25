@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 7 — the scoreboard and game over.
+# Solution to Step 7 - Add the Scoreboard and Game Over sequence
 
 ---
 
@@ -10,7 +10,6 @@ Displays the **level** (not a point count) top-right, and GAME OVER on a squish:
 from turtle import Turtle
 
 FONT = ("Courier", 24, "normal")
-
 
 class Scoreboard(Turtle):
 

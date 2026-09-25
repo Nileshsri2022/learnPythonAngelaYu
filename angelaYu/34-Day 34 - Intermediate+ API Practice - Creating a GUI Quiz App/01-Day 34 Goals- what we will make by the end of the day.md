@@ -1,11 +1,11 @@
-Here is a structured breakdown of the Day 34 goals — the Quizzler GUI quiz app.
+# Day 34 Goals- what we will make by the end of the day
 
 ---
 
 ### 1. Skills Covered on Day 34
 
 * **Consuming the Open Trivia DB API** — fetching real quiz questions
-* **Unescaping HTML entities** (`&#039;` → `'`) with `html.unescape()`
+* **Unescaping HTML entities** (`'` → `'`) with `html.unescape()`
 * **Class-based Tkinter UI** — wrapping the whole interface in a class
 * **Type hints** — `parameter: type` and `-> return_type`
 * Wiring API → engine → GUI with callbacks
@@ -14,7 +14,7 @@ Here is a structured breakdown of the Day 34 goals — the Quizzler GUI quiz app
 
 ### 2. The Project: Quizzler
 
-```
+```text
 [Score: 0]
 ┌──────────────────────┐
 │  Question text here  │   ← card canvas

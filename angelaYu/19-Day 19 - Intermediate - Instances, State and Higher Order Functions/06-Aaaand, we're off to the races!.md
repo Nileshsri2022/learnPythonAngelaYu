@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Turtle Race game build.
+# Aaaand, we're off to the races!
 
 ---
 

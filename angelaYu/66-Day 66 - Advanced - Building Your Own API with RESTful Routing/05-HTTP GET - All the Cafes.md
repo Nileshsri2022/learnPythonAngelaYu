@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the `GET /all` endpoint.
+# HTTP GET - All the Cafes
 
 ---
 

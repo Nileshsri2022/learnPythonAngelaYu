@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on functions as first-class objects.
+# Python Functions as First Class Objects- Passing & Nesting Functions
 
 ---
 
@@ -58,7 +58,6 @@ def outer_function():
 
     nested_function()
 
-
 outer_function()      # I'm outer  /  I'm inner
 nested_function()     # NameError: name 'nested_function' is not defined
 ```
@@ -77,7 +76,6 @@ def outer_function():
     def inner_function():
         print("I'm inner")
     return inner_function          # note: no parentheses
-
 
 my_function = outer_function()     # nothing printed yet
 my_function()                      # now it prints "I'm inner"

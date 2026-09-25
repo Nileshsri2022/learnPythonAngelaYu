@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on the Python input function.
+# The Python Input Function
 
 ---
 

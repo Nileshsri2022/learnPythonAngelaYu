@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on environment variables for sensitive information.
+# Use environment variables to store sensitive information
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured walkthrough of Blackjack Hints 4 & 5 — dealing the first cards.
+# Hint 4 & 5 Solution Walkthrough
 
 ---
 

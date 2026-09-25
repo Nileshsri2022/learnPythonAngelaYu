@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on booking the upcoming Tuesday class.
+# Step 3- Book the upcoming Tuesday class
 
 ---
 

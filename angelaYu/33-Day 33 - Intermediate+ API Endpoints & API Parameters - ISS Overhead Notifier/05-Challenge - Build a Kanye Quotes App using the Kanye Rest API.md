@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Kanye Quotes challenge.
+# Challenge - Build a Kanye Quotes App using the Kanye Rest API
 
 ---
 

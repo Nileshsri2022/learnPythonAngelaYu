@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on feedback, score and bug fixes.
+# Give Feedback to the Player, Keep Score and Fix the Bugs =)
 
 ---
 

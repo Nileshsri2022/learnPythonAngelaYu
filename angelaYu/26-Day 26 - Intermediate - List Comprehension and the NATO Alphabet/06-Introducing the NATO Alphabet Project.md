@@ -1,4 +1,4 @@
-Here is a structured breakdown of the NATO Alphabet project briefing.
+# Introducing the NATO Alphabet Project
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on iterating a Pandas DataFrame.
+# How to Iterate over a Pandas DataFrame
 
 ---
 

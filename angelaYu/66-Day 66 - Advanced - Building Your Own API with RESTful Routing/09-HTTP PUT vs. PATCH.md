@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on `PUT` vs `PATCH`.
+# HTTP PUT vs. PATCH
 
 ---
 

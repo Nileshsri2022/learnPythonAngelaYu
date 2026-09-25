@@ -1,4 +1,4 @@
-Here is a structured breakdown of everything covered in this lesson on printing to the console in Python.
+# Printing to the Console in Python
 
 ---
 

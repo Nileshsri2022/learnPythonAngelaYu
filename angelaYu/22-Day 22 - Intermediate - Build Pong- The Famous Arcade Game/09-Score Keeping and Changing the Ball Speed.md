@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on score keeping and ball speed.
+# Score Keeping and Changing the Ball Speed
 
 ---
 
@@ -9,7 +9,6 @@ from turtle import Turtle
 
 ALIGNMENT = "center"
 FONT = ("Courier", 80, "normal")
-
 
 class Scoreboard(Turtle):
 

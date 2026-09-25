@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 2 — natural-language exercise queries.
+# Step 2 - Get Exercise Stats with Natural Language Queries
 
 ---
 

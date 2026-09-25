@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on hashing and salting with Werkzeug.
+# Hashing and Salting Passwords using Werkzeug
 
 ---
 
@@ -41,7 +41,7 @@ def register():
 
 The stored value looks like this — algorithm, salt and digest packed into one string:
 
-```
+```text
 pbkdf2:sha256:600000$Z8jK1pQ2$3f0a9c4b…
 ```
 

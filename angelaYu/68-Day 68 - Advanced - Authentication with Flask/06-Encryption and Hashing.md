@@ -1,10 +1,10 @@
-Here is a structured breakdown of this lesson on encryption and hashing.
+# Encryption and Hashing
 
 ---
 
 ### 1. Level 0: Plain Text
 
-```
+```text
 email: angela@example.com   password: qwerty123
 ```
 
@@ -25,7 +25,7 @@ the password is stored recoverably, i.e. badly.
 The flaw for passwords: encryption is *reversible*. Anyone who steals the key (or the
 server) can decrypt everything.
 
-```
+```text
 password  +  key  →  ciphertext            (and back again)
 ```
 
@@ -39,7 +39,7 @@ backwards.
 The classic illustration: multiplying 13 × 29 = 377 is instant; finding the factors of 377
 takes trial and error. Hash functions work the same way, with far more complexity.
 
-```
+```text
 password  →  hash function  →  digest        ✅ easy
 digest    →  hash function  →  password      ❌ effectively impossible
 ```

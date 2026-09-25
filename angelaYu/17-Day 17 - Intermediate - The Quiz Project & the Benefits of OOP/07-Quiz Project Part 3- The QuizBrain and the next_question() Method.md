@@ -1,4 +1,4 @@
-Here is a structured breakdown of Quiz Project Part 3 — the QuizBrain and `next_question()`.
+# Quiz Project Part 3- The QuizBrain and the next_question() Method
 
 ---
 

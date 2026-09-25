@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on class inheritance.
+# Class Inheritance
 
 ---
 
@@ -19,7 +19,6 @@ class Animal:                       # base (parent) class
 
     def breathe(self):
         print("Inhale, exhale.")
-
 
 class Fish(Animal):                 # derived (child) class
     def __init__(self):

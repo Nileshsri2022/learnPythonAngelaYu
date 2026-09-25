@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on opening, reading and writing files with `with`.
+# How to Open, Read, and Write to Files using the -with- Keyword
 
 ---
 

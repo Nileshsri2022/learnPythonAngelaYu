@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on downloading the starting project.
+# Download the Starting Project
 
 ---
 
@@ -6,7 +6,7 @@ Here is a structured breakdown of this lesson on downloading the starting projec
 
 The course ships a starter project containing:
 
-```
+```text
 cafe-api/
 ├── main.py            # Flask app + routes to fill in
 ├── templates/

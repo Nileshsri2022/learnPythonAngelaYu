@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on picking your terminal.
+# The Terminal - use either VS Code or PyCharm
 
 ---
 

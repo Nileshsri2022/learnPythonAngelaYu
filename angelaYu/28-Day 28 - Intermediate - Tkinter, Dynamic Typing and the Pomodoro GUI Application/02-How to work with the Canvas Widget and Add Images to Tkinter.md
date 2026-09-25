@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Canvas widget and images.
+# How to work with the Canvas Widget and Add Images to Tkinter
 
 ---
 

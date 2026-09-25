@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on creating your own class.
+# How to create your own Class in Python
 
 ---
 

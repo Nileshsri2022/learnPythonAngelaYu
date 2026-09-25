@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the countdown mechanism.
+# Add a Count Down Mechanism
 
 ---
 

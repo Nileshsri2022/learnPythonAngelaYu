@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 1 — the sign-up form.
+# Step 1 - Create a Sharable Form linked to your Sheet
 
 ---
 

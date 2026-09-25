@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-15 lecture.
+# Location, Location, Location - Pavlov's Coding Corner
 
 ---
 

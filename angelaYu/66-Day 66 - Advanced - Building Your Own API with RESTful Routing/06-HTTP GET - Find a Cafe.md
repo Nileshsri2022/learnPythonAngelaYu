@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the `GET /search` endpoint.
+# HTTP GET - Find a Cafe
 
 ---
 
@@ -10,7 +10,6 @@ The location arrives as a **query parameter** (the part after `?`), not as part 
 
 ```python
 from flask import request
-
 
 @app.route("/search")
 def search_cafes():

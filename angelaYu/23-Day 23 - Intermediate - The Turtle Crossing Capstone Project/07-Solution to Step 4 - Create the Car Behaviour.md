@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 4 — the car behaviour.
+# Solution to Step 4 - Create the Car Behaviour
 
 ---
 
@@ -11,7 +11,6 @@ from turtle import Turtle
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
-
 
 class CarManager:
 

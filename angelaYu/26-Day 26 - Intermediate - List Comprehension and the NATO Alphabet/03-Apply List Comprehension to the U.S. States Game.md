@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson applying comprehensions to the U.S. States Game.
+# Apply List Comprehension to the U.S. States Game
 
 ---
 

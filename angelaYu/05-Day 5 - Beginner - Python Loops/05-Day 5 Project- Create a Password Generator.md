@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Day 5 final project — the PyPassword Generator.
+# Day 5 Project- Create a Password Generator
 
 ---
 
 ### 1. What the Program Does
 
-```
+```text
 Welcome to the PyPassword Generator!
 How many letters would you like in your password? 14
 How many symbols would you like? 3

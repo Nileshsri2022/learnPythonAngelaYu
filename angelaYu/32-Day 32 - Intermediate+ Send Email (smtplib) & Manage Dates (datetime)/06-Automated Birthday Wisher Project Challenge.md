@@ -1,10 +1,10 @@
-Here is a structured breakdown of the Birthday Wisher challenge.
+# Automated Birthday Wisher Project Challenge
 
 ---
 
 ### 1. The Requirements
 
-```
+```text
 birthdays.csv: name,email,year,month,day
 letter_1/2/3.txt: "Dear [NAME], Happy birthday!..."
 ```

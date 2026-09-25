@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the YouTube Music authentication route.
+# Step 2 - Youtube Music - Re-use your Browser's Requests to Authenticate
 
 ---
 

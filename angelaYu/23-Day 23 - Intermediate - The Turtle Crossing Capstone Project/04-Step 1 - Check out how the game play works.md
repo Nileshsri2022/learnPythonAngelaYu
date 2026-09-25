@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 1 — studying how the game plays.
+# Step 1 - Check out how the game play works
 
 ---
 

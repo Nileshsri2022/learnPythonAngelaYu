@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on `__name__` and `__main__`.
+# __name__ and __main__ - Special Attributes built into Python
 
 ---
 

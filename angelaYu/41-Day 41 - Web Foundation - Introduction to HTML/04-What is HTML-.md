@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on what HTML is.
+# What is HTML
 
 ---
 

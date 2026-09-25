@@ -1,4 +1,4 @@
-Here is a structured breakdown of Step 6 — Twilio notifications.
+# Step 6 - Send a notification with Twilio
 
 ---
 

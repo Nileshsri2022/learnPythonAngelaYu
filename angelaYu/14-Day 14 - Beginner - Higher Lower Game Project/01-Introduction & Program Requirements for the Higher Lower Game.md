@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Higher Lower Game — requirements and design.
+# Introduction & Program Requirements for the Higher Lower Game
 
 ---
 
@@ -8,7 +8,7 @@ Like higherlowergame.com: two options are shown (e.g. Instagram vs. Cristiano Ro
 and you guess **which has more followers**. Each correct answer bumps your score and pits
 your account against a fresh challenger — one wrong guess ends the game.
 
-```
+```text
 Compare A: Instagram, an online photo-sharing service.
 Against B: Cristiano Ronaldo, Footballer.
 Who has more followers? Type 'A' or 'B': A

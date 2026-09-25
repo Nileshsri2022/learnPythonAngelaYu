@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-6 lecture.
+# Why is this -so- Hard-! Can I really do this
 
 ---
 

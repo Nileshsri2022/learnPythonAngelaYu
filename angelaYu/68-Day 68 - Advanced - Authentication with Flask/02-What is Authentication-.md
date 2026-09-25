@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on what authentication is.
+# What is Authentication
 
 ---
 
@@ -7,7 +7,7 @@ Here is a structured breakdown of this lesson on what authentication is.
 Every user who visits your site creates data — likes, messages, posts. Without accounts,
 you can't say *whose* data it is. Authentication gives every user an identity:
 
-```
+```text
 register → create account (username + password)
 login    → prove you are that account
 session  → the site remembers you while you browse

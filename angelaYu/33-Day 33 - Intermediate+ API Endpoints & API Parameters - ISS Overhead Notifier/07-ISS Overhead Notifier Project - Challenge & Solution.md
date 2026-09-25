@@ -1,4 +1,4 @@
-Here is a structured walkthrough of the ISS Overhead Notifier.
+# ISS Overhead Notifier Project - Challenge & Solution
 
 ---
 

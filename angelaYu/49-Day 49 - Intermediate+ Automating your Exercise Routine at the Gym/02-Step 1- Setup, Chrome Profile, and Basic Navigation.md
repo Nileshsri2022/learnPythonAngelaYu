@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on project setup, the Chrome profile and navigation.
+# Step 1- Setup, Chrome Profile, and Basic Navigation
 
 ---
 

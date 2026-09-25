@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the goals for Day 48.
+# Day 48 Goals- what you will make by the end of the day
 
 ---
 

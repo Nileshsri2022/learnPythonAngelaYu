@@ -1,4 +1,4 @@
-Here is a short wrap-up note for this end-of-Day-5 lecture.
+# Hard Work and Perseverance beats Raw Talent Every Time
 
 ---
 

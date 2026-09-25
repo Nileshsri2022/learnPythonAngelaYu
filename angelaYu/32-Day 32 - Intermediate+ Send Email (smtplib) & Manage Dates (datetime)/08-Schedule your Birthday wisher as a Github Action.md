@@ -1,4 +1,4 @@
-Here is a structured breakdown of scheduling the script with GitHub Actions.
+# Schedule your Birthday wisher as a Github Action
 
 ---
 

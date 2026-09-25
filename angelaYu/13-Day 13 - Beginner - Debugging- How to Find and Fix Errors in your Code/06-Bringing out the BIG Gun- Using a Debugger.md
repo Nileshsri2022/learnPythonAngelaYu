@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on using a debugger.
+# Bringing out the BIG Gun- Using a Debugger
 
 ---
 

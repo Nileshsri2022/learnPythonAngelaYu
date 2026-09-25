@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Hurdle 3 coding challenge (random walls) and its solution.
+# Hurdles Challenge using While Loops
 
 ---
 

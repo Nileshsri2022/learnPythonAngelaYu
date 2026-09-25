@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on branching and merging.
+# Branching and Merging
 
 ---
 
@@ -57,7 +57,7 @@ Two possible outcomes:
 
 Conflict markers look like:
 
-```
+```text
 <<<<<<< HEAD
 price = 3
 =======

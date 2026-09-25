@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on advanced decorators with `*args` and `**kwargs`.
+# Advanced Decorators with -args and --kwargs
 
 ---
 
@@ -16,7 +16,7 @@ def delay_decorator(function):
 
 Decorate a function that takes inputs and it breaks:
 
-```
+```text
 TypeError: wrapper_function() takes 0 positional arguments but 1 was given
 ```
 
@@ -32,10 +32,8 @@ class User:
         self.name = name
         self.is_logged_in = False
 
-
 def create_blog_post(user):
     print(f"This is {user.name}'s new blog post.")
-
 
 user = User("Angela")
 create_blog_post(user)
@@ -53,7 +51,6 @@ def is_authenticated_decorator(function):
         if args[0].is_logged_in:           # args[0] is the `user` argument
             function(*args, **kwargs)      # hand them to the real function
     return wrapper
-
 
 @is_authenticated_decorator
 def create_blog_post(user):
@@ -101,7 +98,7 @@ silently reading the wrong object.
 This is the shape of real authorisation decorators — Flask's `@login_required`, Django's
 `@permission_required`, API key checks. The pattern:
 
-```
+```text
 inspect the arguments → make a decision → maybe call the original function
 ```
 

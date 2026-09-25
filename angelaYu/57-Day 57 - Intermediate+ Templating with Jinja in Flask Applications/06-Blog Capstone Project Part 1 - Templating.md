@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson on the Blog Capstone Project, part 1.
+# Blog Capstone Project Part 1 - Templating
 
 ---
 

@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 24 goals and the projects you'll have built by the end of the day.
+# Day 24 Goals- what we will make by the end of the day
 
 ---
 

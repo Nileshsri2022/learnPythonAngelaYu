@@ -1,4 +1,4 @@
-Here is a structured breakdown of this lesson introducing the Cookie Clicker project.
+# The Cookie Clicker Project
 
 ---
 

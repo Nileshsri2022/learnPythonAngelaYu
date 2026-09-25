@@ -1,4 +1,4 @@
-Here is a structured breakdown of the Day 27 goals and the project you'll have built by the end of the day.
+# Day 27 Goals- what we will make by the end of the day
 
 ---
 
@@ -15,7 +15,7 @@ Here is a structured breakdown of the Day 27 goals and the project you'll have b
 
 A small GUI: type miles, click "Calculate", see kilometres:
 
-```
+```text
 [ 0  ] Miles  [is equal to]  [ 0  ] Km  [Calculate]
 ```
 
