@@ -2,14 +2,17 @@
 """
 Verify the built site: every internal link resolves, every page has content.
 
-Usage:  python3 check_links.py [--site DIR]
+Usage:  python3 check_links.py [--site DIR] [--external-sample N]
 
 Checks
   1. Every internal href/src on every page resolves to a real file
-     (directory-style URLs -> <dir>/index.html).
+     (directory-style URLs -> <dir>/index.html). Links that point at this site's own
+     `site_url` are resolved internally instead of being reported as external.
   2. Every page has real content (word count of the <article> area).
   3. Page counts per category (transcripts / days).
-  4. Sample of external links is reachable (HEAD, best-effort).
+  4. Sample of external links is reachable (HEAD, best-effort). Canonical/alternate
+     <link> tags are ignored — they always point at the deployed site, not the local
+     build, so they say nothing about this build.
 
 Exit code is non-zero if any internal link is broken.
 """
@@ -25,6 +28,8 @@ from collections import Counter
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlparse
 
+SKIP_LINK_RELS = {"canonical", "alternate", "shortcut icon", "icon", "manifest"}
+
 
 class LinkExtractor(html.parser.HTMLParser):
     def __init__(self) -> None:
@@ -36,10 +41,15 @@ class LinkExtractor(html.parser.HTMLParser):
         self.has_code = False
 
     def handle_starttag(self, tag, attrs):
-        if tag in ("a", "img", "link", "script"):
-            d = dict(attrs)
+        d = dict(attrs)
+        if tag in ("a", "img", "script"):
             url = d.get("href") or d.get("src")
             if url:
+                self.hrefs.append(url)
+        elif tag == "link":
+            rel = (d.get("rel") or "").lower()
+            url = d.get("href")
+            if url and rel not in SKIP_LINK_RELS:
                 self.hrefs.append(url)
         if tag == "article":
             self._in_article += 1
@@ -103,7 +113,21 @@ def main() -> int:
 
     site = Path(args.site).resolve()
     prefix = site_url_prefix()
+    site_host = ""
+    cfg = Path(__file__).resolve().parent / "mkdocs.yml"
+    if cfg.exists():
+        m = re.search(r"^\s*site_url:\s*(\S+)", cfg.read_text(encoding="utf-8"), re.M)
+        if m:
+            site_host = urlparse(m.group(1)).netloc
+
+    if not site.is_dir():
+        print(f"RESULT: FAIL — {site} does not exist; run `mkdocs build` first")
+        return 1
     pages = sorted(site.rglob("*.html"))
+    if len(pages) < 10:
+        print(f"RESULT: FAIL — only {len(pages)} HTML pages found in {site}; "
+              f"the build looks incomplete")
+        return 1
     broken: list[tuple[str, str]] = []
     thin: list[tuple[str, int]] = []
     external: Counter = Counter()
@@ -120,17 +144,28 @@ def main() -> int:
             cat["day-overview"] += 1
         elif "transcript-" in rel:
             cat["transcript"] += 1
+        elif rel.startswith(("cheat-sheets/", "topics/")) or rel in (
+                "study-plan/index.html", "404.html"):
+            cat["study-aid"] += 1
         else:
-            cat["other"] += 1
+            cat["lecture-note"] += 1
 
         info = extract(page)
         if info.article_words < 15 and not info.has_code and rel != "404.html":
             thin.append((rel, info.article_words))
 
         for url in info.hrefs:
-            scheme = urlparse(url).scheme
+            parsed = urlparse(url)
+            scheme = parsed.scheme
             if scheme in ("http", "https"):
-                external[url] += 1
+                if site_host and parsed.netloc == site_host:
+                    target = resolve(page, parsed.path or "/", site, prefix)
+                    if target is None:
+                        broken.append((rel, url))
+                    else:
+                        checked_targets.add(target)
+                else:
+                    external[url] += 1
                 continue
             if scheme or url.startswith(("mailto:", "javascript:", "#")):
                 continue
@@ -142,8 +177,7 @@ def main() -> int:
 
     print(f"pages crawled:        {len(pages)}")
     print(f"internal link checks: {len(checked_targets)} unique targets "
-          f"(+fragments) — all resolved" if not broken else
-          f"internal link checks: {len(checked_targets)} unique targets")
+          f"(+fragments)" + (" — all resolved" if not broken else ""))
     print(f"page categories:      {dict(sorted(cat.items()))}")
     print(f"external unique URLs: {len(external)}")
 
@@ -170,7 +204,7 @@ def main() -> int:
                      "-I", "-L", "--max-time", "8", u],
                     capture_output=True, text=True, timeout=15)
                 code = r.stdout.strip()
-                if code.startswith(("2", "3")) or code == "200":
+                if code.startswith(("2", "3")):
                     ok += 1
                 else:
                     fail += 1
@@ -178,8 +212,9 @@ def main() -> int:
             except Exception:
                 fail += 1
                 print(f"  external ERR: {u[:100]}")
+        note = "" if fail == 0 else "  (offline sandboxes cannot reach the internet)"
         print(f"\nexternal sample: {ok} OK, {fail} failed "
-              f"(of {len(picks)} sampled from {len(external)})")
+              f"(of {len(picks)} sampled from {len(external)}){note}")
 
     print()
     if broken or thin:

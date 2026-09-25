@@ -1,7 +1,7 @@
 site_name: 100 Days of Python — Study Notes
 site_description: >-
-  Personal study notes and transcripts for Angela Yu's 100 Days of Code
-  Python Pro Bootcamp, with full-text search.
+  Study notes and transcripts for Angela Yu's 100 Days of Code Python Pro Bootcamp,
+  with a study plan, cheat sheets, a topic index and full-text search.
 repo_url: https://github.com/Nileshsri2022/learnPythonAngelaYu
 repo_name: Nileshsri2022/learnPythonAngelaYu
 
@@ -16,6 +16,12 @@ site_url: https://nileshsri2022.github.io/learnPythonAngelaYu/
 watch:
   - ../angelaYu
 
+# Transcript pages are deliberately not in the navigation (they are linked from the
+# lecture notes and day pages); this keeps the build log clean.
+not_in_nav: |
+  days/*/transcript-*.md
+  404.md
+
 theme:
   name: material
   language: en
@@ -24,15 +30,20 @@ theme:
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.instant
+    - navigation.instant.progress
     - navigation.indexes
     - navigation.top
     - navigation.tracking
+    - navigation.footer
+    - navigation.path
     - navigation.prune
     - toc.follow
     - search.suggest
     - search.highlight
     - search.share
     - content.code.copy
+    - content.code.select
+    - content.tooltips
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -70,3 +81,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/progress.js

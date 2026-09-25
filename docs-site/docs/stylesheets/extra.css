@@ -1,0 +1,93 @@
+/* Extras for the study-notes site: lecture cards, progress widget, print styles. */
+
+/* ---------- lecture card (top of every note) ---------------------------- */
+.md-typeset .lecture-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 0.2rem;
+  background: var(--md-code-bg-color);
+  padding: 0.6rem 0.9rem;
+  margin: 0 0 1.4rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.md-typeset .lecture-card p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- progress widget on the home page ---------------------------- */
+.md-typeset .progress-widget {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0 1.6rem;
+}
+
+.md-typeset .progress-bar {
+  height: 0.55rem;
+  background: var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.md-typeset .progress-bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--md-primary-fg-color);
+  transition: width 0.3s ease;
+}
+
+.md-typeset .progress-note {
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- clickable progress checkboxes ------------------------------- */
+.md-typeset .task-list-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.md-typeset .task-list-item.task-list-item--done {
+  opacity: 0.6;
+}
+
+/* ---------- print: cheat sheets and notes on paper ---------------------- */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer,
+  .md-search,
+  .md-skip,
+  .md-top,
+  .lecture-card,
+  .progress-note {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-content__inner {
+    padding: 0 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  h1, h2, h3 {
+    break-after: avoid;
+  }
+
+  pre, blockquote, table {
+    break-inside: avoid;
+  }
+}
