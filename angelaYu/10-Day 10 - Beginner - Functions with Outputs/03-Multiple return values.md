@@ -1,31 +1,58 @@
-# 🐍 Multiple return values
+Here is a structured breakdown of everything covered in this lesson on multiple return values.
 
 ---
 
-### Overview
+### 1. More Than One `return` Statement
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 10 - Beginner - Functions with Outputs
-**Lecture:** Multiple return values
-**Level:** Beginner
+A function can have several `return`s in different branches — but **only one ever runs**,
+because the first `return` executed ends the function:
 
----
+```python
+def format_name(f_name, l_name):
+    if f_name == "" or l_name == "":
+        return "You didn't provide valid inputs."   # early exit
+    return f"{f_name.title()} {l_name.title()}"     # normal path
+```
 
-### Summary
-
-In the last lesson, we looked at functions that return some sort of value, we created a function called format_name that returned a string, in this lesson, let&#x27;s see what happens when a function has more than one return statement. When the computer encounters a line that has the word return on it, then it knows that this line is the end of the function. If I add a line of code after the return keyword, notice what happens when I run this code. It doesn&#x27;t ever get executed, and this is because the return tells the computer that this is the end of the function, and you should now exit the function. You can actually have multiple return keywords within the same function, and you can even have an empty return keyword. So just the return keyword without anything afterwards. So for example, we could check whether if the f_name is equal to an empty string or the l_name is equal to an empty string. So in this case, it means that when we called format_name(), maybe we didn&#x27;t give it any inputs. For example, let&#x27;s say that instead of just calling the function as it is, we actually used the input() function. So, &quot;What is your first name?&quot; and &quot;What is your last name?&quot; Now what happens is it&#x27;ll ask us for an input and it will take these two inputs, and then call that function and return the formatted version to be printed. So now in this case, it&#x27;s possible that we might have just not given it a first name or not given it a last name, And it probably shouldn&#x27;t go through these lines of code, but at the moment it&#x27;s still running this function, trying to get the title case from the empty string and then printing it. And I can prove this to you by just adding an extra word in here. So again, empty first name, empty last name, and then it print&#x27;s result, and then, of course, nothing. How can we get it to bypass the rest of the code? If the user typed in an empty first name or last name? Well, we could use what I mentioned before an early return so we could just write return without anything afterwards, and this is going to escape the function. So it&#x27;s basically going to terminate the function early. Now this time if I leave an empty first name and last name, you&#x27;ll see it prints none because there is no output from this to print. Now, of course, it&#x27;s probably safer to actually return something that tells the developer what&#x27;s actually going on so we can give a meaningful message like return something like this. So this way we can catch the cases when something is not quite right, and then exit our function instead of wasting time for it to continue working on something that we don&#x27;t want it to do. We&#x27;ve covered a number of things in today&#x27;s lesson, and I want you to combine this with your existing knowledge to tackle the challenge in the next lesson to get to grips with this concept of functions with inputs and with outputs.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **input() function** | Introduced/used in this lecture |
+This is the standard pattern for **validating input**: bail out early with a message, or
+proceed to the main logic.
 
 ---
 
-### Next Steps
+### 2. Returning Several Values at Once
 
-In the last lesson, we looked at functions that return some sort of value, we created a function called format_name that returned a string, in this lesson, let&#x27;s see what happens when a function has more than one return statement. When the computer encounters a line that has the word return on it, then it knows that this line is the end of the function. If I add a line of code after the return keyword, notice what happens when I run this code. It doesn&#x27;t ever get executed, and this is because the return tells the computer that this is the end of the function, and you should now exit the function. You can actually have multiple return keywords within the same function, and you can even have an empty return keyword. So just the return keyword without anything afterwards. So for example, we could check whether if the f_name is equal to an empty string or the l_name is equal to an empty string. So in this case, it means that when we called format_name(), maybe we didn&#x27;t give it any inputs. For example, let&#x27;s say that instead of just calling the function as it is, we actually used the input() function. So, &quot;What is your first name?&quot; and &quot;What is your last name?&quot; Now what happens is it&#x27;ll ask us for an input and it will take these two inputs, and then call that function and return the formatted version to be printed. So now in this case, it&#x27;s possible that we might have just not given it a first name or not given it a last name, And it probably shouldn&#x27;t go through these lines of code, but at the moment it&#x27;s still running this function, trying to get the title case from the empty string and then printing it. And I can prove this to you by just adding an extra word in here. So again, empty first name, empty last name, and then it print&#x27;s result, and then, of course, nothing. How can we get it to bypass the rest of the code? If the user typed in an empty first name or last name? Well, we could use what I mentioned before an early return so we could just write return without anything afterwards, and this is going to escape the function. So it&#x27;s basically going to terminate the function early. Now this time if I leave an empty first name and last name, you&#x27;ll see it prints none because there is no output from this to print. Now, of course, it&#x27;s probably safer to actually return something that tells the developer what&#x27;s actually going on so we can give a meaningful message like return something like this. So this way we can catch the cases when something is not quite right, and then exit our function instead of wasting time for it to continue working on something that we don&#x27;t want it to do. We&#x27;ve covered a number of things in today&#x27;s lesson, and I want you to combine this with your existing knowledge to tackle the challenge in the next lesson to get to grips with this concept of functions with inputs and with outputs.
+Python functions can return **multiple values** as a tuple, unpacked on arrival:
+
+```python
+def get_coordinates():
+    x = 10
+    y = 20
+    return x, y
+
+px, py = get_coordinates()   # px = 10, py = 20
+```
+
+---
+
+### 3. Days of the Week Exercise
+
+```python
+def days_in_month(month, year):
+    if month > 12 or month < 1:
+        return "Invalid month"
+    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    if month == 2 and is_leap(year):
+        return 29
+    return month_days[month - 1]
+```
+
+* Early `return` handles the invalid case.
+* The final `return` answers the normal case.
+
+---
+
+### Summary Checklist
+
+1. Multiple `return`s = multiple exit points; the first one hit wins.
+2. Early return is the classic validation pattern.
+3. `return a, b` returns a tuple; `x, y = f()` unpacks it.

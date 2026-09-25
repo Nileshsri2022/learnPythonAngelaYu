@@ -1,26 +1,45 @@
-# 📖 Python Typing: Type Hints and Arrows ->
+Here is a structured breakdown of this lesson on type hints and arrows.
 
 ---
 
-### Overview
+### 1. The Syntax
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 34 - Intermediate+ API Practice - Creating a GUI Quiz App
-**Lecture:** Python Typing: Type Hints and Arrows ->
-**Level:** Intermediate+ API Practice
+```python
+def greet(name: str) -> str:
+    return f"Hello, {name}"
+
+def add(a: int, b: int) -> int:
+    return a + b
+
+age: int = 25                  # variable annotation
+scores: list[float] = [9.0, 8.5]
+```
+
+* **Parameter hint:** `name: str` — colon after the name.
+* **Return hint:** `-> str` — arrow before the colon ending the signature.
+* Hints are **not enforced** at runtime — `greet(5)` still runs — they are documentation
+  that editors, linters and type checkers (mypy) use.
+
+---
+
+### 2. Why Bother in Python?
+
+Dynamic typing (Day 28) trades safety for speed; hints give the safety back:
+
+* Autocomplete knows what methods exist on a parameter.
+* Bugs like passing a string into `count - 1` are flagged *before* running.
+* Function signatures become self-documenting.
+
+```python
+def check_answer(self, user_answer: str, correct_answer: str) -> bool:
+```
+
+reads instantly — no docstring needed to know what goes in and out.
 
 ---
 
-### Summary
+### Summary Checklist
 
-A long time ago, we&#x27;ve talked about Python data types. So the data types that we&#x27;ve been working with include things like integers, strings, floating point numbers and booleans. And we&#x27;ve seen how you can interchange between different data types by casting. And we&#x27;ve also seen that in Python, the data types are flexible. So you could create a variable and then change its data type later on. This is known as dynamic typing. Now I want to show you another thing that you can do with data types to make your code less error prone. Let&#x27;s say that we were to create a variable, for example, a variable called age. Now, normally we would set it with an equal sign. But you can also simply declare its data type and then leave it as is. So this means that later on, at some point, once you&#x27;ve actually gotten the age of from the user or you&#x27;ve worked it out, then at that point, you can set it. And this age now has to match the data type over here. So for example, if I was to change this to 12 using a string, then you can see that my PyCharm, my IDE, is now being very helpful in telling me that this age thing ages ago when you created it, you said it should be an integer. Instead, I got a string. So this is quite helpful. You can do this with all of the basic data types. So for example, age is an int, name is a string, height is a float and is_human is a boolean. Now we can also specify the data type inside a function. So for example, if I was to create a function here called a police_check and it took the age as an input, and then inside the police_check function, I would check well, if the age is over 18, then maybe we would have some sort of variable called can_drive and we could set that to true. But otherwise, we can set that to false right? Now, we&#x27;re going to return this as the output. So now at some point we can call our police_check function, pass in the age and if we print this out, you can see that it&#x27;s going to give me false for age 12. And if I decide to say I&#x27;m 19, well, then we get true. We can actually use the output from this function to create a print statement, for example. So if the police check passes, then the policeman tells you, you may pass. Otherwise you might have to pay a fine or spend a night in jail. So this is our function and if we were to use this function police_check at some point way down the line where we&#x27;ve forgotten what we created for this function and we can&#x27;t look it up very easily without scrolling up hundreds of lines of code, now, if at this point we&#x27;ve mistaken the input type and we put in, for example, 12 as a string, then this is actually going to give us a type error and it throws an exception crashing our app. One of the ways that we can make our lives a little bit easier is by declaring a type for this input. So we do it in the same way as you see above. We can add a colon and then we can specify the data type of this particular input. So now when we actually write this line of code, you can see immediately we get this part highlighted. And if I hover over it, it tells me that this input expected a datatype that&#x27;s an integer and instead I gave it a string. So this is a quick hint for us to fix our code before we even run it and get into trouble and create bugs. In addition, you can also specify the data type of the output of a function, and you do that by creating a little arrow with a hyphen and an angle bracket. So now we can say that this particular function is expected to return a boolean data type. And my return statement does in fact comply with this because can_drive can only be true or false. Now, if I forget that this is what I need and at some point I return let&#x27;s say a string, then also I&#x27;m getting this warning highlight here. And when I hover over it again, it&#x27;s expecting a boolean but instead I&#x27;m giving it a string. This is known as a type hint in Python. And it is a feature that we got relatively recently from Python and it has a lot of benefits especially when you want your IDE, for example PyCharm, to help you spot potential bugs and keep your code safer and spend less time debugging and more time writing code. So we&#x27;ve seen how we can declare a data type for a variable like this and we&#x27;ve also seen how we can declare data type for the return type like this. That&#x27;s all there is to it.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
+1. `param: type` in, `-> type` out.
+2. Hints = documentation + editor checks, not runtime enforcement.
+3. Annotate public functions first — that's where readers live.

@@ -22,10 +22,18 @@ angelaYu/
     └── _full-transcript.txt  # Complete concatenated transcript
 ```
 
-**Lecture notes** (367 `.md` files) are structured study notes with overview,
-summary, key concepts table, and detailed notes — derived from the raw
-transcripts. **Transcripts** (604 `.txt` files) are the verbatim word-for-word
-text of each lecture.
+**Lecture notes** are proper structured study notes in the style of the
+[learnAndroidDev](https://github.com/Nileshsri2022/learnAndroidDev) repo — one heading per
+concept, syntax-highlighted **code blocks**, bullet-point explanations, tips and a
+**Summary Checklist** at the end of every note. **Days 1–5 are fully rewritten** in this
+style (more days are being converted progressively; later days still contain the older
+transcript-style notes until their turn comes).
+
+Each day folder also contains **runnable project code** (`.py`) for that day's final
+project — e.g. `band_name_generator.py`, `rock_paper_scissors.py`, `password_generator.py`.
+
+**Transcripts** (604 `.txt` files) remain under `angelaYu/transcripts/` as the verbatim
+word-for-word reference text of each lecture.
 
 ## Topics covered
 

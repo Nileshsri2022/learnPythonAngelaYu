@@ -1,37 +1,33 @@
-# 🔧 Turtle Challenge 2 - Draw a Dashed Line
+Here is a structured breakdown of Turtle Challenge 2 — drawing a dashed line.
 
 ---
 
-### Overview
+### 1. The Task
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 18 - Intermediate - Turtle & the Graphical User Interface (GUI)
-**Lecture:** Turtle Challenge 2 - Draw a Dashed Line
-**Level:** Intermediate
+A dashed line: alternate between **drawing** and **moving without drawing**.
 
 ---
 
-### Summary
+### 2. The Solution
 
-All right. Onwards to the next turtle challenge. So this one is going to be a little bit more intensive, but still a bit of a warmup. So we&#x27;re just going to go for a light jog and we&#x27;re going to draw a dashed line. You&#x27;re going to get your turtle to draw a line like this where it&#x27;s going to draw a line for 10 paces and then a gap of 10 paces, and then a solid line for 10 paces again and it&#x27;s going to repeat this until it does this 50 times. The actual length of the line doesn&#x27;t really matter, the actual length of each of the sections doesn&#x27;t really matter. What&#x27;s really important is you&#x27;re able to get this alternating draw- no-draw thing going on. To complete this challenge you&#x27;re going to need to look through the documentation and maybe also use the help of Google or Stack Overflow and figure out how you can get this behavior to happen. Have a think about it and pause the video and complete the challenge. All right. So if we look through the table of contents here, we can see that the thing that controls the pen is in this section. We can control it&#x27;s drawing, color, filling and more. Now if we look at the drawing control you can see we can get it to pen down and pen up. When we pull the pen down, that means the pen is on the paper and it&#x27;s going to make a mark. But when the pen is pulled up, then there&#x27;s going to be no drawing happening when our turtle is moving. That means we can write some sort of loop, right? Where we get our turtle to move forwards by 10 paces and then we can get this to pull the pen up. And what this is going to do is allow us to move forwards without drawing. So now, while the pen is held up we&#x27;re going to go forwards. Once more another 10 paces this is going to draw the blank. And then finally, we&#x27;re gonna go ahead and put the pen down again. So now, all we need is for these four steps to repeat 15 times so we can write a for loop and then create a range that goes from 0 to 15. And then once we indent this block inside the for loop and run our code, then you can see it draw our dashed line. Did you manage to get this solution? Did you manage to find the relevant part of the documentation to be able to pull the pen up and put the pen down, or did you simply change your code so that it drew black and then it drew white? All of these solutions would work, but what I really wanted you to do is to dig through the documentation and find the parts which will help you to achieve your goals. Head over to the next lesson and I&#x27;ve got another slightly harder challenge for you.
+```python
+for _ in range(15):
+    timmy.forward(10)
+    timmy.penup()
+    timmy.forward(10)
+    timmy.pendown()
+```
 
----
+* `penup()` — lift the pen: moves leave no trace.
+* `pendown()` — lower it: drawing resumes.
 
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-All right. Onwards to the next turtle challenge. So this one is going to be a little bit more intensive, but still a bit of a warmup. So we&#x27;re just going to go for a light jog and we&#x27;re going to draw a dashed line. You&#x27;re going to get your turtle to draw a line like this where it&#x27;s going to draw a line for 10 paces and then a gap of 10 paces, and then a solid line for 10 paces again and it&#x27;s going to repeat this until it does this 50 times. The actual length of the line doesn&#x27;t really matter, the actual length of each of the sections doesn&#x27;t really matter. What&#x27;s really important is you&#x27;re able to get this alternating draw- no-draw thing going on. To complete this challenge you&#x27;re going to need to look through the documentation and maybe also use the help of Google or Stack Overflow and figure out how you can get this behavior to happen. Have a think about it and pause the video and complete the challenge. All right. So if we look through the table of contents here, we can see that the thing that controls the pen is in this section. We can control it&#x27;s drawing, color, filling and more. Now if we look at the drawing control you can see we can get it to pen down and pen up. When we pull the pen down, that means the pen is on the paper and it&#x27;s going to make a mark. But when the pen is pulled up, then there&#x27;s going to be no drawing happening when our turtle is moving. That means we can write some sort of loop, right? Where we get our turtle to move forwards by 10 paces and then we can get this to pull the pen up. And what this is going to do is allow us to move forwards without drawing. So now, while the pen is held up we&#x27;re going to go forwards. Once more another 10 paces this is going to draw the blank. And then finally, we&#x27;re gonna go ahead and put the pen down again. So now, all we need is for these four steps to repeat 15 times so we can write a for loop and then create a range that goes from 0 to 15. And then once we indent this block inside the for loop and run our code, then you can see it draw our dashed line. Did you manage to get this solution? Did you manage to find the relevant part of the documentation to be able to pull the pen up and put the pen down, or did you simply change your code so that it drew black and then it drew white? All of these solutions would work, but what I really wanted you to do is to dig through the documentation and find the parts which will help you to achieve your goals. Head over to the next lesson and I&#x27;ve got another slightly harder challenge for you.
+The penup/pendown pair is how *all* gap effects work (and later, jumping around the
+canvas without leaving lines).
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-All right. Onwards to the next turtle challenge. So this one is going to be a little bit more intensive, but still a bit of a warmup. So we&#x27;re just going to go for a light jog and we&#x27;re going to draw a dashed line. You&#x27;re going to get your turtle to draw a line like this where it&#x27;s going to draw a line for 10 paces and then a gap of 10 paces, and then a solid line for 10 paces again and it&#x27;s going to repeat this until it does this 50 times. The actual length of the line doesn&#x27;t really matter, the actual length of each of the sections doesn&#x27;t really matter. What&#x27;s really important is you&#x27;re able to get this alternating draw- no-draw thing going on. To complete this challenge you&#x27;re going to need to look through the documentation and maybe also use the help of Google or Stack Overflow and figure out how you can get this behavior to happen. Have a think about it and pause the video and complete the challenge. All right. So if we look through the table of contents here, we can see that the thing that controls the pen is in this section. We can control it&#x27;s drawing, color, filling and more. Now if we look at the drawing control you can see we can get it to pen down and pen up. When we pull the pen down, that means the pen is on the paper and it&#x27;s going to make a mark. But when the pen is pulled up, then there&#x27;s going to be no drawing happening when our turtle is moving. That means we can write some sort of loop, right? Where we get our turtle to move forwards by 10 paces and then we can get this to pull the pen up. And what this is going to do is allow us to move forwards without drawing. So now, while the pen is held up we&#x27;re going to go forwards. Once more another 10 paces this is going to draw the blank. And then finally, we&#x27;re gonna go ahead and put the pen down again. So now, all we need is for these four steps to repeat 15 times so we can write a for loop and then create a range that goes from 0 to 15. And then once we indent this block inside the for loop and run our code, then you can see it draw our dashed line. Did you manage to get this solution? Did you manage to find the relevant part of the documentation to be able to pull the pen up and put the pen down, or did you simply change your code so that it drew black and then it drew white? All of these solutions would work, but what I really wanted you to do is to dig through the documentation and find the parts which will help you to achieve your goals. Head over to the next lesson and I&#x27;ve got another slightly harder challenge for you.
+1. Dashes = forward, penup, forward, pendown, repeat.
+2. `penup()`/`pendown()` toggle the drawing state.
+3. Loop body = one full dash+gap unit.

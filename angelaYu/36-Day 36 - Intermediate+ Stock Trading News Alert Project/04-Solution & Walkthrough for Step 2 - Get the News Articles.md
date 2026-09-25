@@ -1,32 +1,41 @@
-# 📖 Solution & Walkthrough for Step 2 - Get the News Articles
+Here is a structured walkthrough of Step 2 — getting the news articles.
 
 ---
 
-### Overview
+### 1. The Branch
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 36 - Intermediate+ Stock Trading News Alert Project
-**Lecture:** Solution & Walkthrough for Step 2 - Get the News Articles
-**Level:** N/A
+Only spend a NewsAPI call when the move is significant:
 
----
-
-### Summary
-
-In the first part of the solution, we managed to get our code to pull in the live stock data for the selected stock name. And then we looked at the difference in price between yesterday and the day before yesterday and then we worked out the percentage difference. Now we have this if statement which will print get news if the percentage difference is greater than a specified amount. Now, I&#x27;ve put right five here, just because ideally, if you were monitoring a particular stock, you&#x27;d probably only be interested if it changed by a large amount, like 5 or 10 or 50% set by you. But at the moment, because we&#x27;re testing these things and the Tesla stock is only moved by one point something percent, then this is actually never going to be true. So I&#x27;m going to manually adjust this down so that we can continue working with the rest of the challenge. So now onto step two of the challenge, the first part is instead of printing get news, we&#x27;re going to use the news API to get articles related to the company name. The news API is newsapi.org. And we can start by getting hold of an API key. Once you signed up, you should get a free API key and we&#x27;re going to paste that into our project. Now we can start looking through the documentation and seeing how we can use this news API. There&#x27;s a number of end points as we can see. There&#x27;s top headlines and also everything. These are the two main end points. Now everything is better for article discovery whereas the headlines tend to only have a limited number of headlines. I&#x27;ve tested both of these and I found that the everything one is more likely to give us a news piece for stocks that we&#x27;re looking for. Because very often a lot of these companies and their stocks don&#x27;t actually make it to the day&#x27;s headlines. So this is what the query looks like, this is the end point, and these are the parameters. Now, if we scroll down, we can see a number of request parameters; q which is the keyword or phrase the same in the article title and body, qIn Title is to search for in the title only, and then you can limit the sources or the domains which you want to search or exclude certain websites and you can also specify the date, time, language, and a number of other things. Now, the only required parameter is actually this API key. Now, in addition, we&#x27;re probably gonna want to use one of these requests parameters. There&#x27;s a lot of stocks that get lumped in into these analysis articles. So I think it will be more specific if we can actually check the title of the article for our company name. So let&#x27;s get started putting this API to use. Up here we&#x27;ve really got the news end point, and we&#x27;re going to delete this print statement, and we&#x27;re going to use the requests library to get hold of some data from that endpoint. And then we&#x27;re going to add our params. Our new params is firstly going to contain our API key and notice how it&#x27;s spelled. When you are using parameters, you have to make sure that any capitalization or spelling must match their requirements exactly. So the API key is just going to be our news API key that we added previously, and then we&#x27;re going to provide a queryInTitle as well. And I&#x27;m actually just going to straight up copy it because I&#x27;m not sure if that was an I or an L. That way we don&#x27;t make any typos. Now, the query we&#x27;re going to search for is actually our company name, because while we can search for the name of the stock, it&#x27;s actually better to search for the company name because most articles tend to include the company name rather than the stock name. This is going to be the params that&#x27;s going to go in here. Now we&#x27;re going to get hold of our response and I&#x27;m going to print out the response as a JSON. All right. If you take a look at the documentation, they also tell you what an example output would look like. Firstly, we have a dictionary with status, total results, but most importantly articles, which is a list. In that list there&#x27;s a bunch of dictionaries which contains things like the source, the author, the title, description, and each of these articles are an item in this list of articles. We can actually get hold of all the articles just by tapping into the news_response.json and then passing in the key articles. And now when I print that out, you can see its a list first of all, and then each article is a dictionary inside that list. Now we&#x27;ve managed to complete to-do number six and we can move on to to-do number seven, which is to use the Python slice operator to create a list that contains the first three articles. And as a hint, I&#x27;ve linked to the Stack Overflow page where they go through the slice operator in quite a bit of detail actually. If we want to only get the first three articles, then our start is probably going to be from the beginning and then we&#x27;re going to loop to stop minus one. So that&#x27;s going to be :3 because let&#x27;s start counting from zero. Like that. And now if I print these three articles, right, to see them, if you click on this soft wrap and you can see the three items, one, two, and three. That&#x27;s step two. Now we&#x27;ve managed to use the news API to get hold of the first three articles that talk about this particular company name. In the next lesson I&#x27;m going to go through the final part of the solution which is step three, and to figure out how to send the relevant parts of the articles to our mobile number.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **JSON data handling** | Introduced/used in this lecture |
+```python
+if abs(diff_percent) > 5:
+    news_params = {
+        "apiKey": NEWS_API_KEY,
+        "qInTitle": COMPANY_NAME,
+    }
+    news_response = requests.get("https://newsapi.org/v2/everything", params=news_params)
+    news_response.raise_for_status()
+    articles = news_response.json()["articles"][:3]   # top 3
+```
 
 ---
 
-### Next Steps
+### 2. Shaping the Messages
 
-In the first part of the solution, we managed to get our code to pull in the live stock data for the selected stock name. And then we looked at the difference in price between yesterday and the day before yesterday and then we worked out the percentage difference. Now we have this if statement which will print get news if the percentage difference is greater than a specified amount. Now, I&#x27;ve put right five here, just because ideally, if you were monitoring a particular stock, you&#x27;d probably only be interested if it changed by a large amount, like 5 or 10 or 50% set by you. But at the moment, because we&#x27;re testing these things and the Tesla stock is only moved by one point something percent, then this is actually never going to be true. So I&#x27;m going to manually adjust this down so that we can continue working with the rest of the challenge. So now onto step two of the challenge, the first part is instead of printing get news, we&#x27;re going to use the news API to get articles related to the company name. The news API is newsapi.org. And we can start by getting hold of an API key. Once you signed up, you should get a free API key and we&#x27;re going to paste that into our project. Now we can start looking through the documentation and seeing how we can use this news API. There&#x27;s a number of end points as we can see. There&#x27;s top headlines and also everything. These are the two main end points. Now everything is better for article discovery whereas the headlines tend to only have a limited number of headlines. I&#x27;ve tested both of these and I found that the everything one is more likely to give us a news piece for stocks that we&#x27;re looking for. Because very often a lot of these companies and their stocks don&#x27;t actually make it to the day&#x27;s headlines. So this is what the query looks like, this is the end point, and these are the parameters. Now, if we scroll down, we can see a number of request parameters; q which is the keyword or phrase the same in the article title and body, qIn Title is to search for in the title only, and then you can limit the sources or the domains which you want to search or exclude certain websites and you can also specify the date, time, language, and a number of other things. Now, the only required parameter is actually this API key. Now, in addition, we&#x27;re probably gonna want to use one of these requests parameters. There&#x27;s a lot of stocks that get lumped in into these analysis articles. So I think it will be more specific if we can actually check the title of the article for our company name. So let&#x27;s get started putting this API to use. Up here we&#x27;ve really got the news end point, and we&#x27;re going to delete this print statement, and we&#x27;re going to use the requests library to get hold of some data from that endpoint. And then we&#x27;re going to add our params. Our new params is firstly going to contain our API key and notice how it&#x27;s spelled. When you are using parameters, you have to make sure that any capitalization or spelling must match their requirements exactly. So the API key is just going to be our news API key that we added previously, and then we&#x27;re going to provide a queryInTitle as well. And I&#x27;m actually just going to straight up copy it because I&#x27;m not sure if that was an I or an L. That way we don&#x27;t make any typos. Now, the query we&#x27;re going to search for is actually our company name, because while we can search for the name of the stock, it&#x27;s actually better to search for the company name because most articles tend to include the company name rather than the stock name. This is going to be the params that&#x27;s going to go in here. Now we&#x27;re going to get hold of our response and I&#x27;m going to print out the response as a JSON. All right. If you take a look at the documentation, they also tell you what an example output would look like. Firstly, we have a dictionary with status, total results, but most importantly articles, which is a list. In that list there&#x27;s a bunch of dictionaries which contains things like the source, the author, the title, description, and each of these articles are an item in this list of articles. We can actually get hold of all the articles just by tapping into the news_response.json and then passing in the key articles. And now when I print that out, you can see its a list first of all, and then each article is a dictionary inside that list. Now we&#x27;ve managed to complete to-do number six and we can move on to to-do number seven, which is to use the Python slice operator to create a list that contains the first three articles. And as a hint, I&#x27;ve linked to the Stack Overflow page where they go through the slice operator in quite a bit of detail actually. If we want to only get the first three articles, then our start is probably going to be from the beginning and then we&#x27;re going to loop to stop minus one. So that&#x27;s going to be :3 because let&#x27;s start counting from zero. Like that. And now if I print these three articles, right, to see them, if you click on this soft wrap and you can see the three items, one, two, and three. That&#x27;s step two. Now we&#x27;ve managed to use the news API to get hold of the first three articles that talk about this particular company name. In the next lesson I&#x27;m going to go through the final part of the solution which is step three, and to figure out how to send the relevant parts of the articles to our mobile number.
+```python
+formatted_articles = [
+    f"{STOCK_NAME}: {up_down}{diff_percent}%\n"
+    f"Headline: {article['title']}.\n"
+    f"Brief: {article['description']}"
+    for article in articles
+]
+```
+
+* A list comprehension (Day 26) builds one alert string per article — each includes the
+  stock line so every SMS is self-contained.
+
+---
+
+### Summary Checklist
+
+1. Threshold branch → fetch → take 3 articles.
+2. Comprehension formats stock + headline + brief per message.

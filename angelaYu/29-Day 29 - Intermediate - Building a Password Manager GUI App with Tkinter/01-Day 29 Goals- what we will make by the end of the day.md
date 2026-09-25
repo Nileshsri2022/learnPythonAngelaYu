@@ -1,31 +1,34 @@
-# 🔧 Day 29 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 29 goals and the project you'll build.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 29
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 29 - Intermediate - Building a Password Manager GUI App with Tkinter
-**Lecture:** Day 29 Goals: what we will make by the end of the day
-**Level:** Intermediate
-
----
-
-### Summary
-
-Hey guys, welcome to 100 Days of Code. And today we are on day 29, where we&#x27;re going to be building a password manager. So we&#x27;re going to be doing this using tkinter. And the real inspiration for this project came about because I was trying to register for a website where it asked for a password that was just insanely complicated, something along these lines, or it has to be really long. It has to include lots of different things, it can&#x27;t match your previous passwords. It just has a whole bunch of rules and I really struggled coming up with a password that actually match all of their requirements. And by the time that I came up with it, I&#x27;ve already forgotten what the password was. One of my favorite blogs is Coding Horror by a guy called Jeff Atwood. And you might not know him by name, but you will actually have used something that he&#x27;s made. He is one of the founders and original creators Stack Overflow which I&#x27;m sure by now you&#x27;re well familiar with. And even he was talking about how password rules are just really terrible. They&#x27;re so long and they&#x27;re so complicated and they&#x27;ve even inspired a really good XKCD comic, which essentially tells the truth that through 20 years of effort, we&#x27;ve successfully trained everyone to use passwords that are hard for humans to remember but easy for computers to guess. This is the crazy state of things. So we&#x27;re going to be creating a program to combat that. And it&#x27;s going to be called MyPass, our password manager, and we&#x27;re going to use it to store and generate passwords. For example, if I wanted to create an account on App Brewery, then I enter the name of the website so that I know what this password is for, I put in my email, and username is already prepopulated in my password manager. And then all I have to do is to either come up with a password that is hopefully not terrible, but I can obviously never remember, or I can use the builtin generate password to just generate me a very complex, very long password with all of the required numbers and symbols and all of that. And once I&#x27;m done with that, then I can click add, and I get a popup asking me if this is okay. And if that all looks good, then I click Yes and that data gets added to a text file, which I have on my computer. So this is not an internet-based service and you keep everything locally on your computer, which some people feel is a lot safer than using a third-party service like LastPass or whatever else. So this is what we&#x27;re trying to build and it&#x27;s got some really neat features. For example, it&#x27;s got some basic validations. So if you, for example, leave one of the fields empty and you click add, you get a popup that tells you, please don&#x27;t leave any of the fields empty. Or if you generate a password, then you can actually immediately use it by pasting it. What&#x27;s happening behind the scenes is as soon as I click on generate password, then my password is saved onto my clipboard and I can paste it into the password field on the website I&#x27;m trying to sign up for. This is what we&#x27;re going to be building today. And it&#x27;s going to use everything you&#x27;ve learned about tkinter and we&#x27;re going to be learning some new things that you can do with tkinter as well. Once you&#x27;re ready, head over to the next lesson and let&#x27;s get started.
+* Canvas-based **logo** in Tkinter
+* `grid()` + **`columnspan`** for the form layout
+* **Saving form data** to a file
+* **Dialog boxes** (`messagebox`) for warnings and confirmations
+* Password generation + **copy to clipboard**
 
 ---
 
-### Key Concepts
+### 2. The Project: Password Manager
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Tkinter GUI framework** | Introduced/used in this lecture |
+```
+[logo]
+Website: [___________]           [Generate Password]
+Email/Username: [___________]
+Password: [___________]          [Add]
+```
+
+* **Add** appends `website | email | password` to `data.txt` (Day 30 upgrades it to JSON).
+* **Generate Password** creates a random strong password and puts it on the clipboard.
+* Missing fields trigger a warning dialog.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey guys, welcome to 100 Days of Code. And today we are on day 29, where we&#x27;re going to be building a password manager. So we&#x27;re going to be doing this using tkinter. And the real inspiration for this project came about because I was trying to register for a website where it asked for a password that was just insanely complicated, something along these lines, or it has to be really long. It has to include lots of different things, it can&#x27;t match your previous passwords. It just has a whole bunch of rules and I really struggled coming up with a password that actually match all of their requirements. And by the time that I came up with it, I&#x27;ve already forgotten what the password was. One of my favorite blogs is Coding Horror by a guy called Jeff Atwood. And you might not know him by name, but you will actually have used something that he&#x27;s made. He is one of the founders and original creators Stack Overflow which I&#x27;m sure by now you&#x27;re well familiar with. And even he was talking about how password rules are just really terrible. They&#x27;re so long and they&#x27;re so complicated and they&#x27;ve even inspired a really good XKCD comic, which essentially tells the truth that through 20 years of effort, we&#x27;ve successfully trained everyone to use passwords that are hard for humans to remember but easy for computers to guess. This is the crazy state of things. So we&#x27;re going to be creating a program to combat that. And it&#x27;s going to be called MyPass, our password manager, and we&#x27;re going to use it to store and generate passwords. For example, if I wanted to create an account on App Brewery, then I enter the name of the website so that I know what this password is for, I put in my email, and username is already prepopulated in my password manager. And then all I have to do is to either come up with a password that is hopefully not terrible, but I can obviously never remember, or I can use the builtin generate password to just generate me a very complex, very long password with all of the required numbers and symbols and all of that. And once I&#x27;m done with that, then I can click add, and I get a popup asking me if this is okay. And if that all looks good, then I click Yes and that data gets added to a text file, which I have on my computer. So this is not an internet-based service and you keep everything locally on your computer, which some people feel is a lot safer than using a third-party service like LastPass or whatever else. So this is what we&#x27;re trying to build and it&#x27;s got some really neat features. For example, it&#x27;s got some basic validations. So if you, for example, leave one of the fields empty and you click add, you get a popup that tells you, please don&#x27;t leave any of the fields empty. Or if you generate a password, then you can actually immediately use it by pasting it. What&#x27;s happening behind the scenes is as soon as I click on generate password, then my password is saved onto my clipboard and I can paste it into the password field on the website I&#x27;m trying to sign up for. This is what we&#x27;re going to be building today. And it&#x27;s going to use everything you&#x27;ve learned about tkinter and we&#x27;re going to be learning some new things that you can do with tkinter as well. Once you&#x27;re ready, head over to the next lesson and let&#x27;s get started.
+1. Three challenges (canvas, grid, save data) + two new Tkinter powers (dialogs,
+   clipboard).
+2. The course's own Day 5 password generator returns as a feature.

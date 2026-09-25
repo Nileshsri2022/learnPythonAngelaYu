@@ -1,32 +1,28 @@
-# 🔧 Day 28 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 28 goals and the project you'll have built by the end of the day.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 28
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 28 - Intermediate - Tkinter, Dynamic Typing and the Pomodoro GUI Application
-**Lecture:** Day 28 Goals: what we will make by the end of the day
-**Level:** Intermediate
-
----
-
-### Summary
-
-Hey guys, welcome to day 28 of 100 Days of Code. Today we&#x27;re going to be building a Pomodora app completely from scratch using tkinter and the knowledge that we gained from yesterday&#x27;s lessons. Now you&#x27;ve already heard me talk about the Pomodoro technique, this famous book by Francesco Cirillo, Cirillo. This famous technique that helps people time-manage and to get more stuff done. Now, if you didn&#x27;t hear me talk about it, this is basically a very simple breakdown. Essentially, you figure out the task that you need to do something hard, something that takes a while like writing your next book or coding up a project. And then you want to set your timer to the 25 minutes and then work on the task for 25 minutes. And then after that, you take a short five-minute break. And after you&#x27;ve done four of these Pomodoros, basically four repetition, then you get to take a 15 to 30 minute break. So this basically really effectively utilizes the way that our brain works to take short breaks often and to work for 25 minutes at a time, which helps us with information retention and also keeping up the motivation. This is the program that we&#x27;re going to be building using tkinter. It&#x27;s going to be a timer with a tomato on it. And when you click start, it&#x27;s going to tell you to work for 25 minutes. Then that window can go into the background and while you&#x27;re writing your code or doing whatever, when the timer&#x27;s up, it will pop to the very front of the screen above all of the other windows and tell you to take a break. So the first break is for five minutes and you&#x27;ll notice here, we&#x27;ve already achieved one check mark for our first Pomodoro completed. And once you&#x27;re done with the break, then it&#x27;s going to go back to work and it&#x27;s going to continue until you reach the longer break or until you click reset to stop and reset the timer. Effectively, it&#x27;s going to help you do these Pomodoros where you have 25-minute work, 5-minute break. You do four of these 25-minute work sessions, and then you get a 20-minute break. So hopefully by creating this program, you&#x27;re going to increase your productivity and you&#x27;re going to have your own handy tool to help you achieve more and do more. So this is what we&#x27;re going to be building. Once you&#x27;re ready, head over to the next lesson and let&#x27;s get started.
+* The **Canvas** widget — images and text on a drawn background
+* **Countdown mechanics** — `window.after()` for non-blocking timers
+* **Dynamic typing** — how Python's types work at runtime (and how to tame them)
 
 ---
 
-### Key Concepts
+### 2. The Project: Pomodoro Timer
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 3 | **Tkinter GUI framework** | Introduced/used in this lecture |
+The productivity technique: 25 min work → 5 min break → repeat, with a longer break every
+4th round. The app:
+
+* Tomato timer face (image on canvas) counting down `MM:SS`.
+* **Start / Reset** buttons; checkmarks ✔ show completed work sessions.
+* Sessions alternate work/break automatically, colour-coded.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey guys, welcome to day 28 of 100 Days of Code. Today we&#x27;re going to be building a Pomodora app completely from scratch using tkinter and the knowledge that we gained from yesterday&#x27;s lessons. Now you&#x27;ve already heard me talk about the Pomodoro technique, this famous book by Francesco Cirillo, Cirillo. This famous technique that helps people time-manage and to get more stuff done. Now, if you didn&#x27;t hear me talk about it, this is basically a very simple breakdown. Essentially, you figure out the task that you need to do something hard, something that takes a while like writing your next book or coding up a project. And then you want to set your timer to the 25 minutes and then work on the task for 25 minutes. And then after that, you take a short five-minute break. And after you&#x27;ve done four of these Pomodoros, basically four repetition, then you get to take a 15 to 30 minute break. So this basically really effectively utilizes the way that our brain works to take short breaks often and to work for 25 minutes at a time, which helps us with information retention and also keeping up the motivation. This is the program that we&#x27;re going to be building using tkinter. It&#x27;s going to be a timer with a tomato on it. And when you click start, it&#x27;s going to tell you to work for 25 minutes. Then that window can go into the background and while you&#x27;re writing your code or doing whatever, when the timer&#x27;s up, it will pop to the very front of the screen above all of the other windows and tell you to take a break. So the first break is for five minutes and you&#x27;ll notice here, we&#x27;ve already achieved one check mark for our first Pomodoro completed. And once you&#x27;re done with the break, then it&#x27;s going to go back to work and it&#x27;s going to continue until you reach the longer break or until you click reset to stop and reset the timer. Effectively, it&#x27;s going to help you do these Pomodoros where you have 25-minute work, 5-minute break. You do four of these 25-minute work sessions, and then you get a 20-minute break. So hopefully by creating this program, you&#x27;re going to increase your productivity and you&#x27;re going to have your own handy tool to help you achieve more and do more. So this is what we&#x27;re going to be building. Once you&#x27;re ready, head over to the next lesson and let&#x27;s get started.
+1. Canvas = free-form drawing area; images and text live on it.
+2. `after(ms, fn)` schedules callbacks without freezing the UI.
+3. Dynamic typing pitfalls (int ↔ str) appear the moment a timer displays itself.

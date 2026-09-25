@@ -1,30 +1,45 @@
-# 🐍 Hint 4 & 5 Solution Walkthrough
+Here is a structured walkthrough of Blackjack Hints 4 & 5 — dealing the first cards.
 
 ---
 
-### Overview
+### 1. Hint 4: Create a `deal_card()` Function
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 11 - Beginner - The Blackjack Capstone Project
-**Lecture:** Hint 4 & 5 Solution Walkthrough
-**Level:** Beginner
+Uses the `random` module to return one card from the deck:
+
+```python
+import random
+
+def deal_card():
+    """Returns a random card from the deck."""
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    return random.choice(cards)
+```
+
+Note it **returns** the card (Day 10) rather than printing it — the caller decides
+where the card goes.
+
+---
+
+### 2. Hint 5: Deal Two Cards to Each Player
+
+Lists collect the hands:
+
+```python
+user_cards = []
+computer_cards = []
+
+for _ in range(2):
+    user_cards.append(deal_card())
+    computer_cards.append(deal_card())
+```
+
+`for _ in range(2)` — the underscore says the loop variable isn't used; we just want
+**two iterations**.
 
 ---
 
-### Summary
+### Summary Checklist
 
-All right. So how did that go? I hope it went really well, and you&#x27;ve managed to complete it all by yourself. If you got stuck, I really recommend just having a sandwich, have a cup of tea, take a break, and then come back to it. You&#x27;d be surprised what your brain can do when it just has a little bit of rest. But I want you to make sure that you&#x27;ve really given it a proper go before you come here and watch the solution, because I&#x27;m going to walk you through the solution step by step in case there are little bits or something that you didn&#x27;t understand, or something that you want to check. But I really, really hope that you&#x27;ve managed to tackle most of this yourself. All right, so without further ado, let&#x27;s get started coding up our Blackjack Project. Hopefully you&#x27;ve already used, Hints 1, 2 or 3. And I&#x27;m going to get started with Hint 4 and build up our Blackjack project step by step. Now the idea of the Hint 1, 2, and 3 is to get you to create these small TODOs of your own so that you can have practice breaking down the problem into a list, and then breaking it down into a flowchart, and then breaking it down into smaller, bite-sized TODOs. So let&#x27;s start out with the first one. We have to create a deal_card() function that uses the list below to return a random card, and 11 is going to be the Ace in this deck. So let&#x27;s get started. And we&#x27;re going to go and create our deal_card() function. Now this function is going to contain these cards, so I&#x27;m going to go ahead and paste it in, make sure it&#x27;s indented. So it&#x27;s inside the function. And now I&#x27;m going to use these cards to randomly pick one out of this list. So to do that we can of course import our Random Module. And then I&#x27;m going to use random.choice() to pick a random card from my list of cards. And then this of course has an output, this random.choice(). So I&#x27;m going to save that output, namely the random card inside another variable called card. And then finally we&#x27;re going to return this chosen card as the output. So that&#x27;s Step 4 done. Now let&#x27;s move on to Step 5. So we&#x27;re going to deal the user and computer two cards each using the deal_card() function. And very helpfully, the hint tells us that we can start out with a blank user card and a blank computer card list. So we basically just have to add two cards to each of these lists. To do this, I&#x27;m going to use a for loop, and I&#x27;m going to use the range() operator to run this for loop twice. So you&#x27;ve seen this syntax before when we talked about for loops. And I&#x27;ve got an underscore here because we don&#x27;t actually need this particular variable, all we need is for this loop to run twice, and this code is going to achieve that. Every single time this loop runs, we&#x27;re going to get a new card by calling deal_card(). Now remember that deal_card() has an output. It outputs a random card. So if you want it&#x27;s actually quite helpful to add some documentation to this. So we could say, &quot;&quot;&quot;Returns a random card from the deck.&quot;&quot;&quot; And now when I write deal_card(), you can see that the doc tells me that this function is going to return a random card from the deck. So that random card is going to replace this function call. So we can capture that data by storing it inside a variable. So we&#x27;ll call that new_card, and set it equal to the output from the function deal_card(). Now the next thing we&#x27;re going to do is we&#x27;re going to add this new_card to the user_cards. So at the moment it&#x27;s an empty list, and all we have to do is say user_cards.append(), and then the object that we want to add to that list is going to be the new_card. Now, some of you might be tempted to instead use the +=, you might want to write something like this. User cards += new_card. And I want to show you what actually happens when you run this. Because this is a really common error. We get a Traceback, and we get a TypeError. It tells us that the &#x27;int&#x27; object is not iterable and it highlights this line 49 as the reason for the error. So what&#x27;s going on here? Well, this plus equals is actually shorthand for writing the extend() function. Now you can see that the extend function is something that extends a list by appending elements from the iterable. So what does this mean? Well, it means that whatever you put inside these parentheses, it has to be a list itself. For example, if this new_card was a list of cards, so maybe just the first dealt card and another card, or even just it by itself inside a set of square brackets which turns it into a list, well then if we run this code right now, we no longer have any errors. And if I convert this back to what you saw before, which is using the p+=, we also have no errors. But when you only want to add a single item, not a list to an existing list, then you have to use append(). So hopefully you didn&#x27;t have this issue, but if you did, this is the reason. Now that we&#x27;ve created these two lines, you can see that it&#x27;s a little bit redundant because we&#x27;re creating this new_card variable just to hold the output from this function, and then we&#x27;re immediately putting it into this list using the append(). So instead we can actually just get rid of the middleman and put deal_card() directly inside the append. And this does exactly the same thing in a single line of code. Once we&#x27;ve done this for user_cards, we&#x27;d probably want to do the same thing for the computer_cards. So computer_cards.append(), and then we call deal_card() again remembering the parentheses. So we&#x27;ve got a total of three parentheses at the end. And this way we deal a new_card and that new_card gets appended to the end of this list.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Module imports** | Introduced/used in this lecture |
-| 3 | **range() function** | Introduced/used in this lecture |
-| 4 | **List .append() method** | Introduced/used in this lecture |
-| 5 | **random module** | Introduced/used in this lecture |
-
----
+1. `deal_card()` = a function with an output: one random card per call.
+2. Hands live in two lists, filled with `append()` in a 2-iteration loop.
+3. Deal *both* players inside the same loop — no duplicated code.

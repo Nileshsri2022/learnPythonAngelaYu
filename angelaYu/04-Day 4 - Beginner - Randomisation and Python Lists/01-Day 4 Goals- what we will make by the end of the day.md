@@ -1,31 +1,32 @@
-# 🐍 Day 4 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 4 goals and the project you'll have built by the end of the day.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 4
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 4 - Beginner - Randomisation and Python Lists
-**Lecture:** Day 4 Goals: what we will make by the end of the day
-**Level:** Beginner
-
----
-
-### Summary
-
-Hey, guys. Welcome back to 100 Days of Code. Today is Day 4 and we&#x27;re going to be focusing on randomization in Python, and we&#x27;re going to be learning about Python lists. Now randomization in any sort of programming language is really, really useful because if we want to create a game, if we want our program to do something different each time, then we need to introduce a little bit of randomness, right? So we&#x27;re going to be looking at using the random module in order to achieve this, and by the end of today, you will have learned enough to be able to build this Rock Paper Scissors game. So it starts out asking you, the user &quot;Type 0 for rock, 1 for paper, or 2 for scissors.&quot; So I&#x27;m going to go for 0 for Rock, and it shows me using ASCII art that this is what I chose, Rock. And then the computer chose Scissors, and Rock beat Scissors, so I win. Now you can run this as many times as you want. If I choose Paper and the computer chooses Rock, then I win. If I choose Paper and the computer chooses Paper, then it&#x27;s a draw. But if I choose Paper and the computer chooses Scissors, then I lose. So this is a pretty simple game, but we&#x27;re going to get the computer to play this game with us, and we&#x27;re going to do that by learning about Randomization, Lists, and a whole lot more. I hope you&#x27;re ready, and once you are, then head over to the next lesson and let&#x27;s get started.
+* **Randomisation** — the `random` module (`randint`, `random()`, `shuffle`, `choice`)
+* **Python lists** — storing groups of related data in order
+* **List indexing / the offset** — accessing items, counting from 0
+* **Modifying lists** — `append()`, `extend()`
+* **Nested lists** and **`IndexError`** (off-by-one errors)
 
 ---
 
-### Key Concepts
+### 2. The End-of-Day Project: Rock Paper Scissors
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **random module** | Introduced/used in this lecture |
+Play against the computer:
+
+1. You type `0` (rock), `1` (paper) or `2` (scissors) — shown as ASCII art.
+2. The computer **randomly** picks its move.
+3. Rules decide the winner: rock beats scissors, scissors beats paper, paper beats rock.
+
+To build it you need a **random** computer choice, a **list** of the three moves, and
+**conditionals** from Day 3.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey, guys. Welcome back to 100 Days of Code. Today is Day 4 and we&#x27;re going to be focusing on randomization in Python, and we&#x27;re going to be learning about Python lists. Now randomization in any sort of programming language is really, really useful because if we want to create a game, if we want our program to do something different each time, then we need to introduce a little bit of randomness, right? So we&#x27;re going to be looking at using the random module in order to achieve this, and by the end of today, you will have learned enough to be able to build this Rock Paper Scissors game. So it starts out asking you, the user &quot;Type 0 for rock, 1 for paper, or 2 for scissors.&quot; So I&#x27;m going to go for 0 for Rock, and it shows me using ASCII art that this is what I chose, Rock. And then the computer chose Scissors, and Rock beat Scissors, so I win. Now you can run this as many times as you want. If I choose Paper and the computer chooses Rock, then I win. If I choose Paper and the computer chooses Paper, then it&#x27;s a draw. But if I choose Paper and the computer chooses Scissors, then I lose. So this is a pretty simple game, but we&#x27;re going to get the computer to play this game with us, and we&#x27;re going to do that by learning about Randomization, Lists, and a whole lot more. I hope you&#x27;re ready, and once you are, then head over to the next lesson and let&#x27;s get started.
+1. Randomness makes programs unpredictable — the heart of every game.
+2. Lists let you store many related items in one ordered variable.
+3. You'll prove both with **Rock Paper Scissors**.

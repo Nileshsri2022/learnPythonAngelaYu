@@ -1,31 +1,73 @@
-# 🐍 Number Manipulation and F Strings in Python
+Here is a structured breakdown of everything covered in this lesson on number manipulation and f-Strings.
 
 ---
 
-### Overview
+### 1. Flooring vs. Rounding
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 2 - Beginner - Understanding Data Types and How to Manipulate Strings
-**Lecture:** Number Manipulation and F Strings in Python
-**Level:** Beginner
+Given a long decimal like a BMI of `30.8539…`, there are two ways to trim it:
+
+* **`int()` floors** — chops off everything after the decimal point:
+
+```python
+bmi = 30.8539
+print(int(bmi))    # 30  (floored — always down)
+```
+
+* **`round()` rounds** — to the nearest whole number, mathematically:
+
+```python
+print(round(bmi))       # 31  (0.5 and above rounds up)
+print(round(3.3))       # 3
+print(round(3.9))       # 4
+```
+
+`round()` also takes a **second argument** — how many decimal places you want:
+
+```python
+print(round(bmi, 2))    # 30.85
+```
 
 ---
 
-### Summary
+### 2. The Assignment Operators (`+=`, `-=`, …)
 
-In the previous challenge, you saw that when we calculated the BMI and we printed out this large number divided by another number, usually there is a large number of digits after the decimal place. Now, this is not really an ideal way to output some number to the user. We&#x27;d really like to be able to round it to the nearest whole number or to a specified number of digits. So how do we do this? Well, you&#x27;ve already seen that we can convert any number into an integer. So instead of simply just printing the original BMI, we can convert it first into an integer, and then we try printing it. You can see what this does is it floors the number. And this is a programming term for basically just removing all of the remaining decimal places, flooring it to the lowest whole number. Now that&#x27;s not quite what we want. We want to use the round() function which performs the rounding in the traditional mathematical sense, where when it&#x27;s 0.5, it rounds up to the next whole number, and when it&#x27;s below that, it rounds up to the lower whole number. So let&#x27;s go ahead and print using the round() function and round our BMI instead. See what all three of them print. So this is our original value 30.85, and when we simply chop off the end, we have a whole number 30. And this is called flooring. Whereas rounding we&#x27;ll round up or down one whole number depending on the first decimal place. So in this case it becomes 31. So this depends on, of course, whether it is 3.9 will round into 4, whereas 3.3 will round into 3. So it&#x27;s a really, really handy function when we&#x27;re working with numbers in Python. Now you can go even one step further, instead of just rounding the number... notice that it actually takes two inputs. So when I typed out round, and you can see the auto-suggest showing me the function that it thinks I&#x27;m trying to get hold of, it takes two inputs. One is the number you want to round, and the second one is the number of digits you want to round it to, which is kind of helpful because what if we want to take our BMI and we wanted to round it to two decimal places? Well, then we would write bmi as the number that will be inserted here, from this variable, and then we just simply type 2. And now when I hit Run, you&#x27;ll see that this time, instead of simply rounding it to a whole number, it rounds it to a floating point number with two decimal places of accuracy. So that can be really helpful if you&#x27;re working with money, for example, and you&#x27;re doing Pythonic calculations, working with currencies or conversions. So Python is just generally really, really number friendly. Now while we&#x27;re working with numbers in Python, another really handy operator is called the Assignment Operator. So we have various different ones depending on which mathematical operation you want to do. But essentially, what this allows us to do is to accumulate the results of our calculations. Now, very often when you&#x27;re writing code, say, for example, if you&#x27;re keeping track of the user&#x27;s score, so you could have score = 0 to begin with. And every single time in your code, say a user scores a point, then you can get hold of this score variable again, and instead of saying score now equals the previous value of score + 1, you can simply use this shorthand +=. So, +=1. And now when we print score you&#x27;ll see that it&#x27;s actually equal to 1. So instead of using += you can use -= which just takes the previous version of score and removes 1 from it, *=, and /=. So this is really handy when you have to manipulate a value based on its previous value, which you&#x27;ll have to do a lot in programming. Now, the final thing I want to show you is something called f-Strings. And this makes it really easy to mix strings and different data types. So far, up to this point, if we wanted to print something like, &quot;Your score is...&quot; and then we wanted it to print the score, we have to write +, but of course, because these are different data types; this is a string and this is an integer, we get a TypeError. So we&#x27;ve had to convert this into a string before it will actually successfully print, when both the data types match. Now this is quite painful, and understandably, a lot of programmers will need some slightly more convenient way of incorporating things that have different data types. Let&#x27;s say, the score = 0. Let&#x27;s say their height = 1.8, and is_winning = True. So here we&#x27;ve got an integer, a float, and a boolean, and we want to mix it all in to a sentence that is a string and get it printed out. So instead of having to convert all of these and use a whole bunch of plus signs, and then you have to convert everything into a string, it&#x27;s really, really painful, right? So what we can do instead is use something in Python known as an f-string. And what an f-string allows us to do is in front of a string like this one, we type the character f, and it&#x27;s really important that it goes in front of the double quotes or single quotes, if you want to write your strings like this. But I like to use double quotes, and a lot of other Python programmers do too. So essentially you&#x27;re adding just the character f in front of the string. And now this is an f-string. And you can start adding various values into this string. So for example if I wanted to write your score is equal to this variable score, then I can put that variable inside a set of curly braces { } like this. And now when I print my string, this one right here, you&#x27;ll see that it says, &quot;Your score = 0.&quot; And it does all of the converting and all of the stuff behind the scenes, and you don&#x27;t have to worry about any of this. So if I want to continue along, I could say, &quot;Your score is {score}, your height is...&quot; add in the &quot;{height}...&quot; and then, &quot;You are winning is...&quot; Then let&#x27;s add that final boolean value &quot;{is_winning}&quot; and get it to run. You can see that our entire string now prints out, &quot;Your score is = 0, your height is 1.8. You are winning is True.&quot; So all of these different data types got combined into a string by using an f in front of the string, and then using these curly braces to place our variables into the string. By using f-strings, you cut down on a lot of the manual labor of inserting different data types into a string, and this is going to come in really handy just about on the next lesson where I&#x27;ve got a coding challenge for you. Head over there and complete the challenge.
+Shortcuts for updating a variable in place:
 
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+```python
+score = 0
+score += 1    # same as: score = score + 1
+score -= 1    # same as: score = score - 1
+score /= 2    # same as: score = score / 2
+```
 
 ---
 
-### Next Steps
+### 3. f-Strings
 
-In the previous challenge, you saw that when we calculated the BMI and we printed out this large number divided by another number, usually there is a large number of digits after the decimal place. Now, this is not really an ideal way to output some number to the user. We&#x27;d really like to be able to round it to the nearest whole number or to a specified number of digits. So how do we do this? Well, you&#x27;ve already seen that we can convert any number into an integer. So instead of simply just printing the original BMI, we can convert it first into an integer, and then we try printing it. You can see what this does is it floors the number. And this is a programming term for basically just removing all of the remaining decimal places, flooring it to the lowest whole number. Now that&#x27;s not quite what we want. We want to use the round() function which performs the rounding in the traditional mathematical sense, where when it&#x27;s 0.5, it rounds up to the next whole number, and when it&#x27;s below that, it rounds up to the lower whole number. So let&#x27;s go ahead and print using the round() function and round our BMI instead. See what all three of them print. So this is our original value 30.85, and when we simply chop off the end, we have a whole number 30. And this is called flooring. Whereas rounding we&#x27;ll round up or down one whole number depending on the first decimal place. So in this case it becomes 31. So this depends on, of course, whether it is 3.9 will round into 4, whereas 3.3 will round into 3. So it&#x27;s a really, really handy function when we&#x27;re working with numbers in Python. Now you can go even one step further, instead of just rounding the number... notice that it actually takes two inputs. So when I typed out round, and you can see the auto-suggest showing me the function that it thinks I&#x27;m trying to get hold of, it takes two inputs. One is the number you want to round, and the second one is the number of digits you want to round it to, which is kind of helpful because what if we want to take our BMI and we wanted to round it to two decimal places? Well, then we would write bmi as the number that will be inserted here, from this variable, and then we just simply type 2. And now when I hit Run, you&#x27;ll see that this time, instead of simply rounding it to a whole number, it rounds it to a floating point number with two decimal places of accuracy. So that can be really helpful if you&#x27;re working with money, for example, and you&#x27;re doing Pythonic calculations, working with currencies or conversions. So Python is just generally really, really number friendly. Now while we&#x27;re working with numbers in Python, another really handy operator is called the Assignment Operator. So we have various different ones depending on which mathematical operation you want to do. But essentially, what this allows us to do is to accumulate the results of our calculations. Now, very often when you&#x27;re writing code, say, for example, if you&#x27;re keeping track of the user&#x27;s score, so you could have score = 0 to begin with. And every single time in your code, say a user scores a point, then you can get hold of this score variable again, and instead of saying score now equals the previous value of score + 1, you can simply use this shorthand +=. So, +=1. And now when we print score you&#x27;ll see that it&#x27;s actually equal to 1. So instead of using += you can use -= which just takes the previous version of score and removes 1 from it, *=, and /=. So this is really handy when you have to manipulate a value based on its previous value, which you&#x27;ll have to do a lot in programming. Now, the final thing I want to show you is something called f-Strings. And this makes it really easy to mix strings and different data types. So far, up to this point, if we wanted to print something like, &quot;Your score is...&quot; and then we wanted it to print the score, we have to write +, but of course, because these are different data types; this is a string and this is an integer, we get a TypeError. So we&#x27;ve had to convert this into a string before it will actually successfully print, when both the data types match. Now this is quite painful, and understandably, a lot of programmers will need some slightly more convenient way of incorporating things that have different data types. Let&#x27;s say, the score = 0. Let&#x27;s say their height = 1.8, and is_winning = True. So here we&#x27;ve got an integer, a float, and a boolean, and we want to mix it all in to a sentence that is a string and get it printed out. So instead of having to convert all of these and use a whole bunch of plus signs, and then you have to convert everything into a string, it&#x27;s really, really painful, right? So what we can do instead is use something in Python known as an f-string. And what an f-string allows us to do is in front of a string like this one, we type the character f, and it&#x27;s really important that it goes in front of the double quotes or single quotes, if you want to write your strings like this. But I like to use double quotes, and a lot of other Python programmers do too. So essentially you&#x27;re adding just the character f in front of the string. And now this is an f-string. And you can start adding various values into this string. So for example if I wanted to write your score is equal to this variable score, then I can put that variable inside a set of curly braces { } like this. And now when I print my string, this one right here, you&#x27;ll see that it says, &quot;Your score = 0.&quot; And it does all of the converting and all of the stuff behind the scenes, and you don&#x27;t have to worry about any of this. So if I want to continue along, I could say, &quot;Your score is {score}, your height is...&quot; add in the &quot;{height}...&quot; and then, &quot;You are winning is...&quot; Then let&#x27;s add that final boolean value &quot;{is_winning}&quot; and get it to run. You can see that our entire string now prints out, &quot;Your score is = 0, your height is 1.8. You are winning is True.&quot; So all of these different data types got combined into a string by using an f in front of the string, and then using these curly braces to place our variables into the string. By using f-strings, you cut down on a lot of the manual labor of inserting different data types into a string, and this is going to come in really handy just about on the next lesson where I&#x27;ve got a coding challenge for you. Head over there and complete the challenge.
+An **f-String** embeds values directly inside a string — prefix the string with `f` and
+wrap variables in `{curly braces}`:
+
+```python
+name = "Angela"
+age = 30
+print(f"My name is {name} and I am {age} years old.")
+# My name is Angela and I am 30 years old.
+```
+
+* No more `+` concatenation, no `str()` conversions, no space headaches.
+* It even works with **expressions** and keeps types intact:
+
+```python
+print(f"Your bill is {round(124.56 * 1.12, 2)}")
+```
+
+> **Note:** f-Strings are the modern, preferred way to format output in Python —
+> use them instead of concatenation wherever you mix text and variables.
+
+---
+
+### Summary Checklist
+
+1. `int()` **floors**; `round()` rounds — optionally to N decimal places with `round(x, n)`.
+2. `+=`, `-=`, `*=`, `/=` update variables in place.
+3. **f-Strings**: `f"Hello {name}"` — mix any variables into text cleanly.

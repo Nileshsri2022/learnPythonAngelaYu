@@ -1,30 +1,50 @@
-# 📖 What is HTML?
+Here is a structured breakdown of this lesson on what HTML is.
 
 ---
 
-### Overview
+### 1. HyperText Markup Language
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 41 - Web Foundation - Introduction to HTML
-**Lecture:** What is HTML?
-**Level:** Web Foundation
+* **HyperText** — text with links to other text.
+* **Markup** — *annotations* that tell the browser what each piece of text **is**.
 
----
+A piece of text wrapped in annotations is an **element**:
 
-### Summary
+```html
+<h1>I'm a top-level heading</h1>
+```
 
-Now let&#x27;s get started by learning a little bit more about HTML, what exactly is it? And how do we use it to create websites? Now, no matter what browser you like to use, Chrome or Safari or Brave, even all of these applications do the same thing. They take different files such as HTML, CSS and JavaScript, and they render them into a website. But even though most modern websites are created using these three different file types combined together, you can&#x27;t create a website with just a CSS file or just a JavaScript file. However, you can have just an HTML file. And in fact, that&#x27;s exactly what the first websites were created with, HTML. Now HTML defines the content and structure of the website. So for example, in this case, all that my HTML file does, is it renders a heading that says, &quot;My website.&quot; And when this file is opened by the browser, it will display that heading saying my website. Now what exactly is HTML? Let&#x27;s break it down. So HTML stands for Hypertext Markup Language. If we look at the first part, Hypertext, what does that mean? Well, it refers to the pieces of text which can link to other documents in the website. So these pieces of text are hypertext or hyperlinks, and they are the foundation of how an HTML website works. Now, if we take a look at the world&#x27;s first website created by Sir Tim Berners-Lee, who also happens to be the inventor of the Internet, then you can see it&#x27;s filled with these hyperlinks marked in blue. And exactly as you would expect, if you click on any of these hyperlinks, it takes you to another document, another HTML file. So if we go back, you can see that we were on Project.html. And if I click on one of the hyperlinks like, &quot;How can I help?&quot; it will take me to another HTML file, and this is how hypertext works. And there&#x27;s even a link on this website explaining exactly what hypertext is. So now that we know what hypertext is, what about the other part, the Markup Language? What is a markup language? Now, if you look at the English language, we often see little bits that function very similar to markup, like these double quotes. The presence of these quotation marks is what tells a reader that this part is a quotation. And as you&#x27;ll find, this is going to be really similar to what you see in the editor&#x27;s review of manuscript. So used to mark them up and show different things, such as, for example, which parts need to be bold by adding a squiggly line underneath it, and which parts need to be underlined by adding a straight line through it. So how do you do markup with HTML? Well, it&#x27;s done through what&#x27;s called HTML tags. Now, in the early days of the Internet, there were only very few HTML tags. These days there are loads more, but realistically, you&#x27;re only going to be using some of the most important ones such as headings, h1 through to h6, or the paragraph tag, the p tag. So here you can see all of the HTML tags, but when we narrow it down to the ones that you actually need to know, then it makes it a lot more approachable. And in the rest of the course we&#x27;re going to be covering some of the most essential tags, and so don&#x27;t worry about learning them. So don&#x27;t worry about memorizing all of them or learning them, we&#x27;re going to cover them as we need them in our projects and in our exercises. So in the next lesson, we&#x27;re going to get started by learning about the heading tag (h), one of the most OG HTML tags that ever existed. So for all of that and more, I&#x27;ll see you on the next lesson.
+* `<h1>` — opening **tag**
+* `I'm a top-level heading` — content
+* `</h1>` — closing tag (same name + a slash)
 
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+The browser doesn't display the tags — it *obeys* them.
 
 ---
 
-### Next Steps
+### 2. The HTML Boilerplate
 
-Now let&#x27;s get started by learning a little bit more about HTML, what exactly is it? And how do we use it to create websites? Now, no matter what browser you like to use, Chrome or Safari or Brave, even all of these applications do the same thing. They take different files such as HTML, CSS and JavaScript, and they render them into a website. But even though most modern websites are created using these three different file types combined together, you can&#x27;t create a website with just a CSS file or just a JavaScript file. However, you can have just an HTML file. And in fact, that&#x27;s exactly what the first websites were created with, HTML. Now HTML defines the content and structure of the website. So for example, in this case, all that my HTML file does, is it renders a heading that says, &quot;My website.&quot; And when this file is opened by the browser, it will display that heading saying my website. Now what exactly is HTML? Let&#x27;s break it down. So HTML stands for Hypertext Markup Language. If we look at the first part, Hypertext, what does that mean? Well, it refers to the pieces of text which can link to other documents in the website. So these pieces of text are hypertext or hyperlinks, and they are the foundation of how an HTML website works. Now, if we take a look at the world&#x27;s first website created by Sir Tim Berners-Lee, who also happens to be the inventor of the Internet, then you can see it&#x27;s filled with these hyperlinks marked in blue. And exactly as you would expect, if you click on any of these hyperlinks, it takes you to another document, another HTML file. So if we go back, you can see that we were on Project.html. And if I click on one of the hyperlinks like, &quot;How can I help?&quot; it will take me to another HTML file, and this is how hypertext works. And there&#x27;s even a link on this website explaining exactly what hypertext is. So now that we know what hypertext is, what about the other part, the Markup Language? What is a markup language? Now, if you look at the English language, we often see little bits that function very similar to markup, like these double quotes. The presence of these quotation marks is what tells a reader that this part is a quotation. And as you&#x27;ll find, this is going to be really similar to what you see in the editor&#x27;s review of manuscript. So used to mark them up and show different things, such as, for example, which parts need to be bold by adding a squiggly line underneath it, and which parts need to be underlined by adding a straight line through it. So how do you do markup with HTML? Well, it&#x27;s done through what&#x27;s called HTML tags. Now, in the early days of the Internet, there were only very few HTML tags. These days there are loads more, but realistically, you&#x27;re only going to be using some of the most important ones such as headings, h1 through to h6, or the paragraph tag, the p tag. So here you can see all of the HTML tags, but when we narrow it down to the ones that you actually need to know, then it makes it a lot more approachable. And in the rest of the course we&#x27;re going to be covering some of the most essential tags, and so don&#x27;t worry about learning them. So don&#x27;t worry about memorizing all of them or learning them, we&#x27;re going to cover them as we need them in our projects and in our exercises. So in the next lesson, we&#x27;re going to get started by learning about the heading tag (h), one of the most OG HTML tags that ever existed. So for all of that and more, I&#x27;ll see you on the next lesson.
+Every page starts from this scaffold (VS Code: `!` + Tab):
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Page</title>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+</body>
+</html>
+```
+
+* `head` — invisible metadata: charset, title (browser tab), links.
+* `body` — everything the visitor actually sees.
+
+---
+
+### Summary Checklist
+
+1. Element = opening tag + content + closing tag.
+2. Boilerplate first: doctype, html, head, body.
+3. Head is for the machine; body is for the human.

@@ -1,30 +1,36 @@
-# 🐍 Python Constants and Global Scope
+Here is a structured breakdown of everything covered in this lesson on Python constants and global scope.
 
 ---
 
-### Overview
+### 1. Global Constants — the Good Globals
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 12 - Beginner - Scope & Number Guessing Game
-**Lecture:** Python Constants and Global Scope
-**Level:** Beginner
+A **constant** is a value defined once and never changed — pi, the alphabet, difficulty
+settings. Global scope is *perfect* for them:
 
----
+```python
+PI = 3.14159
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
+```
 
-### Summary
-
-Remember, you should be careful with variables that have global scope, but don&#x27;t believe the people who tell you that you should never use global scope. Global scope can be incredibly useful, especially when you&#x27;re defining constants. Global constants are variables which you define and you&#x27;re never planning on changing it ever again. It&#x27;s just something like, for example, the value of pi, right? You want to look it up once and you want to put it into your code, and you never want to look it up ever again. And every other time you want to use it, say inside a function, then all you want to do is just tap into that value of pi. So usually in order to differentiate these constants, which you&#x27;re pretty much never going to change from the variables which you&#x27;re likely to change, the naming convention in Python is to turn it into all uppercase. For example, if you had PI or you had a URL that you needed to use, then these are all going to be uppercase, separated with underscores. What this means is that later on in your function and you want to use one of these global constants, as soon as you type it, you can see it&#x27;s uppercase, and you know, to remind yourself to not modify this inside your code. Now that we&#x27;ve talked a little bit about scope, it&#x27;s time to put your knowledge into action. Head over to the next lesson, and I&#x27;ve got a quiz that will test your understanding. So all of that and more, I&#x27;ll see you there.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+By convention Python constants are named in **ALL_CAPS** — a signal to every reader:
+*don't touch this*.
 
 ---
 
-### Next Steps
+### 2. Why They're Safe
 
-Remember, you should be careful with variables that have global scope, but don&#x27;t believe the people who tell you that you should never use global scope. Global scope can be incredibly useful, especially when you&#x27;re defining constants. Global constants are variables which you define and you&#x27;re never planning on changing it ever again. It&#x27;s just something like, for example, the value of pi, right? You want to look it up once and you want to put it into your code, and you never want to look it up ever again. And every other time you want to use it, say inside a function, then all you want to do is just tap into that value of pi. So usually in order to differentiate these constants, which you&#x27;re pretty much never going to change from the variables which you&#x27;re likely to change, the naming convention in Python is to turn it into all uppercase. For example, if you had PI or you had a URL that you needed to use, then these are all going to be uppercase, separated with underscores. What this means is that later on in your function and you want to use one of these global constants, as soon as you type it, you can see it&#x27;s uppercase, and you know, to remind yourself to not modify this inside your code. Now that we&#x27;ve talked a little bit about scope, it&#x27;s time to put your knowledge into action. Head over to the next lesson, and I&#x27;ve got a quiz that will test your understanding. So all of that and more, I&#x27;ll see you there.
+* Nothing ever *writes* to them, so they can't cause the mutation bugs of the last lesson.
+* They centralise configuration — change `HARD_LEVEL_TURNS` in one place, the whole game
+  updates.
+
+Typical layout: constants at the **top of the file**, functions below them using them as
+read-only inputs.
+
+---
+
+### Summary Checklist
+
+1. Constants: `ALL_CAPS`, defined at global scope, never reassigned.
+2. Read-only globals are safe and genuinely useful.
+3. Mutable globals are the problem — constants are the solution.

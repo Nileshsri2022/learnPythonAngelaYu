@@ -1,30 +1,109 @@
-# 🐍 Using the for loop with Python Lists
+Here is a structured breakdown of everything covered in this lesson on looping through Python lists with the `for` loop.
 
 ---
 
-### Overview
+### 1. What is a Loop?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 5 - Beginner - Python Loops
-**Lecture:** Using the for loop with Python Lists
-**Level:** Beginner
+A **loop** is a way to make something happen over and over and over again. Instead of writing the same line of code many times by hand, we tell the computer to repeat it for us — saving time and energy.
 
----
-
-### Summary
-
-The first topic I want to talk about today is the concept of Loops. Things that have to happen over and over and over again. The first type of loop I want to introduce you to is something called the for loop, and it can be used really easily in combination with something we learned in yesterday&#x27;s lessons, which is Lists. By using a for loop like this, we can go through each item in a list and perform some action with each individual item. So let&#x27;s try it out in practice. First, let&#x27;s say we had a list called fruits and it contained three items apple, peach, and pear. If we wanted to access each item in this list individually and print it out one by one, then we would use a for loop. So we start out with the keyword &quot;for&quot; and then we give a name to a single item, so in this case we might call it, fruit. And then we use the &quot;in&quot; keyword. And finally, the list that we want to loop through, which is our fruits here. Now we cap it off with a colon, and we go on to the next line and notice how it&#x27;s indented there. Now I&#x27;m going to go ahead and print the value of each of the fruit variables. And if I run this code you&#x27;ll see that it loops through my list of fruits, and for each of the fruits inside the list, it prints it out into the console. Apple, Peach, Pear in that order. Now, the important thing to realize here is that basically, you can imagine that behind the scenes, what this code is doing is it&#x27;s taking this list of fruits and it&#x27;s assigning a variable name fruit to each of them. So the first time this runs fruit is equal to Apple. The second time this runs fruit is equal to Peach. And we can see this even more clearly if you run it through the Thonny IDE which I told you about at the beginning of the course. Now, if I go ahead and click on the debug icon and I step into each of the steps, you can see, first, it establishes that we have a list of three strings Apple, Peach, Pear. And then we go into the for loop. Now notice on the right here I&#x27;ve got all the variables being accounted for. And the first one it&#x27;s noticed is the variable fruits which holds a list of strings. Now as I continue into the for loop, notice how it&#x27;s going to look through this list of fruits. And it&#x27;s going to assign the variable name fruit to each of the items starting from the first one, Apple. So now by the time it&#x27;s reached line three, we&#x27;ve already got this variable called fruit that&#x27;s been assigned to the value of Apple. And so at this point printing out the value of this fruit, it&#x27;s obviously going to print out Apple as you&#x27;ll see in the next step. There we go. Now, once I&#x27;m done here, then it&#x27;s going to loop back to the start of the for loop, and now this variable fruit is going to be assigned to the next value inside the list of fruits. So now notice how the variable fruit is attached to the value Peach. And then it continues this and so on and so forth until it prints out each one of the fruits. And this really emphasizes the most important aspect of loops. The loop allows us to execute the same line of code multiple times. In this case we&#x27;re executing the print statement three times. But our for loop isn&#x27;t limited to just executing a single statement. We don&#x27;t just have to print out the name of an item in the list. We can execute a whole block of statements multiple times, and we can do many things inside this for loop, and by inside I mean indented. So let&#x27;s say that in addition to printing out the fruit, I&#x27;m going to write another print statement, and I&#x27;m going to not only print out the name of the fruit, but I&#x27;m also going to say fruit + space plus pie. So when I run this code, what do you think will happen? Well, it prints out Apple, and then it prints out Apple Plus pie. And then it goes back to the start and it assigns the variable fruit to the next item. Peach. Peach pie. Pear. Pear pie. So this is how we can implement a simple for loop that loops through a list and assigns a variable name to each of the items in the list in order, and then inside the for loop after the colon, after some indentation, we can do something with that temporary variable for each of the items. Now, I&#x27;ve been talking a lot about the concept of being inside a for loop versus being outside a for loop, and this is really, really important. Whenever you see a colon, say in our if statements that we saw previously, or the for loop that we&#x27;re using here, the indentation is really, really important because if it&#x27;s indented then it means that it&#x27;s inside the for loop and these instructions will get carried out for as many times as the for loop will need to repeat. Now, if I decided that I wanted to say print my fruits, so my list of fruits up here, and I put it inside my for loop, so indented after the for loop. Then, as you can imagine, it&#x27;s going to print that for as many times as the loop runs, which is going to be three because there&#x27;s three items in our list. Now, if I had indented that back to the beginning, so now it&#x27;s no longer inside the for loop, then it&#x27;s only going to print once and it&#x27;s going to print it after the for loop is done. So notice how it&#x27;s doing the whole Apple Apple pie, etc. and then once the loop is finished, then it jumps to the next line and carries out this instruction. So the indentation is really, really important, and you have to be really careful with this. Have a play around with this code. And if you&#x27;re still struggling to see how it works, then move the code over to Thonny and step through each step, one at a time and see how it works. But I hope you&#x27;re starting to see how loops are really handy at executing an instruction over and over and over again, getting the computer to save us time and energy. A really good example of when loops would come in really handy is, you know, how Bart Simpson gets punished and has to write out a sentence over and over again on the blackboard? Well, if only Bart was a programmer, then he would be able to use loops to do this and he would be able to chill in the corner. Now, once you&#x27;re happy with this type of for loop, then head over to the next lesson where I&#x27;ve got a coding exercise that&#x27;s going to put your knowledge to the test. All right, so I&#x27;ll see you there.
+The first type of loop introduced here is the **`for` loop**, which combines perfectly with **Lists** from the previous lesson: it lets us go through each item in a list and perform an action with each individual item.
 
 ---
 
-### Key Concepts
+### 2. The `for` Loop with Lists
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+Say we have a list of fruits and want to print each one individually:
+
+```python
+fruits = ["Apple", "Peach", "Pear"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+**Output:**
+```
+Apple
+Peach
+Pear
+```
+
+Breaking the syntax down piece by piece:
+
+* **`for`** — the keyword that starts the loop.
+* **`fruit`** — a name we invent for *a single item* in the list.
+* **`in`** — the keyword that connects the item name to the collection.
+* **`fruits`** — the list we want to loop through.
+* **`:`** — the colon that ends the loop header; the next line **must be indented**.
 
 ---
 
-### Next Steps
+### 3. What Happens Behind the Scenes
 
-The first topic I want to talk about today is the concept of Loops. Things that have to happen over and over and over again. The first type of loop I want to introduce you to is something called the for loop, and it can be used really easily in combination with something we learned in yesterday&#x27;s lessons, which is Lists. By using a for loop like this, we can go through each item in a list and perform some action with each individual item. So let&#x27;s try it out in practice. First, let&#x27;s say we had a list called fruits and it contained three items apple, peach, and pear. If we wanted to access each item in this list individually and print it out one by one, then we would use a for loop. So we start out with the keyword &quot;for&quot; and then we give a name to a single item, so in this case we might call it, fruit. And then we use the &quot;in&quot; keyword. And finally, the list that we want to loop through, which is our fruits here. Now we cap it off with a colon, and we go on to the next line and notice how it&#x27;s indented there. Now I&#x27;m going to go ahead and print the value of each of the fruit variables. And if I run this code you&#x27;ll see that it loops through my list of fruits, and for each of the fruits inside the list, it prints it out into the console. Apple, Peach, Pear in that order. Now, the important thing to realize here is that basically, you can imagine that behind the scenes, what this code is doing is it&#x27;s taking this list of fruits and it&#x27;s assigning a variable name fruit to each of them. So the first time this runs fruit is equal to Apple. The second time this runs fruit is equal to Peach. And we can see this even more clearly if you run it through the Thonny IDE which I told you about at the beginning of the course. Now, if I go ahead and click on the debug icon and I step into each of the steps, you can see, first, it establishes that we have a list of three strings Apple, Peach, Pear. And then we go into the for loop. Now notice on the right here I&#x27;ve got all the variables being accounted for. And the first one it&#x27;s noticed is the variable fruits which holds a list of strings. Now as I continue into the for loop, notice how it&#x27;s going to look through this list of fruits. And it&#x27;s going to assign the variable name fruit to each of the items starting from the first one, Apple. So now by the time it&#x27;s reached line three, we&#x27;ve already got this variable called fruit that&#x27;s been assigned to the value of Apple. And so at this point printing out the value of this fruit, it&#x27;s obviously going to print out Apple as you&#x27;ll see in the next step. There we go. Now, once I&#x27;m done here, then it&#x27;s going to loop back to the start of the for loop, and now this variable fruit is going to be assigned to the next value inside the list of fruits. So now notice how the variable fruit is attached to the value Peach. And then it continues this and so on and so forth until it prints out each one of the fruits. And this really emphasizes the most important aspect of loops. The loop allows us to execute the same line of code multiple times. In this case we&#x27;re executing the print statement three times. But our for loop isn&#x27;t limited to just executing a single statement. We don&#x27;t just have to print out the name of an item in the list. We can execute a whole block of statements multiple times, and we can do many things inside this for loop, and by inside I mean indented. So let&#x27;s say that in addition to printing out the fruit, I&#x27;m going to write another print statement, and I&#x27;m going to not only print out the name of the fruit, but I&#x27;m also going to say fruit + space plus pie. So when I run this code, what do you think will happen? Well, it prints out Apple, and then it prints out Apple Plus pie. And then it goes back to the start and it assigns the variable fruit to the next item. Peach. Peach pie. Pear. Pear pie. So this is how we can implement a simple for loop that loops through a list and assigns a variable name to each of the items in the list in order, and then inside the for loop after the colon, after some indentation, we can do something with that temporary variable for each of the items. Now, I&#x27;ve been talking a lot about the concept of being inside a for loop versus being outside a for loop, and this is really, really important. Whenever you see a colon, say in our if statements that we saw previously, or the for loop that we&#x27;re using here, the indentation is really, really important because if it&#x27;s indented then it means that it&#x27;s inside the for loop and these instructions will get carried out for as many times as the for loop will need to repeat. Now, if I decided that I wanted to say print my fruits, so my list of fruits up here, and I put it inside my for loop, so indented after the for loop. Then, as you can imagine, it&#x27;s going to print that for as many times as the loop runs, which is going to be three because there&#x27;s three items in our list. Now, if I had indented that back to the beginning, so now it&#x27;s no longer inside the for loop, then it&#x27;s only going to print once and it&#x27;s going to print it after the for loop is done. So notice how it&#x27;s doing the whole Apple Apple pie, etc. and then once the loop is finished, then it jumps to the next line and carries out this instruction. So the indentation is really, really important, and you have to be really careful with this. Have a play around with this code. And if you&#x27;re still struggling to see how it works, then move the code over to Thonny and step through each step, one at a time and see how it works. But I hope you&#x27;re starting to see how loops are really handy at executing an instruction over and over and over again, getting the computer to save us time and energy. A really good example of when loops would come in really handy is, you know, how Bart Simpson gets punished and has to write out a sentence over and over again on the blackboard? Well, if only Bart was a programmer, then he would be able to use loops to do this and he would be able to chill in the corner. Now, once you&#x27;re happy with this type of for loop, then head over to the next lesson where I&#x27;ve got a coding exercise that&#x27;s going to put your knowledge to the test. All right, so I&#x27;ll see you there.
+Imagine the loop assigning the variable `fruit` to each item in turn:
+
+1. **1st iteration:** `fruit = "Apple"` → `print(fruit)` prints `Apple`
+2. **2nd iteration:** `fruit = "Peach"` → `print(fruit)` prints `Peach`
+3. **3rd iteration:** `fruit = "Pear"` → `print(fruit)` prints `Pear`
+
+> **Tip:** Step through this in the **Thonny IDE** with the debug icon to watch the
+> `fruit` variable attach to `"Apple"`, then `"Peach"`, then `"Pear"`, one step at
+> a time — the clearest way to see how the loop really works.
+
+---
+
+### 4. Executing a Whole Block of Statements
+
+A `for` loop is **not limited to a single statement** — everything that is indented after the colon is *inside* the loop and runs once per item:
+
+```python
+fruits = ["Apple", "Peach", "Pear"]
+
+for fruit in fruits:
+    print(fruit)
+    print(fruit + " pie")
+```
+
+**Output:**
+```
+Apple
+Apple pie
+Peach
+Peach pie
+Pear
+Pear pie
+```
+
+Each pass through the loop body prints the fruit **and** the fruit + " pie" before moving to the next item.
+
+---
+
+### 5. Inside vs. Outside the Loop (Indentation!)
+
+Whenever you see a **colon** — in `if` statements or `for` loops — the **indentation** that follows decides what is inside that block:
+
+```python
+fruits = ["Apple", "Peach", "Pear"]
+
+for fruit in fruits:
+    print(fruit)
+    print(fruits)   # INSIDE: printed 3 times (once per item)
+
+print("Loop is done")  # OUTSIDE: printed once, after the loop finishes
+```
+
+* **Indented** → runs once *for every item* in the list.
+* **Not indented** → runs *only once*, after the whole loop has finished.
+
+> **Warning:** Indentation is really, really important. Be careful with it —
+> moving a single line in or out of the loop completely changes the output.
+
+---
+
+### Summary Checklist
+
+1. **Purpose:** Loops execute the same code multiple times without repeating it by hand.
+2. **Syntax:** `for single_item in list_name:` — then indent the body.
+3. **Loop variable:** `fruit` is reassigned to each list item in order, every iteration.
+4. **Loop body:** Everything indented under the `for` runs once per item — one or many statements.
+5. **Indentation decides scope:** indented = inside the loop (repeats); unindented = outside (runs once, at the end).

@@ -1,27 +1,40 @@
-# 🐍 Docstrings
+Here is a structured breakdown of everything covered in this lesson on docstrings.
 
 ---
 
-### Overview
+### 1. What is a Docstring?
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 10 - Beginner - Functions with Outputs
-**Lecture:** Docstrings
-**Level:** Beginner
+A **docstring** is documentation written *inside* your function — a multi-line string on
+the very first line of the body. It's what makes your functions show helpful pop-ups in
+PyCharm, just like `len()` and other built-ins do:
+
+```python
+def format_name(f_name, l_name):
+    """Take a first and last name and format it
+    to return the title case version of the name."""
+    if f_name == "" or l_name == "":
+        return "You didn't provide valid inputs."
+    return f"{f_name.title()} {l_name.title()}"
+```
+
+* Triple quotes `""" ... """` — can span multiple lines.
+* Must be the **first statement** in the function body.
+
+---
+
+### 2. Why Bother?
+
+* **Hover documentation** — editors show it when you (or teammates) call the function.
+* **Forces clarity** — writing the description often reveals design problems.
+* **Professional habit** — every serious codebase documents its functions this way.
+
+> **Tip:** Hover over your own function name at the call site — if the pop-up shows your
+> docstring, you've done it right.
 
 ---
 
-### Summary
+### Summary Checklist
 
-Hey guys, I want to quickly spend a few minutes talking about a concept in Python known as Docstrings. Docstrings are basically a way for us to create little bits of documentation as we&#x27;re coding along in our functions, or in our other blocks of code. Now, previously we&#x27;ve seen that when we use other functions, like the ones that were already defined by Python, like the len() function, I can see this little piece of documentation that tells me what this function is actually going to do, namely, &quot;Return the number of items in a container.&quot; So how can we create the same kind of documentation for the functions that we write? Well, we would do that using docstrings. The docstring has to go as the first line after the declaration. So here we&#x27;ve defined the name of our function the inputs. And then after the colon the first indented line will be the docstring. But that&#x27;s not it, you also have to use three of these quotation marks, and it&#x27;s in between these three quotation marks that you can write your documentation. We could write something like, well, what is this format name function going to do? What would we want our future selves or another user who&#x27;s using this function to know about it? Well, it&#x27;s going to &quot;&quot;&quot;Take a first and last name and format it...&quot;&quot;&quot; Notice how with docstrings you can actually write strings that are multi-line. Normally, if I was to create a normal string, let&#x27;s say I don&#x27;t know, a = (&quot;A string &quot;) If I hit the Enter key, I&#x27;m going to get a warning because it&#x27;s going to interpret this as the end of this line and it won&#x27;t see this closing quotation mark as being a part of this string. But when we use a docstring, we can write as many lines as we want, and it will be interpreted all as the same thing all together, as if it was fitted onto the same line, like this. Now that we&#x27;ve added our docstring, it&#x27;s time to see what it looks like. Now, if I call this function, you can see that the text we wrote here now gets populated in the documentation. &quot;It takes the first and last name and formats it to return the title case version of the name.&quot; So this is a way for you to be able to start documenting your functions and giving each function a little bit of an explainer. Now you can also use this as a multi-line comment. So notice how when we write a comment and we go to the next line, it becomes code again. Now you can, in fact, use something like this where you just comment as many lines as you like and this will be interpreted as a comment as long as it&#x27;s not assigned to anything. So for example, if I create a variable, then this is now a piece of code. Because it&#x27;s a little bit confusing, the official Python guidance is actually to avoid multi-line comments like this. What is actually much easier is to just write your multi-line comment, and then to highlight all of it, and then to hit cmd + / or Ctrl + / on windows. That&#x27;s a much better way of differentiating the comment from actual pieces of code. Have a go at adding docstrings to the other functions that you&#x27;ve created, and see it show up when you call your functions.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **len() function** | Introduced/used in this lecture |
-
----
+1. Docstring = `"""description"""` as the first line of a function.
+2. It powers editor tooltips, just like built-in functions' docs.
+3. Document every non-obvious function: what it takes, what it returns.

@@ -1,36 +1,60 @@
-# 📖 Day 42 Project - Birthday Invite Website
+Here is a structured breakdown of the Day 42 project — Birthday Invite Website.
 
 ---
 
-### Overview
+### 1. The Requirements
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 42 - Web Foundation - Intermediate HTML
-**Lecture:** Day 42 Project - Birthday Invite Website
-**Level:** Web Foundation
+A single page combining *everything* from Day 41–42: headings, paragraphs, lists
+(ordered + unordered + nested), images, anchor, `<br>` and `<hr>`.
 
 ---
 
-### Summary
+### 2. The Solution
 
-All right. It&#x27;s time to put everything we&#x27;ve learned so far together and create a project. In this project, we&#x27;re going to create a website for your next party to help you invite all your guests, because paper invites and WhatsApp invites are only for people who can&#x27;t create websites. Am I right? We can do it better. This is what we&#x27;re aiming for. We&#x27;re aiming for a retro 90s look website because we haven&#x27;t learned about styling websites yet, which is yet to come, but this is already pretty nice. We&#x27;re going to create a website to tell people that it&#x27;s our birthday, which day it is, and we&#x27;re going to add some images. We&#x27;re going to tell people what to bring using lists. And also we&#x27;re going to add an anchor tag to show people where they need to go. Hopefully, we&#x27;re going to combine a lot of the things that you&#x27;ve learned in previous lessons. And once you&#x27;re ready, head over to the course resources for this lesson. Download and extract the zip file in order to get started. When you take a look at the index.html, you can see I&#x27;ve provided an example image URL and an example Google Maps link. So if you take a look inside the goal, you can see what the example image will take you to. And if you&#x27;re ready for an Easter egg/mini surprise, you can head over to the Google map link and see where it&#x27;s located as well. So this is a project and it&#x27;s not a coding exercise. It&#x27;s not something that I&#x27;m testing you on. Everything I&#x27;m saying, it&#x27;s just a guideline. I want you to at minimum, have an image in there, have a list in there, and also have an anchor tag in there. Everything else is totally up to you. You can mess around with it as much as you like or change as much as you like, or keep it as simple as you like. It doesn&#x27;t really matter. Pause the video and give this project a go, and happy birthday if it is your birthday today. All right. So want to walk through one possible solution? I just want to say this is just one possibility. You can change it as much as you like. There is no right or wrong in the projects, it&#x27;s all about practice and also your own personal style. So in my case, I created an h1 for the top-level heading, which is the most important thing, it&#x27;s my birthday. And then I&#x27;ve got some h2&#x27;s and some h3&#x27;s, so for what to bring and where you need to go. In the image tag I&#x27;ve added a source to that image I provided in the starting code, and also I provided an alternative text to show people what this image is all about. If you managed to get the image source and the alternative text and your image shows up, then congratulations. You did a great job. Now, the next part I&#x27;ve got is an unordered list to tell people what they should bring with each item in its own list item element. And finally, I created an anchor tag to tell people where they need to go. So I&#x27;ve added an href attribute and I used the link that I supplied in the starting code and I told people that the link text is a Google map link, which hopefully will take them to where they need to go, which is somewhere in Tokyo where all the pigeon people meet, apparently. So if you found that Easter egg, then congratulations. But if you&#x27;re really proud of what you managed to do for your project, then be sure to take a screenshot of it and post it in the Q&amp;A to share it with the rest of us. I would love to see what you came up with, but that&#x27;s all from me for this section. I hope you enjoyed learning more about HTML elements and I&#x27;ll see you soon.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Invite</title>
+</head>
+<body>
+    <h1>Today is Nilesh's Birthday 🎉</h1>
+    <h2>You're invited to celebrate!</h2>
+    <img src="birthday-cake.jpg" alt="Birthday cake" height="250">
+
+    <h3>The Plan</h3>
+    <ol>
+        <li>Arrive by 7 PM</li>
+        <li>Dinner &amp; cake</li>
+        <li>Games until late</li>
+    </ol>
+
+    <h3>What to Bring</h3>
+    <ul>
+        <li>Your dancing shoes
+            <ul>
+                <li>Backup socks too</li>
+            </ul>
+        </li>
+        <li>A big appetite</li>
+    </ul>
+
+    <h3>Where</h3>
+    <p>
+        42 Gomti Nagar,<br>
+        Lucknow, Uttar Pradesh
+    </p>
+    <a href="rsvp.html">RSVP here</a>
+    <hr>
+    <p>This invite was hand-coded in HTML.</p>
+</body>
+</html>
+```
 
 ---
 
-### Key Concepts
+### Summary Checklist
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-
----
-
-### 🏋️ Practice Exercise
-
-All right. It&#x27;s time to put everything we&#x27;ve learned so far together and create a project. In this project, we&#x27;re going to create a website for your next party to help you invite all your guests, because paper invites and WhatsApp invites are only for people who can&#x27;t create websites. Am I right? We can do it better. This is what we&#x27;re aiming for. We&#x27;re aiming for a retro 90s look website because we haven&#x27;t learned about styling websites yet, which is yet to come, but this is already pretty nice. We&#x27;re going to create a website to tell people that it&#x27;s our birthday, which day it is, and we&#x27;re going to add some images. We&#x27;re going to tell people what to bring using lists. And also we&#x27;re going to add an anchor tag to show people where they need to go. Hopefully, we&#x27;re going to combine a lot of the things that you&#x27;ve learned in previous lessons. And once you&#x27;re ready, head over to the course resources for this lesson. Download and extract the zip file in order to get started. When you take a look at the index.html, you can see I&#x27;ve provided an example image URL and an example Google Maps link. So if you take a look inside the goal, you can see what the example image will take you to. And if you&#x27;re ready for an Easter egg/mini surprise, you can head over to the Google map link and see where it&#x27;s located as well. So this is a project and it&#x27;s not a coding exercise. It&#x27;s not something that I&#x27;m testing you on. Everything I&#x27;m saying, it&#x27;s just a guideline. I want you to at minimum, have an image in there, have a list in there, and also have an anchor tag in there. Everything else is totally up to you. You can mess around with it as much as you like or change as much as you like, or keep it as simple as you like. It doesn&#x27;t really matter. Pause the video and give this project a go, and happy birthday if it is your birthday today. All right. So want to walk through one possible solution? I just want to say this is just one possibility. You can change it as much as you like. There is no right or wrong in the projects, it&#x27;s all about practice and also your own personal style. So in my case, I created an h1 for the top-level heading, which is the most important thing, it&#x27;s my birthday. And then I&#x27;ve got some h2&#x27;s and some h3&#x27;s, so for what to bring and where you need to go. In the image tag I&#x27;ve added a source to that image I provided in the starting code, and also I provided an alternative text to show people what this image is all about. If you managed to get the image source and the alternative text and your image shows up, then congratulations. You did a great job. Now, the next part I&#x27;ve got is an unordered list to tell people what they should bring with each item in its own list item element. And finally, I created an anchor tag to tell people where they need to go. So I&#x27;ve added an href attribute and I used the link that I supplied in the starting code and I told people that the link text is a Google map link, which hopefully will take them to where they need to go, which is somewhere in Tokyo where all the pigeon people meet, apparently. So if you found that Easter egg, then congratulations. But if you&#x27;re really proud of what you managed to do for your project, then be sure to take a screenshot of it and post it in the Q&amp;A to share it with the rest of us. I would love to see what you came up with, but that&#x27;s all from me for this section. I hope you enjoyed learning more about HTML elements and I&#x27;ll see you soon.
-
----
-
-### Next Steps
-
-All right. It&#x27;s time to put everything we&#x27;ve learned so far together and create a project. In this project, we&#x27;re going to create a website for your next party to help you invite all your guests, because paper invites and WhatsApp invites are only for people who can&#x27;t create websites. Am I right? We can do it better. This is what we&#x27;re aiming for. We&#x27;re aiming for a retro 90s look website because we haven&#x27;t learned about styling websites yet, which is yet to come, but this is already pretty nice. We&#x27;re going to create a website to tell people that it&#x27;s our birthday, which day it is, and we&#x27;re going to add some images. We&#x27;re going to tell people what to bring using lists. And also we&#x27;re going to add an anchor tag to show people where they need to go. Hopefully, we&#x27;re going to combine a lot of the things that you&#x27;ve learned in previous lessons. And once you&#x27;re ready, head over to the course resources for this lesson. Download and extract the zip file in order to get started. When you take a look at the index.html, you can see I&#x27;ve provided an example image URL and an example Google Maps link. So if you take a look inside the goal, you can see what the example image will take you to. And if you&#x27;re ready for an Easter egg/mini surprise, you can head over to the Google map link and see where it&#x27;s located as well. So this is a project and it&#x27;s not a coding exercise. It&#x27;s not something that I&#x27;m testing you on. Everything I&#x27;m saying, it&#x27;s just a guideline. I want you to at minimum, have an image in there, have a list in there, and also have an anchor tag in there. Everything else is totally up to you. You can mess around with it as much as you like or change as much as you like, or keep it as simple as you like. It doesn&#x27;t really matter. Pause the video and give this project a go, and happy birthday if it is your birthday today. All right. So want to walk through one possible solution? I just want to say this is just one possibility. You can change it as much as you like. There is no right or wrong in the projects, it&#x27;s all about practice and also your own personal style. So in my case, I created an h1 for the top-level heading, which is the most important thing, it&#x27;s my birthday. And then I&#x27;ve got some h2&#x27;s and some h3&#x27;s, so for what to bring and where you need to go. In the image tag I&#x27;ve added a source to that image I provided in the starting code, and also I provided an alternative text to show people what this image is all about. If you managed to get the image source and the alternative text and your image shows up, then congratulations. You did a great job. Now, the next part I&#x27;ve got is an unordered list to tell people what they should bring with each item in its own list item element. And finally, I created an anchor tag to tell people where they need to go. So I&#x27;ve added an href attribute and I used the link that I supplied in the starting code and I told people that the link text is a Google map link, which hopefully will take them to where they need to go, which is somewhere in Tokyo where all the pigeon people meet, apparently. So if you found that Easter egg, then congratulations. But if you&#x27;re really proud of what you managed to do for your project, then be sure to take a screenshot of it and post it in the Q&amp;A to share it with the rest of us. I would love to see what you came up with, but that&#x27;s all from me for this section. I hope you enjoyed learning more about HTML elements and I&#x27;ll see you soon.
+1. Every element from two days of HTML in one page.
+2. Runnable version: [`birthday_invite.html`](birthday_invite.html)

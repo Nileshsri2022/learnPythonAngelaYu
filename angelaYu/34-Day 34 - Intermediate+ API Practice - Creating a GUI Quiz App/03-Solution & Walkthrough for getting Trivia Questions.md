@@ -1,32 +1,38 @@
-# 📖 Solution & Walkthrough for getting Trivia Questions
+Here is a structured walkthrough of the data-fetching solution.
 
 ---
 
-### Overview
+### 1. Feeding the Existing Pipeline
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 34 - Intermediate+ API Practice - Creating a GUI Quiz App
-**Lecture:** Solution & Walkthrough for getting Trivia Questions
-**Level:** Intermediate+ API Practice
+Day 17's quiz engine consumed a list of `Question` objects. Only the construction loop
+changes to match the API's field names:
 
----
+```python
+question_bank = []
+for question in question_data:
+    question_bank.append(Question(question["question"], question["correct_answer"]))
+```
 
-### Summary
+* `question["question"]` — the API's text field.
+* `question["correct_answer"]` — `"True"` or `"False"` as strings.
 
-All right. So the first thing we need to do that we learnt in order to work with APIs is to import the requests module. And once we&#x27;ve imported that, we need to get a response from the URL that we saw over here. As I mentioned, the end point is everything that&#x27;s before the question mark. So let&#x27;s put that in as the URL for our get request. And then in addition, we need to add some parameters. So let&#x27;s make our parameters a Python dictionary, and the key must match the key that&#x27;s shown here and the value has to match the value that&#x27;s given here as well. So we&#x27;ve got two keys; amount and type. So these are both going to be strings, but the values can be numbers if it is appropriate. So amount sets the number of questions we want back from the API, and then the type sets the type of questions that we want. So in our case, we want the boolean data type that matches this exact entry. So that way we get back true-false questions. Now that we&#x27;ve done that we can use this parameters dictionary as the params, and then we want our response to raise an exception if there were any errors. And then we&#x27;re going to get our response to give us the data using the JSON method. If this is our data, let&#x27;s go ahead and print it and see what it looks like. We can run this particular file, data.py, by right-clicking and just saying run data. And once it&#x27;s done, you can see we printed out the data and the part that we&#x27;re interested in is the value of this key results, because it contains the list of questions. That&#x27;s the only part we&#x27;re interested in. So in order to tap into that, we have to add a set of square brackets and then pass in the key which is called results. So let&#x27;s put that as the key. And now we&#x27;re fetching all of the items that are the results from this data object that we get back. So now, if I run this again, you can see we now have a list of question objects which each contains a dictionary and it looks now pretty much identical to this structure that we had before. Now, instead of printing this, we can save it as the question_data. So now this question_data and has replaced this question_data, and as I mentioned, we can run our main.py and it should now work just as it did before. But this time it&#x27;s going to use questions that came from our API. The cold war ended with Joseph Stalin&#x27;s death, true or false. I think that&#x27;s actually false. But notice how when we get the data back from the API, it&#x27;s formatted in such a way that we&#x27;ve got certain symbols that have been encoded using this particular format because all of this is meant to represent a single apostrophe. In the next lesson, I&#x27;m going to show you how we can format the text that we get back to turn this encoding into the actual characters that it should be. For all of that and more, I&#x27;ll see you on the next lesson.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Module imports** | Introduced/used in this lecture |
-| 3 | **JSON data handling** | Introduced/used in this lecture |
+This is the OOP payoff again: **the engine doesn't care where data came from.**
 
 ---
 
-### Next Steps
+### 2. First Run Reveals a Problem
 
-All right. So the first thing we need to do that we learnt in order to work with APIs is to import the requests module. And once we&#x27;ve imported that, we need to get a response from the URL that we saw over here. As I mentioned, the end point is everything that&#x27;s before the question mark. So let&#x27;s put that in as the URL for our get request. And then in addition, we need to add some parameters. So let&#x27;s make our parameters a Python dictionary, and the key must match the key that&#x27;s shown here and the value has to match the value that&#x27;s given here as well. So we&#x27;ve got two keys; amount and type. So these are both going to be strings, but the values can be numbers if it is appropriate. So amount sets the number of questions we want back from the API, and then the type sets the type of questions that we want. So in our case, we want the boolean data type that matches this exact entry. So that way we get back true-false questions. Now that we&#x27;ve done that we can use this parameters dictionary as the params, and then we want our response to raise an exception if there were any errors. And then we&#x27;re going to get our response to give us the data using the JSON method. If this is our data, let&#x27;s go ahead and print it and see what it looks like. We can run this particular file, data.py, by right-clicking and just saying run data. And once it&#x27;s done, you can see we printed out the data and the part that we&#x27;re interested in is the value of this key results, because it contains the list of questions. That&#x27;s the only part we&#x27;re interested in. So in order to tap into that, we have to add a set of square brackets and then pass in the key which is called results. So let&#x27;s put that as the key. And now we&#x27;re fetching all of the items that are the results from this data object that we get back. So now, if I run this again, you can see we now have a list of question objects which each contains a dictionary and it looks now pretty much identical to this structure that we had before. Now, instead of printing this, we can save it as the question_data. So now this question_data and has replaced this question_data, and as I mentioned, we can run our main.py and it should now work just as it did before. But this time it&#x27;s going to use questions that came from our API. The cold war ended with Joseph Stalin&#x27;s death, true or false. I think that&#x27;s actually false. But notice how when we get the data back from the API, it&#x27;s formatted in such a way that we&#x27;ve got certain symbols that have been encoded using this particular format because all of this is meant to represent a single apostrophe. In the next lesson, I&#x27;m going to show you how we can format the text that we get back to turn this encoding into the actual characters that it should be. For all of that and more, I&#x27;ll see you on the next lesson.
+Some questions arrive looking like:
+
+```
+&quot;Southern Cross&quot; is the name of the UK&#039;s flag.
+```
+
+Those `&quot;` / `&#039;` are **HTML entities** — the next lesson fixes them.
+
+---
+
+### Summary Checklist
+
+1. Swap dict keys; the `Question`/`QuizBrain` classes stay untouched.
+2. Raw API text needs entity decoding before display.

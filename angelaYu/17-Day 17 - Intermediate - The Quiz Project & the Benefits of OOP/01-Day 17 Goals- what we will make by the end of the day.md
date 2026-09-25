@@ -1,30 +1,41 @@
-# 🔧 Day 17 Goals: what we will make by the end of the day
+Here is a structured breakdown of the Day 17 goals and the project you'll have built by the end of the day.
 
 ---
 
-### Overview
+### 1. Skills Covered on Day 17
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 17 - Intermediate - The Quiz Project & the Benefits of OOP
-**Lecture:** Day 17 Goals: what we will make by the end of the day
-**Level:** Intermediate
-
----
-
-### Summary
-
-Hey guys, welcome to day 17 of 100 Days of Code. Now, today we&#x27;re going to be focusing on how we actually create the classes that we&#x27;ve been using in yesterday&#x27;s lessons. Today&#x27;s final project that we&#x27;re going to be building up towards is a quiz game. So we&#x27;re going to be able to create a true-false quiz, and we&#x27;ll be able to play the quiz, answer the questions and keep track of score. But we&#x27;re gonna be building this completely using Object Oriented Programming. We&#x27;re going to be creating our classes ourselves and then using the objects created from those classes in order to build this game. And once you&#x27;re done, this is what you&#x27;ll be able to create. Question one, A slug&#x27;s blood is green, true or false. True. Now, if you want to have a play around with the final project to get a feel for how it works, then you&#x27;ll find a link to this final version of the quiz game in the course resources. But once you&#x27;re ready, then head over to the next lesson and we&#x27;re going to get started by learning how to create our own custom classes. So, for all of that and more, I&#x27;ll see you there.
+* **Creating your own classes** — `__init__`, attributes, methods
+* Using OOP to **model** a program: Question, QuizBrain
+* Program design: data → objects → behaviour
 
 ---
 
-### Key Concepts
+### 2. The Project: True/False Quiz
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+```
+Q.1: A slug's blood is green. (True/False): true
+You got it right!
+Your current score is: 1/1
+...
+You've completed the quiz
+Your final score was: 8/10
+```
+
+Built in five parts:
+
+1. A **`Question`** class
+2. A **list of Question objects** built from data
+3. **`QuizBrain`** with `next_question()`
+4. Looping while questions remain
+5. Checking answers and keeping score
+
+Then the quiz is pointed at the **Open Trivia Database** for unlimited questions — the
+"benefits of OOP" payoff.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey guys, welcome to day 17 of 100 Days of Code. Now, today we&#x27;re going to be focusing on how we actually create the classes that we&#x27;ve been using in yesterday&#x27;s lessons. Today&#x27;s final project that we&#x27;re going to be building up towards is a quiz game. So we&#x27;re going to be able to create a true-false quiz, and we&#x27;ll be able to play the quiz, answer the questions and keep track of score. But we&#x27;re gonna be building this completely using Object Oriented Programming. We&#x27;re going to be creating our classes ourselves and then using the objects created from those classes in order to build this game. And once you&#x27;re done, this is what you&#x27;ll be able to create. Question one, A slug&#x27;s blood is green, true or false. True. Now, if you want to have a play around with the final project to get a feel for how it works, then you&#x27;ll find a link to this final version of the quiz game in the course resources. But once you&#x27;re ready, then head over to the next lesson and we&#x27;re going to get started by learning how to create our own custom classes. So, for all of that and more, I&#x27;ll see you there.
+1. Day 17 = first day of *designing with* classes, not just using them.
+2. Data becomes objects; behaviour lives in a controller class.
+3. Swappable data source proves the design's flexibility.

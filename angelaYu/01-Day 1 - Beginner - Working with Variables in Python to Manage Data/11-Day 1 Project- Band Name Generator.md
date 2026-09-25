@@ -1,39 +1,74 @@
-# 🐍 Day 1 Project: Band Name Generator
+Here is a structured breakdown of the Day 1 final project — the Band Name Generator.
 
 ---
 
-### Overview
+### 1. What the Program Does
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 1 - Beginner - Working with Variables in Python to Manage Data
-**Lecture:** Day 1 Project: Band Name Generator
-**Level:** Beginner
+1. Prints a welcome message.
+2. Asks **which city you grew up in**.
+3. Asks **the name of a pet**.
+4. Combines the two answers into a **band name** and prints it.
 
----
-
-### Summary
-
-All right, guys, it&#x27;s time for the final project of today. So the program that you&#x27;re going to be building looks a little bit like this. And you can check it out if you head over to this link, either by typing it in or heading to the Course Resources page and clicking on the corresponding link. But essentially, it&#x27;s a Band Name Generator, and it asks you for a city that you grew up in and the name of your pet, and then it combines those together and gives you the name of your band. There&#x27;s a couple of things to note here. Firstly is notice when this input got triggered, the cursor actually showed up on a new line. So if I run this again, you can see it says, &quot;What&#x27;s the name of the city you grew up in?&quot; And then the cursor is on the next line. And what I want you to do is to go ahead and head over to this stunning project. So there&#x27;s a couple of steps in here as hints. But the important thing is, once you&#x27;ve completed this project, it should work exactly the same as the one that you see here. And in order to do this, you&#x27;re going to have to apply everything that you learned today, including printing inputs, variables, new lines, string manipulation, debugging, and a whole lot more. So this is the time to grab yourself a cup of tea or coffee, pause the video, and tackle this final project. All right guys, I hope you gave that a go and you were able to complete it. If you want to see how I&#x27;ve implemented it, or if you want to, just check to see if you have any errors or if there&#x27;s something that you&#x27;re unsure about, then continue watching and I&#x27;ll go through the solution with you. The first step is to create a greeting for your program. In our case, it says, Welcome to the Band Name Generator, so that&#x27;s exactly what I&#x27;m going to create. And we print these messages using the print() function. So I&#x27;m going to say, &quot;Welcome to the Band Name Generator.&quot; And this when I run it will just print that message. Now the next step is to ask the user for the city that they grew up in. So in order to get some input from the user, we&#x27;ll need of course the input() function. And we&#x27;re going to ask them using the prompt which goes inside the parentheses, &quot;Which city did you grow up in?&quot; So now when I hit run it&#x27;s going to ask me for the city that I grew up in and I&#x27;m able to add a reply like so. Now that data is just going to be lost to thin air unless I capture it and I give it a name. So I&#x27;m going to have to create a variable to hold on to the data that the user inputted. So we&#x27;ll just call that city and then add the equal sign to assign whatever it is that the user typed in to this variable name. And now I have access to this city variable, and I can print it or use it later on if I want to, like so. Now the next step is to ask the user for the name of a pet. So we&#x27;ll call that variable pet, and we&#x27;ll assign it the value that the user inputs for what is the name of a pet? Now step four is to combine the name of the city and the pet and show them their band name. Now, there&#x27;s quite a few ways of doing this, especially if you look around on the internet, but the way that you learned in today&#x27;s lessons is using string concatenation. So we&#x27;re going to do that. So we&#x27;re going to use a print statement and tell them, &quot;Your band name could be:...&quot; And then we&#x27;re going to add the name of the city, and then add a space and then add the name of their pet. So now when we run our code, it will ask us for the name of their city and then the name of a pet. And then it should combine those together and show us the name of our band. Now the final step is that the input cursor should show on a new line like this. So here&#x27;s the cursor, but here&#x27;s the input just so that you get a bit of space and you&#x27;re not typing it in directly after the prompt here. Like what we have. So how do we do that? Well, you learned about modifying strings by creating a new line using the \n, and we can add that both to the end of the city input and the pet input, and now when we run our code, you&#x27;ll see that the cursor now shows up on the next line, and our program looks a lot better. So there you have it. This is how you solve this boss challenge. And this is how you create the Band Name Generator project. So I hope you had fun with me today, learning Python and a lot of the fundamentals of Python. And tomorrow I&#x27;ve got another jam-packed module of really awesome tutorials, and code challenges, and projects for you to sink your teeth into. I&#x27;m looking forward to seeing you tomorrow. So have a rest now and let your brain work on the things that you learned while you sleep, and I&#x27;ll see you here bright and early. Good night, and see you tomorrow.
+Example: city `Bristol` + pet `Rabbit` → band name **`Bristol Rabbit`**.
 
 ---
 
-### Key Concepts
+### 2. Building It Step by Step
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **print() function** | Introduced/used in this lecture |
-| 2 | **while loops** | Introduced/used in this lecture |
-| 3 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 4 | **input() function** | Introduced/used in this lecture |
+**Step 1 — Greeting** with `print()`:
+
+```python
+print("Welcome to the Band Name Generator.")
+```
+
+**Step 2 — Ask for the city** with `input()`, and **store it in a variable** so it isn't lost:
+
+```python
+city = input("Which city did you grow up in?\n")
+```
+
+**Step 3 — Ask for the pet** the same way:
+
+```python
+pet = input("What is the name of a pet?\n")
+```
+
+**Step 4 — Combine and show the band name** using concatenation:
+
+```python
+print("Your band name could be " + city + " " + pet)
+```
+
+> **Tip:** Adding `"\n"` at the end of an input prompt puts the typing cursor on a
+> new line — just like the reference program. A `" "` string in the final print
+> keeps a space between the city and the pet.
 
 ---
 
-### 🏋️ Practice Exercise
+### 3. Full Solution
 
-All right, guys, it&#x27;s time for the final project of today. So the program that you&#x27;re going to be building looks a little bit like this. And you can check it out if you head over to this link, either by typing it in or heading to the Course Resources page and clicking on the corresponding link. But essentially, it&#x27;s a Band Name Generator, and it asks you for a city that you grew up in and the name of your pet, and then it combines those together and gives you the name of your band. There&#x27;s a couple of things to note here. Firstly is notice when this input got triggered, the cursor actually showed up on a new line. So if I run this again, you can see it says, &quot;What&#x27;s the name of the city you grew up in?&quot; And then the cursor is on the next line. And what I want you to do is to go ahead and head over to this stunning project. So there&#x27;s a couple of steps in here as hints. But the important thing is, once you&#x27;ve completed this project, it should work exactly the same as the one that you see here. And in order to do this, you&#x27;re going to have to apply everything that you learned today, including printing inputs, variables, new lines, string manipulation, debugging, and a whole lot more. So this is the time to grab yourself a cup of tea or coffee, pause the video, and tackle this final project. All right guys, I hope you gave that a go and you were able to complete it. If you want to see how I&#x27;ve implemented it, or if you want to, just check to see if you have any errors or if there&#x27;s something that you&#x27;re unsure about, then continue watching and I&#x27;ll go through the solution with you. The first step is to create a greeting for your program. In our case, it says, Welcome to the Band Name Generator, so that&#x27;s exactly what I&#x27;m going to create. And we print these messages using the print() function. So I&#x27;m going to say, &quot;Welcome to the Band Name Generator.&quot; And this when I run it will just print that message. Now the next step is to ask the user for the city that they grew up in. So in order to get some input from the user, we&#x27;ll need of course the input() function. And we&#x27;re going to ask them using the prompt which goes inside the parentheses, &quot;Which city did you grow up in?&quot; So now when I hit run it&#x27;s going to ask me for the city that I grew up in and I&#x27;m able to add a reply like so. Now that data is just going to be lost to thin air unless I capture it and I give it a name. So I&#x27;m going to have to create a variable to hold on to the data that the user inputted. So we&#x27;ll just call that city and then add the equal sign to assign whatever it is that the user typed in to this variable name. And now I have access to this city variable, and I can print it or use it later on if I want to, like so. Now the next step is to ask the user for the name of a pet. So we&#x27;ll call that variable pet, and we&#x27;ll assign it the value that the user inputs for what is the name of a pet? Now step four is to combine the name of the city and the pet and show them their band name. Now, there&#x27;s quite a few ways of doing this, especially if you look around on the internet, but the way that you learned in today&#x27;s lessons is using string concatenation. So we&#x27;re going to do that. So we&#x27;re going to use a print statement and tell them, &quot;Your band name could be:...&quot; And then we&#x27;re going to add the name of the city, and then add a space and then add the name of their pet. So now when we run our code, it will ask us for the name of their city and then the name of a pet. And then it should combine those together and show us the name of our band. Now the final step is that the input cursor should show on a new line like this. So here&#x27;s the cursor, but here&#x27;s the input just so that you get a bit of space and you&#x27;re not typing it in directly after the prompt here. Like what we have. So how do we do that? Well, you learned about modifying strings by creating a new line using the \n, and we can add that both to the end of the city input and the pet input, and now when we run our code, you&#x27;ll see that the cursor now shows up on the next line, and our program looks a lot better. So there you have it. This is how you solve this boss challenge. And this is how you create the Band Name Generator project. So I hope you had fun with me today, learning Python and a lot of the fundamentals of Python. And tomorrow I&#x27;ve got another jam-packed module of really awesome tutorials, and code challenges, and projects for you to sink your teeth into. I&#x27;m looking forward to seeing you tomorrow. So have a rest now and let your brain work on the things that you learned while you sleep, and I&#x27;ll see you here bright and early. Good night, and see you tomorrow.
+```python
+print("Welcome to the Band Name Generator.")
+city = input("Which city did you grow up in?\n")
+pet = input("What is the name of a pet?\n")
+print("Your band name could be " + city + " " + pet)
+```
+
+**Sample run:**
+```
+Welcome to the Band Name Generator.
+Which city did you grow up in?
+Bristol
+What is the name of a pet?
+Rabbit
+Your band name could be Bristol Rabbit
+```
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-All right, guys, it&#x27;s time for the final project of today. So the program that you&#x27;re going to be building looks a little bit like this. And you can check it out if you head over to this link, either by typing it in or heading to the Course Resources page and clicking on the corresponding link. But essentially, it&#x27;s a Band Name Generator, and it asks you for a city that you grew up in and the name of your pet, and then it combines those together and gives you the name of your band. There&#x27;s a couple of things to note here. Firstly is notice when this input got triggered, the cursor actually showed up on a new line. So if I run this again, you can see it says, &quot;What&#x27;s the name of the city you grew up in?&quot; And then the cursor is on the next line. And what I want you to do is to go ahead and head over to this stunning project. So there&#x27;s a couple of steps in here as hints. But the important thing is, once you&#x27;ve completed this project, it should work exactly the same as the one that you see here. And in order to do this, you&#x27;re going to have to apply everything that you learned today, including printing inputs, variables, new lines, string manipulation, debugging, and a whole lot more. So this is the time to grab yourself a cup of tea or coffee, pause the video, and tackle this final project. All right guys, I hope you gave that a go and you were able to complete it. If you want to see how I&#x27;ve implemented it, or if you want to, just check to see if you have any errors or if there&#x27;s something that you&#x27;re unsure about, then continue watching and I&#x27;ll go through the solution with you. The first step is to create a greeting for your program. In our case, it says, Welcome to the Band Name Generator, so that&#x27;s exactly what I&#x27;m going to create. And we print these messages using the print() function. So I&#x27;m going to say, &quot;Welcome to the Band Name Generator.&quot; And this when I run it will just print that message. Now the next step is to ask the user for the city that they grew up in. So in order to get some input from the user, we&#x27;ll need of course the input() function. And we&#x27;re going to ask them using the prompt which goes inside the parentheses, &quot;Which city did you grow up in?&quot; So now when I hit run it&#x27;s going to ask me for the city that I grew up in and I&#x27;m able to add a reply like so. Now that data is just going to be lost to thin air unless I capture it and I give it a name. So I&#x27;m going to have to create a variable to hold on to the data that the user inputted. So we&#x27;ll just call that city and then add the equal sign to assign whatever it is that the user typed in to this variable name. And now I have access to this city variable, and I can print it or use it later on if I want to, like so. Now the next step is to ask the user for the name of a pet. So we&#x27;ll call that variable pet, and we&#x27;ll assign it the value that the user inputs for what is the name of a pet? Now step four is to combine the name of the city and the pet and show them their band name. Now, there&#x27;s quite a few ways of doing this, especially if you look around on the internet, but the way that you learned in today&#x27;s lessons is using string concatenation. So we&#x27;re going to do that. So we&#x27;re going to use a print statement and tell them, &quot;Your band name could be:...&quot; And then we&#x27;re going to add the name of the city, and then add a space and then add the name of their pet. So now when we run our code, it will ask us for the name of their city and then the name of a pet. And then it should combine those together and show us the name of our band. Now the final step is that the input cursor should show on a new line like this. So here&#x27;s the cursor, but here&#x27;s the input just so that you get a bit of space and you&#x27;re not typing it in directly after the prompt here. Like what we have. So how do we do that? Well, you learned about modifying strings by creating a new line using the \n, and we can add that both to the end of the city input and the pet input, and now when we run our code, you&#x27;ll see that the cursor now shows up on the next line, and our program looks a lot better. So there you have it. This is how you solve this boss challenge. And this is how you create the Band Name Generator project. So I hope you had fun with me today, learning Python and a lot of the fundamentals of Python. And tomorrow I&#x27;ve got another jam-packed module of really awesome tutorials, and code challenges, and projects for you to sink your teeth into. I&#x27;m looking forward to seeing you tomorrow. So have a rest now and let your brain work on the things that you learned while you sleep, and I&#x27;ll see you here bright and early. Good night, and see you tomorrow.
+1. `print()` for messages, `input()` with a prompt for questions.
+2. **Save every answer in a variable** or it's gone.
+3. Concatenate with `+`, adding `" "` where you need spaces.
+4. Runnable version: [`band_name_generator.py`](band_name_generator.py)

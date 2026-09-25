@@ -1,28 +1,48 @@
-# 🔧 Solution & Walkthrough for Saving Progress
+Here is a structured walkthrough of the save-progress solution.
 
 ---
 
-### Overview
+### 1. The Complete Data Flow
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 31 - Intermediate - Flash Card App Capstone Project
-**Lecture:** Solution & Walkthrough for Saving Progress
-**Level:** Intermediate
+```
+startup:   words_to_learn.csv exists? ──no──▶ french_words.csv (all words)
+                     │yes
+                     ▼
+           to_learn = list of dicts
+                     │
+app loop:  next_card() → 3s → flip_card()
+             │✔                     │✘
+             ▼                      ▼
+   remove + to_csv()          next_card()
+   (deck shrinks forever)
+```
+
+---
+
+### 2. The Final Code Touches
+
+```python
+def is_known():
+    to_learn.remove(current_card)
+    data = pandas.DataFrame(to_learn)
+    data.to_csv("data/words_to_learn.csv", index=False)
+    next_card()
+```
+
+* `index=False` — no stray unnamed column in the saved CSV.
+* When `to_learn` is empty, `pandas.DataFrame([]).to_csv` writes an empty file —
+  the app has taught you *everything* it has.
 
 ---
 
-### Summary
+### 3. The Capstone Wrap-Up
 
-We are now within sight of the finish line. We&#x27;re onto the last step. So this is the solution for step 4. And in step 4 we want to be able to improve our program so that the words where the user clicks the checkmark to means they already know that word. They know what it means and they don&#x27;t wanna see it again in this list. So what we want to be able to do is to remove the words that the user knows from this dictionary of words to_learn. And to do that, we have to change this command. When the user clicks on the unknown button, we&#x27;re going to simply just give them the next card, which is a random word from the list of words. But when they use it clicks on the known button, instead of clicking on next card, we&#x27;re going to call a different function which I&#x27;m going to call is_known. Now is_known is going to be a function that&#x27;s going to remove the current card from the cards that are in the list of words to learn. So what we&#x27;re going to do is we&#x27;re going to get hold of our list to learn, and then we&#x27;re going to call the remove method. And then we&#x27;re going to remove a particular element from it. And that happens to be the current card. So remember, the current card is a dictionary which we got by randomly choosing from our list to learn. So now, when the user says is_known, then the current card is going to be removed from the list of words to learn. And then after we&#x27;ve done that, then we&#x27;re going to call next card from this particular method. At the moment, if we run this code and I just keep clicking the check mark, eventually, we&#x27;re going to have a very small list of words that we&#x27;re going to pick from. In fact, if I go ahead and print the length of my list, to_learn, you can see that the first time I run this code and I click on the is_known button, we have a hundred words. But if I keep clicking on this, then you&#x27;ll see that every single time, I&#x27;m just reducing that list because I&#x27;m saying, I already know what this word compris means and that word is now taken out of my list of words to learn. So now that list is smaller by one entry. Now this works right now, but if I rerun the app, then you can see it goes back right to the beginning and it has a hundred words again. So in order to keep hold of the words that I still need to learn, I have to save this list to a new permanent file each time the user clicks on this is_known button. So the way that I&#x27;m going to do that is by using pandas again. I&#x27;m going to use pandas to create a new data frame. And that data frame is going to be created from our list to_learn. Now, I&#x27;m going to save this as our data, and then I can say data.to_csv in order to save it as a CSV file. So I&#x27;ll call this words_to_learn.csv. So now, if I press my check mark and I take a look within my files, you can see that words_to_learn.csv is created. And at the moment it&#x27;s got 89 entries. But if I keep clicking this a few times, it&#x27;s going to reduce each time. So this is now a permanent storage of all the words that I have yet to learn. But I don&#x27;t really want it randomly in the middle of my project. I want it to be saved alongside my french_words.csv. So I have to change this to a file path which is going to be data/words_to_learn.csv. So let&#x27;s go ahead and delete this file and do refactor. And then we&#x27;re going to run this again. And next time you&#x27;ll see that it appears in the right place. Now, in addition to saving it to CSV, we also have to read from that CSV because instead of using the words from our original list which is our french_words.csv, I actually want to be able to read from my words_to_learn.csv instead, because that way, every single time I rerun the app, it&#x27;s always going to give me all the words that I&#x27;ve yet to learn. So currently we&#x27;re on 87. If I run this again, you can see that the first time I click on this, it&#x27;s going to go to 86 instead of going back to 100. But there is a problem here though because if I delete this file, words_to_learn.csv, and I go ahead and run this, the first time this runs it&#x27;s going to crash and we have that familiar file not found error. So we know how to deal with that. We need to catch this exception. The exception occurs right here. It happens when we try to get hold of this piece of data which may or may not exist. So if it does not exist, so we&#x27;re going to catch this except file not found error. Well, in that case, we&#x27;re going to be using the original data which comes from the french_words.csv. So we&#x27;ll say pandas. read_csv and then we&#x27;re going to read this file, data/french_words.csv. So this is always going to be there because it&#x27;s preloaded with our project. But if we do manage to find our words_to_learn.csv, then that means this program has been run before and we&#x27;ve removed some of the words we already know. So we can catch that with an else statement and we can say, well, in this case, we&#x27;re going to set a global variable called to_learn which starts out as an empty dictionary. And we set it to the data that comes from this CSV. However, if that file was not found, then this to_learn is going to be set to the original data.to_dict and we&#x27;re going to orient according to records as well. Okay. Now, when we run our code, you can see we have no errors. And the first time that it runs, it&#x27;s going to pick from our french_words.csv. Now, once I&#x27;ve started saying I&#x27;ve learned this, I&#x27;ve learned this, I&#x27;ve learned this, then it&#x27;s going to generate a words_to_learn.csv. And the next time I run this code, it&#x27;s gonna start using that words_to_learn.csv and start where I left off. Now, there is one slight weird bug to this. When you take a look at the words_to_learn.csv, it adds the record number to the first column every single time I run the code. So if I run this code again, you can see now I have three columns of all of the records. So basically when we read from this particular CSV, we generate a data frame. And when I read from that data frame, so let&#x27;s delete this and run our code again, you can see that pandas is automatically added in these record numbers. So that gets then added back into our words_to_learn.csv when it saves it into the file. If we want to get rid of these record numbers, all we have to do is when we save it to the CSV, we can set a property called index to false. This way it just doesn&#x27;t add the index numbers to our newly created list and now if I rerun this code, you can see that our words_to_learn.csv doesn&#x27;t actually include an index. It only includes the actual records or the actual words and their English translations. That&#x27;s basically it. That&#x27;s all the solutions to our capstone project. And you&#x27;ve now built a fully fleshed flashcard that you can use to learn languages. So you could have the front with whatever language you want, and the back with English translations, or you can use it to learn Programming facts. You could have the front with a Programming word and the back as the meaning of the Programming word. You could use it to study History or Geography. And this program is going to help you manage all the things that you don&#x27;t remember and keep showing it to you until you do. Have fun modifying this flashcard app and I hope it will be helpful in your studies as well. If you&#x27;ve built something particularly interesting, again, be sure to share with us in the Q/A so that we can all admire and congratulate you on your hard work.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Pandas library** | Introduced/used in this lecture |
-| 3 | **random module** | Introduced/used in this lecture |
+Four steps, four familiar patterns: UI (Day 27/28), data pipeline (Day 25/26),
+timers (Day 28), persistence + exceptions (Day 30). Nothing new — everything combined.
 
 ---
+
+### Summary Checklist
+
+1. ✔ rewrites the deck; ✘ leaves it alone; startup picks the right file.
+2. Runnable version: [`main.py`](main.py) (needs the course's images + CSVs)

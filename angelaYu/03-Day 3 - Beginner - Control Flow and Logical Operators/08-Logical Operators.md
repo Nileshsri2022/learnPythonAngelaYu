@@ -1,32 +1,69 @@
-# 🐍 Logical Operators
+Here is a structured breakdown of everything covered in this lesson on logical operators.
 
 ---
 
-### Overview
+### 1. The Three Logical Operators
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 3 - Beginner - Control Flow and Logical Operators
-**Lecture:** Logical Operators
-**Level:** Beginner
+They combine or flip Boolean conditions **in a single line of code**:
 
----
-
-### Summary
-
-Now, up to this point you&#x27;ve seen us use if statements, else statements, elif statements, multiple if statements as well as nested if statements, but the thing that we haven&#x27;t been able to do thus far is to check for multiple conditions in the same line of code. So how would we be able to combine different conditions and say, well, is the pizza large, and the user wants pepperoni, and extra cheese all in the same line of code. Well, to do this, we would need to learn about the logical operators. So there&#x27;s three of them that are really useful: &quot;and&quot;, &quot;or&quot;, and &quot;not&quot;. So let&#x27;s take a look at the first one. When you combine two different conditions using an and operator they both have to be True both A and B for the entire line of code to be True. If just one of them is True, say A is True and B is False, or A is False and B is True, then the overall thing evaluates to False. Now let&#x27;s try out some of that in actual code. So let&#x27;s go ahead and go into the Python Console that we see, right here. And here we can write Python code from scratch, so completely independent of everything else and independent of our code files. So let&#x27;s test out some Python code in here. Let&#x27;s say that, a = 12. Right? Now, let&#x27;s say that I wanted to check whether if is a &gt; 15? Well, that is going to be False. Now what about is a &gt; 10? Well, that&#x27;s going to be True. Now, if I combined this using an &quot;and&quot; statement, I could say, well, is a &gt; 10 and a &lt; 13 and hit Enter, then I would get, True, because both a is greater than ten and a is less than 13 are True. So in this case, when both conditions are true, then this entire line gets evaluated to True. But see what happens when just one of them is False. So is a &gt; 15 and a &lt; 13, a is greater than 15 is False, a is less than 13 is True, and now we get False . So that&#x27;s what happens when you combine different conditions using and. So using the &quot;and&quot; logical operator it looks at two conditions, and to see if they are both True. And if they are both True it becomes True as the final outcome. But if either of these are False, so False and True becomes False. True and False also becomes False. And this is how the and logical operator works. Now if you only needed one of the conditions to be True, then you could use the &quot;or&quot; operator instead. So if C or D were True, or if they&#x27;re both True, then it will evaluate to True. It&#x27;s only when both C and D are False, does this statement actually become False. Now the final one is the &quot;not&quot; operator. And all that this does is it basically reverses a condition. So if the condition is False, then it becomes True. If it&#x27;s True, then it becomes False. So coming back to our code, we can refresh and restart the Python Console and start with the same a = 12 . And we can use the or statement by saying, well, is a &gt; 10. That&#x27;s True, or is a &lt; 10, which is not True. So here we have a condition that is True and a condition that&#x27;s not True, but because this time instead of using an and, we have an or, between these two conditions, then this will actually evaluate to True. So in this case, using the or True or True will become True. True or False will become True. False or True becomes true and it&#x27;s only False or False when both of the conditions are False does it actually evaluate to False. So this is quite different from the &quot;and&quot; operator. Now finally with the &quot;not&quot; operator, it only works when the condition that&#x27;s being checked is False. So effectively it flips the True to the False and False to True. Let me show you what I mean. So we know that a is 12, so is a &lt; 0? Well it&#x27;s not because it&#x27;s 12. It&#x27;s definitely not less than zero. But by putting the not in front of it, it reverses the condition. So a &lt; 0, this will evaluate to False, but putting the not in front of it it becomes True. So not False is True, and not True is False. Coming back to our roller coaster ticketing, let&#x27;s say that the roller coaster company decided that for everybody who is having a midlife crisis, they would give them free tickets. And according to Wikipedia, midlife crises typically occur when you are 45 to 55 years old. Let&#x27;s see if we can incorporate this into our code. So let&#x27;s say that in addition to these existing price categories, what if you had to add a separate price category for those people who are aged between 45 and 55, and those people get to ride for free? Do you think you would be able to change the code using what you&#x27;ve learned about logical operators, in order to incorporate this addition to our program? Pause the video and give that a go. So we&#x27;ve currently got three conditions: age less than 12, age between 12 and 18, and finally everybody else. Now instead of just finishing up there, let&#x27;s go ahead and add another elif. And here we&#x27;re going to combine two conditions. We&#x27;re going to say if the age &gt;= 45 and age &lt;= 55, then we get to catch that midlife crisis window. Well, in this case, we&#x27;re going to print something like...we&#x27;re going to say everything&#x27;s going to be okay, have a free ride on us. And in fact, we don&#x27;t need to modify the bill in any way because we know that with if, elif, and else statements is that once this condition matches, then everything that&#x27;s inside this block. So everything that&#x27;s indented inside this elif is going to be carried out, namely printing this out, and then it&#x27;s going to skip the rest of this if else block and continue on. Now, if they want a photo, they still have to pay $3, but at least their ticket is free. And we&#x27;ve been able to do this because we know about the &quot;and&quot; logical operator. Now, for the keen eyed amongst you, you might have noticed with this condition check, we have a warning underneath it. And this says that there&#x27;s actually a simpler way of writing this expression, and it tells us that we can actually simplify it. Now because we&#x27;re checking two conditions and we have the &quot;and&quot; logical operator in between, sometimes you might want to make this code less wordy. So if you hover over this warning and you click on Simplified chained comparison, it will give you a simpler way of doing this comparison using two of these checks, either side of the age, and it does exactly the same thing, but in less words of code. But here is the big but, looking at this, is this easier to understand and logic through versus this? Because to somebody who&#x27;s just starting Python programming, I think this is easier to understand what&#x27;s going on. Is age greater or equal to 45, and is age less than or equal to 55? So even though there is this warning in here, I&#x27;m going to leave it in this format because a lot of you are just starting out learning how to code, and this is a much easier way of reasoning about what&#x27;s going on in this line of code. So the thing with warnings are that they&#x27;re really helpful once you get going as a programmer, but in the learning stage, I wouldn&#x27;t worry too much about all of it. Look at it, read it, see if you understand what it&#x27;s trying to tell you, and then you decide which version you prefer.
+| Operator | Rule | Example |
+|----------|------|---------|
+| `and` | `True` only if **both** sides are `True` | `a > 10 and a < 13` |
+| `or` | `True` if **at least one** side is `True` | `a < 10 or a > 13` |
+| `not` | **Inverts** the Boolean | `not a > 15` |
 
 ---
 
-### Key Concepts
+### 2. `and` — Both Must Be True
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+```python
+a = 12
+print(a > 10 and a < 13)   # True  (both sides True)
+print(a > 15 and a < 13)   # False (one side False)
+```
+
+`True and True` → `True`; anything with a `False` → `False`.
+
+---
+
+### 3. `or` — At Least One True
+
+```python
+a = 12
+print(a < 10 or a > 13)    # False (both sides False)
+print(a < 10 or a == 12)   # True  (one side True is enough)
+```
+
+`False or False` → `False`; every other combination → `True`.
 
 ---
 
-### 🏋️ Practice Exercise
+### 4. `not` — Flip It
 
-Now, up to this point you&#x27;ve seen us use if statements, else statements, elif statements, multiple if statements as well as nested if statements, but the thing that we haven&#x27;t been able to do thus far is to check for multiple conditions in the same line of code. So how would we be able to combine different conditions and say, well, is the pizza large, and the user wants pepperoni, and extra cheese all in the same line of code. Well, to do this, we would need to learn about the logical operators. So there&#x27;s three of them that are really useful: &quot;and&quot;, &quot;or&quot;, and &quot;not&quot;. So let&#x27;s take a look at the first one. When you combine two different conditions using an and operator they both have to be True both A and B for the entire line of code to be True. If just one of them is True, say A is True and B is False, or A is False and B is True, then the overall thing evaluates to False. Now let&#x27;s try out some of that in actual code. So let&#x27;s go ahead and go into the Python Console that we see, right here. And here we can write Python code from scratch, so completely independent of everything else and independent of our code files. So let&#x27;s test out some Python code in here. Let&#x27;s say that, a = 12. Right? Now, let&#x27;s say that I wanted to check whether if is a &gt; 15? Well, that is going to be False. Now what about is a &gt; 10? Well, that&#x27;s going to be True. Now, if I combined this using an &quot;and&quot; statement, I could say, well, is a &gt; 10 and a &lt; 13 and hit Enter, then I would get, True, because both a is greater than ten and a is less than 13 are True. So in this case, when both conditions are true, then this entire line gets evaluated to True. But see what happens when just one of them is False. So is a &gt; 15 and a &lt; 13, a is greater than 15 is False, a is less than 13 is True, and now we get False . So that&#x27;s what happens when you combine different conditions using and. So using the &quot;and&quot; logical operator it looks at two conditions, and to see if they are both True. And if they are both True it becomes True as the final outcome. But if either of these are False, so False and True becomes False. True and False also becomes False. And this is how the and logical operator works. Now if you only needed one of the conditions to be True, then you could use the &quot;or&quot; operator instead. So if C or D were True, or if they&#x27;re both True, then it will evaluate to True. It&#x27;s only when both C and D are False, does this statement actually become False. Now the final one is the &quot;not&quot; operator. And all that this does is it basically reverses a condition. So if the condition is False, then it becomes True. If it&#x27;s True, then it becomes False. So coming back to our code, we can refresh and restart the Python Console and start with the same a = 12 . And we can use the or statement by saying, well, is a &gt; 10. That&#x27;s True, or is a &lt; 10, which is not True. So here we have a condition that is True and a condition that&#x27;s not True, but because this time instead of using an and, we have an or, between these two conditions, then this will actually evaluate to True. So in this case, using the or True or True will become True. True or False will become True. False or True becomes true and it&#x27;s only False or False when both of the conditions are False does it actually evaluate to False. So this is quite different from the &quot;and&quot; operator. Now finally with the &quot;not&quot; operator, it only works when the condition that&#x27;s being checked is False. So effectively it flips the True to the False and False to True. Let me show you what I mean. So we know that a is 12, so is a &lt; 0? Well it&#x27;s not because it&#x27;s 12. It&#x27;s definitely not less than zero. But by putting the not in front of it, it reverses the condition. So a &lt; 0, this will evaluate to False, but putting the not in front of it it becomes True. So not False is True, and not True is False. Coming back to our roller coaster ticketing, let&#x27;s say that the roller coaster company decided that for everybody who is having a midlife crisis, they would give them free tickets. And according to Wikipedia, midlife crises typically occur when you are 45 to 55 years old. Let&#x27;s see if we can incorporate this into our code. So let&#x27;s say that in addition to these existing price categories, what if you had to add a separate price category for those people who are aged between 45 and 55, and those people get to ride for free? Do you think you would be able to change the code using what you&#x27;ve learned about logical operators, in order to incorporate this addition to our program? Pause the video and give that a go. So we&#x27;ve currently got three conditions: age less than 12, age between 12 and 18, and finally everybody else. Now instead of just finishing up there, let&#x27;s go ahead and add another elif. And here we&#x27;re going to combine two conditions. We&#x27;re going to say if the age &gt;= 45 and age &lt;= 55, then we get to catch that midlife crisis window. Well, in this case, we&#x27;re going to print something like...we&#x27;re going to say everything&#x27;s going to be okay, have a free ride on us. And in fact, we don&#x27;t need to modify the bill in any way because we know that with if, elif, and else statements is that once this condition matches, then everything that&#x27;s inside this block. So everything that&#x27;s indented inside this elif is going to be carried out, namely printing this out, and then it&#x27;s going to skip the rest of this if else block and continue on. Now, if they want a photo, they still have to pay $3, but at least their ticket is free. And we&#x27;ve been able to do this because we know about the &quot;and&quot; logical operator. Now, for the keen eyed amongst you, you might have noticed with this condition check, we have a warning underneath it. And this says that there&#x27;s actually a simpler way of writing this expression, and it tells us that we can actually simplify it. Now because we&#x27;re checking two conditions and we have the &quot;and&quot; logical operator in between, sometimes you might want to make this code less wordy. So if you hover over this warning and you click on Simplified chained comparison, it will give you a simpler way of doing this comparison using two of these checks, either side of the age, and it does exactly the same thing, but in less words of code. But here is the big but, looking at this, is this easier to understand and logic through versus this? Because to somebody who&#x27;s just starting Python programming, I think this is easier to understand what&#x27;s going on. Is age greater or equal to 45, and is age less than or equal to 55? So even though there is this warning in here, I&#x27;m going to leave it in this format because a lot of you are just starting out learning how to code, and this is a much easier way of reasoning about what&#x27;s going on in this line of code. So the thing with warnings are that they&#x27;re really helpful once you get going as a programmer, but in the learning stage, I wouldn&#x27;t worry too much about all of it. Look at it, read it, see if you understand what it&#x27;s trying to tell you, and then you decide which version you prefer.
+```python
+print(not a > 15)   # True — because a > 15 is False
+```
 
 ---
+
+### 5. Why This Matters
+
+Logical operators replace clumsy **nested** code with a single readable condition:
+
+```python
+# Nested version
+if size == "L":
+    if add_pepperoni == "Y":
+
+# One-line version with and
+if size == "L" and add_pepperoni == "Y":
+```
+
+---
+
+### Summary Checklist
+
+1. `and` → both conditions must be `True`.
+2. `or` → at least one condition `True`.
+3. `not` → inverts the result.
+4. Use them to combine conditions on **one line** instead of nesting.

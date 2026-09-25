@@ -1,0 +1,27 @@
+"""Follower data for the Higher Lower Game (a sample of the course's game_data module)."""
+
+data = [
+    {"name": "Instagram", "follower_count": 346, "description": "Social media platform", "country": "United States"},
+    {"name": "Cristiano Ronaldo", "follower_count": 215, "description": "Footballer", "country": "Portugal"},
+    {"name": "Ariana Grande", "follower_count": 183, "description": "Musician and actress", "country": "United States"},
+    {"name": "Dwayne Johnson", "follower_count": 145, "description": "Actor and professional wrestler", "country": "United States"},
+    {"name": "Selena Gomez", "follower_count": 129, "description": "Musician and actress", "country": "United States"},
+    {"name": "Kylie Jenner", "follower_count": 107, "description": "Reality TV personality and businesswoman and model", "country": "United States"},
+    {"name": "Kim Kardashian", "follower_count": 102, "description": "Reality TV personality and businesswoman", "country": "United States"},
+    {"name": "Beyoncé", "follower_count": 96, "description": "Musician", "country": "United States"},
+    {"name": "Taylor Swift", "follower_count": 92, "description": "Musician", "country": "United States"},
+    {"name": "Virat Kohli", "follower_count": 89, "description": "Cricketer", "country": "India"},
+    {"name": "National Geographic", "follower_count": 86, "description": "Magazine", "country": "United States"},
+    {"name": "Leo Messi", "follower_count": 105, "description": "Footballer", "country": "Argentina"},
+    {"name": "Neymar", "follower_count": 81, "description": "Footballer", "country": "Brazil"},
+    {"name": "Mr Bean", "follower_count": 18, "description": "Comedian and actor", "country": "United Kingdom"},
+    {"name": "Snoop Dogg", "follower_count": 42, "description": "Rapper", "country": "United States"},
+    {"name": "Shah Rukh Khan", "follower_count": 42, "description": "Actor", "country": "India"},
+    {"name": "NASA", "follower_count": 42, "description": "Space agency", "country": "United States"},
+    {"name": "Tesla", "follower_count": 30, "description": "Car company", "country": "United States"},
+    {"name": "Disney", "follower_count": 32, "description": "Media conglomerate", "country": "United States"},
+    {"name": "Netflix", "follower_count": 27, "description": "Streaming service", "country": "United States"},
+    {"name": "NASA Hubble", "follower_count": 4, "description": "Telescope", "country": "United States"},
+    {"name": "Malala Yousafzai", "follower_count": 1, "description": "Activist and Nobel Peace Prize winner", "country": "Pakistan"},
+    {"name": "Sachin Tendulkar", "follower_count": 30, "description": "Cricketer", "country": "India"},
+]

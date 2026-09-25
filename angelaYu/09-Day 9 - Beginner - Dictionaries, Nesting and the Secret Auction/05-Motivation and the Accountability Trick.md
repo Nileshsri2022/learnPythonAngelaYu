@@ -1,28 +1,26 @@
-# 🐍 Motivation and the Accountability Trick
+Here is a short wrap-up note for this end-of-Day-9 lecture.
 
 ---
 
-### Overview
+### 1. The Message: The Accountability Trick
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 9 - Beginner - Dictionaries, Nesting and the Secret Auction
-**Lecture:** Motivation and the Accountability Trick
-**Level:** Beginner
+Motivation is easier to keep when **someone else is watching**. Tell a family member, a
+friend or a study buddy that you've committed to 100 days of code, and let them check up
+on you weekly:
 
----
-
-### Summary
-
-Hey, congratulations on completing day 9. Now today I want to share with you a trick that&#x27;s really useful for keeping your motivations high. And the idea is to make sure that you are accountable by not just yourself, but also somebody else. So find a member of your family, find a friend, find a buddy, and just tell them that you&#x27;ve committed to doing this 100 days of code. And then they&#x27;ll check up on you every week asking you, what have you made? What have you learned? And then you can send them the projects you&#x27;ve built like Hangman or Treasure Island so that they can share in your learning and what you&#x27;ve been building. Now, what this is really important for is that you can&#x27;t just tell yourself, ah, you know, maybe I&#x27;ll give myself a day off today. Now you&#x27;ve got somebody who&#x27;s going to hold you accountable to make sure that you keep showing up and you keep persevering. So give that a go and I&#x27;ll see you tomorrow.
+* *"What have you made this week?"*
+* *"What have you learned?"*
 
 ---
 
-### 🏋️ Practice Exercise
+### 2. Why It Works
 
-Hey, congratulations on completing day 9. Now today I want to share with you a trick that&#x27;s really useful for keeping your motivations high. And the idea is to make sure that you are accountable by not just yourself, but also somebody else. So find a member of your family, find a friend, find a buddy, and just tell them that you&#x27;ve committed to doing this 100 days of code. And then they&#x27;ll check up on you every week asking you, what have you made? What have you learned? And then you can send them the projects you&#x27;ve built like Hangman or Treasure Island so that they can share in your learning and what you&#x27;ve been building. Now, what this is really important for is that you can&#x27;t just tell yourself, ah, you know, maybe I&#x27;ll give myself a day off today. Now you&#x27;ve got somebody who&#x27;s going to hold you accountable to make sure that you keep showing up and you keep persevering. So give that a go and I&#x27;ll see you tomorrow.
+* Promises to others are harder to break than promises to yourself.
+* Explaining what you built reinforces it (and doubles as practice for interviews).
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-Hey, congratulations on completing day 9. Now today I want to share with you a trick that&#x27;s really useful for keeping your motivations high. And the idea is to make sure that you are accountable by not just yourself, but also somebody else. So find a member of your family, find a friend, find a buddy, and just tell them that you&#x27;ve committed to doing this 100 days of code. And then they&#x27;ll check up on you every week asking you, what have you made? What have you learned? And then you can send them the projects you&#x27;ve built like Hangman or Treasure Island so that they can share in your learning and what you&#x27;ve been building. Now, what this is really important for is that you can&#x27;t just tell yourself, ah, you know, maybe I&#x27;ll give myself a day off today. Now you&#x27;ve got somebody who&#x27;s going to hold you accountable to make sure that you keep showing up and you keep persevering. So give that a go and I&#x27;ll see you tomorrow.
+1. Recruit an accountability partner today.
+2. Show them your Secret Auction — your first proof of progress. 🤝

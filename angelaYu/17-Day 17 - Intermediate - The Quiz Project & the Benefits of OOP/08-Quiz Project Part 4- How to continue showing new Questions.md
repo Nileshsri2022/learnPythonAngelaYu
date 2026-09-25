@@ -1,31 +1,39 @@
-# 🔧 Quiz Project Part 4: How to continue showing new Questions
+Here is a structured breakdown of Quiz Project Part 4 — looping until the quiz is done.
 
 ---
 
-### Overview
+### 1. A `still_has_questions()` Method
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 17 - Intermediate - The Quiz Project & the Benefits of OOP
-**Lecture:** Quiz Project Part 4: How to continue showing new Questions
-**Level:** Intermediate
+The QuizBrain can answer its own "are we done?":
 
----
+```python
+def still_has_questions(self):
+    return self.question_number < len(self.question_list)
+```
 
-### Summary
-
-In the previous lesson, we managed to get our QuizBrain up and running and to start asking the user for their answer. But currently, there&#x27;s no way for our program to continue to the next question once the user has typed an input. However, if we take a look at the final version of the quiz game, you can see once the user&#x27;s typed an input, it then goes to the next question and shows them the question number 2 and the question text for that second question. How can we create that functionality to work with our QuizBrain? Well, if we could create another method called still_has_questions well then inside our main.py we could probably create a while loop and the while loop checks if the quiz still has questions remaining. Well, then in that case, we&#x27;re going to keep going to the next question. So how do we create this functionality and how do we create it inside the QuizBrain? Your job is to create a new method here which is going to be called still_has_questions. And this is going to return a boolean, either true or false. And depending on that boolean, we can get our while loop to keep working and keep running and looping, or we&#x27;re going to get the loop to stop once the quiz has run out of questions. Here&#x27;s the behavior that you&#x27;re looking for by the end of the challenge. The while loop should continue serving up the next question to the user until we reach the end of the quiz. Have a think about how the question number and the length of the question list relate to each other and see if you can complete this challenge. All right. So we know that we can get the length of our question list by using the Len function. Currently, in all the current version of the question bank, we have 12 questions in total. So the length is going to be 12. Now we want our loop to keep going until we&#x27;ve reached the number of questions in our list. What we could do is we could check to see if the self.question_number is less than the length of self.question_list. In that case, we&#x27;ll return true, but otherwise we&#x27;ll return false. Remember that this question number gets increased every time we show the user the next question. It starts out being zero and then it goes immediately to one. And then we get to the end of the next question function and we get to our while loop. So in our while loop, we can check to see if the quiz still has questions. And if this is true, then go to the next question. But if it&#x27;s false, then exit the loop and we&#x27;re at the end of the game. Back inside our QuizBrain we can actually simplify this method even more because we know that this is going to be evaluated by the computer and it&#x27;s going to be either that true or false. If it is it&#x27;s true then it goes into this block. And if it&#x27;s false, then it goes into the else block. We can actually save ourselves all of this effort by simply just returning this expression. Now, what it&#x27;s going to do is, let&#x27;s say that a = 5 and b = 3. And if we were to return five is greater than three, then this is basically the same as this expression which gets evaluated by the computer. And when this code runs, it&#x27;s going to be either true or it&#x27;s going to be false. So that that value is then going to be straight away returned by this method back into this while loop to see if we should continue going to the next question or not. So let&#x27;s run this file and you can see it asks me the first question. And then it&#x27;s going to go to the next question. And then it&#x27;s going to basically keep going until it gets to the end of the list of questions and then it ends our entire program. In the next lesson we&#x27;re going to figure out how we can check the answer that the user has inputted here and see if its actually the correct answer.
+Returns a Boolean — exactly what a `while` condition wants.
 
 ---
 
-### Key Concepts
+### 2. The Game Loop
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **while loops** | Introduced/used in this lecture |
-| 2 | **if/elif/else conditionals** | Introduced/used in this lecture |
+```python
+quiz = QuizBrain(question_bank)
+
+while quiz.still_has_questions():
+    quiz.next_question()
+
+print("You've completed the quiz!")
+print(f"Your final score was: {quiz.score}/{quiz.question_number}")
+```
+
+The loop keeps asking while there's fuel; when `question_number` reaches the list length,
+`still_has_questions()` flips to `False` and the loop ends.
 
 ---
 
-### Next Steps
+### Summary Checklist
 
-In the previous lesson, we managed to get our QuizBrain up and running and to start asking the user for their answer. But currently, there&#x27;s no way for our program to continue to the next question once the user has typed an input. However, if we take a look at the final version of the quiz game, you can see once the user&#x27;s typed an input, it then goes to the next question and shows them the question number 2 and the question text for that second question. How can we create that functionality to work with our QuizBrain? Well, if we could create another method called still_has_questions well then inside our main.py we could probably create a while loop and the while loop checks if the quiz still has questions remaining. Well, then in that case, we&#x27;re going to keep going to the next question. So how do we create this functionality and how do we create it inside the QuizBrain? Your job is to create a new method here which is going to be called still_has_questions. And this is going to return a boolean, either true or false. And depending on that boolean, we can get our while loop to keep working and keep running and looping, or we&#x27;re going to get the loop to stop once the quiz has run out of questions. Here&#x27;s the behavior that you&#x27;re looking for by the end of the challenge. The while loop should continue serving up the next question to the user until we reach the end of the quiz. Have a think about how the question number and the length of the question list relate to each other and see if you can complete this challenge. All right. So we know that we can get the length of our question list by using the Len function. Currently, in all the current version of the question bank, we have 12 questions in total. So the length is going to be 12. Now we want our loop to keep going until we&#x27;ve reached the number of questions in our list. What we could do is we could check to see if the self.question_number is less than the length of self.question_list. In that case, we&#x27;ll return true, but otherwise we&#x27;ll return false. Remember that this question number gets increased every time we show the user the next question. It starts out being zero and then it goes immediately to one. And then we get to the end of the next question function and we get to our while loop. So in our while loop, we can check to see if the quiz still has questions. And if this is true, then go to the next question. But if it&#x27;s false, then exit the loop and we&#x27;re at the end of the game. Back inside our QuizBrain we can actually simplify this method even more because we know that this is going to be evaluated by the computer and it&#x27;s going to be either that true or false. If it is it&#x27;s true then it goes into this block. And if it&#x27;s false, then it goes into the else block. We can actually save ourselves all of this effort by simply just returning this expression. Now, what it&#x27;s going to do is, let&#x27;s say that a = 5 and b = 3. And if we were to return five is greater than three, then this is basically the same as this expression which gets evaluated by the computer. And when this code runs, it&#x27;s going to be either true or it&#x27;s going to be false. So that that value is then going to be straight away returned by this method back into this while loop to see if we should continue going to the next question or not. So let&#x27;s run this file and you can see it asks me the first question. And then it&#x27;s going to go to the next question. And then it&#x27;s going to basically keep going until it gets to the end of the list of questions and then it ends our entire program. In the next lesson we&#x27;re going to figure out how we can check the answer that the user has inputted here and see if its actually the correct answer.
+1. `while quiz.still_has_questions():` — the object reports its own completion.
+2. The final score line uses the object's state — no extra bookkeeping.
+3. Methods that return Booleans (`has_x`, `is_x`) make loops read like English.
