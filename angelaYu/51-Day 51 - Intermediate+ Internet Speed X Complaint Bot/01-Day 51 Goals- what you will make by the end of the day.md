@@ -1,31 +1,57 @@
-# 📖 Day 51 Goals: what you will make by the end of the day
+Here is a structured breakdown of this lesson on the goals for Day 51.
 
 ---
 
-### Overview
+### 1. The Idea: Complain Automatically
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 51 - Intermediate+ Internet Speed X Complaint Bot
-**Lecture:** Day 51 Goals: what you will make by the end of the day
-**Level:** N/A
+Internet providers promise a minimum speed in your contract. Proving you're not getting it
+usually means calling support and waiting on hold. Today's bot does the complaining for
+you, in public, where customer-service teams actually pay attention.
 
----
+**The pipeline:**
 
-### Summary
-
-Hey guys welcome to day 51 of 100 Days of Code. Today we&#x27;re going to be building a Complaining Twitter bot. I dunno about you, but I&#x27;m the sort of person who really, really hates dealing with customer service. Very often, if I buy a product and it doesn&#x27;t work or it gets shipped to me broken, I will actually just put it down to bad luck to avoid having to deal with customer service. I find it really hard calling up customer service, waiting on the line, and it&#x27;s just generally a really difficult experience for me. But what if it&#x27;s something that really bothers you that you need to complain about in order to get it fixed? Well, this particular internet user was promised a internet speed from Comcast, so Xfinity in the US where he was meant to get 150 kilobits down and 10 kilobits up. But what he found was that actually for a lot of the time, he wasn&#x27;t getting the promised internet speeds. So he would do a speed test and then send his internet speeds by Twitter to Comcast to complain. Now, depending on who your internet provider is and how much you&#x27;re paying, they tend to guarantee a minimum internet speed. Now, very often though, most people aren&#x27;t testing their internet speeds every day. Just occasionally you feel like, oh, it feels a bit slow today. Or why is my download taking so long? If you look in your contract, you&#x27;ll often find that guaranteed minimum speed in terms of megabits per second. For most people, it&#x27;s probably going to be around 30 megabits or 60 megabits depending on how much you pay. Now for a lot of providers, they actually have a guarantee where if you can prove that the internet speed that you&#x27;re getting is not what they promised, they&#x27;ll actually give you your money back or even better they might try and fix it. So what this Comcast user did is he would test his internet speed and then tweet automatically to Comcast and complain that his internet speed is only 23 down 5 up when he&#x27;s paying 150 down 10 up. Now, the reason why people interact with Twitter in terms of customer service is because it&#x27;s public. Everybody else can see your complaint to a particular company and if they&#x27;re a large brand or a large company, then they tend to have a social media monitor. And often the customer service you get by complaining on Twitter can actually be even better than if you call them up or if you email them. One of the best customer service teams on Twitter is JetBlue. And on the internet, you&#x27;ve got lots of examples of people having a really great experience with the customer service team on Twitter from JetBlue, for example, this guy who was on a flight and his TV didn&#x27;t work, and they actually ended up offering him, um, flight credits just on the spot for having a broken TV, all achieved using a couple of tweets. Now, recently I was even reading this article in time magazine where it&#x27;s talking about &#x27;Does tweeting at companies really work?&#x27; And very often, yes, it really does. And even when you look at this basically Python Twitter bot, you can see that he often got replies from Comcast and other users chipping in trying to get ahold of Comcast to fix their internet as well. Now, Comcast is probably quite well known to having pretty bad customer service. In fact, there&#x27;s this post which I&#x27;ll link to, um, where a journalist was trying to cancel their Comcast service and it took something like 5 or 10 minutes where the customer service guy was just trying really, really hard to not let them cancel even sometimes being quite condescending and a bit mean. But in this conversation, you actually hear the Comcast person saying we&#x27;re the only people who can promise you a hundred megabit download speed. And in fact, when you look at the Comcast users tweets, you can see often that is actually not the case. So this can also bolster your argument when you want to leave an internet service or when you want to get money back or when you just want somebody to fix your internet speeds. The website we&#x27;re going to be using is speedtest.net which is probably one of the best speed test websites out there. And what we&#x27;re going to do is we&#x27;re going to use our bots using selenium to press go. You can see it&#x27;s going to start working out my download speeds and my upload speeds. Now this often takes anywhere between sort of half a minute to two minutes depending on your internet speed. But once it&#x27;s done, then we&#x27;ll end up with a result ID as well as our download speed and our upload speed. And you can then compare these against what you were promised by your internet service provider. And then we&#x27;re going to tweet at our provider. So if it&#x27;s Comcast or AT&amp;T or in the UK, it could be BT or Sky, whatever it may be. And then we&#x27;re going to tell them about our terrible internet speeds compared to what we pay for. So that&#x27;s the goal. And when I run my internet speed Twitter bot, you can see this is what happens. [inaudible], That&#x27;s the goal. Once you&#x27;re ready head over to the next lesson and let&#x27;s get started.
-
----
-
-### Key Concepts
-
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
-| 2 | **Selenium web automation** | Introduced/used in this lecture |
+```
+speedtest.net  →  read download/upload  →  compare with what you pay for  →  tweet at your ISP
+```
 
 ---
 
-### Next Steps
+### 2. Why Twitter/X Works for This
 
-Hey guys welcome to day 51 of 100 Days of Code. Today we&#x27;re going to be building a Complaining Twitter bot. I dunno about you, but I&#x27;m the sort of person who really, really hates dealing with customer service. Very often, if I buy a product and it doesn&#x27;t work or it gets shipped to me broken, I will actually just put it down to bad luck to avoid having to deal with customer service. I find it really hard calling up customer service, waiting on the line, and it&#x27;s just generally a really difficult experience for me. But what if it&#x27;s something that really bothers you that you need to complain about in order to get it fixed? Well, this particular internet user was promised a internet speed from Comcast, so Xfinity in the US where he was meant to get 150 kilobits down and 10 kilobits up. But what he found was that actually for a lot of the time, he wasn&#x27;t getting the promised internet speeds. So he would do a speed test and then send his internet speeds by Twitter to Comcast to complain. Now, depending on who your internet provider is and how much you&#x27;re paying, they tend to guarantee a minimum internet speed. Now, very often though, most people aren&#x27;t testing their internet speeds every day. Just occasionally you feel like, oh, it feels a bit slow today. Or why is my download taking so long? If you look in your contract, you&#x27;ll often find that guaranteed minimum speed in terms of megabits per second. For most people, it&#x27;s probably going to be around 30 megabits or 60 megabits depending on how much you pay. Now for a lot of providers, they actually have a guarantee where if you can prove that the internet speed that you&#x27;re getting is not what they promised, they&#x27;ll actually give you your money back or even better they might try and fix it. So what this Comcast user did is he would test his internet speed and then tweet automatically to Comcast and complain that his internet speed is only 23 down 5 up when he&#x27;s paying 150 down 10 up. Now, the reason why people interact with Twitter in terms of customer service is because it&#x27;s public. Everybody else can see your complaint to a particular company and if they&#x27;re a large brand or a large company, then they tend to have a social media monitor. And often the customer service you get by complaining on Twitter can actually be even better than if you call them up or if you email them. One of the best customer service teams on Twitter is JetBlue. And on the internet, you&#x27;ve got lots of examples of people having a really great experience with the customer service team on Twitter from JetBlue, for example, this guy who was on a flight and his TV didn&#x27;t work, and they actually ended up offering him, um, flight credits just on the spot for having a broken TV, all achieved using a couple of tweets. Now, recently I was even reading this article in time magazine where it&#x27;s talking about &#x27;Does tweeting at companies really work?&#x27; And very often, yes, it really does. And even when you look at this basically Python Twitter bot, you can see that he often got replies from Comcast and other users chipping in trying to get ahold of Comcast to fix their internet as well. Now, Comcast is probably quite well known to having pretty bad customer service. In fact, there&#x27;s this post which I&#x27;ll link to, um, where a journalist was trying to cancel their Comcast service and it took something like 5 or 10 minutes where the customer service guy was just trying really, really hard to not let them cancel even sometimes being quite condescending and a bit mean. But in this conversation, you actually hear the Comcast person saying we&#x27;re the only people who can promise you a hundred megabit download speed. And in fact, when you look at the Comcast users tweets, you can see often that is actually not the case. So this can also bolster your argument when you want to leave an internet service or when you want to get money back or when you just want somebody to fix your internet speeds. The website we&#x27;re going to be using is speedtest.net which is probably one of the best speed test websites out there. And what we&#x27;re going to do is we&#x27;re going to use our bots using selenium to press go. You can see it&#x27;s going to start working out my download speeds and my upload speeds. Now this often takes anywhere between sort of half a minute to two minutes depending on your internet speed. But once it&#x27;s done, then we&#x27;ll end up with a result ID as well as our download speed and our upload speed. And you can then compare these against what you were promised by your internet service provider. And then we&#x27;re going to tweet at our provider. So if it&#x27;s Comcast or AT&amp;T or in the UK, it could be BT or Sky, whatever it may be. And then we&#x27;re going to tell them about our terrible internet speeds compared to what we pay for. So that&#x27;s the goal. And when I run my internet speed Twitter bot, you can see this is what happens. [inaudible], That&#x27;s the goal. Once you&#x27;re ready head over to the next lesson and let&#x27;s get started.
+Complaints on social media are **public** — big brands staff social media monitors, and
+replies there are often faster and more generous than a phone queue (JetBlue is the
+famous example). A bot can post the same complaint every day, at any hour, with evidence
+(a Speedtest result ID) attached.
+
+---
+
+### 3. The Project
+
+Build a class, `InternetSpeedTwitterBot`, with two jobs:
+
+| Method | Responsibility |
+|--------|----------------|
+| `get_internet_speed()` | drive Speedtest, wait for the test to finish, scrape download & upload |
+| `tweet_at_provider()` | log in to X, compose the complaint, post it |
+
+Then compare actual speeds against your **promised** speeds and only tweet when the bot
+finds you've been short-changed.
+
+---
+
+### 4. Things to Keep in Mind
+
+* A Speedtest run takes 30 s – 2 min — Selenium must *wait*, not guess.
+* The numbers appear as text in elements whose ids/classes can change; inspect the page.
+* X login has 2FA/captcha traps; a persistent profile saves you from repeated logins.
+* Keep the tweet polite and factual — it's a complaint, not a rant.
+
+---
+
+### Summary Checklist
+
+1. Speedtest → scrape speeds → compare to the contract → tweet the ISP.
+2. Public complaints get better customer service responses than private ones.
+3. Two methods, one class: `get_internet_speed()` and `tweet_at_provider()`.
+4. Real sites change markup — inspect before trusting any selector.
+5. Only tweet when the measured speed is actually below the promised one.
