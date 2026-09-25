@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sea Room — Boutique Hotel</title>
+    <style>
+        /* ------------------------------------------------------------------
+           Day 65 practice page: the four pillars applied to a hotel brief.
+
+           Colour   : analogous blue-teal palette (sea, calm, trust)
+           Type     : Playfair Display (serif headings = tradition/class)
+                      + Inter/system sans (body = readable, modern)
+           UI       : one clear action per screen, generous white space,
+                      consistent alignment, ~60 character measure
+           UX       : three taps to book, consistent nav, no dark patterns
+           ------------------------------------------------------------------ */
+        :root {
+            --ink: #10243a;
+            --sea: #14566b;
+            --sand: #f6f3ee;
+            --accent: #c98a3c;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+            color: var(--ink);
+            background: var(--sand);
+            line-height: 1.65;
+        }
+
+        /* --- consistent navigation on every "page" (section) ------------ */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 8vw;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 1px 0 rgba(16, 36, 58, 0.08);
+        }
+
+        .brand {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 1.4rem;
+            letter-spacing: 0.02em;
+        }
+
+        nav a {
+            margin-left: 28px;
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* --- hero: hierarchy via size + one obvious action -------------- */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 6vw;
+            align-items: center;
+            padding: 9vh 8vw;
+            background: linear-gradient(160deg, #eaf3f6, #f6f3ee);
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+            line-height: 1.15;
+            margin: 0 0 18px;
+        }
+
+        .hero p {
+            max-width: 60ch;          /* optimal line length */
+            color: #41576e;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 14px 30px;
+            background: var(--sea);
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+        }
+
+        .btn:hover { background: var(--accent); }
+
+        .hero img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 24px 48px rgba(16, 36, 58, 0.18);
+        }
+
+        /* --- rooms: white space does the luxury work -------------------- */
+        .rooms {
+            padding: 11vh 8vw;
+            background: #fff;
+            text-align: center;
+        }
+
+        .rooms h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 2rem;
+            margin-bottom: 56px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 48px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card { max-width: 300px; }
+
+        .card h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            margin: 20px 0 8px;
+        }
+
+        .card p {
+            color: #41576e;
+            font-size: 0.95rem;
+        }
+
+        .price {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* --- footer: quiet, consistent, no tricks ---------------------- */
+        footer {
+            padding: 40px 8vw;
+            background: var(--sea);
+            color: #dce9ee;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .hero { grid-template-columns: 1fr; padding: 7vh 6vw; }
+            .hero img { order: -1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="brand">The Sea Room</span>
+        <nav>
+            <a href="#rooms">Rooms</a>
+            <a href="#story">Our story</a>
+            <a href="#book">Book</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>A quiet room, the sound of the sea.</h1>
+            <p>
+                Twelve rooms on the harbour wall, breakfast until eleven and a
+                library that never closes. No hidden fees, no "resort charge",
+                no surprises at checkout.
+            </p>
+            <a class="btn" href="#book">Check availability</a>
+        </div>
+        <!-- Swap in your own photo: static/images/hero.jpg -->
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900"
+             alt="Blue sea and sand">
+    </section>
+
+    <section class="rooms" id="rooms">
+        <h2>Rooms</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Harbour</h3>
+                <p>A double room facing the boats. Small, warm, quiet.</p>
+                <p class="price">from £120 / night</p>
+            </div>
+            <div class="card">
+                <h3>Terrace</h3>
+                <p>Your own strip of roof, a table, two chairs, sea air.</p>
+                <p class="price">from £180 / night</p>
+            </div>
+            <div class="card">
+                <h3>Lighthouse Suite</h3>
+                <p>The top floor, two windows and a very long bath.</p>
+                <p class="price">from £260 / night</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="story">
+        <div>
+            <h1>Built in 1892. Tired by 2019. Loved since.</h1>
+            <p>
+                We kept the original tiles and the creaking stairs, and replaced
+                everything that made the beds uncomfortable.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900"
+             alt="Hotel corridor with light streaming in">
+    </section>
+
+    <footer id="book">
+        <p>The Sea Room · Harbour Wall · hello@thesea-room.example · +44 0000 000000</p>
+        <p>Prices include breakfast, tax and the dog.</p>
+    </footer>
+</body>
+</html>

@@ -1,30 +1,62 @@
-# 📖 Introduction to Web Design
+Here is a structured breakdown of this lesson introducing web design.
 
 ---
 
-### Overview
+### 1. Nobody Recommends a Website for Working Well
 
-**Course:** 100 Days of Code™: The Complete Python Pro Bootcamp
-**Chapter:** Day 65 - Web Design School - How to Create a Website that People will Love
-**Lecture:** Introduction to Web Design
-**Level:** Web Design School
-
----
-
-### Summary
-
-Hey guys. In this module, I&#x27;ve got something a little bit different for you. Now, up till now we&#x27;ve been working on how to build websites that have great functionality and how to use CSS, HTML, to build up the structure of the website. Now today, I want to talk about something a little bit different namely how to design websites so that not only does your website have great functionality but it also looks beautiful. The most important thing to making a website loved by users is pretty much the design. After all, think about it. When was the last time you heard somebody tell you, &quot;Hey I came across this great website. It worked really really well. So smooth and no bugs.&quot; Nobody ever says that, right? They say things like: &quot;It looked so beautiful. It just worked like I wanted it to.&quot; So today we&#x27;re going to talk about design and I want to show you some of the different aspects of design when it comes to websites. Now more often than not, you&#x27;ve heard the saying, right? &quot;Don&#x27;t judge a book by its cover.&quot; Now at the same time, you might have also heard of this saying: &quot;You only have three seconds to make a good impression.&quot; Now when it comes to web design, the latter is probably more accurate. It&#x27;s just like a job interview or a first date, your website has a crucial few seconds before the user is going to judge your company, your brand, your product. So take a look at this example. This is a website called Penny Juice and it&#x27;s a company that sells children&#x27;s juice cartons. Now look at the design of it. There&#x27;s clashing colors, there&#x27;s different typefaces, there&#x27;s different colors for the text and they have different fonts and it&#x27;s all, to be honest, a bit of a mess. So this is a question I often ask students at this point. Take a look at this website and ask yourself if you were to buy a product from this company, if you were to buy a carton of juice, how much would you pay for it? Now take a look at this website. This is the same website reimagined by a professional web designer. Look at how the color scheme is now consistent, how the fonts and the typefaces now look a lot better. And ask yourself again, how much would you pay for a single carton of juice from this website. Now I&#x27;ve asked this question to a number of people and this is the result I got. People are willing to pay anywhere up to only a dollar for a carton of juice from the first website, but anywhere up to $3 for the second website. Now I run a startup and a lot of friends and colleagues of mine also work on their own businesses, and we usually spend a lot of time brainstorming, &quot;How can we make our product better?&quot; &quot;How do we make our brand stronger?&quot; And there&#x27;s very very few things that we can think of that can actually produce a three times improvement in the value of your product or in the value of your company. So design is really really powerful. It&#x27;s one of the cheapest ways to make your company or your product look expensive because it&#x27;s elevating. And it doesn&#x27;t take a lot to get good at design as you&#x27;ll see in the coming lessons. So we&#x27;re going to be exploring some of the principles of web design in this module. And I want to take you through everything from Color Theory, to Typography to, User Interface Design, and User Experience Design. These are the four pillars of good web design. So once you are ready, head over to the next lesson and let&#x27;s get started.
+Nobody says *"you should visit this site, it had no bugs."* They say *"it looked amazing"*.
+Design is what makes people love a website — and it's also the cheapest way to make a
+product look expensive.
 
 ---
 
-### Key Concepts
+### 2. The Penny Juice Experiment
 
-| # | Concept | Description |
-|---|---------|-------------|
-| 1 | **if/elif/else conditionals** | Introduced/used in this lecture |
+Two versions of the same children's juice site:
+
+| Version | Colour scheme | Fonts | What people would pay |
+|---------|---------------|-------|----------------------|
+| Original | clashing colours, mixed typefaces, chaotic | many | up to ~$1 |
+| Redesigned | consistent palette, careful type | two | up to ~$3 |
+
+Same juice. **3× the perceived value**, and the only change was design.
 
 ---
 
-### Next Steps
+### 3. You Have Three Seconds
 
-Hey guys. In this module, I&#x27;ve got something a little bit different for you. Now, up till now we&#x27;ve been working on how to build websites that have great functionality and how to use CSS, HTML, to build up the structure of the website. Now today, I want to talk about something a little bit different namely how to design websites so that not only does your website have great functionality but it also looks beautiful. The most important thing to making a website loved by users is pretty much the design. After all, think about it. When was the last time you heard somebody tell you, &quot;Hey I came across this great website. It worked really really well. So smooth and no bugs.&quot; Nobody ever says that, right? They say things like: &quot;It looked so beautiful. It just worked like I wanted it to.&quot; So today we&#x27;re going to talk about design and I want to show you some of the different aspects of design when it comes to websites. Now more often than not, you&#x27;ve heard the saying, right? &quot;Don&#x27;t judge a book by its cover.&quot; Now at the same time, you might have also heard of this saying: &quot;You only have three seconds to make a good impression.&quot; Now when it comes to web design, the latter is probably more accurate. It&#x27;s just like a job interview or a first date, your website has a crucial few seconds before the user is going to judge your company, your brand, your product. So take a look at this example. This is a website called Penny Juice and it&#x27;s a company that sells children&#x27;s juice cartons. Now look at the design of it. There&#x27;s clashing colors, there&#x27;s different typefaces, there&#x27;s different colors for the text and they have different fonts and it&#x27;s all, to be honest, a bit of a mess. So this is a question I often ask students at this point. Take a look at this website and ask yourself if you were to buy a product from this company, if you were to buy a carton of juice, how much would you pay for it? Now take a look at this website. This is the same website reimagined by a professional web designer. Look at how the color scheme is now consistent, how the fonts and the typefaces now look a lot better. And ask yourself again, how much would you pay for a single carton of juice from this website. Now I&#x27;ve asked this question to a number of people and this is the result I got. People are willing to pay anywhere up to only a dollar for a carton of juice from the first website, but anywhere up to $3 for the second website. Now I run a startup and a lot of friends and colleagues of mine also work on their own businesses, and we usually spend a lot of time brainstorming, &quot;How can we make our product better?&quot; &quot;How do we make our brand stronger?&quot; And there&#x27;s very very few things that we can think of that can actually produce a three times improvement in the value of your product or in the value of your company. So design is really really powerful. It&#x27;s one of the cheapest ways to make your company or your product look expensive because it&#x27;s elevating. And it doesn&#x27;t take a lot to get good at design as you&#x27;ll see in the coming lessons. So we&#x27;re going to be exploring some of the principles of web design in this module. And I want to take you through everything from Color Theory, to Typography to, User Interface Design, and User Experience Design. These are the four pillars of good web design. So once you are ready, head over to the next lesson and let&#x27;s get started.
+*"Don't judge a book by its cover"* does **not** apply to websites. A visitor decides
+whether your site (and brand) is credible in a couple of seconds — like a job interview or
+a first date.
+
+---
+
+### 4. The Four Pillars of Web Design
+
+| Pillar | Question it answers |
+|--------|---------------------|
+| **Colour theory** | what mood am I conveying? |
+| **Typography** | which fonts suit my message? |
+| **UI design** | where do users' eyes go, and is it comfortable? |
+| **UX design** | is the experience effortless? |
+
+This module has no code in it — it trains your eye. The skill transfers to every site and
+app you build afterwards.
+
+---
+
+### 5. How to Practise
+
+Collect websites you admire, ask *why* they work, and try to rebuild the same feeling in
+your own projects. Design is a muscle: the more you look and copy deliberately, the better
+your instinct gets.
+
+---
+
+### Summary Checklist
+
+1. Design drives whether users love (and trust) your site.
+2. Good design can multiply perceived value — the Penny Juice 3× example.
+3. First impressions take seconds; a messy design loses users immediately.
+4. The four pillars: colour, typography, UI, UX.
+5. This module is about training the eye, not writing code.
